@@ -1,0 +1,43 @@
+# Metadata
+title: Kit France
+email:
+description:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username:
+linkedin_username: kit-france-a1a3b874
+github_username: makendon
+
+# GitHub link settings
+github:
+  is_project_page: true
+  repository_name: test-jekyll
+  repository_url: https://github.com/makendon/test-jekyll
+  owner_name: makendon
+  owner_url: https://github.com/makendon
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jemoji
+
+# Header
+header_pages:
+  - about.markdown
+  - portfolio.md
+  - projects.md
+  - blog.markdown
+
+#Permalink
+permalink: pretty
+
+# Blogging
+show_excerpts: true
+
+# Images
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
