@@ -11,8 +11,8 @@ github_username: makendon
 # GitHub link settings
 github:
   is_project_page: true
-  repository_name: test-jekyll
-  repository_url: https://github.com/makendon/test-jekyll
+  repository_name: kits-dna
+  repository_url: https://github.com/makendon/kits-dna
   owner_name: makendon
   owner_url: https://github.com/makendon
 

@@ -14,7 +14,7 @@
  * Alternative Site header
  */
 .site-header-new {
-  background-color: white;
+  background-color: #f7f7f7;
   border-bottom: 1px solid #004225;
   position: fixed;
   top: 0;
@@ -24,9 +24,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Bradley Hand";
-  font-size: x-large;
-  color: #004225;
+  font-size: medium;
+  font-weight: 400;
 }
 
 header * {
@@ -141,9 +140,9 @@ header img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #004225;
   padding-bottom: 1em;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('images/Aloha.png');
+  background-image: url('images/Aloha.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -195,10 +194,10 @@ header img {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #004225;
   padding: $spacing-unit 1;
-  background-color: #ededed;
+  background-color: #f7f7f7;
   padding-top: 1em;
+  border-top: 1px solid #004225;
 }
 
 /*.site-footer-navigation {
