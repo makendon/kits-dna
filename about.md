@@ -3,7 +3,7 @@ layout: page
 title: About me
 permalink: /about/
 ---
-# :wave: Aloha, I'm Kit France!
+# :wave: Aloha, I'm Kit!
 
 ![Image of me throwing a shaka at the top of Mauna Kea](/assets/images/Me.jpeg)
 

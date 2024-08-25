@@ -24,10 +24,10 @@ plugins:
 
 # Header
 header_pages:
-  - about.markdown
+  - about.md
   - portfolio.md
   - projects.md
-  - blog.markdown
+  - blog.md
 
 #Permalink
 permalink: pretty
