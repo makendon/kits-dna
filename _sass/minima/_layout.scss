@@ -142,8 +142,8 @@ header img {
   text-align: center;
   color: #004225;
   padding-bottom: 1em;
-  background-image: url('images/Aloha.png');
-  background-size: cover;
+  /*background-image: url('images/productdoodles2.jpeg');*/
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -165,8 +165,8 @@ header img {
   margin-bottom: 0;
 }
 
-/* Hero Button */
-.hero .btn {
+/* Hero Button .hero */
+.btn {
   display: block;
   width: 200px;
   border: 3px solid white;
@@ -183,11 +183,20 @@ header img {
   border-color: #004225;
 }
 
-.hero .btn:hover { 
+.btn:hover { 
   color: white; 
   text-decoration: none; 
   background-color: rgba(207, 16, 32, 1); 
   border-color: #cf1020;
+}
+
+/* Homepage */
+.homepage {
+  padding-top: 1em;
+  text-align: center;
+  font-size: xx-large;
+  background-color: #004225;
+  color: white;
 }
 
 /**
