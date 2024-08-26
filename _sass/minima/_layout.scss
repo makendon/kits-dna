@@ -168,16 +168,16 @@ header img {
 /* Hero Button .hero */
 .btn {
   display: block;
-  width: 200px;
+  width: 100px;
   border: 3px solid white;
-  padding: 1em;
-  margin-top: 50px;
+  padding: 0.5em;
+  margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
   color: white;
   text-decoration: none;
-  font-size: 18.66px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   border-radius: 20px;
   background-color: #004225;
   border-color: #004225;
@@ -185,18 +185,44 @@ header img {
 
 .btn:hover { 
   color: white; 
-  text-decoration: none; 
+  text-decoration-line: underline; 
+  text-decoration-style: wavy;
   background-color: rgba(207, 16, 32, 1); 
   border-color: #cf1020;
 }
 
 /* Homepage */
 .homepage {
-  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   text-align: center;
-  font-size: xxx-large;
-  font-weight: 500;
   background-color: white;
+}
+
+.homepage div {
+  height: auto;
+  width: auto;
+}
+
+.homepage h1 {
+  font-size: 67px;
+  font-weight: 500;
+  /*background: -webkit-linear-gradient(bottom right, #32cd32 , #004225);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+
+.homepage h2 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 0%;
+}
+
+.homepage img {
+  max-width: 100%;
+  height: 750px;
+  object-fit: cover;
+  display: inline-block;
 }
 
 /**
@@ -206,7 +232,7 @@ header img {
   padding: $spacing-unit 1;
   background-color: #f7f7f7;
   padding-top: 1em;
-  border-top: 1px solid #004225;
+  /*border-top: 1px solid #004225;*/
 }
 
 /*.site-footer-navigation {
@@ -218,11 +244,13 @@ header img {
 
 .site-footer-owner {
   display: block;
-  font-weight: 700;
+  font-size: small;
+  font-weight: 500;
 }
 
 .site-footer-credits {
-  color: $grey-color
+  color: $grey-color;
+  font-size: small;
 }
 
 .footer-heading {
@@ -238,6 +266,12 @@ header img {
   list-style: none;
   margin-left: 0;
   margin-right: 0;
+}
+
+.footer-container {
+  width: 800px;
+  position: absolute;
+  float: right;
 }
 
 .footer-col-wrapper {

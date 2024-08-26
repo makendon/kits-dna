@@ -29,7 +29,7 @@ ___
 
 ## :pound: Price Scraper
 
-I’m planning to follow [Replit’s 100 days of code](https://replit.com/learn/100-days-of-python). On day 100 you build a product price scraper using `python`. Not sure what products i’ll scrape but this project will hopefully get me started in programming.
+I’m planning to follow ["Replit’s 100 days of code"](https://replit.com/learn/100-days-of-python). On day 100 you build a product price scraper using `python`. Not sure what products i’ll scrape but this project will hopefully get me started in programming.
 
 ___
 
