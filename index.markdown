@@ -5,11 +5,3 @@
 layout: homepage
 title:
 ---
-
-<section class="hero"> 
-  <div class="hero-inner">
-    <h1>I'm Kit France</h1>
-    <p>And I'm a Product Manager</p>
-    <a href="https://example.com/" class="btn">About me</a>
-  </div>
-</section>
