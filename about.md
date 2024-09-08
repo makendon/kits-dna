@@ -3,7 +3,7 @@ layout: page
 title: About me
 permalink: /about/
 ---
-## :wave: Aloha, I'm Kit
+# :wave: Aloha, I'm Kit
 
 ![Image of me throwing a shaka at the top of Mauna Kea](/assets/images/Me.jpeg)
 
@@ -13,11 +13,11 @@ I grew up in the countryside, which inspired my masters degree in Geoscience. My
 
 I moved into a product role in the public sector at the end of 2019 starting in Networking, before moving into Microsoft 365 and now within Platform Engineering and Developer Tooling. Our product/s are *internal* - our users are primarily engineers.
 
-### Internal Product Management
+## Internal Product Management
 
 Being an *internal* product manager is tough, unlike customers who don't know what is possible, our users have an idea about what is possible, because they are fellow engineers. Our products are technical, and often 3rd party tools, so having deep knowledge of the product is challenging due to its size, and without engineering experience - i lean more on tech lead than i'd like. A consequence of this is that I spend more time growing my technical skills then a do my product knowledge, but this is an investment that will benefit me long term allowing better collaboration and conversations with the product, users and stakeholders.
 
-### Public Sector
+## Public Sector
 
 The public sector doesn't make profit or bring in revenue, but presents challenges around what's viable, often with an emphasis on fraud, error and debt.
 
