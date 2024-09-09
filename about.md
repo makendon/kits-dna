@@ -27,3 +27,24 @@ Value in the public sector isn't if someone would buy or choose to use your prod
 - Expenditure: Can we save costs / public money.
 - Efficiency: Doing more with less, increasing automation, reducing toil.
 - Effectiveness: Achieving objectives and policies.
+
+### Blog
+
+Read my [blog](/blog/) for thoughts on:
+
+- My [Projects](/projects/)
+- Product management
+  - Internal
+  - Public sector
+
+### Fun
+
+Here's some hobbies to put a personal touch on a *work* focussed about me page!
+
+:soccer: Newcastle United fan, no season ticket unfortunately but I'm a big enough fan where it can impact your weekend! :raising_hand_man: was a hero of mine growing up.
+
+:golf: I don't play or practice enough golf, so I don't have a handicap. It's difficult but good fun, and there's something about trying to challenge myself and improve - albeit slowly - that resonates with me. Will i ever be a single digit handicap, probably not, but something to aim for.
+
+:ski: We were lucky as kids to go skiing every other year, and it's now our main holiday. I'm not a beach person for more than a day, doesn't mean I don't like hot places - Hawaii and Utah are too incredible places i've been lucky enough to travel too.
+
+:video_game: I used to enjoy downtime with the PlayStation before focussing more time on, well, this project and growing my tech skills.
