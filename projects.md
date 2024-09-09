@@ -8,13 +8,17 @@ permalink: /projects/
   
 # :man: Personal Website
 
-For my first *personal* foray into technology, why not start with a personal website. This site is open source, you can view the code at [kits-dna](https://github.com/makendon/kits-dna) - I'll add some [blog](/blog/) posts about building it. The repository name was inspired by [crisp-dna](https://dna.crisp.se/docs/index.html), but is an insight into *my* inner workings rather than a consulting company.
+For my first *personal* foray into technology, why not start with a personal website. This site is open source, you can view the code at [kits-dna](https://github.com/makendon/kits-dna). The repository name was inspired by [crisp-dna](https://dna.crisp.se/docs/index.html), but is an insight into *my* inner workings rather than a consulting company.
 
 ## :information_source: Quick Info
 
 My site is hosted on GitHub Pages and built using `Jekyll`. The theme is `minima`, with some custom HTML and CSS. I built the site entirely on my iPad Pro using GitHub Codespaces.
 
-Check my [blog](blog/) for more details on building `kits-dna` if you're interested.
+I created the homepage image myself by drawing [bikablo](https://bikablo.com/en/home-page/) style visuals. I'm terrible at drawing but I'm pleased how well they turned out! The Apple **Freeform** app helped me out by smoothing some lines. Hopefully product people will recognise what the visuals represent.
+
+I used **Canva** to create my website logo, simple to do using a template, i just changed the colours to my two core site colours which are `british racing green` and `lava`.
+
+Check out my [blog](blog/) for more on building `kits-dna` if you're interested.
 
 ## :next_track_button: Next
 
