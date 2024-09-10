@@ -334,7 +334,8 @@ header img {
 }
 
 .page-heading {
-  @include relative-font-size(2.625);
+  font-size: 2em;
+  /*@include relative-font-size(2em); /*original 2.625*/
 }
 
 .post-list-heading {
@@ -369,7 +370,8 @@ header img {
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  font-size: 2em;
+  /*@include relative-font-size(2.625); /*original 2.625*/
   letter-spacing: -1px;
   line-height: 1;
 
@@ -382,7 +384,8 @@ header img {
   margin-bottom: $spacing-unit;
 
   h1 {
-    @include relative-font-size(2);
+    font-size: 2em;
+    /*@include relative-font-size(2);*/
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
@@ -390,7 +393,8 @@ header img {
   }
 
   h2 {
-    @include relative-font-size(1.8);
+    font-size: 1.5em;
+    /*@include relative-font-size(1.8);*/
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
@@ -398,7 +402,8 @@ header img {
   }
 
   h3 {
-    @include relative-font-size(1.625);
+    font-size: 1.17em;
+    /*@include relative-font-size(1.625);*/
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
@@ -406,7 +411,8 @@ header img {
   }
 
   h4 {
-    @include relative-font-size(1.25);
+    font-size: 1.12em;
+    /*@include relative-font-size(1.25);*/
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
