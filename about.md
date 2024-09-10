@@ -3,7 +3,7 @@ layout: page
 title: About me
 permalink: /about/
 ---
-# :wave: Aloha, I'm Kit
+## :wave: Aloha, I'm Kit
 
 ![Image of me throwing a shaka at the top of Mauna Kea](/assets/images/Me.jpeg)
 
@@ -28,7 +28,7 @@ Value in the public sector isn't if someone would buy or choose to use your prod
 - Efficiency: Doing more with less, increasing automation, reducing toil.
 - Effectiveness: Achieving objectives and policies.
 
-### Blog
+## Blog
 
 Read my [blog](/blog/) for thoughts on:
 
@@ -37,7 +37,7 @@ Read my [blog](/blog/) for thoughts on:
   - Internal
   - Public sector
 
-### Fun
+## Fun
 
 Here's some hobbies to put a personal touch on a *work* focussed about me page!
 
