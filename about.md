@@ -9,26 +9,26 @@ permalink: /about/
 
 I’m married with a baby girl, and two cats, one or both might appear on this site at some point! We live in North-East England.
 
-I grew up in the countryside, which inspired my masters degree in Geoscience. My Digital journey started with networking learnt working in Oil & Gas before moving into Financial Services where i supported Cyber Security engagements.
+I grew up in the countryside, which inspired my masters degree in Geoscience. My Digital journey started with networking learnt working in Oil & Gas before moving into Financial Services where I supported Cyber Security engagements.
 
 I moved into a product role in the public sector at the end of 2019 starting in Networking, before moving into Microsoft 365 and now within Platform Engineering and Developer Tooling. Our product/s are *internal* - our users are primarily engineers.
 
-## Internal Product Management
+## :package: Internal Product Management
 
-Being an *internal* product manager is tough, unlike customers who don't know what is possible, our users have an idea about what is possible, because they are fellow engineers. Our products are technical, and often 3rd party tools, so having deep knowledge of the product is challenging due to its size, and without engineering experience - i lean more on tech lead than i'd like. A consequence of this is that I spend more time growing my technical skills then a do my product knowledge, but this is an investment that will benefit me long term allowing better collaboration and conversations with the product, users and stakeholders.
+Being an *internal* product manager is tough, unlike customers who don't know what is possible, our users have an idea about what is possible. Our products are technical, and often 3rd party tools, so having deep knowledge of the product is challenging without engineering experience. Subsequently I spend more time growing my technical skills but this is an investment that will benefit me long term allowing better collaboration and conversations with users and stakeholders.
 
-## Public Sector
+## :loudspeaker: Public Sector
 
 The public sector doesn't make profit or bring in revenue, but presents challenges around what's viable, often with an emphasis on fraud, error and debt.
 
 Value in the public sector isn't if someone would buy or choose to use your product, it's the only product or service that meets a need, there's no competition. Value is provided by **improving the lives of citizens** - access to essential benefits, making it easy to file a tax return, getting a drivers license or passport. Value can also be seen as:
 
 - Experience: User satisfaction.
-- Expenditure: Can we save costs / public money.
-- Efficiency: Doing more with less, increasing automation, reducing toil.
+- Expenditure: Can we save money.
+- Efficiency: Doing more with less; increasing automation, reducing toil.
 - Effectiveness: Achieving objectives and policies.
 
-## Blog
+## :writing_hand: Blog
 
 Read my [blog](/blog/) for thoughts on:
 
@@ -36,15 +36,14 @@ Read my [blog](/blog/) for thoughts on:
 - Product management
   - Internal
   - Public sector
+- Random stuff
 
-## Fun
+## :mirror_ball: Fun
 
-Here's some hobbies to put a personal touch on a *work* focussed about me page!
+:soccer: Newcastle United fan! :raising_hand_man: was a hero of mine growing up.
 
-:soccer: Newcastle United fan, no season ticket unfortunately but I'm a big enough fan where it can impact your weekend! :raising_hand_man: was a hero of mine growing up.
+:golf: I don't play or practice enough but there's something about the challenge of improving that i love - tough game.
 
-:golf: I don't play or practice enough golf, so I don't have a handicap. It's difficult but good fun, and there's something about trying to challenge myself and improve - albeit slowly - that resonates with me. Will i ever be a single digit handicap, probably not, but something to aim for.
+:ski: Started skiing at 6 years old in Canada, and have since skied in Switzerland, Norway, France and Italy.
 
-:ski: We were lucky as kids to go skiing every other year, and it's now our main holiday. I'm not a beach person for more than a day, doesn't mean I don't like hot places - Hawaii and Utah are too incredible places i've been lucky enough to travel too.
-
-:video_game: I used to enjoy downtime with the PlayStation before focussing more time on, well, this project and growing my tech skills.
+:video_game: I mainly play sport games, not played much since becoming a Dad and spending more spare time on tech projects.
