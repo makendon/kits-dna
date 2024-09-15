@@ -41,3 +41,6 @@ defaults:
       path: "assets/images"
     values:
       image: true
+
+# Markdown
+markdown: GFM
