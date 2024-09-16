@@ -1,11 +1,11 @@
 ---
 layout: page
 title: About me
-permalink: /about/
+permalink: {{ "/about/" | relative_url }}
 ---
 ## :wave: Aloha, I'm Kit
 
-![Image of me throwing a shaka at the top of Mauna Kea](/assets/images/Me.jpeg)
+![Image of me throwing a shaka at the top of Mauna Kea]({{ "/assets/images/Me.jpeg" | relative_url}})
 
 I’m married with a baby girl, and two cats, one or both might appear on this site at some point! We live in North-East England.
 
