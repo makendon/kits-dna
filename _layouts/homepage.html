@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-  {%- include head.html -%}
-
-  <body>
-
-    {%- include header.html -%}
-
-    <section class=homepage>
-      <div>
-        <!--<h1> <a href="/about/">Kit France</a> </h1>-->
-        <h1>Kit France</h1>
-        <h2>Dad. Husband. Product Manager.</h2>
-        <img src="{{ "assets/images/productdoodles2.jpeg" | relative_url }}" alt="Product Doodles. Business Outcomes, User Needs, Discovery, Ideas, Building, Product, Loveable."/>
-        <a style="color: white" href="{{ "/about/" | relative_url }}" class="btn">About me</a>
-        </div>
-
-      </section>
-
-    {%- include footer.html -%}
-
-  </body>
-
-</html>
+---
+layout: default
+---
+<section class=homepage>
+  <div>
+     <h1>Kit France</h1>
+      <h2>Dad. Husband. Product Manager.</h2>
+      <img src="{{ "assets/images/productdoodles2.jpeg" | relative_url }}" alt="Product Doodles. Business Outcomes, User Needs, Discovery, Ideas, Building, Product, Loveable."/>
+      <a style="color: white" href="{{ "/about/" | relative_url }}" class="btn">About me</a>
+      </div>
+</section>
