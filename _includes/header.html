@@ -1,14 +1,14 @@
 <header class="site-header-new">
  <a href="{{ "/" | relative_url }}">
-  <img class="header-logo" src="/assets/images/C.jpeg" alt="CF">
+  <img class="header-logo" src="{{ "/assets/images/C.jpeg" | relative_url }}" alt="CF">
  </a>
      <nav>
         <ul>
             <li><a style="color: #004225" href="{{ "/" | relative_url }}">Home</a></li>
-            <li><a style="color: #004225" href="/about/">About</a></li>
-            <li><a style="color: #004225" href="/projects/">Projects</a></li>
-            <li><a style="color: #004225" href="/blog/">Blog</a></li>
-            <li><a style="color: #004225" href="/contact/">Contact</a></li>
+            <li><a style="color: #004225" href="{{ "/about/" | relative_url }}">About</a></li>
+            <li><a style="color: #004225" href="{{ "/projects/" | relative_url }}">Projects</a></li>
+            <li><a style="color: #004225" href="{{ "/blog/" | relative_url }}">Blog</a></li>
+            <li><a style="color: #004225" href="{{ "/contact/" | relative_url }}">Contact</a></li>
         </ul>
       </nav>
    
