@@ -30,9 +30,9 @@ Value in the public sector isn't if someone would buy or choose to use your prod
 
 ## :writing_hand: Blog
 
-Read my [blog]({% link blog.md %}) for thoughts on:
+Read my [blog]({{ '/blog/' | relative_url }}) for thoughts on:
 
-- My [Projects]({% link projects.md %})
+- My [Projects]({{ '/projects/' | relative_url }})
 - Product management
   - Internal
   - Public sector
