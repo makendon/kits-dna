@@ -18,7 +18,7 @@ I created the homepage image myself by drawing [**bikablo**](https://bikablo.com
 
 I used **Canva** to create my website logo, simple to do using a template, I just changed the colours to my two core site colours which are british racing green and lava.
 
-Check out my [blog](/blog/) for more on building `kits-dna` if you're interested.
+Check out my [blog]({{ '/blog/' | relative_url }}) for more on building `kits-dna` if you're interested.
 
 Building the site got me started with markup code, and a wee bit of design. Learning a programming language is next up.
 
