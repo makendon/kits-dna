@@ -19,9 +19,9 @@
 /**
  * Alternative Site header
  */
-.site-header-new {
+/*.site-header-new {
   background-color: #f7f7f7;
-  /*border-bottom: 1px solid #004225;*/
+  /*border-bottom: 1px solid #004225;
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +32,7 @@
   justify-content: center;
   font-size: medium;
   font-weight: 400;
-}
+}*/
 
 header * {
   display: inline;
@@ -119,14 +119,13 @@ header img {
     .menu-icon {
       display: block;
       float: right;
-      width: 36px;
-      height: 26px;
+      width: 100%;
+      height: 2em;
       line-height: 0;
-      padding-top: 10px;
-      text-align: center;
+      text-align: left;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: #004225;
       }
     }
 
@@ -213,13 +212,11 @@ header img {
 
 /* Homepage */
 .homepage {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
   text-align: center;
   background-color: white;
-}
-
-.homepage div {
-  height: auto;
-  width: auto;
 }
 
 .homepage h1 {
@@ -234,6 +231,7 @@ header img {
   font-size: 1.55em;
   font-weight: 500;
   line-height: 0%;
+  overflow-wrap: break-word;
 }
 
 .homepage img {
