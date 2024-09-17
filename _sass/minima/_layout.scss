@@ -103,14 +103,14 @@ header img {
     top: 1px;
     right: $spacing-unit / 2;
     background-color: #f7f7f7;
-    border: 1px solid $grey-color-light;
-    border-radius: 1px;
+    /*border: 1px solid $grey-color-light;
+    border-radius: 1px;*/
     text-align: left;
 
     label[for="nav-trigger"] {
       display: block;
-      float: right;
-      width: 100%;
+      float: none;
+      width: 2em;
       height: 2em;
       z-index: 2;
       cursor: pointer;
@@ -126,6 +126,8 @@ header img {
 
       > svg {
         fill: #004225;
+        padding-top: 5px;
+        height: 28px;
       }
     }
 
@@ -141,7 +143,7 @@ header img {
 
     .page-link {
       display: block;
-      padding: 0px 5px;
+      padding: 0px 10px;
 
       &:not(:last-child) {
         margin-right: 0;
