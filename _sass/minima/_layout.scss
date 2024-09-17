@@ -100,6 +100,7 @@ header img {
 
   @include media-query($on-palm) {
     position: absolute;
+    top: 1px;
     right: $spacing-unit / 2;
     background-color: #f7f7f7;
     border: 1px solid $grey-color-light;
@@ -109,7 +110,7 @@ header img {
     label[for="nav-trigger"] {
       display: block;
       float: right;
-      width: 2em;
+      width: 100%;
       height: 2em;
       z-index: 2;
       cursor: pointer;
@@ -118,7 +119,7 @@ header img {
     .menu-icon {
       display: block;
       float: right;
-      width: 2em;
+      width: 100%;
       height: 2em;
       line-height: 0;
       text-align: center;
@@ -140,7 +141,7 @@ header img {
 
     .page-link {
       display: block;
-      padding: 0px 1px;
+      padding: 0px 5px;
 
       &:not(:last-child) {
         margin-right: 0;
