@@ -32,7 +32,7 @@ Value in the public sector isn't if someone would buy or choose to use your prod
 
 Read my [blog]({{ '/blog/' | relative_url }}) for thoughts on:
 
-- My [Projects]({{ '/projects/' | relative_url }})
+- My [projects]({{ '/projects/' | relative_url }})
 - Product management
   - Internal
   - Public sector
@@ -47,3 +47,5 @@ Read my [blog]({{ '/blog/' | relative_url }}) for thoughts on:
 :ski: Started skiing at 6 years old in Canada, and have since skied in Switzerland, Norway, France and Italy.
 
 :video_game: I mainly play sport games, not played much since becoming a Dad and spending more spare time on tech projects.
+
+## :call_me_hand: Hang Loose and Take Care

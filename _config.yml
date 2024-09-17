@@ -26,7 +26,6 @@ plugins:
 # Header
 header_pages:
   - about.md
-  - portfolio.md
   - projects.md
   - blog.md
 
