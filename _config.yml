@@ -9,6 +9,9 @@ twitter_username:
 linkedin_username: kit-france-a1a3b874
 github_username: makendon
 
+# Google Analyics
+google_analytics: G-QZ7X5N4DD9
+
 # GitHub link settings
 github:
   is_project_page: true
