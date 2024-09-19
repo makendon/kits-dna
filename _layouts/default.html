@@ -15,8 +15,10 @@
 
     {%- include footer.html -%}
 
+    {%- if jekyll.environment == 'production' -%}
     {%- include simple-analytics.html -%}
-
+    {%- endif -%}
+    
   </body>
 
 </html>
