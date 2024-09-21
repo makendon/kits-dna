@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About me
+title: About Me
 permalink: /about/
 ---
 ## :wave: Aloha, I'm Kit
