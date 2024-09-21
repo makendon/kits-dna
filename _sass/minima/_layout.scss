@@ -205,11 +205,9 @@ header img {
 }
 
 .btn:hover { 
-  color: white; 
-  text-decoration-line: underline; 
-  text-decoration-style: wavy;
-  background-color: rgba(207, 16, 32, 1); 
-  border-color: #cf1020;
+  color: black; 
+  background-color: black; 
+  border-color: black;
 }
 
 /* Homepage */
@@ -419,7 +417,7 @@ footer {
 
 .footer-column a:hover {
   text-decoration: underline;
-  color: $brand-color;
+  color: yellow;
 }
 
 /* Social Links */
