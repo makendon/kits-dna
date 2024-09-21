@@ -3,7 +3,7 @@ title: Kit France
 repository: makendon/kits-dna
 email:
 description:
-tagline: My personal website # SEO field
+tagline: Aloha # SEO field
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kitfrance.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
