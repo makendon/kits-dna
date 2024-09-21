@@ -115,7 +115,8 @@ a {
   &:hover {
     color: $brand-color;
     text-decoration-line: underline;
-    text-decoration-style: wavy;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
   }
 
   .social-media-list &:hover {
