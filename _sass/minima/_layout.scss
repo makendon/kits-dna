@@ -16,6 +16,7 @@
   font-size: medium;
   font-weight: 400;
 }
+
 /**
  * Alternative Site header
  */
@@ -212,11 +213,11 @@ header img {
 
 /* Homepage */
 .homepage {
+  color: #004225;
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  background-color: white;
 }
 
 /*.homepage h1 {
@@ -371,7 +372,7 @@ header img {
 
 /* Basic Footer Styles */
 footer {
-  background-color: #000000;
+  background-color: #080808;
   color: white;
   padding: 20px 0;
 }
