@@ -21,12 +21,7 @@ Being an *internal* product manager is tough, unlike customers who don't know wh
 
 The public sector doesn't make profit or bring in revenue, but presents challenges around what's viable, often with an emphasis on fraud, error and debt.
 
-Value in the public sector isn't if someone would buy or choose to use your product, it's the only product or service that meets a need, there's no competition. Value is provided by **improving the lives of citizens** - access to essential benefits, making it easy to file a tax return, getting a drivers license or passport. Value can also be seen as:
-
-- Experience: User satisfaction.
-- Expenditure: Can we save money.
-- Efficiency: Doing more with less; increasing automation, reducing toil.
-- Effectiveness: Achieving objectives and policies.
+Value in the public sector isn't if someone would buy or choose to use your product, it's the only product or service that meets a need, there's no competition. Value is provided by **improving the lives of citizens** - access to essential benefits, making it easy to file a tax return, getting a drivers license or passport.
 
 ## :writing_hand: Blog
 
@@ -49,3 +44,5 @@ Read my [blog]({{ '/blog/' | relative_url }}) for thoughts on:
 :video_game: I mainly play sport games, not played much since becoming a Dad and spending more spare time on tech projects.
 
 ## :call_me_hand: Hang Loose and Take Care
+
+> :eyeglasses: **_Views are my own_**
