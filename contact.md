@@ -1,12 +1,12 @@
 ---
-layout: contact
+layout: page
 title: Contact Me
 permalink: /contact/
 ---
 
 ## :iphone: Social
 
-Find me over on [LinkedIn](https://www.linkedin.com/in/kit-france-a1a3b874) to check out my professional profile and send me a message. 
+Find me over on [LinkedIn](https://www.linkedin.com/in/kit-france-a1a3b874) to check out my professional profile and send me a message.
 
 ## :e-mail: Email
 
