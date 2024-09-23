@@ -10,7 +10,7 @@ dl, dd, ol, ul, figure {
 
 /**
  * Basic styling
- */
+ */ 
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
@@ -28,11 +28,11 @@ body {
   padding-top: 10px;
 }
 
-/* Dark Mode using media query */
-/*@media (prefers-color-scheme: dark) {
+/* Dark mode body using media query */
+@media (prefers-color-scheme: dark) {
   body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: #ffffff;
+    color: #fcfcfc;
     background-color: #121212;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -46,11 +46,7 @@ body {
     flex-direction: column;
     padding-top: 10px;
   }
-
-  a {
-      color: #bb86fc;
-  }
-}*/
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -148,6 +144,34 @@ a {
   }
 }
 
+/* Dark mode links */
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #f24553;
+    text-decoration: none;
+  
+    &:visited {
+      color: darken(#f24553, 15%);
+    }
+  
+    &:hover {
+      color: #f24553;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 1px;
+    }
+  
+    .social-media-list &:hover {
+      text-decoration: none;
+  
+      .username {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
 
 /**
  * Blockquotes
@@ -174,7 +198,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: $grey-color-light; /*eef*/
   color: $brand-color
 }
 

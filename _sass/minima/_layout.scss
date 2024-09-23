@@ -155,7 +155,7 @@ header img {
 }
 
 /* Hero */
-.hero {
+/*.hero {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -164,12 +164,11 @@ header img {
   text-align: center;
   color: #004225;
   padding-bottom: 1em;
-  /*background-image: url('images/productdoodles2.jpeg');*/
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-} 
+} */
 
 /* Hero Text
 .hero-text {
@@ -196,7 +195,6 @@ header img {
   margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
-  color: white;
   text-decoration: none;
   font-size: 1em;
   font-weight: 500;
@@ -205,10 +203,47 @@ header img {
   border-color: #004225;
 }
 
-.btn:hover { 
-  color: black; 
+.btn a {
+  color: yellow;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: yellow;
+  text-decoration-line: underline;
   background-color: black; 
   border-color: black;
+}
+
+/* Dark mode hero button */
+@media (prefers-color-scheme: dark) {
+  .btn {
+    display: block;
+    width: 100px;
+    border: 3px solid #fcfcfc;
+    padding: 0.5em;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 20px;
+    background-color: yellow;
+    border-color: yellow;
+  }
+  
+  .btn a {
+    color: #111111;
+    text-decoration: none;
+  }
+  
+  .btn:hover { 
+    color: #111111;
+    text-decoration: underline;
+    background-color: #fcfcfc; 
+    border-color: #fcfcfc;
+  }
 }
 
 /* Homepage */
@@ -218,6 +253,13 @@ header img {
   margin: 0 auto;
   width: 100%;
   text-align: center;
+}
+
+/* Dark mode .homepage */
+@media (prefers-color-scheme: dark) {
+  .homepage {
+    color: #fcfcfc;
+  }
 }
 
 /*.homepage h1 {
@@ -264,6 +306,14 @@ header img {
   height: auto;
   object-fit: cover;
   display: inline-block;
+}
+
+/* Dark mode .homepage img */
+@media (prefers-color-scheme: dark) {
+  .homepage img {
+    filter: brightness(90%);
+    padding-bottom: 1em;
+  }
 }
 
 /**
@@ -372,8 +422,8 @@ header img {
 
 /* Basic Footer Styles */
 footer {
-  background-color: #080808;
-  color: white;
+  background-color: #121212; /*080808*/
+  color: #fcfcfc;
   padding: 20px 0;
 }
 
@@ -400,7 +450,7 @@ footer {
 
 .footer-column p,
 .footer-column a {
-  color: white;
+  color: #fcfcfc;
   text-decoration: none;
   font-size: small;
 }
@@ -418,12 +468,13 @@ footer {
 
 .footer-column a:hover {
   text-decoration: underline;
-  color: yellow;
+  text-decoration-thickness: 1px;
+  color: #fcfcfc;
 }
 
 /* Social Links */
 .social-links a {
-  color: white;
+  color: #fcfcfc;
   font-size: small;
   text-align: center;
 }
@@ -461,6 +512,7 @@ footer {
 }
 
 .post-list {
+  margin-top: $spacing-unit;
   margin-left: 0;
   list-style: none;
 
@@ -484,10 +536,12 @@ footer {
  * Posts
  */
 .post-header {
+  margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
 }
 
 .post-title {
+  margin-bottom: $spacing-unit;
   font-size: 2em;
   /*@include relative-font-size(2.625); /*original 2.625*/
   letter-spacing: -1px;
