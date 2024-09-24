@@ -17,6 +17,13 @@
   font-weight: 400;
 }
 
+/* Dark mode site header using media query */
+@media (prefers-color-scheme: dark) {
+  .site-header {
+    background-color: #080808;
+  }
+}
+
 /**
  * Alternative Site header
  */
@@ -66,7 +73,6 @@ header img {
 
 .site-title {
   @include relative-font-size(1.625);
-  font-family: "Bradley Hand";
   font-weight: 300;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
@@ -98,6 +104,13 @@ header img {
       margin-right: 20px;
     }
   }
+
+  /* Dark mode page link (header) using media query */
+@media (prefers-color-scheme: dark) {
+  .page-link {
+    color:#fcfcfc;
+  }
+}
 
   @include media-query($on-palm) {
     position: absolute;
@@ -218,17 +231,7 @@ header img {
 /* Dark mode hero button */
 @media (prefers-color-scheme: dark) {
   .btn {
-    display: block;
-    width: 100px;
     border: 3px solid #fcfcfc;
-    padding: 0.5em;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 500;
-    border-radius: 20px;
     background-color: yellow;
     border-color: yellow;
   }
@@ -311,7 +314,7 @@ header img {
 /* Dark mode .homepage img */
 @media (prefers-color-scheme: dark) {
   .homepage img {
-    filter: brightness(90%);
+    /*filter: brightness(90%);*/
     padding-bottom: 1em;
   }
 }
@@ -422,7 +425,7 @@ header img {
 
 /* Basic Footer Styles */
 footer {
-  background-color: #121212; /*080808*/
+  background-color: #080808; /*080808*/
   color: #fcfcfc;
   padding: 20px 0;
 }

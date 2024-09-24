@@ -31,20 +31,8 @@ body {
 /* Dark mode body using media query */
 @media (prefers-color-scheme: dark) {
   body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: #fcfcfc;
     background-color: #121212;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-       -moz-font-feature-settings: "kern" 1;
-         -o-font-feature-settings: "kern" 1;
-            font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    padding-top: 10px;
   }
 }
 
