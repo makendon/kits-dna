@@ -304,20 +304,37 @@ header img {
   }
 }  
 
-.homepage img {
+/* Default homepage image (light mode) */
+#homeImage {
+  content: url('/assets/images/productdoodles.jpeg');
   max-width: 100%;
   height: auto;
   object-fit: cover;
   display: inline-block;
 }
 
-/* Dark mode .homepage img */
+/* Dark mode homepage image */
 @media (prefers-color-scheme: dark) {
-  .homepage img {
-    /*filter: brightness(90%);*/
-    padding-bottom: 1em;
+  #homeImage {
+      content: url('/assets/images/productdoodles4.jpeg');
+      padding-bottom: 1em;
   }
 }
+
+/*.homepage img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: inline-block;
+}*/
+
+/* Dark mode .homepage img */
+/*@media (prefers-color-scheme: dark) {
+  .homepage img {
+    /*filter: brightness(90%);
+    padding-bottom: 1em;
+  }
+}*/
 
 /**
  * Site footer
