@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-### Dependencies 
+### Dependencies
 
 #### Local
 
@@ -23,14 +23,13 @@ git clone https://github.com/makendon/kits-dna.git
 cd kits-dna
 ```
 
-
 ### Jekyll
 
 Jekyll builds the site locally and is also used by GitHub Pages.
 
 - Install dependencies. Jekyll [pre-requisites](https://jekyllrb.com/docs/installation/) can help for different operating systems
 
-- Install Jekyll and bundler gems 
+- Install Jekyll and bundler gems
 
 ```
 gem install jekyll bundler
@@ -50,7 +49,7 @@ bundle install && bundle update
 bundle exec jekyll serve
 ```
 
-- Open a web browser and go to http://localhost:4000/ you should see your local copy of the site running.
+- Open a web browser and go to http://localhost:4000/ you should see your local copy of the site running
 
 ### Make Changes
 
