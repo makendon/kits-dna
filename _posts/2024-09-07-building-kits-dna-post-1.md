@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building kits-dna - Post 1
-date: 2024-09-22
+date: 2024-09-29
 categories: kits-dna
 ---
 Over a series of blog posts I’ll tell the story of how I built this website, aka `kits-dna`. My goal with this is to show people who aren’t *engineers/developers* that it's easy to create a personal website, either as a portfolio, blog or both, and get started with an internet presence outside of social media.
@@ -47,7 +47,7 @@ To get started with Jekyll, I’d recommend initialising a git repository locall
 
 In upcoming posts on building `kits-dna` I’ll cover:
 
-- How to use an iPad or tablet to create a website
+- How to use an iPad or tablet to create a website1
 - How to customise the appearance of your site
 - Build Gotcha's on GitHub Pages
 - How to make your site look good on mobile
