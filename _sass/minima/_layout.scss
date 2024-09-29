@@ -56,7 +56,7 @@ header img {
   margin-right: 2em;
 }
 
-/*.header-col {
+.header-col {
   float: left;
   margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
@@ -69,7 +69,7 @@ header img {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
   }
-}*/
+}
 
 .site-title {
   @include relative-font-size(1.625);
@@ -237,12 +237,12 @@ header img {
   }
   
   .btn a {
-    color: #111111;
+    color: #004225;
     text-decoration: none;
   }
   
   .btn:hover { 
-    color: #111111;
+    color: #004225;
     text-decoration: underline;
     background-color: #fcfcfc; 
     border-color: #fcfcfc;
@@ -316,7 +316,7 @@ header img {
 /* Dark mode homepage image */
 @media (prefers-color-scheme: dark) {
   #homeImage {
-      content: url('/assets/images/IMG_0064.png');
+      content: url('/assets/images/productdoodles4.jpeg');
       padding-bottom: 1em;
   }
 }
