@@ -3,16 +3,15 @@ layout: page
 title: Privacy Policy
 permalink: /privacy/
 ---
-
-Last Updated On 20/09/2024 
-
 **Your privacy is important.**
 
-This Privacy Policy describes the policies on the collection, use and disclosure of your information that is collected when you use this website [https://kitfrance.com](https://kitfrance.com/). 
+Last Updated On 20/09/2024
+
+This Privacy Policy describes the policies on the collection, use and disclosure of your information that is collected when you use this website [https://kitfrance.com](https://kitfrance.com/).
 
 ## Contact Me - Email
 
-### Information Collected:
+### Information Collected
 
 The following personal information will be collected:
 
@@ -22,23 +21,23 @@ The following personal information will be collected:
 
 By contacting me by Email you are consenting to the collection, use and disclosure of your information in accordance with this Privacy Policy. If you do not consent to the same, please do not send me an Email.
 
-### How Your Information Is Used:
+### How Your Information Is Used
 
 Information collected will be used for contact purposes only.
 
-### Sharing Your Information:
+### Sharing Your Information
 
 Your information will not be shared with anyone or 3rd parties.
 
-### Retention Of Your Information:
+### Retention Of Your Information
 
-Personal data sent via email will be retained for as long as needed. E.g. for the duration of any conversation. Any feedback turned into a GitHub Issue will be anonymised. 
+Personal data sent via email will be retained for as long as needed. E.g. for the duration of any conversation. Any feedback turned into a GitHub Issue will be anonymised.
 
 ## Analytics
 
-This site uses [**Simple Analytics**](https://www.simpleanalytics.com/) to collect metrics such as page views in a cookie less manner. 
+This site uses [**Simple Analytics**](https://www.simpleanalytics.com/) to collect metrics such as page views in a cookie less manner.
 
-Simple Analytics does not collect any personal data and is GDPR compliant by default. As no personal data is collected, no cookie consent is required unlike Google Analytics. 
+Simple Analytics does not collect any personal data and is GDPR compliant by default. As no personal data is collected, no cookie consent is required unlike Google Analytics.
 
 No analytics will be used for ads or marketing.
 

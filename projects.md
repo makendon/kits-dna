@@ -4,23 +4,19 @@ title: Projects
 permalink: /projects/
 ---
 
-> :memo: **Note:** These are all ideas for **personal** projects to help develop my technology skills.
+> :memo: **Note:** These are ideas for **personal** projects to develop my technology skills.
   
 ## :man: Personal Website
 
 For my first *personal* foray into technology, why not start with a personal website. This site is open source, you can view the code at [kits-dna](https://github.com/makendon/kits-dna). The repository name was inspired by [crisp-dna](https://dna.crisp.se/docs/index.html), but is an insight into *my* inner workings rather than a consulting company.
 
-### :information_source: Quick Info
+My site is hosted on GitHub Pages and built using **Jekyll**. The theme is **Minima**, with some custom `HTML` and `CSS`. I built the site entirely on my iPad Pro using **GitHub Codespaces**.
 
-My site is hosted on GitHub Pages and built using **Jekyll**. The theme is `minima`, with some custom `HTML` and `CSS`. I built the site entirely on my iPad Pro using **GitHub Codespaces**.
-
-I created the homepage image myself by drawing [**bikablo**](https://bikablo.com/en/home-page/) style visuals. I'm terrible at drawing but I'm pleased how well they turned out. The Apple **Freeform** app helped me out by smoothing some lines. Hopefully product people will recognise what the visuals represent.
-
-I used **Canva** to create my website logo, simple to do using a template, I just changed the colours to my two core site colours which are british racing green and lava.
+I created the homepage image myself by drawing [**bikablo**](https://bikablo.com/en/home-page/) style visuals. I'm terrible at drawing but I'm pleased how well they turned out. The Apple **Freeform** app helped me out by smoothing some lines. Hopefully product people will recognise what the visuals represent. The site logo is AI generated using **DALL.E**.
 
 Check out my [blog]({{ '/blog/' | relative_url }}) for more on building `kits-dna` if you're interested.
 
-Building the site got me started with markup code, and a wee bit of design. Learning a programming language is next up.
+Building the site got me started with markup code, and design. Learning a programming language is next up.
 
 ## :cat: Scratch Project
 
@@ -43,3 +39,4 @@ Increasing the ambition level a bit now. I’ve got an idea for a *product*. Bei
 - GitHub
 - Git
 - Jekyll
+- ChatGPT
