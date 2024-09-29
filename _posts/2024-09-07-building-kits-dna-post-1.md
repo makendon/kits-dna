@@ -47,7 +47,7 @@ To get started with Jekyll, I’d recommend initialising a git repository locall
 
 In upcoming posts on building `kits-dna` I’ll cover:
 
-- How to use an iPad or tablet to create a website
+- How to use an iPad or tablet to create a website1
 - How to customise the appearance of your site
 - Build Gotcha's on GitHub Pages
 - How to make your site look good on mobile

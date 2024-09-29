@@ -120,6 +120,11 @@ header img {
     /*border: 1px solid $grey-color-light;
     border-radius: 1px;*/
     text-align: left;
+    background-color: #f7f7f7;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #080808;
+    }
 
     label[for="nav-trigger"] {
       display: block;
@@ -142,17 +147,31 @@ header img {
         fill: #004225;
         padding-top: 5px;
         height: 28px;
+
+        @media (prefers-color-scheme: dark) {
+          fill: #ffff00;
+        }
       }
     }
 
     input ~ .trigger {
       clear: both;
       display: none;
+      background-color: #f7f7f7;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #080808;
+      }
     }
 
     input:checked ~ .trigger {
       display: block;
       padding-bottom: 5px;
+      background-color: #f7f7f7;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #080808;
+      }
     }
 
     .page-link {
