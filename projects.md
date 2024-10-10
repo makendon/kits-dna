@@ -20,7 +20,9 @@ Building the site got me started with markup code, and design. Learning a progra
 
 ## :cat: Scratch Project
 
-Why not start learning programming like a kid. [**Scratch**](https://scratch.mit.edu/) is an MIT project to help kids get into programming by using a fun graphical approach. Scratch is available online and also comes installed on `Raspberry Pi OS`. My plan is to build a small game or animation.
+Why not start learning programming like a kid. [**Scratch**](https://scratch.mit.edu/) is an MIT project to help kids get into programming by using a fun graphical approach. Scratch is available online and also comes installed on `Raspberry Pi OS`.
+
+Check out my [**Scratch**]({{ '/scratch/' | relative_url }}) projects.
 
 ## :pound: Price Scraper
 
