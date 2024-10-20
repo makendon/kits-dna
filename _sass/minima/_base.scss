@@ -100,7 +100,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-weight: 500;
 }
 
 
@@ -186,8 +186,8 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: $grey-color-light; /*eef*/
-  color: $brand-color
+  background-color: $grey-color-light; // #eef
+  color: $brand-color;
 }
 
 code {
