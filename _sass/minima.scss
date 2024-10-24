@@ -16,7 +16,8 @@ $background-color: white !default; // #f7f7f7 is grey
 $brand-color:      #CF1020 !default; // #2a7ae2 is original blue color
 
 $grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-light: lighten($grey-color, 30%) !default;
+$grey-color-v-light: lighten($grey-color, 45%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
 $table-text-align: left !default;

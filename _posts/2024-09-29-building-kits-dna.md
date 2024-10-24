@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building my personal website... kits-dna
+title: Building My Personal Website... kits-dna
 date: 2024-09-29
 categories: kits-dna
 ---
@@ -45,11 +45,14 @@ To get started with Jekyll, I’d recommend initialising a git repository locall
 
 ## Next
 
-In upcoming posts on building `kits-dna` I’ll cover:
+I'm planning a 10 post series on building `kits-dna` which will cover the following topics:
 
-- How to use an iPad or tablet to create a website
-- How to customise the appearance of your site
+- How to Use an iPad or Tablet to Create a Website
+- How to Get Started
+- How to Customise the Appearance of Your Jekyll Website
 - Build Gotcha's on GitHub Pages
-- How to make your site look good on mobile
-- How to add (Simple) Analytics
-- How to add a Favicon
+- How to Make Your Website Look Good on Mobile
+- How to Add (Simple) Analytics
+- How to Add a Favicon
+- How to Add a Custom Domain (Squarespace)
+- Bringing it All Together
