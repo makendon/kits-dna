@@ -6,8 +6,16 @@
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
-    background: $grey-color-light; // #eef
+    background: $grey-color-v-light; // #eef
   }
+
+  /* Dark mode highlighter using media query */
+@media (prefers-color-scheme: dark) {  
+  .highlighter-rouge & {    
+    background: $grey-color-dark;
+    border-color: $grey-color-dark;
+  }
+} 
 
   .c     { color: #998; font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error
