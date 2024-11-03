@@ -21,7 +21,7 @@ $brand-color-dark: #f24553;
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 30%) !default;
 $grey-color-v-light: lighten($grey-color, 45%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color-dark:  #1c1c1c; // darken($grey-color, 25%) !default;
 
 $table-text-align: left !default;
 
