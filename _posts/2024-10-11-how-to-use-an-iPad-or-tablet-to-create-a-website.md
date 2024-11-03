@@ -4,8 +4,8 @@ title: How to Use an iPad or Tablet to Create a Website
 date: 2024-10-11
 categories: kits-dna
 ---
-This is the 2nd post in the **Building kits-dna** series.
-Most development that I’ve experienced still happens locally - on a devs laptop - before their work is pushed to a central source code management tool such as GitHub, GitLab etc.
+*This is the 2nd post in the **Building kits-dna** series.*
+Most development that I’ve experienced still happens locally - on a devs laptop - before their work is pushed to a central source code management tool such as GitHub, GitLab etc. But do we *need* a laptop?
 
 I have an old laptop and a slow Raspberry Pi 4, but I do have a newer iPad Pro, so I investigated if there was a way to develop locally using an IDE (Integrated Development Environment) using my iPad. There are a few hacks in this space such as using the iPad to remote onto the Pi or using Working Copy, but native IDE’s aren’t available on iOS.
 

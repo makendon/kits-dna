@@ -6,8 +6,16 @@
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
-    background: $grey-color-light; // #eef
+    background: $grey-color-v-light; // #eef
   }
+
+  /* Dark mode highlighter using media query */
+@media (prefers-color-scheme: dark) {  
+  .highlighter-rouge & {    
+    background: $grey-color-dark;
+    border-color: $grey-color-dark;
+  }
+} 
 
   .c     { color: #998; font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error
@@ -44,7 +52,7 @@
   .ne    { color: #900; font-weight: bold } // Name.Exception
   .nf    { color: #900; font-weight: bold } // Name.Function
   .nn    { color: #555 } // Name.Namespace
-  .nt    { color: #000080 } // Name.Tag
+  .nt    { color: #2a7ae2 } // Name.Tag 000080
   .nv    { color: #008080 } // Name.Variable
   .ow    { font-weight: bold } // Operator.Word
   .w     { color: #bbb } // Text.Whitespace

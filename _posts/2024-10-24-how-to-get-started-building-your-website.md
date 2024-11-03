@@ -1,11 +1,11 @@
 ---
 layout: post
-title: How to Get Started
+title: How to Get Started Building Your Website
 date: 2024-10-24
 categories: kits-dna
 ---
-This is the 3rd post in the **Building kits-dna** series.
-In posts 1 and 2 of the building kits-dna series I’ve focussed primarily on the technology. But how can *you* “Get Started” building your own personal website.
+*This is the 3rd post in the **Building kits-dna** series.*
+In posts 1 and 2 of the building kits-dna series I’ve focussed primarily on the technology. But how can *you* “Get Started” building your own personal website?
 
 > :bulb: **Tip:** I recommend reading posts 1 and 2 so that you’ve got some background before going further. If you’re technically confident, jump straight in!
 
@@ -90,7 +90,7 @@ There's a couple of ways that Github Pages can be enabled for a repository:
     5. Under *Branch*, select the **branch** this would usually be *main*, *master* or *gh-pages*
     6. Open up a browser and go to https:repositoryname.github.io
 
-> :hand: **Help:** Visit [GitHub Pages](https://pages.github.com/) for a quick overview. For further help see GitHub's extensive Pages [documentation](https://docs.github.com/en/pages)
+> :hand: **Help:** Visit [GitHub Pages](https://pages.github.com/) for a quick overview. For further help see GitHub's extensive Pages [documentation](https://docs.github.com/en/pages).
 
 ### Removing Your Website from the Internet
 

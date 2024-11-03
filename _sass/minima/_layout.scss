@@ -108,7 +108,7 @@ header img {
   /* Dark mode page link (header) using media query */
 @media (prefers-color-scheme: dark) {
   .page-link {
-    color:#fcfcfc;
+    color: $text-color-dark;
   }
 }
 
@@ -280,7 +280,7 @@ header img {
 /* Dark mode .homepage */
 @media (prefers-color-scheme: dark) {
   .homepage {
-    color: #fcfcfc;
+    color: $text-color-dark;
   }
 }
 
