@@ -271,6 +271,7 @@ header img {
 /* Homepage */
 .homepage {
   color: #004225;
+  background-color: $background-color;
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
@@ -281,6 +282,7 @@ header img {
 @media (prefers-color-scheme: dark) {
   .homepage {
     color: $text-color-dark;
+    background-color: $background-color-dark;
   }
 }
 
@@ -629,4 +631,12 @@ footer {
       @include relative-font-size(1.125);
     }
   }
+}
+
+/* Blog RSS */
+.blog-rss ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }

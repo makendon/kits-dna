@@ -4,11 +4,15 @@ title: Projects
 permalink: /projects/
 ---
 
-> :memo: **Note:** These are ideas for **personal** projects to develop my technology skills.
+> :bulb: *These are ideas for **personal** projects to develop my technology skills*
   
 ## :man: Personal Website
 
 For my first *personal* foray into technology, why not start with a personal website. This site is open source, you can view the code at [kits-dna](https://github.com/makendon/kits-dna). The repository name was inspired by [crisp-dna](https://dna.crisp.se/docs/index.html), but is an insight into *my* inner workings rather than a consulting company.
+
+I'm going to use the sites blog to start writing my thoughts. *Thinking* and *writing* are two crucial non-technical skills that I want to grow with this project :thought_balloon:
+
+### Building kits-dna
 
 My site is hosted on GitHub Pages and built using **Jekyll**. The theme is **Minima**, with some custom `HTML` and `CSS`. I built the site entirely on my iPad Pro using **GitHub Codespaces**.
 
@@ -28,7 +32,7 @@ Check out my [Scratch]({{ '/scratch/' | relative_url }}) projects.
 
 Next step is learning a *text* based programming language. I’m planning to follow [Replit’s 100 days of code](https://replit.com/learn/100-days-of-python) course to learn `python`. On day 100 you build a product price scraper. Not sure what product/s I’ll scrape but this course should be a good introduction to programming.
 
-> "Everybody in this country should learn how to programme a computer, because it teaches you how to think" - Steve Jobs
+> *"Everybody in this country should learn how to programme a computer, because it teaches you how to think" - Steve Jobs*
 
 ## :gift: Product
 

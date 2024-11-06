@@ -43,6 +43,6 @@ Read my [blog]({{ '/blog/' | relative_url }}) for thoughts on:
 
 :video_game: I mainly play sport games, not played much since becoming a Dad and spending more spare time on tech projects.
 
-## :call_me_hand: Hang Loose and Take Care
-
-> :eyeglasses: **_Views are my own_**
+> :call_me_hand: Hang Loose and Take Care
+>
+> :eyeglasses: *Thoughts and views expressed are my **own***
