@@ -4,6 +4,9 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
+
+    <meta name="fediverse:creator" content="@makendon@mastodon.social">
+
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
 
     <br>
@@ -31,4 +34,5 @@ layout: default
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
 </article>
