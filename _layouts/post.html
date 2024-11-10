@@ -23,6 +23,9 @@ layout: default
       <p>Written by</p>
       <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ site.author }}</span></span>
       {%- endif -%}</p>
+
+      <p>|{% include reading-time.html %}</p>
+
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
