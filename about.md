@@ -27,21 +27,24 @@ Value in the public sector isn't if someone would buy or choose to use your prod
 
 Read my [blog]({{ '/blog/' | relative_url }}) for thoughts on:
 
+- Building a personal website
 - My [projects]({{ '/projects/' | relative_url }})
 - Product management
   - Internal
   - Public sector
-- Random stuff
+- Technology
+
+> :thinking: The purpose of my blog is to write my thoughts. Pretty simple, but both are critical skills. If it can help me engage interests, be more creative and learn new skills then I'll be happy. In the future who knows I might start a focussed blog or newsletter.
 
 ## :mirror_ball: Fun
 
-:soccer: Newcastle United fan! :raising_hand_man: was a hero of mine growing up.
+:soccer: Newcastle United! :raising_hand_man: was a hero of mine growing up.
 
-:golf: I don't play or practice enough but there's something about the challenge of improving that i love - tough game.
+:golf: I don't play or practice enough but there's something about the challenge of improving that I love.
 
-:ski: Started skiing at 6 years old in Canada, and have since skied in Switzerland, Norway, France and Italy.
+:ski: Started skiing at 6 years old in Canada, also skied in Switzerland, Norway, France and Italy.
 
-:video_game: I mainly play sport games, not played much since becoming a Dad and spending more spare time on tech projects.
+:video_game: I mainly play sport games, not played much since becoming a Dad and spending spare time on tech projects.
 
 > :call_me_hand: Hang Loose and Take Care
 >
