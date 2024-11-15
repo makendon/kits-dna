@@ -16,15 +16,17 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
+
       {%- if site.author -%}
 
       <br>
       
+      <div class="post-meta">
       <p>Written by</p>
       <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ site.author }}</span></span>
       {%- endif -%}</p>
-
       <p>|{% include reading-time.html %}</p>
+      </div>
 
   </header>
 
