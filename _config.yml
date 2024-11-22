@@ -3,11 +3,11 @@ title: Kit France
 repository: makendon/kits-dna
 email:
 description:
-tagline: Aloha # SEO field
+tagline: Product # SEO field
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kitfrance.com" # the base hostname & protocol for your site, e.g. http://example.com
 author: Kit France # Global author to replace need for front matter
-logo: /assets/images/C.jpeg/ # SEO field
+logo: /assets/images/Hawaii-Logo.png/ # SEO field
 
 # Social links
 linkedin_username: kit-france-a1a3b874
@@ -17,9 +17,6 @@ rss: rss
 mastodon:
  - username: makendon
    instance: mastodon.social
-
-# Google Analyics
-google_analytics:
 
 # GitHub link settings
 github:
