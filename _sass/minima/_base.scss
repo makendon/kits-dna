@@ -101,9 +101,15 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
+  color: #004225;
 }
 
-
+/* Dark mode headings using media query */
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-color-dark;
+  }
+}
 
 /**
  * Links
@@ -290,7 +296,7 @@ table {
   border: 1px solid $grey-color-light;
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: ($grey-color-v-light);
     }
   }
   th, td {
@@ -303,5 +309,26 @@ table {
   }
   td {
     border: 1px solid $grey-color-light;
+  }
+}
+
+/* Dark mode tables using media query */
+@media (prefers-color-scheme: dark) {
+  table {
+    color: lighten($text-color-dark, 18%);
+    border: 1px solid $grey-color-dark;
+    tr {
+      &:nth-child(even) {
+        background-color: $grey-color-dark;
+      }
+    }
+    th {
+      background-color: lighten($grey-color-dark, 3%);
+      border: 1px solid darken($grey-color-dark, 4%);
+      border-bottom-color: darken($grey-color-dark, 12%);
+    }
+    td {
+      border: 1px solid $grey-color-dark;;
+    }
   }
 }
