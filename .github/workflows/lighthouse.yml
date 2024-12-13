@@ -1,4 +1,4 @@
-name: CI
+name: Lighthouse CI
 on: [push]
 jobs:
   lhci:
@@ -10,6 +10,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+      - name: Install Jekyll and Bundler
+        run: gem install jekyll bundler
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.14.x
