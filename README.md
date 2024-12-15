@@ -18,26 +18,32 @@ See the .devcontainer directory in this repo with pre-installed dependencies.
 
 ### Clone Repo
 
-```
+```git
 git clone https://github.com/makendon/kits-dna.git
-cd kits-dna
 ```
 
 ### Jekyll
 
 Jekyll builds the site locally and is also used by GitHub Pages.
 
-- Install dependencies. Jekyll [pre-requisites](https://jekyllrb.com/docs/installation/) can help for different operating systems
+- Install Ruby. Jekyll [pre-requisites](https://jekyllrb.com/docs/installation/) can help for different operating systems
 
-- Install Jekyll and bundler gems
+- Install Jekyll
 
+```ruby
+gem install jekyll
 ```
+
+- Install bundler gems
+
+```ruby
 gem install jekyll bundler
 ```
 
 - Install the gem dependencies and update
 
-```
+```ruby
+cd kits-dna
 bundle install && bundle update
 ```
 
@@ -45,7 +51,7 @@ bundle install && bundle update
 
 - Run local server
 
-```
+```ruby
 bundle exec jekyll serve
 ```
 
