@@ -18,7 +18,7 @@ See the .devcontainer directory in this repo with pre-installed dependencies.
 
 ### Clone Repo
 
-```ruby
+```git
 git clone https://github.com/makendon/kits-dna.git
 ```
 
