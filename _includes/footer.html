@@ -1,16 +1,9 @@
 <footer>
     <div class="footer-container">
-      <!-- General Info Column -->
-      <div class="footer-column">
-        <h5>:information_source: Information</h5>
-        <p><a target="_blank" href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is made with :heart: by <a target="_blank" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
-        <p><a href="{{ "/privacy/" | relative_url }}">Privacy</a>&emsp;|&emsp;<a href="{{ "/accessibility/" | relative_url }}">Accessibility</a></p>
-        <p>Copyright © 2024 Kit France</p>
-      </div>
-  
+      
       <!-- Navigation Links Column -->
       <div class="footer-column">
-        <h5>:compass: Navigation</h5>
+        <span class="footer-heading">Navigation</span>
         <ul>
           <li><a href="{{ "/" | relative_url }}">Home</a></li>
           <li><a href="{{ "/about/" | relative_url }}">About Me</a></li>
@@ -18,13 +11,35 @@
           <li><a href="{{ "/blog/" | relative_url }}">Blog</a></li>
         </ul>
       </div>
-  
+
       <!-- Social Links Column -->
       <div class="footer-column">
-        <h5>:call_me_hand: Contact</h5>
+        <span class="footer-heading">Contact</span>
         {%- include social.html -%}
         <ul class="social-links">
           <li><a href="{{ "/contact/" | relative_url }}">Contact Me</a></li>
+        </ul>
+      </div>
+
+      <!-- Tech Column -->
+      <div class="footer-column">
+       <span class="footer-heading">Tech</span>
+       <p><a target="_blank" href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is made with :heart: by <a target="_blank" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> and powered by <a target="_blank" href="https://jekyllrb.com"">Jekyll</a> and <a target="_blank" href="https://pages.github.com"">GitHub Pages</a></p>
       </div>
     </div>
-  </footer>
+
+    <!-- Extras -->
+    <hr class="footer-divider">
+    <div class="footer-container">
+      
+      <!-- Copyright Column -->
+      <div class="footer-column">
+       <p>Copyright © 2024 Kit France</p>
+      </div>
+
+      <!-- Links Column -->
+      <div class="footer-column">
+        <p><a href="{{ "/privacy/" | relative_url }}">Privacy</a>&emsp;|&emsp;<a href="{{ "/accessibility/" | relative_url }}">Accessibility</a></p>
+      </div>
+    </div>
+</footer>
