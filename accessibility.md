@@ -5,9 +5,13 @@ permalink: /accessibility/
 ---
 I want as many people as possible to be able to use this website, however be aware that parts will not be fully accessible.
 
-No accessibility *testing* except the checks below have been conducted. If the websites accessibility can be improved please [contact me]({{ "/contact/" | relative_url }}) or open an issue on [kits-dna](https://github.com/makendon/kits-dna/issues).
+If the sites accessibility can be improved please [contact me]({{ "/contact/" | relative_url }}) or open an issue on [kits-dna](https://github.com/makendon/kits-dna/issues).
 
 The following steps have been taken to make this website accessible:
+
+## Google Lighthouse
+
+This website is tested with [Lighthouse](https://developer.chrome.com/docs/lighthouse). A GitHub Actions workflow runs on each `git push` and outputs the results. Lighthouse includes an [Accessibility audit](https://developer.chrome.com/docs/lighthouse/accessibility/scoring), which I'll use to improve the sites accessibility.
 
 ## Images
 
