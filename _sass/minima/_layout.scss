@@ -136,6 +136,7 @@ header img {
       clear: both;
       display: none;
       background-color: #f7f7f7;
+      text-align: center;
 
       @media (prefers-color-scheme: dark) {
         background-color: #080808;
@@ -144,12 +145,18 @@ header img {
 
     input:checked ~ .trigger {
       display: block;
-      padding-bottom: 5px;
+      padding-bottom: 1px;
       background-color: #f7f7f7;
 
       @media (prefers-color-scheme: dark) {
         background-color: #080808;
       }
+    }
+
+    .icon-link {
+      display: block;
+      margin-top: -15px;
+      margin-bottom: -10px;
     }
 
     .page-link {
@@ -465,4 +472,71 @@ footer {
   padding: 0;
   margin: 0;
   text-align: left;
+}
+
+/* Search */
+
+/* Styles for the search box */
+#search input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: $base-font-size;
+}
+
+#search button {
+  background-color: #004225;
+  color: $text-color-dark;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: $small-font-size;
+  cursor: pointer;
+}
+
+#search button:hover {
+  background-color: #004225;
+}
+
+/* Additional styles for the search container
+#search {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+} */
+
+/* Dark mode search */
+
+/* Styles for the search box */
+@media (prefers-color-scheme: dark) {
+  #search input {
+    border: 1px solid #fcfcfc;
+  }
+
+  #search button {
+    background-color: yellow;
+    color: $text-color;
+  }
+
+  #search button:hover {
+    background-color: yellow;
+  }
+}
+
+/* Change the color of the Font Awesome search icon */
+.icon-link .fa-search {
+  color: #004225;
+}
+
+/* Dark mode search link */
+@media (prefers-color-scheme: dark) {
+  .icon-link .fa-search {
+    color: $text-color-dark;
+  }
 }

@@ -26,8 +26,17 @@
                  <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
                  {%- endif -%}
                {%- endfor -%}
+               <!-- Using an icon as a link (example with Font Awesome) -->
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+               <a class="icon-link" href="{{ "/search/" | relative_url }}" title="Search Page"><i class="fas fa-search"></i></a>
              </div>
            </nav>
          {%- endif -%}
        </div>
+
+       <!--<div class="search-links">
+         Using an emoji as a link
+        &nbsp;<a class="emoji-link" href="{{ "/search/" | relative_url }}" title="Search Page">🔍</a>
+       </div>-->
+
      </header>
