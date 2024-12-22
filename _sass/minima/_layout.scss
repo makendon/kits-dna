@@ -15,13 +15,6 @@
   font-weight: 400;
 }
 
-/* Dark mode site header using media query */
-@media (prefers-color-scheme: dark) {
-  .site-header {
-    background-color: #080808;
-  }
-}
-
 header * {
   display: inline;
 }
@@ -85,24 +78,12 @@ header img {
     }
   }
 
-  /* Dark mode page link (header) using media query */
-  @media (prefers-color-scheme: dark) {
-    .page-link {
-      color: $text-color-dark;
-    }
-  }
-
   @include media-query($on-palm) {
     position: absolute;
     top: 1px;
     right: $spacing-unit / 2;
-    background-color: #f7f7f7;
     text-align: left;
     background-color: #f7f7f7;
-
-    @media (prefers-color-scheme: dark) {
-      background-color: #080808;
-    }
 
     label[for="nav-trigger"] {
       display: block;
@@ -125,10 +106,6 @@ header img {
         fill: #004225;
         padding-top: 5px;
         height: 28px;
-
-        @media (prefers-color-scheme: dark) {
-          fill: #ffff00;
-        }
       }
     }
 
@@ -137,26 +114,25 @@ header img {
       display: none;
       background-color: #f7f7f7;
       text-align: center;
-
-      @media (prefers-color-scheme: dark) {
-        background-color: #080808;
-      }
     }
 
     input:checked ~ .trigger {
       display: block;
       padding-bottom: 1px;
       background-color: #f7f7f7;
-
-      @media (prefers-color-scheme: dark) {
-        background-color: #080808;
-      }
+      text-align: center;
     }
 
     .icon-link {
       display: block;
       margin-top: -15px;
       margin-bottom: -10px;
+    }
+
+    .dark-mode-toggle {
+      display: flex;
+      padding-left: 20px;
+      padding-bottom: 10px;
     }
 
     .page-link {
@@ -206,27 +182,6 @@ header img {
   border-color: black;
 }
 
-/* Dark mode hero button */
-@media (prefers-color-scheme: dark) {
-  .btn {
-    border: 3px solid #fcfcfc;
-    background-color: yellow;
-    border-color: yellow;
-  }
-  
-  .btn a {
-    color: #004225;
-    text-decoration: none;
-  }
-  
-  .btn:hover { 
-    color: #004225;
-    text-decoration: underline;
-    background-color: #fcfcfc; 
-    border-color: #fcfcfc;
-  }
-}
-
 /* Homepage */
 .homepage {
   color: #004225;
@@ -235,14 +190,6 @@ header img {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-}
-
-/* Dark mode .homepage */
-@media (prefers-color-scheme: dark) {
-  .homepage {
-    color: $text-color-dark;
-    background-color: $background-color-dark;
-  }
 }
 
 /* Default font sizes for larger screens */
@@ -274,14 +221,6 @@ header img {
   height: auto;
   object-fit: cover;
   display: inline-block;
-}
-
-/* Dark mode homepage image */
-@media (prefers-color-scheme: dark) {
-  #homeImage {
-      content: url('/assets/images/productdoodles4.jpeg');
-      padding-bottom: 1em;
-  }
 }
 
 /**
@@ -511,32 +450,33 @@ footer {
   border-radius: 4px;
 } */
 
-/* Dark mode search */
-
-/* Styles for the search box */
-@media (prefers-color-scheme: dark) {
-  #search input {
-    border: 1px solid #fcfcfc;
-  }
-
-  #search button {
-    background-color: yellow;
-    color: $text-color;
-  }
-
-  #search button:hover {
-    background-color: yellow;
-  }
-}
-
 /* Change the color of the Font Awesome search icon */
 .icon-link .fa-search {
   color: #004225;
+  font-size: 1rem;
 }
 
-/* Dark mode search link */
-@media (prefers-color-scheme: dark) {
-  .icon-link .fa-search {
-    color: $text-color-dark;
+/* Style for the dark mode toggle icon */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: grey;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+
+  &:hover {
+    transform: rotate(15deg);
+    color: grey
+  }
+
+  .light-icon {
+    display: none;  // Hide sun by default (light mode)
+  }
+  
+  .dark-icon {
+    display: inline-block;  // Show moon by default (light mode)
   }
 }

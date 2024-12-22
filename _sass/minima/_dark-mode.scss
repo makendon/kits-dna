@@ -1,0 +1,291 @@
+/* Dark mode SCSS from _base and _layout */
+
+/* Remove or comment out all @media (prefers-color-scheme: dark) queries */
+/* Replace with a single system dark mode check that can be overridden */
+
+html[data-theme="system"] {
+  @media (prefers-color-scheme: dark) {
+    /* Your dark mode styles here */
+    body {
+      color: $text-color-dark;
+      background-color: $background-color-dark;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: $text-color-dark;
+    }
+    a {
+      color: $brand-color-dark;
+      text-decoration: none;
+    
+      &:visited {
+        color: darken($brand-color-dark, 15%);
+      }
+    
+      &:hover {
+        color: $brand-color-dark;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 1px;
+      }
+    
+      .social-media-list &:hover {
+        text-decoration: none;
+    
+        .username {
+          text-decoration: underline;
+        }
+      }
+    }
+    blockquote {
+      background-color: $grey-color-dark;
+      color: $grey-color-light;
+    }
+    code {    
+      background-color: $grey-color-dark;
+      color: $text-color-dark;
+      border: 1px solid $grey-color-dark;
+    }
+    .highlight {
+        background: $grey-color-dark;
+        border-color: $grey-color-dark;
+        
+        .highlighter-rouge & {
+          background: $grey-color-dark;
+          border-color: $grey-color-dark;
+        }
+    }
+    table {
+      color: lighten($text-color-dark, 18%);
+      border: 1px solid $grey-color-dark;
+      tr {
+        &:nth-child(even) {
+          background-color: $grey-color-dark;
+        }
+      }
+      th {
+        background-color: lighten($grey-color-dark, 3%);
+        border: 1px solid darken($grey-color-dark, 4%);
+        border-bottom-color: darken($grey-color-dark, 12%);
+      }
+      td {
+        border: 1px solid $grey-color-dark;;
+      }
+    }
+    .site-header {
+      background-color: #080808;
+    }
+    .site-nav {
+      .page-link {
+        color: $text-color-dark;
+      }
+      
+      .menu-icon > svg {
+        fill: #ffff00;
+      }
+      
+      @include media-query($on-palm) {
+        background-color: #080808;
+        
+        input ~ .trigger,
+        input:checked ~ .trigger {
+          clear: both;
+          background-color: #080808;
+        }
+      }
+    }
+    .btn {
+      border: 3px solid #fcfcfc;
+      background-color: yellow;
+      border-color: yellow;
+    }
+    .btn a {
+      color: #004225;
+      text-decoration: none;
+    }
+    .btn:hover { 
+      color: #004225;
+      text-decoration: underline;
+      background-color: #fcfcfc; 
+      border-color: #fcfcfc;
+    }
+    .homepage {
+      color: $text-color-dark;
+      background-color: $background-color-dark;
+    }
+    #homeImage {
+      content: url('/assets/images/productdoodles4.jpeg');
+      padding-bottom: 1em;
+    }
+    .footer-column a {
+      color: #fcfcfc;
+    }
+    #search input {
+      border: 1px solid #fcfcfc;
+    }
+    #search button {
+      background-color: yellow;
+      color: $text-color;
+    }
+    #search button:hover {
+      background-color: yellow;
+    }
+    .icon-link .fa-search {
+      color: $text-color-dark;
+    }
+    .dark-mode-toggle {
+      color: yellow;
+      
+      .light-icon {
+        display: inline-block;  // Show sun in dark mode
+      }
+      
+      .dark-icon {
+        display: none;  // Hide moon in dark mode
+      }
+    }
+  }
+}
+
+/* Manual dark mode - higher specificity to override system preference */
+html[data-theme="dark"] body,
+body.dark-mode {
+  color: $text-color-dark;
+  background-color: $background-color-dark;
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-color-dark;
+  }
+  a {
+    color: $brand-color-dark;
+    text-decoration: none;
+  
+    &:visited {
+      color: darken($brand-color-dark, 15%);
+    }
+  
+    &:hover {
+      color: $brand-color-dark;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 1px;
+    }
+  
+    .social-media-list &:hover {
+      text-decoration: none;
+  
+      .username {
+        text-decoration: underline;
+      }
+    }
+  }
+  blockquote {
+    background-color: $grey-color-dark;
+    color: $grey-color-light;
+  }
+  code {    
+    background-color: $grey-color-dark;
+    color: $text-color-dark;
+    border: 1px solid $grey-color-dark;
+  }
+  .highlight {
+    background: $grey-color-dark;
+    border-color: $grey-color-dark;
+    
+    .highlighter-rouge & {
+      background: $grey-color-dark;
+      border-color: $grey-color-dark;
+    }
+  }
+  table {
+    color: lighten($text-color-dark, 18%);
+    border: 1px solid $grey-color-dark;
+    tr {
+      &:nth-child(even) {
+        background-color: $grey-color-dark;
+      }
+    }
+    th {
+      background-color: lighten($grey-color-dark, 3%);
+      border: 1px solid darken($grey-color-dark, 4%);
+      border-bottom-color: darken($grey-color-dark, 12%);
+    }
+    td {
+      border: 1px solid $grey-color-dark;;
+    }
+  }
+  .site-header {
+    background-color: #080808;
+  }
+  .site-nav {
+    .page-link {
+      color: $text-color-dark;
+    }
+    
+    .menu-icon > svg {
+      fill: #ffff00;
+    }
+    
+    @include media-query($on-palm) {
+      background-color: #080808;
+      
+      input ~ .trigger,
+      input:checked ~ .trigger {
+        clear: both;
+        background-color: #080808;
+      }
+    }
+  }
+  .btn {
+    border: 3px solid #fcfcfc;
+    background-color: yellow;
+    border-color: yellow;
+  }
+  .btn a {
+    color: #004225;
+    text-decoration: none;
+  }
+  .btn:hover { 
+    color: #004225;
+    text-decoration: underline;
+    background-color: #fcfcfc; 
+    border-color: #fcfcfc;
+  }
+  .homepage {
+    color: $text-color-dark;
+    background-color: $background-color-dark;
+  }
+  #homeImage {
+    content: url('/assets/images/productdoodles4.jpeg');
+    padding-bottom: 1em;
+  }
+  .footer-column a {
+    color: #fcfcfc;
+  }
+  #search input {
+    border: 1px solid #fcfcfc;
+  }
+  #search button {
+    background-color: yellow;
+    color: $text-color;
+  }
+  #search button:hover {
+    background-color: yellow;
+  }
+  .icon-link .fa-search {
+    color: $text-color-dark;
+  }
+  .dark-mode-toggle {
+    color: yellow;
+
+    &:hover {
+      color: yellow;
+    }
+    
+    .light-icon {
+      display: inline-block;  // Show sun in dark mode
+    }
+    
+    .dark-icon {
+      display: none;  // Hide moon in dark mode
+    }
+  }
+}

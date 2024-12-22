@@ -28,14 +28,6 @@ body {
   padding-top: 10px;
 }
 
-/* Dark mode body using media query */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: $text-color-dark;
-    background-color: $background-color-dark;
-  }
-}
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -104,13 +96,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #004225;
 }
 
-/* Dark mode headings using media query */
-@media (prefers-color-scheme: dark) {
-  h1, h2, h3, h4, h5, h6 {
-    color: $text-color-dark;
-  }
-}
-
 /**
  * Links
  */
@@ -138,35 +123,6 @@ a {
   }
 }
 
-/* Dark mode links */
-@media (prefers-color-scheme: dark) {
-  a {
-    color: $brand-color-dark;
-    text-decoration: none;
-  
-    &:visited {
-      color: darken($brand-color-dark, 15%);
-    }
-  
-    &:hover {
-      color: $brand-color-dark;
-      text-decoration-line: underline;
-      text-decoration-style: solid;
-      text-decoration-thickness: 1px;
-    }
-  
-    .social-media-list &:hover {
-      text-decoration: none;
-  
-      .username {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-
-
 /**
  * Blockquotes
  */
@@ -183,14 +139,6 @@ blockquote {
 
   > :last-child {
     margin-bottom: 0;
-  }
-}
-
-/* Dark mode blockquotes using media query */
-@media (prefers-color-scheme: dark) {
-  blockquote {
-    background-color: $grey-color-dark;
-    color: $grey-color-light;
   }
 }
 
@@ -220,15 +168,6 @@ pre {
     padding-left: 0;
   }
 }
-
-/* Dark mode code using media query */
-@media (prefers-color-scheme: dark) {  
-  code {    
-    background-color: $grey-color-dark;
-    color: $text-color-dark;
-    border: 1px solid $grey-color-dark;
-  }
-}  
 
 /**
  * Wrapper
@@ -313,26 +252,5 @@ table {
   }
   td {
     border: 1px solid $grey-color-light;
-  }
-}
-
-/* Dark mode tables using media query */
-@media (prefers-color-scheme: dark) {
-  table {
-    color: lighten($text-color-dark, 18%);
-    border: 1px solid $grey-color-dark;
-    tr {
-      &:nth-child(even) {
-        background-color: $grey-color-dark;
-      }
-    }
-    th {
-      background-color: lighten($grey-color-dark, 3%);
-      border: 1px solid darken($grey-color-dark, 4%);
-      border-bottom-color: darken($grey-color-dark, 12%);
-    }
-    td {
-      border: 1px solid $grey-color-dark;;
-    }
   }
 }
