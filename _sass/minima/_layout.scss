@@ -1,148 +1,170 @@
-/**
- * Site header
- */
+/* Site header */
 .site-header {
-  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: $head-foot-color;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 2.22em;
+}
+
+.header-left {
+  flex: 1 1 33.33%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: medium;
-  font-weight: 400;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-left: 2rem;
 }
 
-header * {
-  display: inline;
+.site-logo {
+  height: 2.5rem;
+  width: auto;
 }
 
-header li {
-  margin: 20px;
+.nav-toggle {
+  display: none;
 }
 
-header img {
-  max-width: 100%;
-  height: 3em;
-  margin-right: 2em;
-}
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
 
-.header-col {
-  float: left;
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
-  padding-top: $spacing-unit / 2;
-}
-
-@include media-query($on-palm) {
-  .header-col {
-    float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+  span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #004225;
+    margin: 5px 0;
+    transition: 0.3s;
   }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background-color: $head-foot-color;
+}
+
+.header-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 33.33%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: $small-font-size;
+
+  a {
+  text-decoration: none;
+  color: #004225;
+  font-weight: 500;
+  transition: color 0.2s;
+  }
+
+  a:hover {
+    color: #004225;
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: #004225;
+  }
+}
+
+.header-right {
+  flex: 1 1 33.33%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-right: 2rem;
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
+  font-size: $base-font-size;
+  font-family: monospace;
 
-  &,
-  &:visited {
-    color: black;
+  a {
+    color: #004225;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #004225;
   }
 }
 
-.site-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
-
-  .nav-trigger {
-      display: none;
+@media (max-width: 768px) {
+  .header-center {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $head-foot-color;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-  .menu-icon {
+  .header-right {
+    margin-right: 6rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .site-title {
     display: none;
   }
 
-  .page-link {
-    color: #004225;
-    line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
+  .nav-toggle-label {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    z-index: 2;
   }
 
-  @include media-query($on-palm) {
+  .main-nav {
     position: absolute;
-    top: 1px;
-    right: $spacing-unit / 2;
-    text-align: left;
-    background-color: #f7f7f7;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    text-align: center;
+  }
 
-    label[for="nav-trigger"] {
-      display: block;
-      float: none;
-      width: 2em;
-      height: 2em;
-      z-index: 2;
-      cursor: pointer;
-    }
+  .nav-toggle:checked ~ .main-nav {
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
 
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 100%;
-      height: 2em;
-      line-height: 0;
-      text-align: center;
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
 
-      > svg {
-        fill: #004225;
-        padding-top: 5px;
-        height: 28px;
-      }
-    }
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
 
-    input ~ .trigger {
-      clear: both;
-      display: none;
-      background-color: #f7f7f7;
-      text-align: center;
-    }
-
-    input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 1px;
-      background-color: #f7f7f7;
-      text-align: center;
-    }
-
-    .icon-link {
-      display: block;
-      margin-top: -15px;
-      margin-bottom: -10px;
-    }
-
-    .dark-mode-toggle {
-      display: flex;
-      padding-left: 20px;
-      padding-bottom: 10px;
-    }
-
-    .page-link {
-      display: block;
-      padding: 0px 10px;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-    }
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
   }
 }
 
@@ -229,13 +251,15 @@ header img {
 
 /* Basic Footer Styles */
 footer {
-  background-color: #080808; /*080808*/
-  color: #fcfcfc;
+  background-color: $head-foot-color; /*080808*/
+  color: $head-foot-text-color; /*#e0e0e0*/
   padding: 20px 0;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .footer-heading {
-  color: #fcfcfc;
+  color: $head-foot-text-color;
   margin-bottom: 10px;
   font-weight: 600;
   text-align: center;
@@ -260,7 +284,7 @@ footer {
 
 .footer-column p,
 .footer-column a {
-  color: #fcfcfc;
+  color: $head-foot-text-color;
   text-decoration: none;
   font-size: small;
   text-align: center;
@@ -280,18 +304,18 @@ footer {
 .footer-column a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  color: #fcfcfc;
+  color: $head-foot-text-color;
 }
 
 .footer-divider {
   max-width: 800px;
-  border-top: 1px solid #fcfcfc;
+  border-top: 1px solid $head-foot-text-color;
   margin: 20px auto;
 }
 
 /* Social Links */
 .social-links a {
-  color: #fcfcfc;
+  color: $head-foot-text-color;
   font-size: small;
   text-align: center;
 }
@@ -305,10 +329,11 @@ footer {
   .footer-container {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 
   .footer-column {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 0;
     max-width: 100%;
   }
@@ -342,7 +367,8 @@ footer {
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  font-style: italic;
+  color: $text-color;
 }
 
 .post-link {
