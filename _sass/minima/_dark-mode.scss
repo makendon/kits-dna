@@ -72,26 +72,36 @@ html[data-theme="system"] {
       }
     }
     .site-header {
-      background-color: #080808;
+      background-color: $head-foot-color-dark;
+      color: $head-foot-text-color-dark;
     }
-    .site-nav {
-      .page-link {
-        color: $text-color-dark;
-      }
+    .site-title {
+      a {
+        color: $head-foot-text-color-dark;
       
-      .menu-icon > svg {
-        fill: #ffff00;
-      }
-      
-      @include media-query($on-palm) {
-        background-color: #080808;
-        
-        input ~ .trigger,
-        input:checked ~ .trigger {
-          clear: both;
-          background-color: #080808;
+        &:visited {
+        color: $head-foot-text-color-dark;
         }
       }
+    }
+    .nav-list {
+      a {
+      color: $head-foot-text-color-dark;
+      
+      &:hover,
+      &:visited {
+        color: $head-foot-text-color-dark;
+        }
+      }
+    }
+    .nav-toggle-label {
+      span {
+        background: $head-foot-text-color-dark;
+      }
+    }
+    .main-nav {
+      background-color: $head-foot-color-dark;
+      color: $head-foot-text-color-dark;
     }
     .btn {
       border: 3px solid #fcfcfc;
@@ -116,8 +126,20 @@ html[data-theme="system"] {
       content: url('/assets/images/productdoodles4.jpeg');
       padding-bottom: 1em;
     }
-    .footer-column a {
-      color: #fcfcfc;
+    footer {
+      background-color: $head-foot-color-dark;
+      color: $head-foot-text-color-dark;
+    }
+    .footer-heading {
+      color: $head-foot-text-color-dark;
+    }
+    .footer-column {
+      p, a {
+      color: $head-foot-text-color-dark;
+      }
+    }
+    .post-meta {
+      color: $text-color-dark;
     }
     #search input {
       border: 1px solid #fcfcfc;
@@ -213,26 +235,36 @@ body.dark-mode {
     }
   }
   .site-header {
-    background-color: #080808;
+    background-color: $head-foot-color-dark;
+    color: $head-foot-text-color-dark;
   }
-  .site-nav {
-    .page-link {
-      color: $text-color-dark;
-    }
+  .site-title {
+    a {
+      color: $head-foot-text-color-dark;
     
-    .menu-icon > svg {
-      fill: #ffff00;
-    }
-    
-    @include media-query($on-palm) {
-      background-color: #080808;
-      
-      input ~ .trigger,
-      input:checked ~ .trigger {
-        clear: both;
-        background-color: #080808;
+      &:visited {
+      color: $head-foot-text-color-dark;
       }
     }
+  }
+  .nav-list {
+    a {
+    color: $head-foot-text-color-dark;
+    
+    &:hover,
+    &:visited {
+      color: $head-foot-text-color-dark;
+      }
+    }
+  }
+  .nav-toggle-label {
+    span {
+      background: $head-foot-text-color-dark;
+    }
+  }
+  .main-nav {
+    background-color: $head-foot-color-dark;
+    color: $head-foot-text-color-dark;
   }
   .btn {
     border: 3px solid #fcfcfc;
@@ -257,11 +289,23 @@ body.dark-mode {
     content: url('/assets/images/productdoodles4.jpeg');
     padding-bottom: 1em;
   }
-  .footer-column a {
-    color: #fcfcfc;
+  footer {
+    background-color: $head-foot-color-dark;
+    color: $head-foot-text-color-dark;
+  }
+  .footer-heading {
+    color: $head-foot-text-color-dark;
+  }
+  .footer-column {
+    p, a {
+    color: $head-foot-text-color-dark;
+    }
+  }
+  .post-meta {
+    color: $text-color-dark;
   }
   #search input {
-    border: 1px solid #fcfcfc;
+    border: 1px solid $text-color-dark;
   }
   #search button {
     background-color: yellow;
