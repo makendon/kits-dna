@@ -1,2 +1,0 @@
-/*
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://github.com https://*.githubusercontent.com; style-src 'self' 'unsafe-inline' https://github.com https://*.githubusercontent.com; img-src 'self' data: https: https://github.com https://*.githubusercontent.com https://mastodon.social; font-src 'self'; connect-src 'self'; frame-src 'self' https://scratch.mit.edu; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests;
