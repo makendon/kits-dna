@@ -55,7 +55,3 @@ defaults:
 
 # Markdown
 markdown: GFM
-
-# Include in build
-include:
-  - _headers
