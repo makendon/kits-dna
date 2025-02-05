@@ -2,13 +2,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy-Report-Only" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-src 'self' https://scratch.mit.edu; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests;">
+    {%- if jekyll.environment == 'production' -%}
+    {%- include csp.html -%}
+    {%- endif -%}
     <link rel="icon" type="image/x-icon" href="{{ "/assets/favicons-emoji/favicon.ico" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
-    
     {%- feed_meta -%}
     {%- seo -%}
-
     {%- include custom-head.html -%}
-    
   </head>
