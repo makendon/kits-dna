@@ -1,0 +1,12 @@
+extends: substitution
+message: "This might sound discouraging—try a more inviting phrase: '%s'."
+ignorecase: true
+level: suggestion
+swap:
+  "it's difficult": "it takes some practice"
+  "this is complicated": "this has a few steps, but you'll get it"
+  "you must": "you can"
+  "you should already know": "if you're new, here's what you need to know"
+  "don't worry if you don't understand": "I'll explain it step by step!"
+  "just follow the steps": "let's go through this together"
+  "it's obvious that": "you might notice that"
