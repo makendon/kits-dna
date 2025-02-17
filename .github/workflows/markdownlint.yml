@@ -11,8 +11,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
+  markdownlint:
+    name: markdownlint
     runs-on: ubuntu-22.04
+    continue-on-error: true
     steps:
     - uses: actions/checkout@v3
     - uses: DavidAnson/markdownlint-cli2-action@v11

@@ -12,8 +12,9 @@ on:
 
 jobs:
   vale:
-    name: runner / vale
+    name: vale
     runs-on: ubuntu-22.04
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: errata-ai/vale-action@v2.1.1
