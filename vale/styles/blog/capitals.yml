@@ -1,0 +1,5 @@
+extends: capitalization
+message: "Use sentence-style capitalisation: only capitalise the first word (unless it's a name or brand)."
+level: warning
+scope: heading
+match: $sentence
