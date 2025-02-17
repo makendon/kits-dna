@@ -1,0 +1,18 @@
+name: Markdownlint CI
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - '**.md'
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - uses: DavidAnson/markdownlint-cli2-action@v11
