@@ -42,6 +42,8 @@ $on-laptop:        800px !default;
 //     padding-left: $spacing-unit / 2;
 //   }
 // }
+
+// Mixins
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
@@ -51,11 +53,3 @@ $on-laptop:        800px !default;
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
-
-// Import partials.
-@import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting",
-  "minima/dark-mode"
-;
