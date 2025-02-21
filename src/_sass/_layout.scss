@@ -1,10 +1,15 @@
+// Layout styles
+
+@use 'variables' as vars;
+@use 'mixins';
+
 /* Site header */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  background-color: $head-foot-color;
+  background-color: vars.$head-foot-color;
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +53,7 @@
 .main-nav {
   display: flex;
   justify-content: center;
-  background-color: $head-foot-color;
+  background-color: vars.$head-foot-color;
 }
 
 .header-center {
@@ -66,7 +71,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: $small-font-size;
+  font-size: vars.$small-font-size;
 
   a {
   text-decoration: none;
@@ -94,7 +99,7 @@
 }
 
 .site-title {
-  font-size: $base-font-size;
+  font-size: vars.$base-font-size;
   font-family: monospace;
 
   a {
@@ -113,7 +118,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: $head-foot-color;
+    background-color: vars.$head-foot-color;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
@@ -207,7 +212,7 @@
 /* Homepage */
 .homepage {
   color: #004225;
-  background-color: $background-color;
+  background-color: vars.$background-color;
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
@@ -251,15 +256,15 @@
 
 /* Basic Footer Styles */
 footer {
-  background-color: $head-foot-color; /*080808*/
-  color: $head-foot-text-color; /*#e0e0e0*/
+  background-color: vars.$head-foot-color; /*080808*/
+  color: vars.$head-foot-text-color; /*#e0e0e0*/
   padding: 20px 0;
   position: relative;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .footer-heading {
-  color: $head-foot-text-color;
+  color: vars.$head-foot-text-color;
   margin-bottom: 10px;
   font-weight: 600;
   text-align: center;
@@ -284,7 +289,7 @@ footer {
 
 .footer-column p,
 .footer-column a {
-  color: $head-foot-text-color;
+  color: vars.$head-foot-text-color;
   text-decoration: none;
   font-size: small;
   text-align: center;
@@ -304,18 +309,18 @@ footer {
 .footer-column a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  color: $head-foot-text-color;
+  color: vars.$head-foot-text-color;
 }
 
 .footer-divider {
   max-width: 800px;
-  border-top: 1px solid $head-foot-text-color;
+  border-top: 1px solid vars.$head-foot-text-color;
   margin: 20px auto;
 }
 
 /* Social Links */
 .social-links a {
-  color: $head-foot-text-color;
+  color: vars.$head-foot-text-color;
   font-size: small;
   text-align: center;
 }
@@ -343,7 +348,7 @@ footer {
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: vars.$spacing-unit 0;
   flex: 1;
 }
 
@@ -352,81 +357,81 @@ footer {
 }
 
 .post-list-heading {
-  @include relative-font-size(1.75);
+  @include mixins.relative-font-size(1.75);
 }
 
 .post-list {
-  margin-top: $spacing-unit;
+  margin-top: vars.$spacing-unit;
   margin-left: 0;
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: vars.$spacing-unit;
   }
 }
 
 .post-meta {
-  font-size: $small-font-size;
+  font-size: vars.$small-font-size;
   font-style: italic;
-  color: $text-color;
+  color: vars.$text-color;
 }
 
 .post-link {
   display: block;
-  @include relative-font-size(1.5);
+  @include mixins.relative-font-size(1.5);
 }
 
 /**
  * Posts
  */
 .post-header {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  margin-top: vars.$spacing-unit;
+  margin-bottom: vars.$spacing-unit;
 }
 
 .post-title {
-  margin-bottom: $spacing-unit;
+  margin-bottom: vars.$spacing-unit;
   font-size: 2em;
   letter-spacing: -1px;
   line-height: 1;
 
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+  @include mixins.media-query(vars.$laptop) {
+    @include mixins.relative-font-size(2.25);
   }
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  margin-bottom: vars.$spacing-unit;
 
   h1 {
     font-size: 2em;
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
+    @include mixins.media-query(vars.$laptop) {
+      @include mixins.relative-font-size(1.75);
     }
   }
 
   h2 {
     font-size: 1.5em;
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.50);
+    @include mixins.media-query(vars.$laptop) {
+      @include mixins.relative-font-size(1.50);
     }
   }
 
   h3 {
     font-size: 1.17em;
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
+    @include mixins.media-query(vars.$laptop) {
+      @include mixins.relative-font-size(1.375);
     }
   }
 
   h4 {
     font-size: 1.12em;
 
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
+    @include mixins.media-query(vars.$laptop) {
+      @include mixins.relative-font-size(1.125);
     }
   }
 }
@@ -449,16 +454,16 @@ footer {
   border: 1px solid black;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: $base-font-size;
+  font-size: vars.$base-font-size;
 }
 
 #search button {
   background-color: #004225;
-  color: $text-color-dark;
+  color: vars.$text-color-dark;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  font-size: $small-font-size;
+  font-size: vars.$small-font-size;
   cursor: pointer;
 }
 

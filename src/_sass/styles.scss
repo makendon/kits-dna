@@ -1,5 +1,7 @@
 // Main stylesheet
 @use 'variables' as vars;
+@use 'mixins';
 @use 'base';
 @use 'layout';
+@use 'dark-mode';
 @use 'syntax-highlighting';
