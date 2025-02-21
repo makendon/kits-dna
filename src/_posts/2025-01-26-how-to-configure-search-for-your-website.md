@@ -1,8 +1,9 @@
 ---
-layout: post
 title: How to configure Search for your website
 date: 2025-01-26
-categories: kits-dna
+tags:
+  - search
+  - pagefind
 ---
 Being able to search across a website is a helpful capability and I want to give readers of my blog the ability to find information across my posts.
 

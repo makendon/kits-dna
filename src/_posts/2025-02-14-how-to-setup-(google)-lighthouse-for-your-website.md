@@ -1,8 +1,8 @@
 ---
-layout: post
 title: How to setup (Google) Lighthouse for your Jekyll website
 date: 2025-02-14
-categories: kits-dna
+tags:
+  - lighthouse
 ---
 Want to improve your websites performance and accessibility? Lighthouse can help identify actions to take.
 

@@ -1,8 +1,8 @@
 ---
-layout: post
 title: How to Add Simple Analytics to Your Website
 date: 2024-11-22
-categories: kits-dna
+tags:
+  - kits-dna
 ---
 *This is the 7th post in the building kits-dna series.* Google Analytics is popular but does it meet modern privacy standards such as GDPR? Here’s a simple alternative.
 

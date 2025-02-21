@@ -1,8 +1,8 @@
 ---
-layout: post
 title: How to Add a Favicon to Your Website
 date: 2024-11-29
-categories: kits-dna
+tags:
+  - kits-dna
 ---
 *This is the 8th post in the building kits-dna series.* Ever wondered what the icons on the web browser tab are next to the name of the site you're visiting? They're favicons, short for *favourite icons*.
 
@@ -28,7 +28,7 @@ Once you've downloaded your favicon you need to add it to your site.
 Now you've got favicons in your repo you need to add the code. The favicon code goes into the `head` or your site, for the non-techies this is different to your site `header`. The `_includes` directory in the repository root contains a `head.html` file. You need to add the following line of `HTML` code:
 
 ```html
-<link rel="icon" type="image/x-icon" href="{{ "/assets/favicons/favicon.ico" | relative_url }}">
+<link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
 ```
 
 You'll need to update the icons `href` to the relative path of your favicon. You can then test to see if your favicon is working on your site by running it locally.
@@ -41,7 +41,7 @@ Hopefully you guys are seeing the correct favicon... I'm not! :joy: I get...
 
 You should see the :call_me_hand: emoji but rotated so the finger and thumb is pointing towards the sky. If you look in my `assets/favicons-emoji` directory you'll see what the favicon should be.
 
-> :memo: **Note:** If you've read my blog and my [About Me]({{ '/about/' | relative_url }}) page you'll know I use the :call_me_hand: emoji to represent a *shaka*, this is a homage to our honeymoon in Hawaii. :call_me_hand: is also the sites favicon, however I updated it to be more shaka like by rotating the icon.
+> :memo: **Note:** If you've read my blog and my [About Me](/about) page you'll know I use the :call_me_hand: emoji to represent a *shaka*, this is a homage to our honeymoon in Hawaii. :call_me_hand: is also the sites favicon, however I updated it to be more shaka like by rotating the icon.
 
 I think browser caching is the issue. The favicon I see is an old one, so the browser has cached (stored) it, and hasn't looked for the new file/link.
 

@@ -2,11 +2,13 @@
 
   <!-- Header section left -->
   <div class="header-left">
-    <a href="{{ "/" | relative_url }}">
-      <img class="site-logo" src="{{ "/assets/images/Hawaii-Logo.webp" | relative_url }}" width="40" height="23" alt="CF">
+    <a href={{ "/" }}>
+      <img class="site-logo" src="/assets/images/Hawaii-Logo.webp" width="40" height="23" alt="CF">
     </a>
     <div class="site-title">
-      <a rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      <a
+        {{ metadata.name }}>
+      </a>
     </div>
   </div>
 
@@ -18,34 +20,9 @@
     <span></span>
   </label>
 
-  <nav class="main-nav" role="navigation" aria-label="Main navigation">
-    <ul class="nav-list">
-      {%- assign page_paths = site.header_pages | default: default_paths -%}
-      {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title -%}
-          <li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
-        {%- endif -%}
-      {%- endfor -%}
-    </ul>
+  <nav class="site-nav">
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
   </nav>
-
-  <!--<details class="nav-container">
-    <summary class="hamburger" aria-label="Menu">
-      <svg width="24" height="24" viewBox="0 0 24 24">
-        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2"/>
-      </svg>
-    </summary>
-    
-    <nav class="header-center" role="navigation" aria-label="Main navigation">
-      <ul class="nav-list">
-        <li><a class="nav-item" href="{{ "/" | relative_url }}">Home</a></li>
-        <li><a class="nav-item" href="{{ "/about/" | relative_url }}">About Me</a></li>
-        <li><a class="nav-item" href="{{ "/projects" | relative_url }}">Projects</a></li>
-        <li><a class="nav-item" href="{{ "/blog/" | relative_url }}">Blog</a></li>
-      </ul>
-    </nav>
-  </details>-->
 
   <!-- Header section right-->
   <div class="header-right">
@@ -53,7 +30,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <a class="icon-link" href="{{ "/search/" | relative_url }}" title="Search Page"><i class="fa-solid fa-search"></i></a>
+    <a class="icon-link" href="/search" title="Search Page"><i class="fa-solid fa-search"></i></a>
     <!-- Dark Mode Toggle -->
     <button type="button" class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark/Light Mode">
       <i class="fa-solid fa-sun light-icon"></i>

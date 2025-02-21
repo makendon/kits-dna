@@ -1,32 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-  {% include 'head.html' %}
-
+<html lang="{{ metadata.lang or 'en' }}">
+  {% include 'head.njk' %}
   <body>
-
     {% include 'header.njk' %}
-
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content | safe }}
       </div>
     </main>
-
-    {% include 'footer.html' %}
-
+    {% include 'footer.njk' %}
 <!--
     {%- if jekyll.environment == 'production' -%}
     {%- include simple-analytics.html -%}
     {%- endif -%}
 -->
-
     <!-- Include jQuery from a CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
     <!-- Include the dark-mode.js file -->
     <script src="/src/_scripts/dark-mode.js"></script>
-    
   </body>
-
 </html>

@@ -1,8 +1,8 @@
 ---
-layout: post
 title: Bringing it All Together
 date: 2024-12-09
-categories: kits-dna
+tags:
+  - kits-dna
 ---
 *This is the 10th and final post in the building kits-dna series.* This post wraps up series, summarising what we've learnt and what's next.
 
@@ -12,15 +12,15 @@ In this series we’ve covered:
 
 | Post | Technology |
 | --- | --- |
-| [Building My Personal Website... kits-dna]({% post_url 2024-09-29-building-kits-dna %}) | GitHub, GitHub Pages, Git |
-| [How to Use an iPad or Tablet to Create a Website]({% post_url 2024-10-11-how-to-use-an-iPad-or-tablet-to-create-a-website %}) | GitHub Codespaces |
-| [How to Get Started Building Your Website]({% post_url 2024-10-24-how-to-get-started-building-your-website %}) | Jekyll |
-| [How to Customise the Appearance of Your Website]({% post_url 2024-11-03-how-to-customise-the-appearance-of-your-website %}) | CSS |
-| [Build Gotcha's on GitHub Pages]({% post_url 2024-11-08-build-gotchas-on-github-pages %}) | Liquid |
-| [How to Make Your Website Look Good on Mobile]({% post_url 2024-11-15-how-to-make-your-website-look-good-on-mobile %}) | Responsive Design |
-| [How to Add Simple Analytics to Your Website]({% post_url 2024-11-22-how-to-add-simple-analytics-to-your-website %}) | Simple Analytics |
-| [How to Add a Favicon to Your Website]({% post_url 2024-11-29-how-to-add-a-favicon-to-your-website %}) | Favicon |
-| [How to Add a Custom Domain to Your Website]({% post_url 2024-12-06-how-to-add-a-custom-domain-to-your-website %}) | DNS, Squarespace |
+| [Building My Personal Website... kits-dna](/2024-09-29-building-kits-dna) | GitHub, GitHub Pages, Git |
+| [How to Use an iPad or Tablet to Create a Website](/2024-10-11-how-to-use-an-iPad-or-tablet-to-create-a-website) | GitHub Codespaces |
+| [How to Get Started Building Your Website](/2024-10-24-how-to-get-started-building-your-website) | Jekyll |
+| [How to Customise the Appearance of Your Website](/2024-11-03-how-to-customise-the-appearance-of-your-website) | CSS |
+| [Build Gotcha's on GitHub Pages](/2024-11-08-build-gotchas-on-github-pages) | Liquid |
+| [How to Make Your Website Look Good on Mobile](/2024-11-15-how-to-make-your-website-look-good-on-mobile) | Responsive Design |
+| [How to Add Simple Analytics to Your Website](/2024-11-22-how-to-add-simple-analytics-to-your-website) | Simple Analytics |
+| [How to Add a Favicon to Your Website](/2024-11-29-how-to-add-a-favicon-to-your-website) | Favicon |
+| [How to Add a Custom Domain to Your Website](/2024-12-06-how-to-add-a-custom-domain-to-your-website) | DNS, Squarespace |
 
 This covers the basics of building your own website. I haven't covered *everything* and there's lots more you could do, but you don't need lots of `JavaScript` to make your site dynamic when getting started.
 
@@ -50,7 +50,7 @@ I might experiment with **Hugo** for a wee project I have in mind. If this goes 
 
 ## Wrap Up
 
-That’s it! Let me know if this series of posts have helped you build your first website, I’d love your feedback. Check out my [Contact Me]({{ '/contact/' | relative_url }}) page or hit the social icons in the footer to connect.
+That’s it! Let me know if this series of posts have helped you build your first website, I’d love your feedback. Check out my [Contact Me](/contact) page or hit the social icons in the footer to connect.
 
 Stay tuned to my blog for future posts as I iterate `kits-dna` explore new projects and skills, and write about product.
 

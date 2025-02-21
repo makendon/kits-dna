@@ -1,11 +1,9 @@
 ---
-layout: page
 title: Accessibility
-permalink: /accessibility/
 ---
 I want as many people as possible to be able to use this website, however be aware that parts will not be fully accessible.
 
-If the sites accessibility can be improved please [contact me]({{ "/contact/" | relative_url }}) or open an issue on [kits-dna](https://github.com/makendon/kits-dna/issues).
+If the sites accessibility can be improved please [contact me](/contact) or open an issue on [kits-dna](https://github.com/makendon/kits-dna/issues).
 
 The following steps have been taken to make this website accessible:
 

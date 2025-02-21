@@ -1,7 +1,7 @@
 ---
-layout: page
 title: Projects
-permalink: /projects/
+eleventyNavigation:
+  key: Projects
 ---
 
 > :bulb: *These are ideas for **personal** projects to develop my technology skills*
@@ -18,7 +18,7 @@ My site is hosted on GitHub Pages and built using **Jekyll**. The theme is **Min
 
 I created the homepage image myself by drawing **bikablo** style visuals. I'm terrible at drawing but I'm pleased how well they turned out. The Apple **Freeform** app helped me out by smoothing some lines. Hopefully product people will recognise what the visuals represent. The site logo is AI generated using **DALL.E**.
 
-Check out my [blog]({{ '/blog/' | relative_url }}) for more on building `kits-dna` if you're interested.
+Check out my [blog](/blog) for more on building `kits-dna` if you're interested.
 
 Building the site got me started with markup code, and design. Learning a programming language is next up.
 
@@ -26,7 +26,7 @@ Building the site got me started with markup code, and design. Learning a progra
 
 Why not start learning programming like a kid. **Scratch** is an MIT project to help kids get into programming by using a fun graphical approach. Scratch is available online and also comes installed on `Raspberry Pi OS`.
 
-Check out my [Scratch]({{ '/scratch/' | relative_url }}) projects.
+Check out my [Scratch](/scratch) projects.
 
 ## :snake: Python
 

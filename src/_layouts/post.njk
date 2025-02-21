@@ -1,35 +1,38 @@
 ---
-layout: default
+layout: base.njk
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
+<article class="post">
   <header class="post-header">
-
     <meta name="fediverse:creator" content="@makendon@mastodon.social">
-
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-
+    <h1 class="post-title">{{ title }}</h1>
+    <p class="post-description">{{ description }}</p>
+    <p class="post-author">
+      {{ metadata.author.name }}
+    </p>
     <div class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if site.author -%}
-      <div class="post-meta">
-      <p>Written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ site.author }}</span></span>{%- endif -%},{% include reading-time.html %}</p>
-      </div>
+      <p>📅&nbsp;{{ date | dateFormat }}&nbsp; |&nbsp; {% include "reading-time.njk" %}</p>
     </div>
-
+      <div class="post-tags">
+        {% if tags %}
+        <p>🏷️&nbsp;
+          {%- for tag in tags | filterTagList -%}
+            <a href="/tags/{{ tag | slugify }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+          {%- endfor -%}
+        </p>
+      </div>
+    {% endif %}
   </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+  <div class="post-content">
+    {{ content | safe }}
   </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<ul class="links-nextprev">
+  {%- if previousPost %}<li class="links-nextprev-prev">&larr; Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+	{%- if nextPost %}<li class="links-nextprev-next">Next &rarr;<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+</ul>
+{%- endif %}
+{%- endif %}
 </article>

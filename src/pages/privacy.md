@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Privacy Policy
-permalink: /privacy/
 ---
 **Your privacy is important.**
 

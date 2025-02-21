@@ -1,8 +1,8 @@
 ---
-layout: post
 title: How to Make Your Website Look Good on Mobile
 date: 2024-11-15
-categories: kits-dna
+tags:
+  - kits-dna
 ---
 *This is the 6th post in the building kits-dna series.* This post picks up where we left off with a *design* gotcha - responsive or mobile first design.
 
@@ -97,6 +97,6 @@ If you've made it this far try viewing this site on different devices, you can t
 
 Design in general is a new competency for me and building `kits-dna` is a great example of how going outside your comfort zone can lead you to learning new skills. Skills that I'll be able to use to develop my career, and hobbies.
 
-I'm planning to test `kits-dna` on [**Google Lighthouse**](https://developer.chrome.com/docs/lighthouse) which might pick up a raft of different issues for future iterations/improvements. If you spot any issues on mobile or on a laptop / desktop please give me [feedback]({{ '/contact/' | relative_url }}) or raise an issue on [GitHub](https://github.com/makendon/kits-dna/issues).
+I'm planning to test `kits-dna` on [**Google Lighthouse**](https://developer.chrome.com/docs/lighthouse) which might pick up a raft of different issues for future iterations/improvements. If you spot any issues on mobile or on a laptop / desktop please give me [feedback](/contact) or raise an issue on [GitHub](https://github.com/makendon/kits-dna/issues).
 
 Thanks for reading :call_me_hand:

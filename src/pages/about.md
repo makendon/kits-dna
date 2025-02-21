@@ -1,7 +1,7 @@
 ---
-layout: page
 title: About Me
-permalink: /about/
+eleventyNavigation:
+  key: About Me
 ---
 ## :wave: Aloha, I'm Kit
 
@@ -25,10 +25,10 @@ Value in the public sector isn't if someone would buy or choose to use your prod
 
 ## :writing_hand: Blog
 
-Read my [blog]({{ '/blog/' | relative_url }}) for thoughts on:
+Read my [blog](/blog) for thoughts on:
 
 - Building a personal website
-- My [projects]({{ '/projects/' | relative_url }})
+- My [projects](/projects)
 - Product management
   - Internal
   - Public sector
