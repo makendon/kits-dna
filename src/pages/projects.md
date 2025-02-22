@@ -2,6 +2,7 @@
 title: Projects
 eleventyNavigation:
   key: Projects
+  order: 2
 ---
 
 > :bulb: *These are ideas for **personal** projects to develop my technology skills*

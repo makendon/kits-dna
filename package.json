@@ -13,11 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "git-url": "git+https://github.com/makendon/kits-dna.git",
-    "url": "https://github.com/makendon/kits-dna.git",
-    "name": "kits-dna",
-    "owner": "makendon",
-    "owner-url": "https://github.com/makendon"
+    "url": "git+https://github.com/makendon/kits-dna.git"
   },
   "keywords": [],
   "author": "Kit France",

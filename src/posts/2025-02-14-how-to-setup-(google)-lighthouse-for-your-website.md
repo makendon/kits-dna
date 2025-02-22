@@ -3,9 +3,8 @@ title: How to setup (Google) Lighthouse for your Jekyll website
 date: 2025-02-14
 tags:
   - lighthouse
+description: Want to improve your websites performance and accessibility? Lighthouse can help identify actions to take.
 ---
-Want to improve your websites performance and accessibility? Lighthouse can help identify actions to take.
-
 ## What is Lighthouse
 
 [Lighthouse](https://developer.chrome.com/docs/lighthouse/) provides powerful audit insights into website performance, accessibility, best practices and Search Engine Optimisation (SEO). It's [open source](https://github.com/GoogleChrome/lighthouse) and can run on any web page whether public or requiring authentication.

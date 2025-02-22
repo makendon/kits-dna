@@ -8,6 +8,7 @@ $base-font-size:   18px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $large-font-size: 28px !default;
+$code-font-size:   $base-font-size * 0.750 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
@@ -15,19 +16,20 @@ $spacing-unit:     30px !default;
 $text-color:       #111111 !default;
 $text-color-dark:  #fcfcfc;
 $background-color: white !default; // #f7f7f7 is grey
-$background-color-dark: #121212;
+$background-color-dark: #121212; 
 $brand-color:     #004225 !default;
-$link-color:      #CF1020 !default; // #2a7ae2 is original blue color
-$link-color-visited: #f24553;
-$link-color-dark: #ef192b; // link-color-visited darken 15%
+$link-color:      #004225 !default; // #2a7ae2 is original blue color CF1020 is red 0000ee is blue
+$link-color-visited: #6A0DAD !default; // 551A8B is purple f24553
+$link-color-dark: #89E219; // #A6FF4D lime green 
+$link-color-dark-visited: #C68BFF; // #00FFC2 cyan
 $head-foot-text-color: #004225; // #333333 is grey
 $head-foot-text-color-dark: #e0e0e0;
 $head-foot-color: #f0f0f0;
 $head-foot-color-dark: #1d1d1d;
 
 $grey-color:       #828282 !default;
-$grey-color-light: #a7a7a7 !default;
-$grey-color-v-light: #bababa !default;
+$grey-color-light: #c0c0c0 !default; // a7a7a7
+$grey-color-v-light: #f2f2f2 !default; // bababa
 $grey-color-dark:  #1c1c1c !default; // #616161 grey-color darken 25% 
 
 $table-text-align: left !default;

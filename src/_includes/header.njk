@@ -7,7 +7,7 @@
     </a>
     <div class="site-title">
       <a
-        {{ metadata.name }}>
+        href={{ "/" }}>{{ metadata.author.name }}
       </a>
     </div>
   </div>
@@ -20,8 +20,10 @@
     <span></span>
   </label>
 
-  <nav class="site-nav">
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+  <nav class="header-center">
+    <ul class="nav-list">
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+    </ul>
   </nav>
 
   <!-- Header section right-->

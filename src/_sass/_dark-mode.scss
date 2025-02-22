@@ -16,12 +16,15 @@ html[data-theme="system"] {
     h1, h2, h3, h4, h5, h6 {
       color: vars.$text-color-dark;
     }
+    p {
+      color: vars.$text-color-dark;
+    }
     a {
-      color: vars.$link-color-visited;
+      color: vars.$link-color-dark;
       text-decoration: none;
     
       &:visited {
-        color: vars.$link-color-dark;
+        color: vars.$link-color-dark-visited;
       }
     
       &:hover {
@@ -179,16 +182,18 @@ body.dark-mode {
   h1, h2, h3, h4, h5, h6 {
     color: vars.$text-color-dark;
   }
+  p {
+    color: vars.$text-color-dark;
+  }
   a {
     color: vars.$link-color-dark;
     text-decoration: none;
   
     &:visited {
-      color: vars.$link-color-dark;
+      color: vars.$link-color-dark-visited;
     }
   
     &:hover {
-      color: vars.$link-color-dark;
       text-decoration-line: underline;
       text-decoration-style: solid;
       text-decoration-thickness: 1px;
@@ -204,7 +209,7 @@ body.dark-mode {
   }
   blockquote {
     background-color: vars.$grey-color-dark;
-    color: vars.$grey-color-light;
+    color: vars.$grey-color-v-light;
   }
   code {    
     background-color: vars.$grey-color-dark;
@@ -289,7 +294,7 @@ body.dark-mode {
     background-color: vars.$background-color-dark;
   }
   #homeImage {
-    content: url('/assets/images/productdoodles4.jpeg');
+    content: url('/assets/images/productdoodles4.webp');
     padding-bottom: 1em;
   }
   footer {

@@ -2,6 +2,7 @@
 title: About Me
 eleventyNavigation:
   key: About Me
+  order: 1
 ---
 ## :wave: Aloha, I'm Kit
 

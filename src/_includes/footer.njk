@@ -15,6 +15,11 @@
       <!-- Social Links Column -->
       <div class="footer-column">
         <span class="footer-heading">Contact</span>
+        <div class="social-icons">
+          <a href="{{ metadata.linkedin.url }}" title="LinkedIn"><i class="fa-brands fa-linkedin fa-xl" style="color: #828282;"></i></a>
+          <a href="{{ metadata.github.repo_owner_url }}" title="GitHub"><i class="fa-brands fa-github fa-xl" style="color: #828282;"></i></a>
+          <a href="{{ metadata.mastodon.url }}" title="Mastodon"><i class="fa-brands fa-mastodon fa-xl" style="color: #828282;"></i></a>
+        </div>
         <ul class="social-links">
           <li><a href="/contact/">Contact Me</a></li>
         </ul>
@@ -23,8 +28,8 @@
       <!-- Tech Column -->
       <div class="footer-column">
        <span class="footer-heading">Tech</span>
-       <p><a target="_blank" href="{{ repository_url }}">{{ repository_name }}</a> is made with :heart: by <a target="_blank" href="{{ repository_owner-url }}">{{ repository_owner }}</a> 
-       <p>Powered by <a target="_blank" href="https://jekyllrb.com">Jekyll</a> and <a target="_blank" href="https://pages.github.com">GitHub Pages</a></p>
+       <p><a target="_blank" href="{{ metadata.github.repo_url }}">{{ metadata.github.repo_name }}</a> is made with ❤️ by <a target="_blank" href="{{ metadata.github.repo_owner_url }}">{{ metadata.github.repo_owner }}</a> 
+       <p>Powered by <a target="_blank" href="https://www.11ty.dev">Eleventy</a> and <a target="_blank" href="https://pages.github.com">GitHub Pages</a></p>
       </div>
     </div>
 
