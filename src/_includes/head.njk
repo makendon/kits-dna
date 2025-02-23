@@ -2,12 +2,45 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--
-  {%- if jekyll.environment == 'production' -%}
-  {%- include csp.html -%}
-  {%- endif -%}
-  -->
+  
+  <!-- Content Security Policy in production -->
+  {% if kitsDna.environment == 'production' %}
+  {% include "csp.njk" %}
+  {% endif %}
+
+  <title>{{ title or metadata.title }}</title>
+  <meta name="description" content="{{ metadata.description }}">
+  <meta name="author" content="{{ metadata.author.name }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ metadata.title }}">
+  <meta property="og:description" content="{{ metadata.description }}">
+  <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="{{ metadata.author.twitter }}">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/favicons-emoji/favicon.ico">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/styles.css">
-  {% include 'custom-head.html' %}
+
+  {% include "custom-head.njk" %}
+
+    <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ metadata.title }}",
+      "url": "{{ metadata.url }}"
+    }
+  </script>
+
 </head>

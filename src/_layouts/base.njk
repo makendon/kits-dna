@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ metadata.lang or 'en' }}" data-theme="system">
-  {% include 'head.njk' %}
+  {% include "head.njk" %}
   <body>
-    {% include 'header.njk' %}
+    {% include "header.njk" %}
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content | safe }}
       </div>
     </main>
-    {% include 'footer.njk' %}
-<!--
-    {%- if jekyll.environment == 'production' -%}
-    {%- include simple-analytics.html -%}
-    {%- endif -%}
--->
+    {% include "footer.njk" %}
+
+    {% if kitsDna.environment == 'production' %}
+    {% include "simple-analytics.njk" %}
+    {% endif %}
+
     <!-- Include jQuery from a CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- Include the dark-mode.js file -->

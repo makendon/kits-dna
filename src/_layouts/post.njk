@@ -10,7 +10,7 @@ layout: base.njk
      Written by {{ metadata.author.name }}
     </p>
     <div class="post-reading-time">
-      <p>📅&nbsp;{{ date | dateFormat }}&nbsp; |&nbsp; {% include 'reading-time.njk' %}</p>
+      <p>📅&nbsp;{{ date | dateFormat }}&nbsp; |&nbsp; {% include "reading-time.njk" %}</p>
     </div>
       <div class="post-tags">
         {% if tags %}

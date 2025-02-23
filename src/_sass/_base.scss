@@ -164,11 +164,11 @@ a {
     font-weight: 500;
 
     &:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
 
     &:visited {
-        color: vars.$link-color-visited;
+      color: vars.$link-color-visited;
     }
 }
 

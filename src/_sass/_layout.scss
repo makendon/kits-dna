@@ -18,7 +18,7 @@
 }
 
 .header-left {
-  flex: 1 1 33.33%;
+  flex: 1 1 25%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -29,6 +29,33 @@
 .site-logo {
   height: 2.5rem;
   width: auto;
+}
+
+.site-title {
+  font-size: vars.$base-font-size;
+  font-family: monospace;
+
+  a {
+    color: #004225;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: #004225;
+  }
+}
+
+.header-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 50%;
 }
 
 .nav-toggle {
@@ -56,34 +83,27 @@
   background-color: vars.$head-foot-color;
 }
 
-.header-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 33.33%;
-}
-
 .nav-list {
   display: flex;
   flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
 
   ul {
-    font-size: vars.$small-font-size;
-    font-weight: 500;
     padding-left: 0;
   }
 
   li {
     display: inline-block;
-    margin-right: 2rem;
+    /*margin-right: 2rem;*/
   }
 
   a {
-  text-decoration: none;
-  color: #004225;
-  font-weight: 500;
-  transition: color 0.2s;
+    font-size: vars.$small-font-size;
+    text-decoration: none;
+    color: #004225;
+    font-weight: 500;
+    transition: color 0.2s;
   }
 
   a:hover {
@@ -99,34 +119,24 @@
     color: #004225;
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    font-weight: 700;
+    font-weight: 600;
   }
 
 }
 
 .header-right {
-  flex: 1 1 33.33%;
+  flex: 1 1 25%;
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
   margin-right: 2rem;
 }
 
-.site-title {
-  font-size: vars.$base-font-size;
-  font-family: monospace;
-
-  a {
-    color: #004225;
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: #004225;
-  }
-}
-
 @media (max-width: 768px) {
+  .site-title {
+    display: none;
+  }
+
   .header-center {
     position: absolute;
     top: 100%;
@@ -137,18 +147,10 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-  .header-right {
-    margin-right: 6rem;
-  }
-
   .nav-list {
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-  }
-
-  .site-title {
-    display: none;
   }
 
   .nav-toggle-label {
@@ -184,6 +186,10 @@
 
   .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .header-right {
+    margin-right: 6rem;
   }
 }
 

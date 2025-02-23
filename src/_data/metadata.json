@@ -1,11 +1,13 @@
 {
     "name": "Kit France",
+    "title": "Kit France",
     "description": "Product",
     "url": "https://kitfrance.com",
     "lang": "en",
     "author": {
         "name": "Kit France",
-        "email": "kit@kitfrance.com"
+        "email": "kit@kitfrance.com",
+        "twitter": ""
     },
     "github": {
         "repo_name": "kits-dna",

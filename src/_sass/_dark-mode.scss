@@ -84,6 +84,10 @@ html[data-theme="system"] {
     .site-title {
       a {
         color: vars.$head-foot-text-color-dark;
+
+        &:hover {
+          text-decoration: none;
+        }
       
         &:visited {
         color: vars.$head-foot-text-color-dark;
@@ -249,6 +253,10 @@ body.dark-mode {
   .site-title {
     a {
       color: vars.$head-foot-text-color-dark;
+
+      &:hover {
+        text-decoration: none;
+      }
     
       &:visited {
       color: vars.$head-foot-text-color-dark;
