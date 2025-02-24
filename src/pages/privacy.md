@@ -39,7 +39,7 @@ Simple Analytics does not collect any personal data and is GDPR compliant by def
 
 No analytics will be used for ads or marketing.
 
-<a href="https://dashboard.simpleanalytics.com/?utm_source=kitfrance.com&utm_content=badge" referrerpolicy="origin" target="_blank"><picture><source srcset="https://simpleanalyticsbadges.com/kitfrance.com?mode=dark" media="(prefers-color-scheme: dark)" /><img src="https://simpleanalyticsbadges.com/kitfrance.com?mode=light" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" /></picture></a>
+<a href="https://dashboard.simpleanalytics.com/?utm_source=kitfrance.com&utm_content=badge" referrerpolicy="origin" target="_blank"><picture><source srcset="https://simpleanalyticsbadges.com/kitfrance.com?mode=dark" media="(prefers-color-scheme: dark)" /><img src="https://simpleanalyticsbadges.com/kitfrance.com?mode=light" alt="Simple Analytics badge" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" /></picture></a>
 
 ### Why analytics is collected
 
