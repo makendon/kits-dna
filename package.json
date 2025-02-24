@@ -1,7 +1,7 @@
 {
   "name": "kits-dna",
   "version": "1.0.0",
-  "description": "`kits-dna` is the repository name for **kitfrance.com**. It uses the **Jekyll** theme **Minima** with custom layouts and CSS.",
+  "description": "`kits-dna` is the repository name for **kitfrance.com**. Built with Eleventy.",
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --watch src/_sass/styles.scss:dist/css/styles.css",
@@ -21,10 +21,11 @@
   "bugs": {
     "url": "https://github.com/makendon/kits-dna/issues"
   },
-  "homepage": "https://github.com/makendon/kits-dna#readme",
+  "homepage": "https://kitfrance.com",
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^2.0.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",

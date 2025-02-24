@@ -1,9 +1,10 @@
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownit from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor';
 import { full as emoji } from 'markdown-it-emoji'
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { dateFormat } from './src/_scripts/dateFormat.js';
 import { filterTagList } from './src/_scripts/filterTagList.js';
 import { wordCount } from './src/_scripts/wordCount.js';
@@ -28,6 +29,7 @@ export default async function(eleventyConfig) {
     const markdownLibrary = markdownit(mdOptions)
         .use(markdownItAnchor, anchorOptions)
         .use(emoji);
+
     // RSS feed
     eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom", // or "rss", "json"
@@ -47,13 +49,32 @@ export default async function(eleventyConfig) {
 			}
 		}
     });
+
+	// Image transforms
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		// output image formats
+		formats: ["webp", "jpeg"],
+
+		// output image widths
+		widths: ["auto"],
+
+		// optional, attributes assigned on <img> nodes override these values
+		htmlOptions: {
+			imgAttributes: {
+				loading: "lazy",
+				decoding: "async",
+			},
+			pictureAttributes: {}
+		}
+	});
+
     // Configure eleventy
 	eleventyConfig.setLibrary("md", markdownLibrary);
     eleventyConfig.addWatchTarget("./src/_sass/");
     eleventyConfig.addPassthroughCopy("./css/");
     eleventyConfig.addPassthroughCopy("./src/assets/");
-    eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addFilter("dateFormat", dateFormat);
     eleventyConfig.addFilter("filterTagList", filterTagList);
     eleventyConfig.addFilter("wordCount", wordCount);
