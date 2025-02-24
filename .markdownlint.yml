@@ -1,0 +1,3 @@
+# Disable specific rules
+MD033: false  # Allow inline HTML
+MD013: false  # Allow line length > 80
