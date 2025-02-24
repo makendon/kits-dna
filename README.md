@@ -1,77 +1,68 @@
 # kits-dna
 
-`kits-dna` is the repository name for **kitfrance.com**. It uses the **Jekyll** theme **Minima** with custom layouts and CSS.
+`kits-dna` is the repository name for **kitfrance.com**. It uses the **Eleventy** static site generator. 11ty.
 
-## Getting Started
+## Getting started
 
-### Dependencies
-
-#### Local
+### Local dependencies
 
 - Git
-- Ruby
-- Jekyll
+- Node.js
+- npm
 
-#### Codespaces
+### Create new directory
 
-See the .devcontainer directory in this repo with pre-installed dependencies.
+```bash
+mkdir new-site-name
+cd new-site-name
+```
 
-### Clone Repo
+### Clone repository
 
-```git
+```bash
 git clone https://github.com/makendon/kits-dna.git
 ```
 
-### Jekyll
+### Install dependencies
 
-Jekyll builds the site locally and is also used by GitHub Pages.
-
-- Install Ruby. Jekyll [pre-requisites](https://jekyllrb.com/docs/installation/) can help for different operating systems
-
-- Install Jekyll
-
-```ruby
-gem install jekyll
+```npm
+npm install
 ```
 
-- Install bundler gems
+### Serve site
 
-```ruby
-gem install jekyll bundler
+Build and host on a local development server:
+
+```npm
+npm start
 ```
 
-- Install the gem dependencies and update
+Open a web browser and go to http://localhost:8080/ you should see your local copy of the site running.
 
-```ruby
-cd kits-dna
-bundle install && bundle update
+#### Make changes
+
+Viola! Now make the site your own, remove the content, add your own! Change the style, go wild. While the site runs locally any changes you make will reflect in real time.
+
+### Build site
+
+Generate a production ready build to the `dist` folder:
+
+```npm
+npm run build
 ```
-
-### Run Site
-
-- Run local server
-
-```ruby
-bundle exec jekyll serve
-```
-
-- Open a web browser and go to http://localhost:4000/ you should see your local copy of the site running
-
-### Make Changes
-
-That's it! Now make the site your own, remove the content, add your own! Change the style, go wild. While the site is running locally any changes you make (except the _config.yml) will be reflected - you may need to refresh your browser.
 
 ## Contributing
 
-If you think that `kits-dna` can be improved you can:
-- Open an issue on the repo.
-- Fork the repo, make changes and open a pull request.
+Help improve `kits-dna`
+
+- Open an issue on the repo
+- Fork the repo, make changes and open a pull request
 
 ## Licensing
 
-### Source Code
+### Source code
 
-`Source code` is licensed under [**GPL v3**](https://www.gnu.org/licenses/gpl-3.0.html).
+Source code licensed under [**GPL v3**](https://www.gnu.org/licenses/gpl-3.0.html).
 
 ### Content
 
