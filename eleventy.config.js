@@ -68,6 +68,13 @@ export default async function(eleventyConfig) {
 		}
 	});
 
+	// Drafts
+	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
+		}
+	});
+
     // Configure eleventy
 	eleventyConfig.setLibrary("md", markdownLibrary);
     eleventyConfig.addWatchTarget("./src/_sass/");
