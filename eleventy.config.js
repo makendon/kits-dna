@@ -8,6 +8,8 @@ import { full as emoji } from 'markdown-it-emoji'
 import { dateFormat } from './src/_scripts/dateFormat.js';
 import { filterTagList } from './src/_scripts/filterTagList.js';
 import { wordCount } from './src/_scripts/wordCount.js';
+import { sortAlphabetically } from "./src/_scripts/sortAlphabetically.js";
+import { getKeys } from "./src/_scripts/getKeys.js";
 
 export default async function(eleventyConfig) {
     // markdown-it options
@@ -85,6 +87,8 @@ export default async function(eleventyConfig) {
     eleventyConfig.addFilter("dateFormat", dateFormat);
     eleventyConfig.addFilter("filterTagList", filterTagList);
     eleventyConfig.addFilter("wordCount", wordCount);
+	eleventyConfig.addFilter("sortAlphabetically", sortAlphabetically);
+	eleventyConfig.addFilter("getKeys", getKeys);
 };
 
 export const config = {
