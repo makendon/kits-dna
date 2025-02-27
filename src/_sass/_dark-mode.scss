@@ -61,20 +61,20 @@ html[data-theme="system"] {
         }
     }
     table {
-      color: vars.$table-text-color;
-      border: 1px solid vars.$grey-color-dark;
+      color: vars.$table-text-color-dark;
+      border: 1px solid vars.$background-color;
       tr {
         &:nth-child(even) {
           background-color: vars.$grey-color-dark;
         }
       }
       th {
-        background-color: vars.$table-th-background-color;
-        border: 1px solid vars.$table-th-border-color;
+        background-color: vars.$background-color-dark;
+        border: 1px solid vars.$background-color;
         border-bottom-color: vars.$table-th-border-bottom-color;
       }
       td {
-        border: 1px solid vars.$grey-color-dark;;
+        border: 1px solid vars.$background-color;
       }
     }
     .site-header {
@@ -150,6 +150,12 @@ html[data-theme="system"] {
     }
     .post-meta {
       color: vars.$text-color-dark;
+    }
+    .post-tags {
+      border-bottom: 1px dashed white;
+    }
+    .links-nextprev {
+      border-top: 1px dashed white;
     }
     #search input {
       border: 1px solid #fcfcfc;
@@ -230,20 +236,20 @@ body.dark-mode {
     }
   }
   table {
-    color: vars.$table-text-color;
-    border: 1px solid vars.$grey-color-dark;
+    color: vars.$table-text-color-dark;
+    border: 1px solid vars.$background-color;
     tr {
       &:nth-child(even) {
         background-color: vars.$grey-color-dark;
       }
     }
     th {
-      background-color: vars.$table-th-background-color;
-      border: 1px solid vars.$table-th-border-color;
+      background-color: vars.$background-color-dark;
+      border: 1px solid vars.$background-color;
       border-bottom-color: vars.$table-th-border-bottom-color;
     }
     td {
-      border: 1px solid vars.$grey-color-dark;;
+      border: 1px solid vars.$background-color;
     }
   }
   .site-header {
@@ -319,6 +325,12 @@ body.dark-mode {
   }
   .post-meta {
     color: vars.$text-color-dark;
+  }
+  .post-tags {
+    border-bottom: 1px dashed white;
+  }
+  .links-nextprev {
+    border-top: 1px dashed white;
   }
   #search input {
     border: 1px solid vars.$text-color-dark;
