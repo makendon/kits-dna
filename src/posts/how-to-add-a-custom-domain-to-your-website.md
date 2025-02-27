@@ -3,6 +3,10 @@ title: How to Add a Custom Domain to Your Website
 date: 2024-12-06
 tags:
   - kits-dna
+  - custom domain
+  - squarespace
+  - dns
+  - github pages
 ---
 *This is the 9th post in the building kits-dna series.* Don't want to use GitHub Pages default domain for your site? Here's how to get setup using Squarespace domains.
 

@@ -3,6 +3,8 @@ title: Build Gotcha's on GitHub Pages
 date: 2024-11-08
 tags:
   - kits-dna
+  - jekyll
+  - liquid
 ---
 *This is the 5th post in the building kits-dna series.* After deploying to GitHub Pages my site didn’t work the same as running locally, the links were broken, and there was another problem…
 

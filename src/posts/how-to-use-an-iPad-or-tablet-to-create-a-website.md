@@ -3,6 +3,8 @@ title: How to Use an iPad or Tablet to Create a Website
 date: 2024-10-11
 tags:
   - kits-dna
+  - github codespaces
+  - jekyll
 ---
 *This is the 2nd post in the **Building kits-dna** series.*
 Most development that I’ve experienced still happens locally - on a devs laptop - before their work is pushed to a central source code management tool such as GitHub, GitLab etc. But do we *need* a laptop?

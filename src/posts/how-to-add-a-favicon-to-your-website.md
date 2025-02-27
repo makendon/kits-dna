@@ -3,6 +3,7 @@ title: How to Add a Favicon to Your Website
 date: 2024-11-29
 tags:
   - kits-dna
+  - favicon
 ---
 *This is the 8th post in the building kits-dna series.* Ever wondered what the icons on the web browser tab are next to the name of the site you're visiting? They're favicons, short for *favourite icons*.
 

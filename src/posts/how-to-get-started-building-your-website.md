@@ -3,6 +3,9 @@ title: How to Get Started Building Your Website
 date: 2024-10-24
 tags:
   - kits-dna
+  - github codespaces
+  - github pages
+  - jekyll
 ---
 *This is the 3rd post in the **Building kits-dna** series.*
 In posts 1 and 2 of the building kits-dna series I’ve focussed primarily on the technology. But how can *you* “Get Started” building your own personal website?
