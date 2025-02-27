@@ -116,8 +116,8 @@ h1, h2, h3, h4, h5, h6 {
     color: vars.$brand-color;
     font-family: vars.$base-font-family;
     font-weight: 500;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: vars.$spacing-unit;
+    margin-bottom: calc(vars.$spacing-unit / 2);
 }
 
 h1 {
@@ -176,6 +176,8 @@ a {
 img {
     max-width: 100%;
     vertical-align: middle;
+    margin-top: calc(vars.$spacing-unit / 2);
+    margin-bottom: calc(vars.$spacing-unit / 2);
 }
 
 // Tables
