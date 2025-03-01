@@ -96,6 +96,10 @@
   li {
     display: inline-block;
     /*margin-right: 2rem;*/
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   a {

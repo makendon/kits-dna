@@ -35,6 +35,12 @@ ol, ul {
     padding-left: calc(vars.$spacing-unit / 2);
 }
 
+li {
+    &:last-child {
+      margin-bottom: calc(vars.$spacing-unit / 2);
+    }
+}
+
 blockquote {
   background-color: vars.$grey-color-v-light;
   color: vars.$grey-color-dark;
