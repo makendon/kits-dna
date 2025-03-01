@@ -10,7 +10,8 @@
     "build:eleventy": "npx eleventy",
     "start": "ELEVENTY_ENVIRONMENT=development npm-run-all build:sass --parallel watch:*",
     "build": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*",
-    "build:netlify": "ELEVENTY_ENVIRONMENT=production npm-run-all build:* && npx pagefind --site dist"
+    "build:search": "npx pagefind --site dist",
+    "deploy": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*"
   },
   "repository": {
     "type": "git",
