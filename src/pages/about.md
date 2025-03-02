@@ -6,7 +6,7 @@ eleventyNavigation:
 ---
 ## :wave: Aloha, I'm Kit
 
-<img src="/assets/images/Me.jpeg" alt="Image of me throwing a shaka at the top of Mauna Kea" width="800">
+![Image of me throwing a shaka at the top of Mauna Kea](/assets/images/Me.jpeg)
 
 I’m married with a baby girl, and two cats, one or both might appear on this site at some point! We live in North-East England.
 
