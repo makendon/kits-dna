@@ -7,7 +7,7 @@ If the sites accessibility can be improved please [contact me](/contact) or open
 
 The following steps have been taken to make this website accessible:
 
-## Google Lighthouse
+## Lighthouse
 
 This website is tested with [Lighthouse](https://developer.chrome.com/docs/lighthouse). A GitHub Actions workflow runs on each `git push` and outputs the results. Lighthouse includes an [Accessibility audit](https://developer.chrome.com/docs/lighthouse/accessibility/scoring), which I'll use to improve the sites accessibility.
 
@@ -17,7 +17,7 @@ This website is tested with [Lighthouse](https://developer.chrome.com/docs/light
 
 ## Emoji
 
-- This site uses jemoji, a GitHub flavoured emoji plugin for jekyll. Emojis have built in alt text
+- This site uses emojis, emojis have built in alt text
 
 ## Colour
 
@@ -27,4 +27,4 @@ This website is tested with [Lighthouse](https://developer.chrome.com/docs/light
 
 ## Dark Mode
 
-This website is configured for auto dark mode based on your device/browser settings. If you want to change between light or dark mode please change your settings.
+This website is configured for auto dark mode based on your device/browser settings. If you want to manually enable dark mode please click on the moon icon in the top right hand corner of the site, to change back to light mode click on the sun icon. The icons are called "Toggle Dark/Light Mode".
