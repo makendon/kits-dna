@@ -8,9 +8,9 @@
     "build:sass": "sass src/_sass/styles.scss dist/css/styles.css",
     "watch:eleventy": "npx @11ty/eleventy --serve",
     "build:eleventy": "npx eleventy",
+    "build:search": "npx pagefind --site dist",
     "start": "ELEVENTY_ENVIRONMENT=development npm-run-all build:sass --parallel watch:*",
     "build": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*",
-    "build:search": "npx pagefind --site dist",
     "deploy": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*"
   },
   "repository": {
