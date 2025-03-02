@@ -11,6 +11,10 @@ Over a series of blog posts I’ll tell the story of how I built this website, a
 
 > :memo: **Note:** For a brief overview of `kits-dna` read my project “**Personal Website**”, on my [Projects](/projects/) page.
 
+> :recycle: **Update 02/03/2025**
+> I've migrated `kits-dna` from Jekyll and GitHub Pages to **Eleventy** and **Netlify**. See my post [Migrating from Jekyll to Eleventy](/migrating-from-jekyll-to-eleventy).
+> You can still view my [Jekyll code](https://github.com/makendon/kits-dna/tree/jekyll) to help you get started.
+
 ## Technologies
 
 ### GitHub

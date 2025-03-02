@@ -1,11 +1,15 @@
 ---
-title: How to configure Search for your website
+title: How to configure search for your website
 date: 2025-01-26
 tags:
   - search
   - pagefind
+  - jekyll
+  - eleventy
+description: Being able to search across a website is a helpful capability and I want to give readers of my blog the ability to find information across my posts.
 ---
-Being able to search across a website is a helpful capability and I want to give readers of my blog the ability to find information across my posts.
+> :recycle: **Update 02/03/2025**
+> I've updated this post with steps required to setup Pagefind with Eleventy.
 
 There're a number of options available to add search capability to your website, examples include, [Algolia](https://www.algolia.com), [Lunr](https://lunrjs.com) and [Pagefind](https://pagefind.app).
 
@@ -36,9 +40,25 @@ To install Pagefind, open a terminal and `cd` to your site, or open your sites f
 
 ### Running Pagefind
 
-To run Pagefind enter the following command in your terminal: `npx pagefind --site _site`. You'll then see Pagefind index pages in your terminal.
+To run Pagefind enter the following command in your terminal: `npx pagefind --site [output directory]`:
+
+Jekyll example where the output directory is `_site`:
+
+```npm
+npx pagefind --site _site
+```
+
+Eleventy example where the output directory is `dist`:
+
+```npm
+npx pagefind --site dist
+```
+
+You'll then see Pagefind index pages in your terminal.
 
 If you serve your site and navigate to your search page you should see a search box interface that you can test out your new site search!
+
+> :memo: **Note:** If you build your site with Eleventy, installing pagefind will add it as a dependency to your `package.json` file.
 
 ## Customising the Search interface
 
@@ -74,7 +94,7 @@ The default stylesheet for the search interface is `/pagefind/pagefind-ui.css` b
 
 I didn't go down the rabbit hole of trying the customise how the search results displayed, I was happy with the output for the purpose of my site.
 
-## Adding Pagefind to your GitHub Actions Workflow
+## Adding Pagefind to your GitHub Actions Workflow for Jekyll
 
 So we've got Pagefind indexing the site locally, a styled search box and the functionality works... awesome! But now we need to index our site at build time for `production`. To do this add the following to your GitHub Actions workflow for building your Jekyll site before deploying to GitHub Pages.
 
@@ -87,6 +107,24 @@ Add the following workflow step under the **Build with Jekyll** step. If in doub
 ```
 
 And viola, Pagefind will index your site after Jekyll builds the site, and once deployed, your live site will have search capability! :rocket:
+
+## Indexing your Site with Eleventy for Netlify Deployments
+
+How can we index our site at build time for `production` Eleventy deployments to Netlify?
+
+In your `package.json` file add a new script:
+
+```json
+ "build:search": "npx pagefind --site dist"
+ ```
+
+You can then use a build or deployment script to give Netlify as a build command:
+
+```json
+ "build": "npm-run-all build:*"
+ ```
+
+The build * wildcard here includes any build scripts you have such as `build:sass` or `build:eleventy`. The script executes sequentially in alphabetical order which is fine for us because Pagefind needs a built site to generate search indexes.
 
 ## Wrap Up
 

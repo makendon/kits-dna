@@ -48,6 +48,9 @@ Thinking about Minima v3, there's an opportunity to look beyond Jekyll. Jekyll i
 
 I might experiment with **Hugo** for a wee project I have in mind. If this goes well, I might be tempted to convert `kits-dna` especially if it adds features out of the box like *search*. However, as long as GitHub Pages supports Jekyll we’ll be good :smile:
 
+> :recycle: **Update 02/03/2025**
+> I've migrated `kits-dna` from Jekyll and GitHub Pages to **Eleventy** and **Netlify**. See my post [Migrating from Jekyll to Eleventy](/migrating-from-jekyll-to-eleventy).
+
 ## Wrap Up
 
 That’s it! Let me know if this series of posts have helped you build your first website, I’d love your feedback. Check out my [Contact Me](/contact) page or hit the social icons in the footer to connect.
