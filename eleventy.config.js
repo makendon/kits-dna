@@ -37,12 +37,12 @@ export default async function(eleventyConfig) {
 		type: "atom", // or "rss", "json"
 		outputPath: "/feed.xml",
 		collection: {
-			name: "post", // iterate over `collections.post`
+			name: "posts", // iterate over `collections.posts`
 			limit: 10,     // 0 means no limit
 		},
 		metadata: {
 			language: "en",
-			title: "kits-dna",
+			title: "Kit France",
 			subtitle: "Product",
 			base: "https://kitfrance.com/",
 			author: {
