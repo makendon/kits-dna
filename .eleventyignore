@@ -2,5 +2,5 @@ README.md
 .vale.ini
 CNAME
 LICENSE.md
-lighthouse.js
+lighthouse.cjs
 .markdownlint.yml
