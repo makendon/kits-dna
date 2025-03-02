@@ -181,6 +181,7 @@ a {
 // Images
 img {
     max-width: 100%;
+    height: auto;
     vertical-align: middle;
     margin-top: calc(vars.$spacing-unit / 2);
     margin-bottom: calc(vars.$spacing-unit / 2);
