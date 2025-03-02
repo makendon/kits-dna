@@ -8,7 +8,6 @@ tags:
   - netlify
   - github pages
 description: Wanting to move on from Jekyll? This post is all about migrating a Jekyll site to Eleventy.
-draft: true
 ---
 In my post [Bringing it all together](/bringing-it-all-together) I wrote a section called *Beyond Jekyll* in which I mention an opportunity to move on from Jekyll.
 
@@ -28,11 +27,11 @@ Eleventy is written in `JavaScript` which played a part in my decision. No under
 
 I first heard about Eleventy at work. Eleventy is powering a new docs-as-code tool and I wanted to learn more. Over Christmas I setup a `test-eleventy` project and started discovering and experimenting using concepts from `kits-dna` along with the simple but effective [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog/tree/main).
 
-Eleventy is a beautiful blank canvas, it doesn't push you towards a theme or template. You can easily clone a project from GitHub (like this one!) if you want a template to help get started. For me this meant I could de-couple from Jekyll's Minima these that I had give a custom look too.
+Eleventy is a beautiful blank canvas, it doesn't push you towards a theme or template. You can easily clone a project from GitHub if you want a template to help get started. For me this meant I could de-couple from Jekyll's Minima theme that I had customised.
 
-Moving from Jekyll, the layouts and includes work like Jekyll and Eleventy even defaults to using Liquid for templating and the same output directory `_site` as Jekyll which is nice for folk migrating.
+Moving from Jekyll, layouts and includes work the same and Eleventy even defaults to using Liquid for templating and the same output directory `_site` as Jekyll.
 
-The flip side of Eleventy, If you're just starting out or a non-techy like me, it's a steeper learning curve. If you're happy with using a theme or template, you might be better off with Jekyll, Hugo or another static site generator. If like me you wanted to build a website to learn, then it's a great tool which will give you more freedom.
+The flip side of Eleventy. If you're just starting out or a non-techy like me, it's a steeper learning curve to configure. If you're happy with using a theme or template, you might be better off with Jekyll, Hugo or another static site generator. If like me you wanted to build a website to learn about web development, then it's a great tool which will give you more freedom.
 
 > :bulb: **Tip:** [Learn Eleventy](https://learn-eleventy.pages.dev) has useful lessons to help you learn Eleventy.
 
@@ -60,18 +59,20 @@ The flip side of Eleventy, If you're just starting out or a non-techy like me, i
 
 I'd recommend setting up a test project before touching your site and blog. This allowed me to understand some of the differences that I'll cover below and get a high level of confidence for my migration. For example Eleventy defaults to Liquid (albeit a different flavour) for templating but **Nunjucks** is more common for Eleventy projects including the `eleventy-base-blog`, so I discovered Nunjucks while testing.
 
-To migrate I created a new `eleventy` branch in my repository. I then deleted the Jekyll dependencies and initialised `npm` followed by installing Eleventy and the dependencies I used on the test project. After that I updated the directory or folder structure. The `src` directory now contains all site content including:
+To migrate I created a new `eleventy` branch in my repository. I then deleted the Jekyll dependencies and initialised `npm` followed by installing Eleventy and the dependencies I used on the test project. After that I updated the directory or folder structure to include a `src` or source directory. The `src` directory now contains all site content including:
 
-- data
-- includes
-- layouts
-- sass
-- scripts
+- _data
+- _includes
+- _layouts
+- _sass
+- _scripts
 - assets
 - pages
 - posts
 
-The output directory when Eleventy builds the site is now `dist`. This has nicely streamlined the repository root.
+This has nicely streamlined the repository root and keeps another Jekyll convention in prefixing directories with an _ to exclude from copying into the output.
+
+The output directory when Eleventy builds the site is now `dist`.
 
 Below I'll dive into specific areas of difference.
 
@@ -114,7 +115,7 @@ Now when running `npm start` your local server will watch for style changes and 
 
 ### Includes
 
-Includes remain the `_includes` directroy. I've kept includes only to what some might call `partials`. Some Eleventy sites place `layouts` in the `_includes` directory. It doesn't really matter, my personal preference is it's cleaner and quicker to find if in their own directory.
+Includes remain in the `_includes` directory. I've kept includes to what are also known as `partials`. Some Eleventy sites place `layouts` in the `_includes` directory. It doesn't really matter, my personal preference is it's cleaner and quicker to find if in their own directory.
 
 ### Layouts
 
@@ -132,21 +133,20 @@ dir: {
 	},
 ```
 
-Layouts chain just like in Jekyll, but in Eleventy you can take advantage of directory data files to apply the layout across all files in the directory. For example, my site pages are in `src/pages`, add a file called `pages.json` and you could add the following code:
+Layouts chain just like in Jekyll, but in Eleventy you can take advantage of directory data files to apply the layout across all files in the directory. For example, my site blog posts are in `src/posts`, add a file called `posts.json` and you could add the following code:
 
 ```json
 {
-	  "layout": "page.njk",
-    "tags": "pages",
-    "permalink": "/{{ page.fileSlug }}/"
+	"layout": "post.njk",
+    "tags": "posts",
 }
 ```
 
-Now each page in the `pages` directory will use the `page.njk` layout rather than needing to define this in each pages front matter. You can still use front matter, and Eleventy's data cascade will prioritise front matter allowing you to overwrite the data file and use a different layout if required, I use this for my `blog.md` page.
+Now each post in the `posts` directory will use the `post.njk` layout rather than needing to define this in each posts front matter. You can still use front matter, and Eleventy's data cascade will prioritise front matter allowing you to overwrite the data file and use a different layout if required. This code also gives each post the `posts` tag, which will include it in the blog collection for displaying a list a blog posts.
 
 ### JavaScript filters
 
-To replicate some Jekyll functionality in Eleventy we need to `JavaScript` filters. I currently have filters to:
+To replicate some Jekyll functionality in Eleventy we need to add some `JavaScript` filters. I currently have filters to:
 
 - Output a more conventional date
 - Find and sort tags
@@ -172,7 +172,7 @@ export default function () {
 
 ![Example of updating the environment variable in the base.njk file](/assets/screenshots/prod-env-example.png)
 
-You'll notice that this code is similar to what you used in Jekyll, only rather than calling Jekyll we're calling the `kitsDna.js` data file.
+You'll notice that this code is similar to what you used in Jekyll, only rather than calling Jekyll we're calling the `kitsDna.js` data file added in step 1.
 
 3. Update your `package.json` build script:
 
@@ -197,11 +197,11 @@ Once I cleared my errors and my site built... I had no style. The stylesheet pat
 
 ### Sass
 
-Unlike Jekyll, when you serve and build Eleventy, Eleventy warns you about deprecations which is nice, but it led to me having to clean up and improve the use of variables and other elements in my `scss` sheets.
+Unlike Jekyll, when you serve and build Eleventy, Eleventy warns you about deprecations which is nice, but it led to me having to clean up and improve the use of variables, mixins and calculations in my `scss` sheets.
 
 ### Links
 
-You don't need to prepend links in Eleventy as you did in Jekyll, meaning you'll need to remove any `| relative_url` references. In Eleventy simple just use `/file_name`. Eleventy outputs files without a directory, meaning that every page and post has the path `dist/`.
+You don't need to prepend links in Eleventy as you did in Jekyll, meaning you'll need to remove any `| relative_url` references. In Eleventy just use `/file_name`. Eleventy outputs files without a directory, meaning that every page and post has the path `dist/`.
 
 ### Post excepts
 
@@ -215,17 +215,17 @@ Migrating to Eleventy has allowed me to add the following new features to `kits-
 - Blog post tags
 - Pages for tags
 
-The tags are nice to haves, but the image transformation will improve the site performance by converting `jpeg` and `png` images to modern formats such as `webp` and outputting multiple images sizes for enhanced responsive design. Images transformed by the nifty `@11ty/eleventy-img` plugin.
+The tags are nice to haves, but the image transformation has improved the site performance by converting `jpeg` and `png` images to modern formats such as `webp` and outputting multiple images sizes for enhanced responsive design. Make sure you add a `height: auto` property to images in your `base.scss` sheet. Images transformed by the nifty `@11ty/eleventy-img` plugin.
 
 ## Deploying with Netlify
 
-I had an open issue to discover deploying `kits-dna` using a tool other than GitHub Pages. Migrating to Eleventy brought this into focus because while you can deploy an Eleventy to GitHub Pages, it's not as graceful as Jekyll. GitHub Actions are available but it results in a `gh-pages` deployment branch that GitHub Pages uses to deploy the site, and I've avoided that to date. Time to discover an alternative.
+I had an open issue to discover deploying `kits-dna` using a tool other than GitHub Pages. Migrating to Eleventy brought this into focus because while you can deploy an Eleventy site to GitHub Pages, it's not as graceful as Jekyll. GitHub Actions are available but it results in a `gh-pages` deployment branch that GitHub Pages uses to deploy the site, and I've avoided that to date. Time to discover an alternative :telescope:
 
-I looked at two providers [**Azure Static Web Apps**](https://azure.microsoft.com/en-us/products/app-service/static) and [**Netlify**](https://www.netlify.com) as simple, free alternatives. I decided to test out **Netlify** using my `test-elventy` project as it's a more commonly used platform and agnostic from Microsoft.
+I looked at two providers [**Azure Static Web Apps**](https://azure.microsoft.com/en-us/products/app-service/static) and [**Netlify**](https://www.netlify.com) as simple, *free* alternatives. I decided to test out **Netlify** using my `test-elventy` project as it's a more commonly used platform and agnostic from Microsoft.
 
 ### Getting started with Netlify
 
-To deploy your site with Netlify (assuming your site's code is hosted on GitHub) simply go to [Netlify Apps](https://app.netlify.com) and login with GitHub. You'll then select which repository you want to deploy, give the site a name (determines the URL subdomain e.g. `test-eleventy.netlify.app`) and configure the build settings:
+To deploy your site with Netlify (assuming your sites code is hosted on GitHub) simply go to [Netlify Apps](https://app.netlify.com) and login with GitHub. Select which repository you want to deploy, give the site a name (determines the URL subdomain e.g. `test-eleventy.netlify.app`) and configure the build settings:
 
 - Branch to deploy = `main`
 - Build command = `npm run build`
@@ -240,6 +240,6 @@ Ta da ! Magic! No need for a GitHub Action workflow, Netlify builds and deploys 
 
 I've added relevant updates to my previous blog posts where relevant, the lighthouse and search posts in particular came in handy to help reconfigure lighthouse and install pagefind again :handshake:
 
-:face_exhaling: that was a long post. I've covered a lot and could have dived even deeper into each section, but hopefully this gives you the confidence to migrate your Jekyll site or create your first site with Eleventy. You learn so much by doing I suggest you crack on and get started, don't worry about making mistakes, you're learning :smile:
+:face_exhaling: that was a long post. I've covered a lot and could have dived even deeper into each section, but hopefully this gives you the confidence to migrate your Jekyll site or create your first site with Eleventy. You learn so much by *doing*, crack on and get started, don't worry about making mistakes, you're learning :smile:
 
 Thanks for reading :call_me_hand:
