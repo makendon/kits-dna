@@ -10,6 +10,10 @@ on:
       - '**.md'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  checks: write
+
 jobs:
   markdownlint:
     name: markdownlint
