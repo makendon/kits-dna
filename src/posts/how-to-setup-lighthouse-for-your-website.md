@@ -1,0 +1,233 @@
+---
+title: How to setup Lighthouse for your website
+date: 2025-02-14
+tags:
+  - lighthouse
+  - jekyll
+  - eleventy
+description: Want to improve your websites performance and accessibility? Lighthouse can help identify actions to take.
+---
+> :recycle: **Update 02/03/2025**
+> I've updated this post with steps required to setup Lighthouse with Eleventy.
+
+## What is Lighthouse
+
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/) provides powerful audit insights into website performance, accessibility, best practices and Search Engine Optimisation (SEO). It's [open source](https://github.com/GoogleChrome/lighthouse) and can run on any web page whether public or requiring authentication.
+
+There are a number of ways to run Lighthouse:
+
+- Run in Chrome DevTools
+- Run as Chrome Extension
+- Install and run the Node command line tool
+- Run [PageSpeed Insights](https://pagespeed.web.dev)
+- Run [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)
+
+## Lighthouse CI
+
+I chose to setup Lighthouse CI.
+
+> *Automate running Lighthouse for every commit, viewing the changes, and preventing regressions - Lighthouse CI*
+
+This means that I can get feedback in build logs and directly in pull requests.
+
+There's some neat documentation on [getting started with Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md). Have a good read through, I'm going to summarise the steps that I took below.
+
+> :memo: **Note:** My tech stack is GitHub and GitHub Actions.
+
+### Configure Lighthouse CI for Jekyll
+
+Add a new file to the root of your repository called `lighthouserc.js` and add the following code:
+
+```js
+module.exports = {
+    ci: {
+      collect: {
+        staticDistDir: './_site',
+      },
+      upload: {
+        target: 'temporary-public-storage',
+      },
+    },
+  };
+```
+
+> :warning: **Warning:** This configuration uses temporary public storage for your Lighthouse results. Storage is between 3 days and 5 weeks as per the [service disclaimer](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/services-disclaimer.md#temporary-public-storage).
+
+#### Configure GitHub Actions for Jekyll
+
+Create a new GiHub Actions workflow in your `.github/workflows` directory called `lighthouse.yml` and add the following code:
+
+```yaml
+name: Lighthouse CI
+on:
+  push:
+    branches-ignore:
+      - main
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+        with:
+          ruby-version: '3.3' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.14.x
+          lhci autorun
+```
+
+This workflow runs on `git push` events but ignores pushes to the main branch (this is my preference). If I create a new feature branch and push that branch and changes to GitHub the workflow will run.
+
+### Configure Lighthouse CI for Eleventy
+
+Add a new file to the root of your repository called `lighthouserc.cjs`.
+
+> :warning: **Warning:** Lighthouse file name is now a *common* `JavaScript` file, this assumes your Eleventy configuration uses `ESM` or `"type": "module"`. Also note the outout folder in this example has changed from `_site` to `dist`.
+
+Add the following code:
+
+```js
+module.exports = {
+    ci: {
+      collect: {
+        staticDistDir: './dist',
+      },
+      upload: {
+        target: 'temporary-public-storage',
+      },
+    },
+  };
+```
+
+#### Configure GitHub Actions for Eleventy
+
+Create a new GiHub Actions workflow in your `.github/workflows` directory called `lighthouse.yml` and add the following code:
+
+```yaml
+name: Lighthouse CI
+on:
+  push:
+    branches-ignore:
+      - main
+  workflow_dispatch:
+
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build site
+        run: npm run build
+
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.14.x
+          lhci autorun
+```
+
+### Viewing the Lighthouse report
+
+To view the Lighthouse report generated by the workflow:
+
+1. Click on **Actions**
+2. From the sidebar select **Lighthouse CI**
+3. Click on a workflow run (commit message)
+4. Select the **Lighthouse** job
+5. Expand **run Lighthouse CI**
+6. Scroll down until you see **Open the report at [URL]**
+7. Click the URL to view the report
+
+### Configuring GitHub status checks
+
+To save you having to go into the workflow to view the Lighthouse reports you can setup GitHub status checks to show the report scores on the pull request user interface along with the report URL.
+
+See the example below showing the Lighthouse audit scores as part of the pull request. You can see the pages the audit has run against and the scores without needing to view the report. Clicking on *Details* takes you to the full report.
+
+![Lighthouse CI status checks](/assets/screenshots/lighthouse-ci-status-checks.png)
+
+To set up the status checks choose an option from the [documentation](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md#github-status-checks). I went with the recommended GitHub App method.
+
+You'll receive an app token which you'll need to add as a secret. To add a secret:
+
+1. Click on **Settings**
+2. From the sidebar under Secrets and variables, select **Actions**
+3. On the Secrets tab, click **New repository secret**
+4. Name the secret `LHCI_GITHUB_APP_TOKEN`
+5. Add the secret
+6. Click **Add secret**
+
+You now need to add a little extra configuration to your `lighthouse.yml` workflow under the *run Lighthouse CI* step.
+
+```yaml
+ env:
+   LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+```
+
+The workflow file should now look like the below for an **Eleventy** build:
+
+```yaml
+name: Lighthouse CI
+on:
+  push:
+    branches-ignore:
+      - main
+  workflow_dispatch:
+
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build site
+        run: npm run build
+
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.14.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+```
+
+## Wrap Up
+
+I haven't added *Assertions* or a *Lighthouse CI Server*, you can read about these features in the documentation I shared earlier. Assertions let you fail a build based on the report results and a server can act as personal storage for visualising reports rather than using temporary public storage. I might set both of these up later, but my focus now is using the Lighthouse report to improve my website.
+
+I started with making accessibility improvements, and I've got an open issue to address performance findings relating to images which wasn't a surprise. My goal is to get all the audits to 100.
+
+SEO and best practices are currently scoring 100, accessibility is mostly 100 other than the blog page which is 96 due to the report picking up heading elements not being in sequential order. I probably just need to give the blog titles a font size that corresponds to a heading size, without being a header. I did similar to improve the footer accessibility so a nice example of how you can use the report to make positive changes.
+
+Thanks for reading :call_me_hand:

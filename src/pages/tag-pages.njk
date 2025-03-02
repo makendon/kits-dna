@@ -1,0 +1,20 @@
+---
+layout: base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+<h1>Posts tagged "{{ tag }}"</h1>
+
+<ul>
+{%- for post in collections[tag] | reverse -%}
+  <li class="tag-list">
+    <code>{{ post.date | dateFormat }}</code>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+  </li>
+{%- endfor -%}
+</ul>
+
+<p>See <a href="/tags">all blog post tags</a>.</p>

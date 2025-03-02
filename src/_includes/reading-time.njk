@@ -1,0 +1,4 @@
+{% set words = content | wordcount - 180 %}
+{% if words > 0 %}
+🕒 {{ ((words + 150) / 150) | round }} minutes to read
+{% endif %}

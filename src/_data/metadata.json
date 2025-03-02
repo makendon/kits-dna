@@ -1,0 +1,24 @@
+{
+    "name": "Kit France",
+    "title": "Kit France",
+    "description": "Product",
+    "url": "https://kitfrance.com",
+    "lang": "en",
+    "author": {
+        "name": "Kit France",
+        "email": "kit@kitfrance.com",
+        "twitter": ""
+    },
+    "github": {
+        "repo_name": "kits-dna",
+        "repo_url": "https://github.com/makendon/kits-dna",
+        "repo_owner": "makendon",
+        "repo_owner_url": "https://github.com/makendon/"
+    },
+    "linkedin": {
+        "url": "https://www.linkedin.com/in/kit-france-a1a3b874"
+    },
+    "mastodon": {
+        "url": "https://mastodon.social/@makendon"
+    }
+}

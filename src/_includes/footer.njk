@@ -1,0 +1,50 @@
+<footer>
+    <div class="footer-container">
+      
+      <!-- Navigation Links Column -->
+      <div class="footer-column">
+        <span class="footer-heading">Navigation</span>
+        <ul>
+          <li>
+            <a href="{{ "/" }}">Home</a>
+            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Links Column -->
+      <div class="footer-column">
+        <span class="footer-heading">Contact</span>
+        <div class="social-icons">
+          <a href="{{ metadata.linkedin.url }}" title="LinkedIn"><i class="fa-brands fa-linkedin fa-xl" style="color: #828282;"></i></a>
+          <a href="{{ metadata.github.repo_owner_url }}" title="GitHub"><i class="fa-brands fa-github fa-xl" style="color: #828282;"></i></a>
+          <a href="{{ metadata.mastodon.url }}" title="Mastodon"><i class="fa-brands fa-mastodon fa-xl" style="color: #828282;"></i></a>
+        </div>
+        <ul class="social-links">
+          <li><a href="/contact/">Contact Me</a></li>
+        </ul>
+      </div>
+
+      <!-- Tech Column -->
+      <div class="footer-column">
+       <span class="footer-heading">Tech</span>
+       <p><a target="_blank" href="{{ metadata.github.repo_url }}">{{ metadata.github.repo_name }}</a> is made with ❤️ by <a target="_blank" href="{{ metadata.github.repo_owner_url }}">{{ metadata.github.repo_owner }}</a> 
+       <p>Powered by <a target="_blank" href="https://www.11ty.dev">Eleventy</a> and <a target="_blank" href="https://www.netlify.com">Netlify</a></p>
+      </div>
+    </div>
+
+    <!-- Extras -->
+    <hr class="footer-divider">
+    <div class="footer-container">
+      
+      <!-- Copyright Column -->
+      <div class="footer-column">
+       <p>Copyright &copy; 2024 - 2025 Kit France</p>
+      </div>
+
+      <!-- Links Column -->
+      <div class="footer-column">
+        <p><a href="/privacy">Privacy</a>&emsp;|&emsp;<a href="/accessibility">Accessibility</a>&emsp;|&emsp;<a href="/search/">Search</a></p>
+      </div>
+    </div>
+</footer>

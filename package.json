@@ -1,0 +1,44 @@
+{
+  "name": "kits-dna",
+  "version": "1.0.0",
+  "description": "`kits-dna` is the repository name for **kitfrance.com**. Built with Eleventy.",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch src/_sass/styles.scss:dist/css/styles.css",
+    "build:sass": "sass src/_sass/styles.scss dist/css/styles.css",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "build:eleventy": "npx eleventy",
+    "build:search": "npx pagefind --site dist",
+    "start": "ELEVENTY_ENVIRONMENT=development npm-run-all build:sass --parallel watch:*",
+    "build": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*",
+    "deploy": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makendon/kits-dna.git"
+  },
+  "keywords": [],
+  "author": "Kit France",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/makendon/kits-dna/issues"
+  },
+  "homepage": "https://kitfrance.com",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-fetch": "^5.0.2",
+    "@11ty/eleventy-img": "^6.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  },
+  "devDependencies": {
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-emoji": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "pagefind": "^1.3.0",
+    "sass": "^1.85.1"
+  }
+}
