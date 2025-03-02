@@ -1,12 +1,13 @@
 ---
 title: Migrating from Jekyll to Eleventy
-date: 2025-03-31
+date: 2025-03-02
 tags:
   - jekyll
   - eleventy
   - nunjucks
   - netlify
   - github pages
+description: Wanting to move on from Jekyll? This post is all about migrating a Jekyll site to Eleventy.
 draft: true
 ---
 In my post [Bringing it all together](/bringing-it-all-together) I wrote a section called *Beyond Jekyll* in which I mention an opportunity to move on from Jekyll.
@@ -45,7 +46,6 @@ The flip side of Eleventy, If you're just starting out or a non-techy like me, i
 - Extensibility
 - `npm` / `node` project
 - Easy serve and build scripts
-- Reduced number of dependencies
 - Data files
 - Alerts to dependency deprecations
 
@@ -198,6 +198,14 @@ Once I cleared my errors and my site built... I had no style. The stylesheet pat
 ### Sass
 
 Unlike Jekyll, when you serve and build Eleventy, Eleventy warns you about deprecations which is nice, but it led to me having to clean up and improve the use of variables and other elements in my `scss` sheets.
+
+### Links
+
+You don't need to prepend links in Eleventy as you did in Jekyll, meaning you'll need to remove any `| relative_url` references. In Eleventy simple just use `/file_name`. Eleventy outputs files without a directory, meaning that every page and post has the path `dist/`.
+
+### Post excepts
+
+Eleventy doesn't support post excerpts like Jekyll does. You can work around this by using a description in your post front matter and adding the relevant code to your `post.njk` layout. This post is using it! Cleverer people than me might be able to do something better :smile:
 
 ## New features
 
