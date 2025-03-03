@@ -2,6 +2,8 @@
 
 `kits-dna` is the repository name for **kitfrance.com**. It uses the **Eleventy** static site generator. 11ty.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/698c405f-df5f-4dcb-aa60-191b0cdcaedf/deploy-status)](https://app.netlify.com/sites/kits-dna/deploys)
+
 ## Getting started
 
 ### Local dependencies
