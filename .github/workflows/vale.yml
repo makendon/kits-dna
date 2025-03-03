@@ -10,6 +10,10 @@ on:
       - '**.md'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  checks: write
+
 jobs:
   vale:
     name: vale
@@ -18,4 +22,3 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: errata-ai/vale-action@v2.1.1
-   
