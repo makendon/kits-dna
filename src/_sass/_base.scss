@@ -1,214 +1,127 @@
-// Base styles
-
 @use 'variables' as vars;
 @use 'mixins';
 
-// CSS Reset
-/**, *:before, *:after {
-    box-sizing: border-box;
-}*/
-
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    /*font: inherit;*/
-    vertical-align: baseline;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    text-size-adjust: none;
+// Modern CSS reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-footer, header, nav, section, main{
-    display: block;
-}
-
+// Base elements
 body {
-    line-height: 1;
-    padding-top: 4em;
+  font: vars.$base-font-weight #{vars.$base-font-size}/#{vars.$base-line-height} vars.$base-font-family;
+  color: vars.$text-color;
+  background-color: vars.$background-color;
+  text-size-adjust: 100%;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 10px;
+  margin-top: 1em;
 }
 
-ol, ul {
-    font-family: vars.$base-font-family;
-    font-size: vars.$base-font-size;
-    padding-left: calc(vars.$spacing-unit / 2);
-}
-
-li {
-    &:last-child {
-      margin-bottom: calc(vars.$spacing-unit / 2);
-    }
-}
-
-blockquote {
-  background-color: vars.$grey-color-v-light;
-  color: vars.$grey-color-dark;
-  border-left: 8px solid #004225;
-  padding-left: calc(vars.$spacing-unit / 2);
-  padding-top: calc(vars.$spacing-unit / 2);
-  padding-bottom: calc(vars.$spacing-unit / 2);
-  margin-top: calc(vars.$spacing-unit / 2);
-  margin-bottom: calc(vars.$spacing-unit / 2);
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after{
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-input {
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-
-// Custom styles
-// Wrapper
-.wrapper {
-    max-width: calc(#{vars.$content-width} - (#{vars.$spacing-unit} * 2));
-    max-width: calc(#{vars.$content-width} - (#{vars.$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: vars.$spacing-unit;
-    padding-left: vars.$spacing-unit;
-    @extend %clearfix !optional;
-
-    @include mixins.media-query(vars.$laptop) {
-        max-width: -webkit-calc(#{vars.$content-width} - (#{vars.$spacing-unit}));
-        max-width:         calc(#{vars.$content-width} - (#{vars.$spacing-unit}));
-        padding-right: calc(vars.$spacing-unit / 2);
-        padding-left: calc(vars.$spacing-unit / 2);
-    }
-}
-
-// Basic styles
-body {
-    font: vars.$base-font-weight #{vars.$base-font-size}/#{vars.$base-line-height} vars.$base-font-family;
-    color: vars.$text-color;
-    background-color: vars.$background-color;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-       -moz-font-feature-settings: "kern" 1;
-         -o-font-feature-settings: "kern" 1;
-            font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    padding-top: 10px;
-    margin-top: 1em;
-}
-
-/*figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, ol, ul, li {
-    margin-bottom: calc(vars.$spacing-unit / 2);
-}*/
-
-// Headings and paragraphs
+// Typography
 h1, h2, h3, h4, h5, h6 {
-    color: vars.$brand-color;
-    font-family: vars.$base-font-family;
-    font-weight: 500;
-    margin-top: vars.$spacing-unit;
-    margin-bottom: calc(vars.$spacing-unit / 2);
+  color: vars.$brand-color;
+  font-family: vars.$base-font-family;
+  font-weight: 500;
+  margin-top: vars.$spacing-unit;
+  margin-bottom: calc(vars.$spacing-unit / 2);
 }
 
-h1 {
-    font-size: 2em;
-
-   /*&::before {
-    content: "/ ";
-    }*/
-}
-
-h2 {
-    font-size: 1.5em;
-
-    /*&::before {
-        content: "// ";
-    }*/
-}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
 
 p {
-    margin-bottom: 0.5em;
-    color: vars.$text-color;
-    font-family: vars.$base-font-family;
-    font-size: vars.$base-font-size;
-    font-weight: vars.$base-font-weight;
+  margin-bottom: 0.5em;
+  color: vars.$text-color;
+  font-family: vars.$base-font-family;
+  font-size: vars.$base-font-size;
 }
 
-// Code `backticks` styling
-code {
-    border: 1px solid;
-    border-radius: 3px;
-    background-color: vars.$grey-color-v-light;
-    color: vars.$text-color;
-    padding: 1px 5px;
-    border: 0;
-    font-family: vars.$code-font-family;
-    line-height: 1;
-    font-size: vars.$small-font-size;
+// Lists
+ol, ul {
+  font-family: vars.$base-font-family;
+  font-size: vars.$base-font-size;
+  padding-left: calc(vars.$spacing-unit / 2);
+}
+
+li:last-child {
+  margin-bottom: calc(vars.$spacing-unit / 2);
 }
 
 // Links
 a {
-    color: vars.$link-color;
-    text-decoration: none;
-    font-weight: 500;
+  color: vars.$link-color;
+  text-decoration: none;
+  font-weight: 500;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover { text-decoration: underline; }
+  &:visited { color: vars.$link-color-visited; }
+}
 
-    &:visited {
-      color: vars.$link-color-visited;
-    }
+// Code
+code {
+  background-color: vars.$grey-color-v-light;
+  color: vars.$text-color;
+  font-family: vars.$code-font-family;
+  font-size: vars.$small-font-size;
+  line-height: 1;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+// Blockquotes
+blockquote {
+  background-color: vars.$grey-color-v-light;
+  color: vars.$grey-color-dark;
+  border-left: 8px solid #004225;
+  padding: calc(vars.$spacing-unit / 2);
+  margin: calc(vars.$spacing-unit / 2) 0;
+
+  > :last-child { margin-bottom: 0; }
 }
 
 // Images
 img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-    margin-top: calc(vars.$spacing-unit / 2);
-    margin-bottom: calc(vars.$spacing-unit / 2);
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin: calc(vars.$spacing-unit / 2) 0;
 }
 
 // Tables
 table {
-    margin-bottom: vars.$spacing-unit;
-    width: 100%;
-    text-align: vars.$table-text-align;
-    color: vars.$table-text-color;
-    border-collapse: collapse;
-    border: 1px solid vars.$grey-color-light;
-    tr {
-      &:nth-child(even) {
-        background-color: (vars.$grey-color-v-light);
-      }
-    }
-    th, td {
-      padding: calc(vars.$spacing-unit / 3) calc(vars.$spacing-unit / 2);
-    }
-    th {
-      background-color: vars.$table-th-background-color;
-      border: 1px solid vars.$table-th-border-color;
-      border-bottom-color: vars.$table-th-border-bottom-color;
-    }
-    td {
-      border: 1px solid vars.$grey-color-light;
-    }
+  width: 100%;
+  margin-bottom: vars.$spacing-unit;
+  border-collapse: collapse;
+  border: 1px solid vars.$grey-color-light;
+  
+  th {
+    background-color: vars.$table-th-background-color;
+    border: 1px solid vars.$table-th-border-color;
+  }
+  
+  td { border: 1px solid vars.$grey-color-light; }
+  
+  th, td { padding: calc(vars.$spacing-unit / 3) calc(vars.$spacing-unit / 2); }
+  
+  tr:nth-child(even) { background-color: vars.$grey-color-v-light; }
+}
+
+// Wrapper
+.wrapper {
+  max-width: calc(#{vars.$content-width} - (#{vars.$spacing-unit} * 2));
+  margin: 0 auto;
+  padding: 0 vars.$spacing-unit;
+  
+  @include mixins.media-query(vars.$laptop) {
+    max-width: calc(#{vars.$content-width} - #{vars.$spacing-unit});
+    padding: 0 calc(vars.$spacing-unit / 2);
+  }
 }

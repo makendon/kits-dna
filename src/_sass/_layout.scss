@@ -5,10 +5,9 @@
 
 /* Site header */
 .site-header {
-  display: flex;
+  @include mixins.flex-center;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: vars.$shadow-default;
   background-color: vars.$head-foot-color;
   position: absolute;
   top: 0;
@@ -18,9 +17,7 @@
 }
 
 .header-left {
-  flex: 1 1 25%;
-  display: flex;
-  align-items: center;
+  @include mixins.header-section;
   justify-content: flex-start;
   gap: 0.5rem;
   margin-left: 2rem;
@@ -36,7 +33,7 @@
   font-size: vars.$base-font-size;
 
   a {
-    color: #004225;
+    color: vars.$brand-color;
     font-weight: 500;
     text-decoration: none;
   }
@@ -46,15 +43,12 @@
   }
 
   &:visited {
-    color: #004225;
+    color: vars.$brand-color;
   }
 }
 
 .header-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flex-center;
   flex: 1 1 50%;
 }
 
@@ -71,7 +65,7 @@
     display: block;
     width: 25px;
     height: 2px;
-    background: #004225;
+    background: vars.$brand-color;
     margin: 5px 0;
     transition: 0.3s;
   }
@@ -95,7 +89,6 @@
 
   li {
     display: inline-block;
-    /*margin-right: 2rem;*/
 
     &:last-child {
       margin-bottom: 0;
@@ -105,22 +98,22 @@
   a {
     font-size: vars.$small-font-size;
     text-decoration: none;
-    color: #004225;
+    color: vars.$brand-color;
     font-weight: 500;
     transition: color 0.2s;
   }
 
   a:hover {
-    color: #004225;
+    color: vars.$brand-color;
     text-decoration: underline;
   }
   
   a:visited {
-    color: #004225;
+    color: vars.$brand-color;
   }
 
   a.active {
-    color: #004225;
+    color: vars.$brand-color;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     font-weight: 600;
@@ -129,14 +122,18 @@
 }
 
 .header-right {
-  flex: 1 1 25%;
-  display: flex;
+  @include mixins.header-section;
   justify-content: flex-end;
   gap: 1rem;
   margin-right: 2rem;
 }
 
+// Mobile styles using a single media query
 @media (max-width: 768px) {
+  .site-header {
+    // Mobile header styles
+  }
+
   .site-title {
     display: none;
   }
@@ -148,7 +145,7 @@
     right: 0;
     background-color: vars.$head-foot-color;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: vars.$shadow-default;
   }
 
   .nav-list {
@@ -177,7 +174,7 @@
 
   .nav-toggle:checked ~ .main-nav {
     height: auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: vars.$shadow-default;
   }
 
   .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
@@ -194,6 +191,10 @@
 
   .header-right {
     margin-right: 6rem;
+  }
+
+  .footer-container {
+    // Mobile footer styles
   }
 }
 
@@ -218,8 +219,8 @@
   font-size: 1em;
   font-weight: 500;
   border-radius: 20px;
-  background-color: #004225;
-  border-color: #004225;
+  background-color: vars.$brand-color;
+  border-color: vars.$brand-color;
 }
 
 .btn a {
@@ -236,7 +237,7 @@
 
 /* Homepage */
 .homepage {
-  color: #004225;
+  color: vars.$brand-color;
   background-color: vars.$background-color;
   max-width: 800px;
   margin: 0 auto;
@@ -272,7 +273,6 @@
 
 /* Default homepage image (light mode) */
 #homeImage {
-  /*content: url('/assets/images/productdoodles.webp');*/
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -289,7 +289,7 @@ footer {
   color: vars.$head-foot-text-color; /*#e0e0e0*/
   padding: 20px 0;
   position: relative;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: vars.$shadow-default;
 }
 
 .footer-heading {
@@ -361,7 +361,7 @@ footer {
   gap: 1rem;
 
   a:hover i {
-    color: #004225 !important; // Override inline style
+    color: vars.$brand-color !important; // Override inline style
     transform: scale(1.2);
   }
 }
@@ -564,7 +564,7 @@ footer {
 }
 
 #search button {
-  background-color: #004225;
+  background-color: vars.$brand-color;
   color: vars.$text-color-dark;
   padding: 10px 20px;
   border: none;
@@ -574,23 +574,12 @@ footer {
 }
 
 #search button:hover {
-  background-color: #004225;
+  background-color: vars.$brand-color;
 }
-
-/* Additional styles for the search container
-#search {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-} */
 
 /* Change the color of the Font Awesome search icon */
 .icon-link .fa-search {
-  color: #004225;
-  font-size: 1rem;
+  color: vars.$brand-color;
 }
 
 /* Style for the dark mode toggle icon */
