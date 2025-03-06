@@ -60,9 +60,8 @@ a {
   color: vars.$link-color;
   text-decoration: none;
   font-weight: 500;
-  text-decoration: underline;
 
-  &:hover { text-decoration-thickness: 2px; }
+  &:hover { text-decoration: underline; }
   &:visited { color: vars.$link-color-visited; }
 }
 
