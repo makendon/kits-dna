@@ -1,10 +1,12 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import Fetch from "@11ty/eleventy-fetch";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownit from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor';
-import { full as emoji } from 'markdown-it-emoji'
+import { full as emoji } from 'markdown-it-emoji';
+import MarkdownItGitHubAlerts from 'markdown-it-github-alerts';
 import { dateFormat } from './src/_scripts/dateFormat.js';
 import { filterTagList } from './src/_scripts/filterTagList.js';
 import { wordCount } from './src/_scripts/wordCount.js';
@@ -30,7 +32,8 @@ export default async function(eleventyConfig) {
 	// Configure markdown library with plugins
     const markdownLibrary = markdownit(mdOptions)
         .use(markdownItAnchor, anchorOptions)
-        .use(emoji);
+        .use(emoji)
+		.use(MarkdownItGitHubAlerts)
 
     // RSS feed
     eleventyConfig.addPlugin(feedPlugin, {
@@ -77,6 +80,19 @@ export default async function(eleventyConfig) {
 		}
 	});
 
+	// Fetch
+	let googleUrl = "https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap";
+    let googleFont = await Fetch(googleUrl, {
+	  duration: "1d",
+	  type: "text",
+	  fetchOptions: {
+	    headers: {
+			"user-agent":
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+		},
+	  },
+    });
+
     // Configure eleventy
 	eleventyConfig.setLibrary("md", markdownLibrary);
     eleventyConfig.addWatchTarget("./src/_sass/");
@@ -89,6 +105,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.addFilter("wordCount", wordCount);
 	eleventyConfig.addFilter("sortAlphabetically", sortAlphabetically);
 	eleventyConfig.addFilter("getKeys", getKeys);
+	eleventyConfig.addGlobalData("googleFont", googleFont);
 };
 
 export const config = {
