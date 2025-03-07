@@ -1,19 +1,22 @@
-// Description: This script (jQuery) is used to toggle dark mode on the website. It listens for system theme changes and allows manual override. Local storage is not used.
+// Description: This script is used to toggle dark mode on the website. It listens for system theme changes and allows manual override. Local storage is not used.
 
-$(document).ready(function () {
-  const darkModeElements = 'body, .site-header, .site-nav, .homepage, #homeImage, #search, .icon-link, .fa-search, .dark-mode-toggle';
+document.addEventListener('DOMContentLoaded', function () {
+  const darkModeElements = [
+    document.body,
+    ...document.querySelectorAll('.site-header, .site-nav, .homepage, #homeImage, #search, .icon-link, .fa-search, .dark-mode-toggle')
+  ];
   
-  // Check system dark mode preference
   const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
   
   function applyTheme(isDark) {
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    $(darkModeElements)[isDark ? 'addClass' : 'removeClass']('dark-mode');
-    // Store in session
+    darkModeElements.forEach(element => {
+      element.classList[isDark ? 'add' : 'remove']('dark-mode');
+    });
     sessionStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
 
-  // Initial setup - check session storage first, then system preference
+  // Initial setup
   const sessionTheme = sessionStorage.getItem('theme');
   if (sessionTheme) {
     applyTheme(sessionTheme === 'dark');
@@ -21,7 +24,7 @@ $(document).ready(function () {
     applyTheme(systemDarkMode.matches);
   }
 
-  // Listen for system theme changes - only if no session preference
+  // Listen for system theme changes
   systemDarkMode.addEventListener('change', (e) => {
     if (!sessionStorage.getItem('theme')) {
       applyTheme(e.matches);
@@ -29,7 +32,7 @@ $(document).ready(function () {
   });
 
   // Handle manual toggle
-  $('#darkModeToggle').on('click', function () {
+  document.getElementById('darkModeToggle').addEventListener('click', function () {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     applyTheme(currentTheme === 'light');
   });
