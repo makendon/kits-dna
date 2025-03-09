@@ -26,6 +26,43 @@
   align-items: center;
 }
 
+// Homepage card size
+@mixin responsive-grid {
+  grid-template-rows: repeat(3, vars.$card-size);
+  
+  @media (max-width: 1100px) {
+    grid-template-rows: repeat(3, vars.$card-size-tablet);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-rows: repeat(3, vars.$card-size-mobile);
+  }
+}
+
+@mixin responsive-card-size {
+  @media (max-width: 1100px) {
+    width: vars.$card-size-tablet;
+    height: vars.$card-size-tablet;
+    font-size: vars.$base-font-size;
+  }
+
+  @media (max-width: 768px) {
+    width: vars.$card-size-mobile;
+    height: vars.$card-size-mobile;
+    font-size: vars.$xs-font-size;
+  }
+}
+
+@mixin responsive-card-icons {
+  @media (max-width: 1100px) {
+    font-size: vars.$large-font-size;
+  }
+
+  @media (max-width: 768px) {
+    font-size: vars.$base-font-size;
+  }
+}
+
 // Shared dark mode styles
 @mixin darkTheme {
   body {
@@ -133,27 +170,22 @@
     color: vars.$head-foot-text-color-dark;
   }
   .btn {
-    border: 3px solid #fcfcfc;
-    background-color: yellow;
-    border-color: yellow;
+    background-color: vars.$brand-color-alt;
+    border-color: vars.$brand-color-alt;
   }
-  .btn a {
-    color: #004225;
+  a.btn {
+    color: vars.$brand-color;
     text-decoration: none;
-  }
-  .btn:hover { 
-    color: #004225;
-    text-decoration: underline;
-    background-color: #fcfcfc; 
-    border-color: #fcfcfc;
+    text-align: center;
   }
   .homepage {
     color: vars.$text-color-dark;
     background-color: vars.$background-color-dark;
   }
   #homeImage {
-    content: url('/assets/images/productdoodles4.webp');
+    content: url('/assets/images/me3.png');
     padding-bottom: 1em;
+    border-radius: 1%;
   }
   footer {
     background-color: vars.$head-foot-color-dark;
@@ -199,5 +231,18 @@
     .dark-icon {
       display: none;  // Hide moon in dark mode
     }
+  }
+  .card {
+    background: vars.$grey-color-dark;
+    color: vars.$text-color-dark;
+
+    &:hover {
+      background: vars.$brand-color;
+      color: vars.$brand-color-alt;
+    }
+  }
+  a.card {
+    color: vars.$text-color-dark;
+    text-decoration: none;
   }
 }

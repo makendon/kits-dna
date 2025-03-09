@@ -7,10 +7,13 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvet
 $code-font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
 $home-font-family: 'Architects Daughter', cursive;
 $base-font-size:   18px !default;
-$base-font-weight: 400 !default;
+$xs-font-size:  $base-font-size * 0.675 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
+$medium-font-size: 24px !default;
 $large-font-size: 28px !default;
+$xl-font-size: 32px !default;
 $code-font-size:   $base-font-size * 0.750 !default;
+$base-font-weight: 400 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
@@ -20,6 +23,7 @@ $text-color-dark:  #fcfcfc;
 $background-color: white !default; // #f7f7f7 is grey
 $background-color-dark: #121212; 
 $brand-color:     #004225 !default;
+$brand-color-alt: #FFBF47 !default;
 $link-color:      #007A4D !default; // #2a7ae2 is original blue color CF1020 is red 0000ee is blue
 $link-color-visited: #7A7A00 !default;
 $link-color-dark: #5AA11B;
@@ -42,6 +46,12 @@ $table-text-color-dark: #e0e0e0;
 $table-th-background-color: #aaaaaa !default; // grey-color-light lighten 3% 
 $table-th-border-color: #a0a0a0 !default; // grey-color-light darken 4%
 $table-th-border-bottom-color: #939393 !default; // grey-color-light darken 12%
+
+$card-size: 200px;
+$card-size-tablet: 150px;
+$card-size-mobile: 66px;
+$card-gap-size: 10px;
+$card-text-color: #fff;
 
 // Width of the content area
 $content-width:    800px !default;
