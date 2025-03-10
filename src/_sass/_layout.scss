@@ -198,14 +198,7 @@
   }
 }
 
-/* Hero */
-.hero h1 {
-  font-size: 5em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* Hero Button .hero */
+/* Hero Button */
 .btn-container {
   display: flex;
   justify-content: space-evenly;
@@ -251,12 +244,18 @@ a.btn {
   color: vars.$brand-color;
   background-color: vars.$background-color;
   margin: 0 auto;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;      // Only one column
+    justify-items: center;          // Center the first column
+    text-align: center;             // Center text if needed
+  }
 }
 
 /* Default font sizes for larger screens */
 .homepage h1 {
   font-family: vars.$home-font-family;
-  font-size: 3.72em; /* Large heading */
+  font-size: 3.72em; // Large heading
   font-weight: 500;
   text-align: center;
   margin-top: -5px;
@@ -265,7 +264,7 @@ a.btn {
 
 .homepage h2 {
   font-family: vars.$home-font-family;
-  font-size: 1.55em; /* Small heading */
+  font-size: 1.55em; // Small heading
   font-weight: 500;
   text-align: center;
 }
@@ -273,11 +272,11 @@ a.btn {
 /* Adjust font size for smaller screens */
 @media (max-width: 768px) {
   .homepage h1 {
-    font-size: 2.98em; /* Scale down by 20% for mobile */
+    font-size: 2.98em; // Scale down by 20% for mobile
   }
 
   .homepage h2 {
-    font-size: 1.24em; /* Scale down by 20% for mobile */
+    font-size: 1.24em; // Scale down by 20% for mobile
   }
 }  
 
@@ -287,6 +286,10 @@ a.btn {
   height: auto;
   object-fit: cover;
   display: inline-block;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 }
 
 /**

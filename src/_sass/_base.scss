@@ -16,11 +16,11 @@ body {
   color: vars.$text-color;
   background-color: vars.$background-color;
   text-size-adjust: 100%;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
   padding-top: 10px;
   margin-top: 1em;
 }

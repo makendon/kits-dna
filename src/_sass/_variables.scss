@@ -1,11 +1,10 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 // Define defaults for each variable.
 
 $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $code-font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
-$home-font-family: 'Architects Daughter', cursive;
+$home-font-family: 'Marker Felt', fantasy;
 $base-font-size:   18px !default;
 $xs-font-size:  $base-font-size * 0.675 !default;
 $small-font-size:  $base-font-size * 0.875 !default;

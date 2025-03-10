@@ -139,14 +139,14 @@
   }
   .site-title {
     a {
-      color: vars.$head-foot-text-color-dark;
+      color: vars.$brand-color-alt;
 
       &:hover {
         text-decoration: none;
       }
     
       &:visited {
-      color: vars.$head-foot-text-color-dark;
+      color: vars.$brand-color-alt;
       }
     }
   }
@@ -179,11 +179,17 @@
     text-align: center;
   }
   .homepage {
-    color: vars.$text-color-dark;
+    color: vars.$brand-color-alt;
     background-color: vars.$background-color-dark;
   }
+  .homepage h1 {
+    color: vars.$brand-color-alt;
+  }
+  .homepage h2 {
+    color: vars.$brand-color-alt;
+  }
   #homeImage {
-    content: url('/assets/images/me3.png');
+    content: url('/assets/images/me3.webp');
     padding-bottom: 1em;
     border-radius: 1%;
   }
