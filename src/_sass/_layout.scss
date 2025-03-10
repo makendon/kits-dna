@@ -221,7 +221,7 @@
   border-color: vars.$brand-color;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 
@@ -246,9 +246,9 @@ a.btn {
   margin: 0 auto;
 
   @media (max-width: 480px) {
-    grid-template-columns: 1fr;      // Only one column
-    justify-items: center;          // Center the first column
-    text-align: center;             // Center text if needed
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 }
 
@@ -373,8 +373,12 @@ footer {
   justify-content: center;
   gap: 1rem;
 
+  a {
+    color: vars.$grey-color;
+  }
+
   a:hover i {
-    color: vars.$brand-color !important; // Override inline style
+    color: vars.$brand-color;
     transform: scale(1.2);
   }
 }
@@ -622,7 +626,6 @@ footer {
 
 // Card Container
 .card-container {
-  @include mixins.responsive-grid;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, vars.$card-size);
@@ -631,13 +634,21 @@ footer {
   align-items: center;
   width: 100%;
   max-width: 500px;
+  padding-top: vars.$spacing-unit;
   margin: auto;
   position: relative;
+
+  @media (max-width: 1100px) {
+    grid-template-rows: repeat(3, vars.$card-size-tablet);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-rows: repeat(3, vars.$card-size-mobile);
+  }
 }
 
 // Card Styling
 .card {
-  @include mixins.responsive-card-size;
   font-family: vars.$home-font-family;
   width: vars.$card-size;
   height: vars.$card-size;
@@ -659,6 +670,18 @@ footer {
     color: vars.$brand-color-alt;
     transform: scale(1.1);
   }
+
+  @media (max-width: 1100px) {
+    width: vars.$card-size-tablet;
+    height: vars.$card-size-tablet;
+    font-size: vars.$base-font-size;
+  }
+
+  @media (max-width: 768px) {
+    width: vars.$card-size-mobile;
+    height: vars.$card-size-mobile;
+    font-size: vars.$xs-font-size;
+  }
 }
 
 a.card {
@@ -667,9 +690,16 @@ a.card {
 }
 
 .card-icons {
-  @include mixins.responsive-card-icons;
   font-size: vars.$xl-font-size;
   margin-bottom: 5px;
+
+  @media (max-width: 1100px) {
+    font-size: vars.$large-font-size;
+  }
+
+  @media (max-width: 768px) {
+    font-size: vars.$base-font-size;
+  }
 }
 
 // Card Positioning
