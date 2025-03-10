@@ -58,7 +58,7 @@ li:last-child {
 // Links
 a {
   color: vars.$link-color;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 500;
 
   &:hover { text-decoration: underline; }
