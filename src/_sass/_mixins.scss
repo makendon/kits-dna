@@ -168,17 +168,17 @@
     border: 1px solid #fcfcfc;
   }
   #search button {
-    background-color: yellow;
+    background-color: vars.$brand-color-alt;
     color: vars.$text-color;
   }
   #search button:hover {
-    background-color: yellow;
+    background-color: vars.$brand-color-alt;
   }
   .icon-link .fa-search {
     color: vars.$text-color-dark;
   }
   .dark-mode-toggle {
-    color: yellow;
+    color: vars.$brand-color-alt;
     
     .light-icon {
       display: inline-block;  // Show sun in dark mode
@@ -186,6 +186,13 @@
     
     .dark-icon {
       display: none;  // Hide moon in dark mode
+    }
+  }
+  .header-anchor {
+    color: vars.$grey-color-light;
+
+    &:hover {
+      color: vars.$link-color-dark;
     }
   }
   .card {

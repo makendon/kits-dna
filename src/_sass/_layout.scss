@@ -624,6 +624,15 @@ footer {
   }
 }
 
+// Header anchor links
+.header-anchor {
+   color: vars.$grey-color-light;
+
+    &:hover {
+      color: vars.$link-color;
+    }
+}
+
 // Card Container
 .card-container {
   display: grid;
