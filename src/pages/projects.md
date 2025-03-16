@@ -5,7 +5,7 @@ eleventyNavigation:
   order: 3
 ---
 
-> :bulb: *These are ideas for **personal** projects to develop my technology skills*
+> :bulb: These are ideas for **personal** projects to develop my technology skills
   
 ## :man: Personal Website
 
@@ -41,7 +41,7 @@ Next step is learning a *text* based programming language. I’m planning to fol
 
 ## :gift: Product
 
-Increasing the ambition level a bit now. I’ve got an idea for a *product*. Being a product manager, I want to solve a problem, but I might end up in a product anti-pattern and prototype a solution to a problem that *I* have. This project will combine new found technical skills with my product skills.
+Increasing the ambition level a bit now. I’ve got a few *product* ideas. Being a product manager, I want to solve a problem, but I might end up in a product anti-pattern and prototype a solution to a problem that *I* have. This project will combine new found technical skills with my product skills.
 
 ## :robot: My Tech Stack
 
