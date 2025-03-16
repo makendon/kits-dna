@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const darkModeElements = [
     document.body,
-    ...document.querySelectorAll('.site-header, .site-nav, .homepage, #homeImage, #search, .icon-link, .fa-search, .dark-mode-toggle')
+    ...document.querySelectorAll('.site-header, .site-nav, .homepage, #homeImage, #search, .icon-link, .fa-search, .dark-mode-toggle, .header-anchor, .card')
   ];
   
   const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)');

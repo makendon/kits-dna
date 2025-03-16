@@ -40,25 +40,9 @@
   }
   a {
     color: vars.$link-color-dark;
-    text-decoration: none;
   
     &:visited {
       color: vars.$link-color-dark-visited;
-    }
-  
-    &:hover {
-      color: vars.$link-color-dark;
-      text-decoration-line: underline;
-      text-decoration-style: solid;
-      text-decoration-thickness: 1px;
-    }
-  
-    .social-media-list &:hover {
-      text-decoration: none;
-  
-      .username {
-        text-decoration: underline;
-      }
     }
   }
   blockquote {
@@ -102,14 +86,14 @@
   }
   .site-title {
     a {
-      color: vars.$head-foot-text-color-dark;
+      color: vars.$brand-color-alt;
 
       &:hover {
         text-decoration: none;
       }
     
       &:visited {
-      color: vars.$head-foot-text-color-dark;
+      color: vars.$brand-color-alt;
       }
     }
   }
@@ -133,27 +117,28 @@
     color: vars.$head-foot-text-color-dark;
   }
   .btn {
-    border: 3px solid #fcfcfc;
-    background-color: yellow;
-    border-color: yellow;
+    background-color: vars.$brand-color-alt;
+    border-color: vars.$brand-color-alt;
   }
-  .btn a {
-    color: #004225;
+  a.btn {
+    color: vars.$brand-color;
     text-decoration: none;
-  }
-  .btn:hover { 
-    color: #004225;
-    text-decoration: underline;
-    background-color: #fcfcfc; 
-    border-color: #fcfcfc;
+    text-align: center;
   }
   .homepage {
-    color: vars.$text-color-dark;
+    color: vars.$brand-color-alt;
     background-color: vars.$background-color-dark;
   }
+  .homepage h1 {
+    color: vars.$brand-color-alt;
+  }
+  .homepage h2 {
+    color: vars.$brand-color-alt;
+  }
   #homeImage {
-    content: url('/assets/images/productdoodles4.webp');
+    content: url('/assets/images/me3.webp');
     padding-bottom: 1em;
+    border-radius: 1%;
   }
   footer {
     background-color: vars.$head-foot-color-dark;
@@ -166,6 +151,9 @@
     p, a {
     color: vars.$head-foot-text-color-dark;
     }
+  }
+  .social-icons a:hover i {
+    color: vars.$brand-color-alt;
   }
   .post-meta {
     color: vars.$text-color-dark;
@@ -180,17 +168,17 @@
     border: 1px solid #fcfcfc;
   }
   #search button {
-    background-color: yellow;
+    background-color: vars.$brand-color-alt;
     color: vars.$text-color;
   }
   #search button:hover {
-    background-color: yellow;
+    background-color: vars.$brand-color-alt;
   }
   .icon-link .fa-search {
     color: vars.$text-color-dark;
   }
   .dark-mode-toggle {
-    color: yellow;
+    color: vars.$brand-color-alt;
     
     .light-icon {
       display: inline-block;  // Show sun in dark mode
@@ -199,5 +187,29 @@
     .dark-icon {
       display: none;  // Hide moon in dark mode
     }
+  }
+  .header-anchor {
+    color: vars.$grey-color-light;
+
+    &:visited {
+      color: vars.$grey-color-light;
+    }
+
+    &:hover {
+      color: vars.$link-color-dark;
+    }
+  }
+  .card {
+    background: vars.$grey-color-dark;
+    color: vars.$text-color-dark;
+
+    &:hover {
+      background: vars.$brand-color;
+      color: vars.$brand-color-alt;
+    }
+  }
+  a.card {
+    color: vars.$text-color-dark;
+    text-decoration: none;
   }
 }

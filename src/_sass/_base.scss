@@ -16,11 +16,11 @@ body {
   color: vars.$text-color;
   background-color: vars.$background-color;
   text-size-adjust: 100%;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
   padding-top: 10px;
   margin-top: 1em;
 }
@@ -58,7 +58,7 @@ li:last-child {
 // Links
 a {
   color: vars.$link-color;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 500;
 
   &:hover { text-decoration: underline; }
@@ -93,6 +93,7 @@ img {
   height: auto;
   vertical-align: middle;
   margin: calc(vars.$spacing-unit / 2) 0;
+  border-radius: 1%;
 }
 
 // Tables

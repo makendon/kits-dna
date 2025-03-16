@@ -2,10 +2,10 @@
 title: Projects
 eleventyNavigation:
   key: Projects
-  order: 2
+  order: 3
 ---
 
-> :bulb: *These are ideas for **personal** projects to develop my technology skills*
+> :bulb: These are ideas for **personal** projects to develop my technology skills
   
 ## :man: Personal Website
 
@@ -13,7 +13,7 @@ For my first *personal* foray into technology, why not start with a personal web
 
 I'm going to use the sites blog to start writing my thoughts. *Thinking* and *writing* are two crucial non-technical skills that I want to grow with this project :thought_balloon:
 
-### Building kits-dna
+### :construction_worker: Building kits-dna
 
 > :recycle: **Updated 02/03/2025**
 
@@ -21,7 +21,7 @@ I've migrated `kits-dna` from Jekyll and GitHub Pages to **Eleventy** and **Netl
 
 My site was hosted on GitHub Pages and built using **Jekyll**. I used the **Minima** theme, with custom `HTML` and `CSS`. I built the site entirely on my iPad Pro using **GitHub Codespaces**. You can still view my [Jekyll code](https://github.com/makendon/kits-dna/tree/jekyll) to help you get started.
 
-I created the homepage image myself by drawing **bikablo** style visuals. I'm terrible at drawing but I'm pleased how well they turned out. The Apple **Freeform** app helped me out by smoothing some lines. Hopefully product people will recognise what the visuals represent. The site logo is AI generated using **DALL.E**.
+The site logo is AI generated using **DALL.E**.
 
 Check out my [blog](/blog) for more on building `kits-dna` if you're interested.
 
@@ -41,7 +41,7 @@ Next step is learning a *text* based programming language. I’m planning to fol
 
 ## :gift: Product
 
-Increasing the ambition level a bit now. I’ve got an idea for a *product*. Being a product manager, I want to solve a problem, but I might end up in a product anti-pattern and prototype a solution to a problem that *I* have. This project will combine new found technical skills with my product skills.
+Increasing the ambition level a bit now. I’ve got a few *product* ideas. Being a product manager, I want to solve a problem, but I might end up in a product anti-pattern and prototype a solution to a problem that *I* have. This project will combine new found technical skills with my product skills.
 
 ## :robot: My Tech Stack
 

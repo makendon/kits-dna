@@ -1,16 +1,21 @@
----
-layout: base.njk
----
-<style>
-  {{ googleFont | safe }}
-</style>
-<section class="homepage">
-  <div>
-     <h1>Kit France</h1>
-     <h2>Dad. Husband. Product Manager.</h2>
-     <img id="homeImage" src="/assets/images/productdoodles.webp" loading="eager" width="800" height="450" alt="Product Doodles. Business Outcomes, User Needs, Discovery, Ideas, Building, Product, Loveable.">
-     <div class="btn">
-     <a href="/about/">About Me</a>
-     </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="{{ metadata.lang or 'en' }}" data-theme="system">
+  {% include "head.njk" %}
+  <body>
+    {% include "header.njk" %}
+    <main aria-label="Content">
+      <div>
+        {{ content | safe }}
+      </div>
+    </main>
+    {% include "footer.njk" %}
+
+    <!-- Include analytics in production -->
+    {% if kitsDna.environment == 'production' %}
+    {% include "simple-analytics.njk" %}
+    {% endif %}
+
+    <!-- Include the dark-mode.js file -->
+    <script src="/assets/js/dark-mode.js" defer></script>
+  </body>
+</html>
