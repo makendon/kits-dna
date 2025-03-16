@@ -626,11 +626,15 @@ footer {
 
 // Header anchor links
 .header-anchor {
-   color: vars.$grey-color-light;
+  color: vars.$grey-color-light;
 
-    &:hover {
-      color: vars.$link-color;
-    }
+  &:visited {
+  color: vars.$grey-color-light;
+  }
+
+  &:hover {
+  color: vars.$link-color;
+  }
 }
 
 // Card Container
@@ -658,7 +662,7 @@ footer {
 
 // Card Styling
 .card {
-  font-family: vars.$home-font-family;
+  font-family: vars.$base-font-family;
   width: vars.$card-size;
   height: vars.$card-size;
   background: #f7f7f7;

@@ -191,6 +191,10 @@
   .header-anchor {
     color: vars.$grey-color-light;
 
+    &:visited {
+      color: vars.$grey-color-light;
+    }
+
     &:hover {
       color: vars.$link-color-dark;
     }
