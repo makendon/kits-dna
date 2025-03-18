@@ -3,11 +3,7 @@ permalink: /search/
 ---
 <h2>Search the site</h2>
 <p>Powered by <a href="https://pagefind.app"><b>Pagefind</b></a></p>
-<link href="/pagefind/pagefind-modular-ui.css" rel="stylesheet">
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true });
-    });
-</script>
+<script src="/assets/js/search.js" defer></script>

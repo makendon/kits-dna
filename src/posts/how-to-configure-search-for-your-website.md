@@ -20,7 +20,7 @@ I went with **Pagefind**. Pagefind is easy to get started with, even with limite
 Pagefind indexes your site *after* it builds so the first step is to add some search functionality or a user interface. I created a new page called `search.html` and added the following code as per the [Pagefind Quick Start Guide](https://pagefind.app/docs/):
 
 ```html
-<link href="/pagefind/pagefind-modular-ui.css" rel="stylesheet">
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
 <script>
@@ -30,7 +30,7 @@ Pagefind indexes your site *after* it builds so the first step is to add some se
 </script>
 ```
 
-`/pagefind/pagefind-modular-ui.css` and `pagefind/pagefind-ui.js` will be created after the site is indexed. These assets are added to the `/pagefind/` directory that is created in your site's output folder `_site`.
+`pagefind/pagefind-ui.js` will be created after the site is indexed. These assets are added to the `/pagefind/` directory in your site's output folder `_site`.
 
 ### Installing Pagefind
 
@@ -62,37 +62,17 @@ If you serve your site and navigate to your search page you should see a search 
 
 ## Customising the Search interface
 
-The default stylesheet for the search interface is `/pagefind/pagefind-ui.css` but as per the code block above I prefer `/pagefind/pagefind-modular-ui.css`. I then used the search id selector with the following CSS to style the search UI:
+Pagefind has guidance on [Customising the UI styles](https://pagefind.app/docs/ui-usage/#customising-the-styles), below is an example of how I've implemented this to change the colours for some of the components.
 
 ```css
-#search input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid black;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: $base-font-size;
-}
-
-#search button {
-  background-color: #004225;
-  color: $text-color-dark;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: $small-font-size;
-  cursor: pointer;
-}
-
-#search button:hover {
-  background-color: #004225;
+#search {
+  --pagefind-ui-primary: #004225;
+  --pagefind-ui-text: #393939;
+  --pagefind-ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI";
 }
 ```
 
-> :memo: **Note:** Pagefind does have guidance on [Customising the UI styles](https://pagefind.app/docs/ui-usage/#customising-the-styles) but I either found this inaccurate or I couldn't follow it... probably the latter! Either way using the search id selector allowed me to style the search UI in a way I was happy with.
-
-I didn't go down the rabbit hole of trying the customise how the search results displayed, I was happy with the output for the purpose of my site.
+I didn't go down the rabbit hole of trying the customise how the search results displayed, I was happy with the output.
 
 ## Adding Pagefind to your GitHub Actions Workflow for Jekyll
 
@@ -125,6 +105,37 @@ You can then use a build or deployment script to give Netlify as a build command
  ```
 
 The build * wildcard here includes any build scripts you have such as `build:sass` or `build:eleventy`. The script executes sequentially in alphabetical order which is fine for us because Pagefind needs a built site to generate search indexes.
+
+## Adding a filter
+
+> :heavy_plus_sign: **Added 18/03/2025**
+
+I've added tags to my blog posts and I wanted to iterate the search functionality to use the tags as search filters. Here's how you can do this using Pagefind.
+
+1. Add `data-pagefind-filter="tag"` to the tags list section of your layout. For example:
+
+```html
+<p>🏷️&nbsp;
+  {%- for tag in tags | filterTagList -%}
+  <a href="/tags/{{ tag | slugify }}/"data-pagefind-filter="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+  {%- endfor -%}
+</p>
+```
+
+2. Run Pagefind `npx pagefind --site dist`
+
+3. Go to your search page. You'll have a filter called `Tag`, by default the filter will display in the search UI sidebar.
+
+The filter will be closed and you'll need to click the arrow to open it. You can change the Pagefind script to open your Tag filter and remove empty filters by adding the following to your search script:
+
+```js
+showEmptyFilters: false,
+openFilters: ['tag']
+```
+
+The end result looks like:
+
+![Search UI](/assets/screenshots/search.png)
 
 ## Wrap Up
 

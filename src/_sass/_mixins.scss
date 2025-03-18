@@ -164,15 +164,11 @@
   .links-nextprev {
     border-top: 1px dashed white;
   }
-  #search input {
-    border: 1px solid #fcfcfc;
-  }
-  #search button {
-    background-color: vars.$brand-color-alt;
-    color: vars.$text-color;
-  }
-  #search button:hover {
-    background-color: vars.$brand-color-alt;
+  #search {
+    --pagefind-ui-primary: #FFBF47;
+    --pagefind-ui-text: #fcfcfc;
+    --pagefind-ui-background: #343434;
+    --pagefind-ui-border: #1c1c1c;
   }
   .icon-link .fa-search {
     color: vars.$text-color-dark;

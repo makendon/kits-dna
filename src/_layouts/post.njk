@@ -7,7 +7,7 @@ layout: base.njk
     <h1 class="post-title">{{ title }}</h1>
     <p class="post-description">{{ description }}</p>
     <p class="post-author">
-     Written by {{ metadata.author.name }}
+    🖊️ {{ metadata.author.name }}
     </p>
     <div class="post-reading-time">
       <p>📅&nbsp;{{ page.date | dateFormat }}&nbsp; |&nbsp; {% include "reading-time.njk" %}</p>
@@ -16,7 +16,7 @@ layout: base.njk
         {% if tags %}
         <p>🏷️&nbsp;
           {%- for tag in tags | filterTagList -%}
-            <a href="/tags/{{ tag | slugify }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+            <a href="/tags/{{ tag | slugify }}/"data-pagefind-filter="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
           {%- endfor -%}
         </p>
       </div>
@@ -30,8 +30,8 @@ layout: base.njk
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
 <ul class="links-nextprev">
-  {%- if previousPost %}<li class="links-nextprev-prev">&larr; Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li class="links-nextprev-next">Next &rarr;<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+  {%- if previousPost %}<li class="links-nextprev-prev">&larr; Previous post<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+	{%- if nextPost %}<li class="links-nextprev-next">Next post &rarr;<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
 </ul>
 {%- endif %}
 {%- endif %}
