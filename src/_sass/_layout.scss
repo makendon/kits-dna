@@ -130,10 +130,6 @@
 
 // Mobile styles using a single media query
 @media (max-width: 768px) {
-  .site-header {
-    // Mobile header styles
-  }
-
   .site-title {
     display: none;
   }
@@ -191,10 +187,6 @@
 
   .header-right {
     margin-right: 6rem;
-  }
-
-  .footer-container {
-    // Mobile footer styles
   }
 }
 
@@ -456,7 +448,7 @@ footer {
 }
 
 .post-content {
-  margin-top: vars.$spacing-unit;;
+  margin-top: vars.$spacing-unit;
   margin-bottom: vars.$spacing-unit;
 
   h1 {
