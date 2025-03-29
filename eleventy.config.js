@@ -79,6 +79,9 @@ export default async function(eleventyConfig) {
 		}
 	});
 
+	// Bundle
+	eleventyConfig.addBundle("css");
+
     // Configure eleventy
 	eleventyConfig.setLibrary("md", markdownLibrary);
     eleventyConfig.addWatchTarget("./src/_sass/");

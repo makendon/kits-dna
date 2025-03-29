@@ -24,8 +24,9 @@
   <link rel="preload" as="image" href="/assets/images/me.webp">
   
   <!-- CSS -->
-  {% include "critical.njk" %}
-  <link rel="stylesheet" href="/css/styles.css">
+  {% css %}{% include "dist/css/styles.css" %}{% endcss %}
+  {% css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+  <style>{% getBundle "css" %}</style>
 
   <!-- Font Awesome -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
