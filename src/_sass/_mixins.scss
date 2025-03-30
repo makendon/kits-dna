@@ -152,7 +152,7 @@
     color: vars.$head-foot-text-color-dark;
     }
   }
-  .social-icons a:hover i {
+  .social-icons a:hover svg {
     color: vars.$brand-color-alt;
   }
   .post-meta {
@@ -170,7 +170,7 @@
     --pagefind-ui-background: #343434;
     --pagefind-ui-border: #1c1c1c;
   }
-  .icon-link .fa-search {
+  .icon-link {
     color: vars.$text-color-dark;
   }
   .dark-mode-toggle {
