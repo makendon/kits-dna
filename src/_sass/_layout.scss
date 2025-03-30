@@ -195,6 +195,8 @@
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
+  max-width: 400px;  // Adjust this value as needed
+  margin: 0 auto; // Center the buttons
 }
 
 .btn {
@@ -227,9 +229,6 @@ a.btn {
 .homepage {
   max-width: 1000px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
   align-items: center;
   min-height: 80vh;
   padding: 2rem;
@@ -365,11 +364,15 @@ footer {
   justify-content: center;
   gap: 1rem;
 
+  svg {
+    font-size: 1.5em;
+  }
+
   a {
     color: vars.$grey-color;
   }
 
-  a:hover i {
+  a:hover svg {
     color: vars.$brand-color;
     transform: scale(1.2);
   }
@@ -576,7 +579,7 @@ footer {
 }
 
 /* Change the color of the Font Awesome search icon */
-.icon-link .fa-search {
+.icon-link {
   color: vars.$brand-color;
 }
 
@@ -598,10 +601,14 @@ footer {
 
   .light-icon {
     display: none;  // Hide sun by default (light mode)
+    font-size: 1.1em;
+    margin-top: 4px;
   }
   
   .dark-icon {
     display: inline-block;  // Show moon by default (light mode)
+    font-size: 1.1em;
+    margin-top: 4px;
   }
 }
 
@@ -706,3 +713,12 @@ a.card {
 .card:nth-child(7) { grid-column: 3; grid-row: 3; }
 .card:nth-child(8) { grid-column: 4; grid-row: 3; }
 .card:nth-child(9) { grid-column: 5; grid-row: 3; }
+
+
+// Font Awesome icon styling
+.icon-svg {
+  display: inline;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+}

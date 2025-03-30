@@ -2,6 +2,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import fontAwesomePlugin from "@11ty/font-awesome";
 import markdownit from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor';
 import { full as emoji } from 'markdown-it-emoji';
@@ -77,6 +78,19 @@ export default async function(eleventyConfig) {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
+	});
+
+	// Bundle
+	eleventyConfig.addBundle("css");
+
+	// Font Awesome
+	eleventyConfig.addPlugin(fontAwesomePlugin, {
+		transform: 'i[class]',
+    	shortcode: "icon",
+    	failOnError: true,
+    	defaultAttributes: {
+      	  class: 'icon-svg'
+    	}
 	});
 
     // Configure eleventy
