@@ -23,4 +23,6 @@ jobs:
     - uses: DavidAnson/markdownlint-cli2-action@v19
       continue-on-error: true
       with:
-        globs: '**/*.md' '!LICENSE.md'
+        globs:
+          - '**/*.md'
+          - '!LICENSE.md'

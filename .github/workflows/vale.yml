@@ -23,4 +23,4 @@ jobs:
       - uses: errata-ai/vale-action@v2.1.1
         continue-on-error: true
         with:
-          exclude_files: LICENSE.md
+          vale_flags: "--glob=!LICENSE.md"
