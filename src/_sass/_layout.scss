@@ -3,12 +3,11 @@
 @use 'variables' as vars;
 @use 'mixins';
 
-/* Site header */
+  /* Site header */
 .site-header {
   @include mixins.flex-center;
   justify-content: space-between;
-  box-shadow: vars.$shadow-default;
-  background-color: vars.$head-foot-color;
+  background: transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -74,7 +73,7 @@
 .main-nav {
   display: flex;
   justify-content: center;
-  background-color: vars.$head-foot-color;
+  background: vars.$background-color;
 }
 
 .nav-list {
@@ -190,7 +189,7 @@
   }
 }
 
-/* Hero Button */
+/* Hero */
 .btn-container {
   display: flex;
   justify-content: space-evenly;
@@ -211,8 +210,8 @@
   font-size: vars.$base-font-size;
   font-weight: vars.$base-font-weight;
   border-radius: 20px;
-  background-color: vars.$brand-color;
-  border-color: vars.$brand-color;
+  background-color: vars.$brand-color-alt;
+  border-color: vars.$brand-color-alt;
 
   &:hover {
     transform: scale(1.2);
@@ -220,14 +219,15 @@
 }
 
 a.btn {
-  color: vars.$brand-color-alt;
+  color: vars.$brand-color;
   text-align: center;
   text-decoration: none;
 }
 
 /* Homepage */
 .homepage {
-  max-width: 1000px;
+  display: flex;
+  max-width: 100%;
   width: 100%;
   align-items: center;
   min-height: 80vh;
@@ -235,6 +235,13 @@ a.btn {
   color: vars.$brand-color;
   background-color: vars.$background-color;
   margin: 0 auto;
+  margin-top: 12px;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1569396116180-210c182bedb8?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
@@ -245,6 +252,7 @@ a.btn {
 
 /* Default font sizes for larger screens */
 .homepage h1 {
+  color: vars.$brand-color-alt;
   font-family: vars.$home-font-family;
   font-size: 3.72em; // Large heading
   font-weight: 500;
@@ -254,6 +262,7 @@ a.btn {
 }
 
 .homepage h2 {
+  color: vars.$brand-color-alt;
   font-family: vars.$home-font-family;
   font-size: 1.55em; // Small heading
   font-weight: 500;

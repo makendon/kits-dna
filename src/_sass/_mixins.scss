@@ -81,7 +81,7 @@
     }
   }
   .site-header {
-    background-color: vars.$head-foot-color-dark;
+    background-color: transparent;
     color: vars.$head-foot-text-color-dark;
   }
   .site-title {
@@ -113,7 +113,7 @@
     }
   }
   .main-nav {
-    background-color: vars.$head-foot-color-dark;
+    background-color: vars.$background-color-dark;
     color: vars.$head-foot-text-color-dark;
   }
   .btn {
