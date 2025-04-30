@@ -72,7 +72,8 @@
       }
     }
     th {
-      background-color: vars.$background-color-dark;
+      background-color: vars.$brand-color;
+      color: vars.$text-color-dark;
       border: 1px solid vars.$background-color;
       border-bottom-color: vars.$table-th-border-bottom-color;
     }

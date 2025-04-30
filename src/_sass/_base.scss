@@ -111,7 +111,8 @@ table {
   border: 1px solid vars.$grey-color-light;
   
   th {
-    background-color: vars.$table-th-background-color;
+    background-color: vars.$brand-color;
+    color: vars.$text-color-dark;
     border: 1px solid vars.$table-th-border-color;
   }
   
