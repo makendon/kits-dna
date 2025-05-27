@@ -1,12 +1,15 @@
 ---
 title: About me
 eleventyNavigation:
-  key: About Me
+  key: About
   order: 1
 ---
 ## :wave: Aloha, I'm Kit
 
-<img src="/assets/images/me.webp" alt="Shaka on Mauna Kea" loading="eager">
+<figure>
+  <img src="/assets/images/me.webp" alt="Shaka on Mauna Kea" loading="eager">
+  <figcaption>Me at the top of Mauna Kea</figcaption>
+</figure>
 
 I’m married with a baby girl, and two cats, one or both might appear on this site at some point! We live in North-East England.
 
