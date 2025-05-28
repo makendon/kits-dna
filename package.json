@@ -4,6 +4,8 @@
   "description": "`kits-dna` is the repository name for **kitfrance.com**. Built with Eleventy.",
   "main": "index.js",
   "scripts": {
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix",
     "clean": "rm -rf dist && rm -rf .cache",
     "watch:sass": "sass --watch src/_sass/styles.scss:dist/css/styles.css",
     "build:sass": "sass src/_sass/styles.scss dist/css/styles.css",
@@ -36,6 +38,9 @@
     "@11ty/font-awesome": "^1.0.0-beta.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-emoji": "^3.0.0",
