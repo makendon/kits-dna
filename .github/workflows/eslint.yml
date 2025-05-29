@@ -37,9 +37,6 @@ jobs:
         run: npm ci
         
       - name: Run ESLint
-        uses: eslint/eslint-action@v2
-        continue-on-error: true # Don't fail the workflow if there are linting issues
-        with:
-          extensions: 'js'
-          fix: false # Set to true if you want GitHub action to auto-fix issues
-          annotations: true # Creates annotations from ESLint results
+        run: npm run eslint
+        continue-on-error: true
+ 
