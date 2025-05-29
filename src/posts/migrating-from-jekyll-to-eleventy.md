@@ -6,7 +6,7 @@ tags:
   - eleventy
   - nunjucks
   - netlify
-  - github pages
+  - github-pages
 description: Wanting to move on from Jekyll? This post is all about migrating a Jekyll site to Eleventy.
 ---
 In my post [Bringing it all together](/bringing-it-all-together) I wrote a section called *Beyond Jekyll* in which I mention an opportunity to move on from Jekyll.

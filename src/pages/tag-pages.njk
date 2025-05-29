@@ -11,7 +11,7 @@ permalink: /tags/{{ tag }}/
     <h1>Posts tagged "{{ tag }}"</h1>
   </header>
   <div>
-    <ul>
+    <ul class="blog-post-list">
     {%- for post in collections[tag] | reverse -%}
       <li>
         <code>{{ post.date | dateFormat }}</code>

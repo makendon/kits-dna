@@ -3,7 +3,7 @@ title: How to Make Your Website Look Good on Mobile
 date: 2024-11-15
 tags:
   - kits-dna
-  - responsive design
+  - responsive-design
   - css
 ---
 *This is the 6th post in the building kits-dna series.* This post picks up where we left off with a *design* gotcha - responsive or mobile first design.

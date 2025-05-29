@@ -3,7 +3,7 @@ title: How to Use an iPad or Tablet to Create a Website
 date: 2024-10-11
 tags:
   - kits-dna
-  - github codespaces
+  - github-codespaces
   - jekyll
 ---
 *This is the 2nd post in the **Building kits-dna** series.*

@@ -4,7 +4,7 @@ date: 2024-09-29
 tags:
   - kits-dna
   - github
-  - github pages
+  - github-pages
   - jekyll
 ---
 Over a series of blog posts I’ll tell the story of how I built this website, aka `kits-dna`. My goal with this is to show people who aren’t *engineers/developers* that it's easy to create a personal website, either as a portfolio, blog or both, and get started with an internet presence outside of social media.
