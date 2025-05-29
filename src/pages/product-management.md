@@ -23,7 +23,10 @@ Public sector products **improve the lives of citizens** - access to essential b
 
 ## :package: My product management philosophy
 
-<img src="/assets/images/productdoodles.webp" alt="Product management art" loading="eager">
+<figure>
+    <img src="/assets/images/productdoodles.webp" alt="Product management art" loading="eager">
+    <figcaption>Product management art</figcaption>
+</figure>
 
 This [**bikablo**](https://bikablo.com/en/home-page/) style drawing used to be my sites homepage image, I'm terrible at drawing but I was proud of it so I'm using it here to visualise opinionated key areas of product.
 

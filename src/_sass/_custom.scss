@@ -1,0 +1,152 @@
+/* Custom styles */
+
+@use "colors" as *;
+@use "fonts";
+
+:root {
+  --pico-font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Homepage */
+.homepage h1 {
+  font-size: 3.72em; // Large heading
+  font-weight: 500;
+  text-align: center;
+}
+
+.homepage h2 {
+  font-size: 1.55em; // Small heading
+  font-weight: 500;
+  text-align: center;
+}
+
+.homepage img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+}
+
+// Header
+header a {
+  font-size: 0.875em;
+}
+
+// Footer
+footer .grid {
+  display: grid;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.875em;
+}
+
+/* Search */
+#search {
+    --pagefind-ui-text: #393939;
+    --pagefind-ui-font: $pico-font-family;
+  }
+
+/* Style for the dark mode toggle icon */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: grey;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  
+  
+    .light-icon {
+      display: none;  // Hide sun by default (light mode)
+      height: 1em;
+      width: 1em;
+      color: $amber-200;
+    }
+    
+    .dark-icon {
+      display: inline;  // Show moon by default (light mode)
+      height: 1em;
+      width: 1em;
+    }
+}
+  
+// Font Awesome icon styling
+.card-icons {
+    display: grid;
+    place-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    height: 2em;
+    width: 2em;
+    color: $orange-400;
+}
+
+.header-icon {
+    height: 1em;
+    width: 1em;
+}
+
+.footer-icon {
+    height: 1.5em;
+    width: 1.5em;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.back-top-icon {
+    height: 1em;
+    width: 1em;
+}
+
+// Post pagination
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: none;
+	padding: 1em 0;
+}
+.links-nextprev > * {
+  list-style: none;
+	flex-grow: 1;
+  flex-basis: 45%; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+.back-to-top {
+  display: grid;
+  place-items: center;
+}
+
+// Product cards
+.cards  {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+// Blog
+.blog-post-list li {
+  list-style: none;
+}

@@ -1,7 +1,9 @@
 // Main stylesheet
-@use 'variables' as vars;
-@use 'mixins';
-@use 'base';
-@use 'layout';
-@use 'dark-mode';
-@use 'github-alerts';
+
+@use "pico" with (
+  $theme-color: "jade"
+);
+@use "fonts";
+@use "custom";
+@use "dark-mode";
+@use "github-alerts"

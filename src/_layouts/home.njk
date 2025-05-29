@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ metadata.lang or 'en' }}" data-theme="system">
+<html lang="{{ metadata.lang or 'en' }}">
   {% include "head.njk" %}
   <body>
     {% include "header.njk" %}
-    <main aria-label="Content">
+    <main class="container-fluid" aria-label="Content">
       <div>
         {{ content | safe }}
       </div>
