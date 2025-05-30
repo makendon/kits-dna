@@ -1,50 +1,31 @@
-<header class="site-header">
-
-  <!-- Header section left -->
-  <div class="header-left">
-    <a href={{ "/" }}>
-      <img class="site-logo" src="/assets/images/hawaii-logo.webp" loading="eager" width="40" height="23" alt="CF" eleventy:ignore>
-    </a>
-    <div class="site-title">
-      <a
-        href={{ "/" }}>{{ metadata.author.name }}
-      </a>
-    </div>
-  </div>
-
-  <!-- Header section center -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
-  <label for="nav-toggle" class="nav-toggle-label">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-  <nav class="main-nav">
-    <ul class="nav-list">
+<header class="container">
+  <nav>
+    <ul>
+      <li>
+        <a href={{ "/" }}><img src="/assets/images/hawaii-logo.webp" loading="eager" width="40" height="23" alt="CF" eleventy:ignore></a>
+      </li>
+    </ul>
+    <ul>
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
-          <a href="{{ entry.url }}" 
-             {% if entry.url == page.url %}
-               class="active"
-               aria-current="page"
-             {% endif %}>
+          <a href="{{ entry.url }}"
+            {% if entry.url == page.url %}
+              aria-current="page"
+            {% endif %}>
             {{ entry.title }}
           </a>
         </li>
       {%- endfor %}
     </ul>
+    <ul>
+      <li>
+        <a href="/search" title="Search"><i class="fa-solid fa-magnifying-glass header-icon"></i></a>
+        <!-- Dark Mode Toggle -->
+        <button class="dark-mode-toggle" id="darkModeToggle" title="Dark/Light Mode">
+          <i class="fa-solid fa-sun light-icon"></i>
+          <i class="fa-solid fa-moon dark-icon"></i>
+        </button>
+      </li>
+    </ul>
   </nav>
-
-  <!-- Header section right-->
-  <div class="header-right">
-    <!-- Using an icon as a link (example with Font Awesome) -->
-    <a class="icon-link" href="/search" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
-    <!-- Dark Mode Toggle -->
-    <button type="button" class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark/Light Mode">
-      <i class="fa-solid fa-sun light-icon"></i>
-      <i class="fa-solid fa-moon dark-icon"></i>
-    </button>
-  </div>
-
 </header>

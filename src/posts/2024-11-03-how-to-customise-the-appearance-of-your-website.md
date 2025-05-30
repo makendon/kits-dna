@@ -5,7 +5,7 @@ tags:
   - kits-dna
   - jekyll
   - css
-  - dark mode
+  - dark-mode
 ---
 *This is the 4th post in the building kits-dna series.*
 Want to change the appearance of your Jekyll site or the Minima theme? This post contains some ideas of what you can change and some tips on how to do it.

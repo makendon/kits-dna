@@ -3,8 +3,8 @@ title: How to Get Started Building Your Website
 date: 2024-10-24
 tags:
   - kits-dna
-  - github codespaces
-  - github pages
+  - github-codespaces
+  - github-pages
   - jekyll
 ---
 *This is the 3rd post in the **Building kits-dna** series.*

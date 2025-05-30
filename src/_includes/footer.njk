@@ -1,50 +1,28 @@
-<footer>
-    <div class="footer-container">
-      
-      <!-- Navigation Links Column -->
-      <div class="footer-column">
-        <span class="footer-heading">Navigation</span>
-        <ul>
-          <li>
-            <a href="{{ "/" }}">Home</a>
-            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-          </li>
-        </ul>
-      </div>
-
-      <!-- Social Links Column -->
-      <div class="footer-column">
-        <span class="footer-heading">Contact</span>
-        <div class="social-icons">
-          <a target="_blank" href="{{ metadata.linkedin.url }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></span></i></a>
-          <a target="_blank" href="{{ metadata.github.repo_owner_url }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a target="_blank" href="{{ metadata.mastodon.url }}" title="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
-        </div>
-        <ul class="social-links">
-          <li><a href="/contact/">Contact Me</a></li>
-        </ul>
-      </div>
-
-      <!-- Tech Column -->
-      <div class="footer-column">
-       <span class="footer-heading">Tech</span>
-       <p><a target="_blank" href="{{ metadata.github.repo_url }}">{{ metadata.github.repo_name }}</a> is made with ❤️ by <a target="_blank" href="{{ metadata.github.repo_owner_url }}">{{ metadata.github.repo_owner }}</a> 
-       <p>Powered by <a target="_blank" href="https://www.11ty.dev">Eleventy</a> and <a target="_blank" href="https://www.netlify.com">Netlify</a></p>
-      </div>
+<footer class="container">
+  <div class="grid">
+    <div>
+      <p>Made with 🖤🤍 in Newcastle<!--by <a target="_blank" href="{{ metadata.github.repo_owner_url }}">{{ metadata.github.repo_owner }}</a>-->
+      <p>Powered by <a target="_blank" rel="noopener noreferrer" href="https://www.11ty.dev">Eleventy</a>, <a target="_blank" rel="noopener noreferrer" href="https://picocss.com">Pico CSS</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.netlify.com">Netlify</a></p>
     </div>
-
-    <!-- Extras -->
-    <hr class="footer-divider">
-    <div class="footer-container">
-      
-      <!-- Copyright Column -->
-      <div class="footer-column">
-       <p>Copyright &copy; 2024 - 2025 {{ metadata.author.name }}</p>
-      </div>
-
-      <!-- Links Column -->
-      <div class="footer-column">
-        <p><a href="/privacy">Privacy</a>&emsp;|&emsp;<a href="/accessibility">Accessibility</a>&emsp;|&emsp;<a href="/search/">Search</a></p>
-      </div>
+    <div>
+      <a target="_blank" rel="noopener noreferrer" href="/contact" data-tooltip="Contact me" title="Contact"><i class="fa-solid fa-address-card footer-icon"></i></a>
+      <a target="_blank" rel="noopener noreferrer" href="{{ metadata.linkedin.url }}" data-tooltip="My CV" title="LinkedIn"><i class="fa-brands fa-linkedin footer-icon"></i></a>
+      <a target="_blank" rel="noopener noreferrer" href="{{ metadata.github.repo_owner_url }}" data-tooltip="My projects" title="GitHub"><i class="fa-brands fa-github footer-icon"></i></a>
+      <a target="_blank" rel="noopener noreferrer" href="{{ metadata.mastodon.url }}" data-tooltip="My social" title="Mastodon"><i class="fa-brands fa-mastodon footer-icon"></i></a>
+      <a target="_blank" rel="noopener noreferrer" href="/feed.xml" data-tooltip="Subscribe to my blog feed" title="RSS/Atom"><i class="fa-solid fa-rss footer-icon"></i></a>
     </div>
+  </div>
+
+  <!-- Extras -->
+  <hr>
+  <div class="grid">
+    <!-- Copyright Column -->
+    <div>
+      <p>&copy; {{ metadata.author.name }} 2025</p>
+    </div>
+    <!-- Links Column -->
+    <div>
+      <p><a href="/">Home</a>&emsp;|&emsp;<a href="/privacy">Privacy</a>&emsp;|&emsp;<a href="/accessibility">Accessibility</a>&emsp;|&emsp;<a href="/search/">Search</a></p>
+    </div>
+  </div>
 </footer>

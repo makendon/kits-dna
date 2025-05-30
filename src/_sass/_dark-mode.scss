@@ -1,20 +1,39 @@
-/* Dark mode SCSS from _base and _layout */
-
-/* Remove or comment out all @media (prefers-color-scheme: dark) queries */
-/* Replace with a single system dark mode check that can be overridden */
-
-@use 'variables' as vars;
-@use 'mixins';
-
-
-// System preference dark mode
-html[data-theme="system"] {
-  @media (prefers-color-scheme: dark) {
-    @include mixins.darkTheme;
-  }
+/* Dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        .dark-mode-toggle {
+            .light-icon {
+                display: inline-block;  // Show sun in dark mode
+            }
+            .dark-icon {
+                display: none;  // Hide moon in dark mode
+            }
+        }
+        #search {
+            --pagefind-ui-primary: #fcfcfc;
+            --pagefind-ui-text: #fcfcfc;
+            --pagefind-ui-background: #343434;
+            --pagefind-ui-border: #1c1c1c;
+          }
+    }
 }
-
-// Manual override
-html[data-theme="dark"] {
-  @include mixins.darkTheme;
+  
+/* Dark color scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+    .dark-mode-toggle {
+        .light-icon {
+            display: inline-block;  // Show sun in dark mode
+        }
+        .dark-icon {
+            display: none;  // Hide moon in dark mode
+        }
+    }
+    #search {
+        --pagefind-ui-primary: #fcfcfc;
+        --pagefind-ui-text: #fcfcfc;
+        --pagefind-ui-background: #343434;
+        --pagefind-ui-border: #1c1c1c;
+      }
 }

@@ -1,0 +1,41 @@
+name: ESLint CI
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - '**.js'
+      - 'package.json'
+      - 'eslint.config.js'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**.js'
+      - 'package.json'
+      - 'eslint.config.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  eslint:
+    name: Run ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run ESLint
+        run: npm run eslint
+        continue-on-error: true
+ 
