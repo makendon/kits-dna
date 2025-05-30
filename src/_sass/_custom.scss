@@ -8,6 +8,12 @@
 }
 
 /* Homepage */
+.homepage-button {
+  justify-content: center;
+  display: flex;
+  gap: 1em;
+}
+
 .homepage h1 {
   font-size: 3.72em; // Large heading
   font-weight: 500;
