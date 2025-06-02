@@ -25,7 +25,7 @@ export default async function(eleventyConfig) {
     level: 2,
     permalink: markdownItAnchor.permalink.linkInsideHeader({
       symbol: "#",
-      placement: "before"
+      placement: "after"
     }),
     slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, "-")
   };

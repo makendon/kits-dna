@@ -156,3 +156,19 @@ justify-content: center;
 .blog-post-list li {
   list-style: none;
 }
+
+// Hide heading anchor by default
+.header-anchor {
+  visibility: hidden;
+}
+
+// Show heading anchor only when the heading is hovered
+h1:hover .header-anchor,
+h2:hover .header-anchor,
+h3:hover .header-anchor,
+h4:hover .header-anchor,
+h5:hover .header-anchor,
+h6:hover .header-anchor {
+  visibility: visible;
+  text-decoration: underline;
+}
