@@ -1,6 +1,6 @@
 {
   "name": "kits-dna",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "`kits-dna` is the repository name for **kitfrance.com**. Built with Eleventy.",
   "main": "index.js",
   "scripts": {
