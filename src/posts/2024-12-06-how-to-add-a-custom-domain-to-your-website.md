@@ -8,9 +8,8 @@ tags:
   - dns
   - github-pages
   - netlify
+description: This is the 9th post in the building kits-dna series. Don't want to use GitHub Pages default domain for your site? Here's how to get setup using Squarespace domains.
 ---
-*This is the 9th post in the building kits-dna series.* Don't want to use GitHub Pages default domain for your site? Here's how to get setup using Squarespace domains.
-
 > :recycle: **Update 03/03/2025**
 > I've updated this post with steps required to setup a custom domain if deploying from Netlify.
 

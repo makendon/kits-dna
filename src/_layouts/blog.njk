@@ -1,16 +1,14 @@
 ---
 layout: base.njk
 ---
-<article>
-  <header>
-    <h1>{{ title }}</h1>
-    <p><a href="/feed.xml" role="button">Subscribe to my blog feed</a></p>
-    <p>🧠Thoughts and views expressed in blog posts are my own</p>
-  </header>
-  <div>
-    {{ content | safe }}
-  </div>
-  <main>
-    {% include "blog-posts.njk" %}
-  </main>
-</article>
+<div>
+  <h1>{{ title }}</h1>
+  <p><a href="/feed.xml" role="button">Subscribe to my blog feed</a></p>
+  <p>🧠Thoughts and views expressed in blog posts are my own</p>
+</div>
+<div>
+  {{ content | safe }}
+</div>
+<main>
+  {% include "blog-posts.njk" %}
+</main>

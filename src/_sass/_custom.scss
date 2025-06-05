@@ -152,11 +152,6 @@ align-items: center;
 justify-content: center;
 }
 
-// Blog
-.blog-post-list li {
-  list-style: none;
-}
-
 // Hide heading anchor by default
 .header-anchor {
   visibility: hidden;
@@ -171,4 +166,11 @@ h5:hover .header-anchor,
 h6:hover .header-anchor {
   visibility: visible;
   text-decoration: underline;
+}
+
+// Product page card grid
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }

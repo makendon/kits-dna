@@ -5,9 +5,8 @@ tags:
   - kits-dna
   - jekyll
   - liquid
+description: This is the 5th post in the building kits-dna series. After deploying to GitHub Pages my site didn’t work the same as running locally, the links were broken, and there was another problem…
 ---
-*This is the 5th post in the building kits-dna series.* After deploying to GitHub Pages my site didn’t work the same as running locally, the links were broken, and there was another problem…
-
 ## Broken Links
 
 To be fair the Jekyll documentation encourages the use of **Liquid** filters, one of which can solve this problem. I didn’t use it, I got drawn into the use of page permalinks like a cowboy :cowboy_hat_face:

@@ -4,9 +4,8 @@ date: 2024-11-29
 tags:
   - kits-dna
   - favicon
+description: This is the 8th post in the building kits-dna series. Ever wondered what the icons on the web browser tab are next to the name of the site you're visiting? They're favicons, short for favourite icons.
 ---
-*This is the 8th post in the building kits-dna series.* Ever wondered what the icons on the web browser tab are next to the name of the site you're visiting? They're favicons, short for *favourite icons*.
-
 When I was first testing my site, next to the website name on the browser tab there was just a **G** in a square, it didn't look like the majority of the sites you visit that have a little logo. I wanted in on this to make my site look a wee bit more polished and friendly. Favicons are simple to create, easy to add to your site but can be stubborn!
 
 Here's an example of a favicon:

@@ -5,9 +5,8 @@ tags:
   - kits-dna
   - responsive-design
   - css
+description: This is the 6th post in the building kits-dna series. This post picks up where we left off with a design gotcha - responsive or mobile first design.
 ---
-*This is the 6th post in the building kits-dna series.* This post picks up where we left off with a *design* gotcha - responsive or mobile first design.
-
 As an internal PM for products without a GUI or mobile use cases this escaped me, but by making this mistake I **learnt**. This started with me asking my wife to visit the site after I had first published and released it - user testing :test_tube: - I was excited for her to see it... she picked up her iPhone... and the site looked crap! What?!
 
 I had the following issues:

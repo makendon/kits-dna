@@ -6,10 +6,8 @@ tags:
   - github-codespaces
   - github-pages
   - jekyll
+description: This is the 3rd post in the Building kits-dna series. In posts 1 and 2 of the building kits-dna series I’ve focussed primarily on the technology. But how can you “Get Started” building your own personal website?
 ---
-*This is the 3rd post in the **Building kits-dna** series.*
-In posts 1 and 2 of the building kits-dna series I’ve focussed primarily on the technology. But how can *you* “Get Started” building your own personal website?
-
 > :bulb: **Tip:** I recommend reading posts 1 and 2 so that you’ve got some background before going further. If you’re technically confident, jump straight in!
 
 If you’ve already checked out the kits-dna GitHub Repo then you’ve probably seen the [README](https://github.com/makendon/kits-dna/blob/main/README.md). A README tells people about your repo / project, there’s varying guidance for what makes a good one available online but I focussed on “Getting Started”. Below is a copy of the relevant sections from the README with a little added content. We'll then look at how we can get the our website onto the internet.

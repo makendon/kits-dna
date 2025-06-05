@@ -6,21 +6,18 @@ pagination:
   alias: tag
 permalink: /tags/{{ tag }}/
 ---
-<article>
-  <header>
-    <h1>Posts tagged "{{ tag }}"</h1>
-  </header>
-  <div>
-    <ul class="blog-post-list">
-    {%- for post in collections[tag] | reverse -%}
-      <li>
-        <code>{{ post.date | dateFormat }}</code>
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </li>
-    {%- endfor -%}
-    </ul>
-  </div>
-  <footer>
-    <p>See <a href="/tags">all blog post tags</a>.</p>
-  </footer>
-</artcile>
+<div>
+  <h1>Posts tagged "{{ tag }}"</h1>
+</div>
+<ul>
+  {%- for post in collections[tag] | reverse -%}
+    <li>
+        <small><code>{{ post.date | dateFormat }}</code></small>
+        </header>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+  {%- endfor -%}
+</ul>
+<div>
+  <p>See <a href="/tags">all blog post tags</a>.</p>
+</div>
