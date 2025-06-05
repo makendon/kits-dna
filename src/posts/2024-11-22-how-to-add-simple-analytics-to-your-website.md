@@ -5,9 +5,8 @@ tags:
   - kits-dna
   - analytics
   - simple-analytics
+description: This is the 7th post in the building kits-dna series. Google Analytics is popular but does it meet modern privacy standards such as GDPR? Here’s a simple alternative.
 ---
-*This is the 7th post in the building kits-dna series.* Google Analytics is popular but does it meet modern privacy standards such as GDPR? Here’s a simple alternative.
-
 Minima supports [Google Analytics (GA)](https://marketingplatform.google.com/about/analytics/) out of the box, all you need to do is sign up for GA and add your tracking code to the relevant file on your site. GA is pretty comprehensive in terms of tracked metrics, but I did find the sidebar annoying. It’s worth mentioning that Jekyll and Minima are quite old in technology terms and aren’t regularly updated, for example the GA reference is to Universal Analytics (UA). Times have also changed in the privacy space such as the introduction of GDPR (for us here in Europe) - can you still use GA?
 
 ## Tracking Cookies

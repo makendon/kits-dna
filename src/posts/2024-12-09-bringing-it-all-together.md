@@ -3,9 +3,8 @@ title: Bringing it All Together
 date: 2024-12-09
 tags:
   - kits-dna
+description: This is the 10th and final post in the building kits-dna series. This post wraps up series, summarising what we've learnt and what's next.
 ---
-*This is the 10th and final post in the building kits-dna series.* This post wraps up series, summarising what we've learnt and what's next.
-
 My goal with this series of posts was to show non *engineers/developers* that it's easy to build their own website. Hopefully reading this series has shown that and inspired you to try it! Even if it’s just cloning my repo or using a Jekyll theme, with a couple of new skills it’s *easy*, and fun to do… even on an iPad.
 
 In this series we’ve covered:

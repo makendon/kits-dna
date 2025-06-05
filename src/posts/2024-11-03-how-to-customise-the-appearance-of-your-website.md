@@ -6,10 +6,8 @@ tags:
   - jekyll
   - css
   - dark-mode
+description: This is the 4th post in the building kits-dna series. Want to change the appearance of your Jekyll site or the Minima theme? This post contains some ideas of what you can change and some tips on how to do it.
 ---
-*This is the 4th post in the building kits-dna series.*
-Want to change the appearance of your Jekyll site or the Minima theme? This post contains some ideas of what you can change and some tips on how to do it.
-
 Jekyll with GitHub Pages supported themes such as Minima allow you to get started building a site quickly. You can even use “remote themes” that others have made available. However the supported themes are relatively basic and need some love, so I took the Minima theme and customised it :heart:
 
 Minima (at the time of writing) is on release v2.5.2 but the README discusses a v3. I have added elements of v3 such as dark mode but if I update to v3 it’ll likely cause a few problems with the `CSS` whereby I can't receive updates / new features, due to the changes I've made. v3 offers an easier way to customise `CSS` which I might need to look into doing myself, or discover using a higher specification of `CSS` such as ID’s.
