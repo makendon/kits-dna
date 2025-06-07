@@ -48,6 +48,14 @@ footer p {
   font-size: 0.875em;
 }
 
+.footer-links a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 /* Search */
 #search {
     --pagefind-ui-text: #393939;
