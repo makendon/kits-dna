@@ -6,7 +6,6 @@ tags:
   - python
   - cs50
 description: I'm currently taking CS50's Introduction to Programming with Python course, here's my half way report.
-draft: true
 ---
 I'm learning [**Python**](https://www.python.org) - a programming language - to build my technical skills. I choose Python because it's often considered one of the easier languages to learn and is a little more readable then `JavaScript` along with being multi-purpose. We also have Python in our tech stack at work.
 
