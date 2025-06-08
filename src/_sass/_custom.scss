@@ -155,12 +155,6 @@ align-items: center;
 justify-content: center;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
 // Hide heading anchor by default
 .header-anchor {
   visibility: hidden;
