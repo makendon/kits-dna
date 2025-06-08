@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Business outcomes",
+        "icon": "fa-solid fa-bullseye",
+        "link": "/product-management/#business-outcomes",
+        "order": 1
+    },
+    {
+        "title": "User needs",
+        "icon": "fa-solid fa-user",
+        "link": "/product-management/#user-needs",
+        "order": 2
+    },
+    {
+        "title": "Discovery",
+        "icon": "fa-solid fa-binoculars",
+        "link": "/product-management/#discovery",
+        "order": 3
+    },
+    {
+        "title": "Validate ideas",
+        "icon": "fa-solid fa-user-check",
+        "link": "/product-management/#validate",
+        "order": 4
+    },
+    {
+        "title": "Build",
+        "icon": "fa-solid fa-wrench",
+        "link": "/product-management/#build",
+        "order": 5
+    },
+    {
+        "title": "Launch",
+        "icon": "fa-solid fa-rocket",
+        "link": "/product-management/#launch",
+        "order": 6
+    },
+    {
+        "title": "Evaluate",
+        "icon": "fa-solid fa-ruler",
+        "link": "/product-management/#evaluate",
+        "order": 7
+    },
+    {
+        "title": "Iterate",
+        "icon": "fa-solid fa-user-gear",
+        "link": "/product-management/#iterate",
+        "order": 8
+    },
+    {
+        "title": "Love",
+        "icon": "fa-solid fa-heart",
+        "link": "/product-management/#love",
+        "order": 9
+    }
+]
