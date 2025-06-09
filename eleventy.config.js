@@ -7,10 +7,10 @@ import markdownit from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import { full as emoji } from "markdown-it-emoji";
 import MarkdownItGitHubAlerts from "markdown-it-github-alerts";
-import { dateFormat } from "./src/_scripts/dateFormat.js";
-import { filterTagList } from "./src/_scripts/filterTagList.js";
+import { dateFormat } from "./src/_scripts/filters/dateFormat.js";
+import { filterTagList } from "./src/_scripts/filters/filterTagList.js";
 import { wordCount } from "./src/_scripts/wordCount.js";
-import { sortAlphabetically } from "./src/_scripts/sortAlphabetically.js";
+import { sortAlphabetically } from "./src/_scripts/filters/sortAlphabetically.js";
 import { getKeys } from "./src/_scripts/getKeys.js";
 
 export default async function(eleventyConfig) {
