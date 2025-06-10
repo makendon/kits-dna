@@ -1,6 +1,6 @@
 ---
 title: How to use Pico CSS
-date: 2025-06-11
+date: 2025-06-10
 tags:
   - pico-css
   - css
@@ -251,7 +251,7 @@ Two negatives I can think of:
 
 ## Wrap up
 
-Not starting with Pico CSS or a CSS framework taught be more about CSS and Sass than if I'd used one from the outset of building a website - all that Jekyll Minima theme CSS customisation! But I that makes it easier to adopt a framework, and understanding the value it gives me. I flipped `kits-dna` over to Pico CSS in just a few hours!
+Not starting with Pico CSS or a CSS framework taught be more about CSS and Sass than if I'd used one from the outset of building a website - all that Jekyll Minima theme CSS customisation! But I think that makes it easier to adopt a framework, and understand the value. I flipped `kits-dna` over to Pico CSS in just a few hours!
 
 Pico CSS has added a modern look, it's easy to install and use and isn't overkill. If I build another small project or website again I'll definitely use it, and hopefully after reading this post you might consider it too. Beautiful, simple to use and high performing, what more do you want. If I was building a SaaS application would I use it? Probably not, but that's not [Pico's target audience / usage scenario](https://picocss.com/docs/usage-scenarios), it comes down to using the right tool or framework for the job.
 
