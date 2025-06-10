@@ -1,7 +1,7 @@
 // @ts-check
 import { test, expect } from "@playwright/test";
 
-test("", async ({ page }) => {
+test("basic", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveTitle(/Kit France/);
   await page.goto("/");
