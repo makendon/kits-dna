@@ -8,7 +8,7 @@ permalink: /product/
 <blockquote>📚 Learn more about my product journey and philosphy at <a href="/product-management/">Product management</a> or click a card to learn more</blockquote>
 
 <div>
-  {%- for batch in productCards | batch(3) -%}
+  {%- for batch in product | batch(3) -%}
     <div class="grid">
       {%- for product in batch -%}
         <div>
