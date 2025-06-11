@@ -5,7 +5,6 @@ assets/.DS_Store
 _site
 dist/
 node_modules/
-package-lock.json
 .DS_Store
 .cache
 
