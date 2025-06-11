@@ -1,12 +1,5 @@
 name: ESLint CI
 on:
-  push:
-    branches-ignore:
-      - main
-    paths:
-      - '**.js'
-      - 'package.json'
-      - 'eslint.config.js'
   pull_request:
     branches:
       - main
