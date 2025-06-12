@@ -7,9 +7,20 @@ If the sites accessibility can be improved please [contact me](/contact) or open
 
 The following steps have been taken to make this website accessible:
 
-## Lighthouse
+## Automated testing
 
-This website is tested with [Lighthouse](https://developer.chrome.com/docs/lighthouse). A GitHub Actions workflow runs on each `git push` and outputs the results. Lighthouse includes an [Accessibility audit](https://developer.chrome.com/docs/lighthouse/accessibility/scoring), which I'll use to improve the sites accessibility.
+### Lighthouse
+
+[Lighthouse](https://developer.chrome.com/docs/lighthouse) tests are ran manually via Chrome Developer Tools and via a GitHub Actions workflow on each `pull request`. Lighthouse includes an [Accessibility audit](https://developer.chrome.com/docs/lighthouse/accessibility/scoring).
+
+### Playwright
+
+[Playwright](https://playwright.dev) is a framework for web testing and automation and can be used for accessibility testing. The accessibility tests use the [axe accessibility testing engine](https://www.deque.com/axe/), axe checks aginst a wide range of accessibility rules such as [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG21/)(WCAG) and some "best practices". Tests are also run against specific WCAG tags or success criteria.
+
+Playwright tests are ran against the development server, both locally and via a GitHub Actions workflow on each `pull request`.
+
+> [!Important]
+> Not all pages on this site are included in automated testing. For Playwright, only the main navigation, home and search pages are tested.
 
 ## Images
 
@@ -18,12 +29,6 @@ This website is tested with [Lighthouse](https://developer.chrome.com/docs/light
 ## Emoji
 
 - This site uses emojis, emojis have built in alt text
-
-## Colour
-
-- Colour and link contrast checked using [WebAIM](https://webaim.org/resources/) resources (WCAG AAA)
-  - Colour Contrast Checker
-  - Link Contrast Checker
 
 ## Dark Mode
 
