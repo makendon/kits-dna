@@ -28,7 +28,7 @@ git clone https://github.com/makendon/kits-dna.git
 ### Install dependencies
 
 ```npm
-npm install
+npm ci
 ```
 
 ### Serve site
