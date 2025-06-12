@@ -1,12 +1,5 @@
 name: ESLint CI
 on:
-  push:
-    branches-ignore:
-      - main
-    paths:
-      - '**.js'
-      - 'package.json'
-      - 'eslint.config.js'
   pull_request:
     branches:
       - main
@@ -33,7 +26,7 @@ jobs:
           node-version: 18.x
           
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         
       - name: Run ESLint
         run: npm run eslint

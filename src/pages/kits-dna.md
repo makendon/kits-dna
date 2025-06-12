@@ -20,3 +20,9 @@ The site logo is AI generated using **DALL.E**.
 Check out my [blog](/blog) for more on building `kits-dna` if you're interested.
 
 Building the site got me started with markup code, and design. Learning a programming language is my next challenge.
+
+#### Powered by
+
+- [**Eleventy**](https://www.11ty.dev)
+- [**Pico CSS**](https://picocss.com)
+- [**Netlify**](https://www.netlify.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/698c405f-df5f-4dcb-aa60-191b0cdcaedf/deploy-status)](https://app.netlify.com/sites/kits-dna/deploys)

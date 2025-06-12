@@ -1,7 +1,7 @@
 name: Lighthouse CI
 on:
-  push:
-    branches-ignore:
+  pull_request:
+    branches:
       - main
   workflow_dispatch:
 
@@ -21,7 +21,7 @@ jobs:
           node-version: 18.x
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build site
         run: npm run build

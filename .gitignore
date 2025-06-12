@@ -5,6 +5,11 @@ assets/.DS_Store
 _site
 dist/
 node_modules/
-package-lock.json
 .DS_Store
 .cache
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
