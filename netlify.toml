@@ -1,8 +1,13 @@
-# [build]
+[build]
 # command = "npm run deploy"
 
 [[plugins]]
 package = "netlify-plugin-cache"
-
   [plugins.inputs]
   paths = [ ".cache" ]
+
+[[plugins]]
+  package = "@netlify/plugin-csp-nonce"
+  [plugins.inputs]
+    reportOnly = false
+    unsafeEval = false
