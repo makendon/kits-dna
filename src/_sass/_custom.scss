@@ -175,3 +175,14 @@ h6:hover .header-anchor {
 .blog-post-list-heading {
   font-size: 1.25rem;
 }
+
+// Centre images and captions
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure figcaption {
+  text-align: center;
+}
