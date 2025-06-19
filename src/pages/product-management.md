@@ -24,7 +24,7 @@ Public sector products **improve the lives of citizens** - access to essential b
 ## :package: My product management philosophy
 
 <figure>
-    <img src="/assets/images/productdoodles.webp" alt="Product management art" loading="eager">
+    <img src="/assets/images/productdoodles.webp" alt="Product management art" eleventy:widths="800">
     <figcaption>Product management art</figcaption>
 </figure>
 
