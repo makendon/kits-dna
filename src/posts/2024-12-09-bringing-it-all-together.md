@@ -11,15 +11,15 @@ In this series we’ve covered:
 
 | Post | Technology |
 | --- | --- |
-| [Building My Personal Website... kits-dna](/building-kits-dna) | GitHub, GitHub Pages, Git |
-| [How to Use an iPad or Tablet to Create a Website](/how-to-use-an-iPad-or-tablet-to-create-a-website) | GitHub Codespaces |
-| [How to Get Started Building Your Website](/how-to-get-started-building-your-website) | Jekyll |
-| [How to Customise the Appearance of Your Website](/how-to-customise-the-appearance-of-your-website) | CSS |
-| [Build Gotcha's on GitHub Pages](/build-gotchas-on-github-pages) | Liquid |
-| [How to Make Your Website Look Good on Mobile](/how-to-make-your-website-look-good-on-mobile) | Responsive Design |
-| [How to Add Simple Analytics to Your Website](/how-to-add-simple-analytics-to-your-website) | Simple Analytics |
-| [How to Add a Favicon to Your Website](/how-to-add-a-favicon-to-your-website) | Favicon |
-| [How to Add a Custom Domain to Your Website](/how-to-add-a-custom-domain-to-your-website) | DNS, Squarespace |
+| [Building My Personal Website... kits-dna](/blog/building-kits-dna) | GitHub, GitHub Pages, Git |
+| [How to Use an iPad or Tablet to Create a Website](/blog/how-to-use-an-iPad-or-tablet-to-create-a-website) | GitHub Codespaces |
+| [How to Get Started Building Your Website](/blog/how-to-get-started-building-your-website) | Jekyll |
+| [How to Customise the Appearance of Your Website](/blog/how-to-customise-the-appearance-of-your-website) | CSS |
+| [Build Gotcha's on GitHub Pages](/blog/build-gotchas-on-github-pages) | Liquid |
+| [How to Make Your Website Look Good on Mobile](/blog/how-to-make-your-website-look-good-on-mobile) | Responsive Design |
+| [How to Add Simple Analytics to Your Website](/blog/how-to-add-simple-analytics-to-your-website) | Simple Analytics |
+| [How to Add a Favicon to Your Website](/blog/how-to-add-a-favicon-to-your-website) | Favicon |
+| [How to Add a Custom Domain to Your Website](/blog/how-to-add-a-custom-domain-to-your-website) | DNS, Squarespace |
 
 This covers the basics of building your own website. I haven't covered *everything* and there's lots more you could do, but you don't need lots of `JavaScript` to make your site dynamic when getting started.
 

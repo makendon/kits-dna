@@ -7,23 +7,56 @@ eleventyNavigation:
 ## :wave: Aloha, I'm Kit
 
 <figure>
-  <img src="/assets/images/me.webp" alt="Shaka on Mauna Kea" loading="eager">
+  <img src="/assets/images/me.webp" alt="Shaka on Mauna Kea" eleventy:widths="800">
   <figcaption>Me at the top of Mauna Kea</figcaption>
 </figure>
 
-I’m married with a baby girl, and two cats, one or both might appear on this site at some point! We live in North-East England.
+I’m married with a baby girl, and two cats. We live in North-East England.
 
 I grew up in the countryside, which inspired my masters degree in Geoscience. My Digital journey started with networking learnt working in Oil & Gas before moving into Financial Services where I supported Cyber Security engagements.
 
-I moved into a product role in the public sector at the end of 2019 starting in Networking, before moving into Microsoft 365 and now within Platform Engineering and Developer Tooling. Our product/s are *internal* - our users are primarily engineers.
+I moved into a product role in the public sector at the end of 2019 starting in Networking, before moving into Microsoft 365 and now within Platform Engineering and Developer Tooling. Our product/s are *internal* - our users are primarily engineers - and our mission is to improve their lives by providing them the tools they need to allow them to focus on solving citizen problems.
 
 ## :package: Product
 
-Check out my [product](/product) page
+Check out my [product](/product) page to see an opinionated view of crucial product concepts. There's also a link to find out more about my product journey and philosophy.
 
 ## :man_technologist: Projects
 
-Check out my personal [projects](/projects)
+Check out my personal [projects](/projects) for examples of developing my technical skills.
+
+### :toolbox: Toolkit
+
+What's in my toolkit:
+
+#### :computer: Devices
+
+- MacBook Air
+- iPad Pro
+- Raspberry Pi 4
+
+#### :brain: Services & tools
+
+- GitHub
+- GitHub Copilot
+- ChatGPT
+- Visual Studio Code
+
+#### :globe_with_meridians: Web stack
+
+- Eleventy
+- Netlify
+- `HTML` / `CSS` / `SCSS` / `JavaScript` (only a little JavaScript)
+- `Markdown`
+- Pagefind
+- Playwright
+
+#### :snake: Programming
+
+- `Python` (learning)
+
+> [!Note]
+For more detail on the tech stack used to build this site, see the [colophon](/kits-dna/#colophon).
 
 ## :writing_hand: Blog
 
@@ -36,7 +69,7 @@ Read my [blog](/blog) for thoughts on:
   - Public sector
 - Technology
 
-> :thinking: The purpose of my blog is to write my thoughts. Pretty simple, but both are critical skills. If it can help me engage interests, be more creative and learn new skills then I'll be happy. In the future who knows I might start a focussed blog or newsletter.
+> :thinking: The purpose of my blog is to write my thoughts. Pretty simple, but thinking and writing are critical skills. If it can help me engage interests, be more creative and learn new skills then I'll be happy. In the future who knows I might start a focussed blog or newsletter.
 
 ## :mirror_ball: Fun
 
