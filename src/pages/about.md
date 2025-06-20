@@ -11,7 +11,7 @@ eleventyNavigation:
   <figcaption>Me at the top of Mauna Kea</figcaption>
 </figure>
 
-I’m married with a baby girl, and two cats, one or both might appear on this site at some point! We live in North-East England.
+I’m married with a baby girl, and two cats. We live in North-East England.
 
 I grew up in the countryside, which inspired my masters degree in Geoscience. My Digital journey started with networking learnt working in Oil & Gas before moving into Financial Services where I supported Cyber Security engagements.
 
@@ -27,7 +27,7 @@ Check out my personal [projects](/projects) for examples of developing my techni
 
 ### :toolbox: Toolkit
 
-Here’s a look at the tools I rely on day-to-day — whether I’m writing code, testing ideas, or just keeping my lights on.
+What's in my toolkit:
 
 #### :computer: Devices
 
