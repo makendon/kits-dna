@@ -1,4 +1,5 @@
 name: ESLint CI
+
 on:
   pull_request:
     branches:
@@ -18,16 +19,16 @@ jobs:
     name: Run ESLint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4
+
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
-          
+          node-version: 24.x
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Run ESLint
         run: npm run eslint
         continue-on-error: true
