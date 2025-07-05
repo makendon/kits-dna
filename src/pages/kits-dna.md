@@ -1,5 +1,6 @@
 ---
 title: kits-dna
+permalink: /side-projects/{{ page.fileSlug }}/
 ---
 ## My personal website
 
