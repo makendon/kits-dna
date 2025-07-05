@@ -17,13 +17,15 @@ I grew up in the countryside, which inspired my masters degree in Geoscience. My
 
 I moved into a product role in the public sector at the end of 2019 starting in Networking, before moving into Microsoft 365 and now within Platform Engineering and Developer Tooling. Our product/s are *internal* - our users are primarily engineers - and our mission is to improve their lives by providing them the tools they need to allow them to focus on solving citizen problems.
 
+<a href="/resume" role="button" class="outline">Check out my resume</a>
+
 ## :package: Product
 
 Check out my [product](/product) page to see an opinionated view of crucial product concepts. There's also a link to find out more about my product journey and philosophy.
 
-## :man_technologist: Projects
+## :man_technologist: Side projects
 
-Check out my personal [projects](/projects) for examples of developing my technical skills.
+Check out my personal [projects](/side-projects) for examples of how I'm exploring and developing my technical skills.
 
 ### :toolbox: Toolkit
 
@@ -73,13 +75,15 @@ Read my [blog](/blog) for thoughts on:
 
 ## :mirror_ball: Fun
 
-:soccer: Newcastle United! :raising_hand_man: was a hero of mine growing up.
+:soccer: Newcastle United :black_heart: :white_heart:
 
 :golf: I don't play or practice enough but there's something about the challenge of improving that I love.
 
 :ski: Started skiing at 6 years old in Canada, also skied in Switzerland, Norway, France and Italy.
 
 :video_game: I mainly play sport games, not played much since becoming a Dad and spending spare time on tech projects.
+
+:beers: My favourite beer is 🪉 Guinness and I enjoy a good :tumbler_glass: Whisky.
 
 > :call_me_hand: Hang Loose and Take Care
 >
