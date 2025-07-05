@@ -3,8 +3,10 @@ layout: base.njk
 ---
 <div>
   <h1>{{ title }}</h1>
-  <p><a href="/feed.xml" role="button">Subscribe to my blog feed</a></p>
   <blockquote>🧠 Thoughts and views expressed in blog posts are my own</blockquote>
+  <a target="_blank" rel="noopener noreferrer" href="/feed.xml" data-tooltip="Subscribe to my blog feed" title="RSS/Atom"><i class="fa-solid fa-rss footer-icon"></i></a>
+  <br \>
+  <br \>
 </div>
 <div>
   {% include "blog-posts.njk" %}
