@@ -1,11 +1,12 @@
 ---
 title: Privacy Policy
+lastUpdated: 2025/03/02
 ---
 **Your privacy is important.**
 
-Last Updated On 02/03/2025
-
 This Privacy Policy describes the policies on the collection, use and disclosure of your information that is collected when you use this website [https://kitfrance.com](https://kitfrance.com/).
+
+*Last updated on {{ lastUpdated | dateFormat }}*
 
 ## Contact Me - Email
 
