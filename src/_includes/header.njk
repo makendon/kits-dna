@@ -1,13 +1,14 @@
 <header class="container">
-  <nav>
-    <ul>
+  <nav class="responsive-nav">
+    <label data-role="burger"><input type="checkbox"/></label>
+    <ul class="nav-bar">
       <li>
-        <a href={{ "/" }}><img src="/assets/images/hawaii-logo.webp" loading="eager" width="40" height="23" alt="CF" eleventy:ignore></a>
+        <a href="{{ '/' }}"><img src="/assets/images/hawaii-logo.webp" loading="eager" width="40" height="23" alt="CF" eleventy:ignore></a>
       </li>
     </ul>
-    <ul>
+    <ul class="nav-items">
       {%- for entry in collections.all | eleventyNavigation %}
-        <li>
+        <li class="secondary">
           <a href="{{ entry.url }}"
             {% if entry.url == page.url %}
               aria-current="page"
@@ -17,10 +18,9 @@
         </li>
       {%- endfor %}
     </ul>
-    <ul>
+    <ul class="nav-items">
       <li>
         <a href="/search" title="Search"><i class="fa-solid fa-magnifying-glass header-icon"></i></a>
-        <!-- Dark Mode Toggle -->
         <button class="dark-mode-toggle" id="darkModeToggle" title="Dark/Light Mode">
           <i class="fa-solid fa-sun light-icon"></i>
           <i class="fa-solid fa-moon dark-icon"></i>
