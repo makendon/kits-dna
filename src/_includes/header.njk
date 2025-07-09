@@ -8,7 +8,7 @@
     </ul>
     <ul class="nav-items">
       {%- for entry in collections.all | eleventyNavigation %}
-        <li class="secondary">
+        <li>
           <a href="{{ entry.url }}"
             {% if entry.url == page.url %}
               aria-current="page"
