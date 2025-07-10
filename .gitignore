@@ -1,3 +1,4 @@
+# General
 .sass-cache
 pagefind
 _sass/.DS_Store
@@ -13,3 +14,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# Personal images & documents
+src/assets/images/me.webp
+src/assets/documents/resume.pdf
