@@ -19,8 +19,8 @@ test.describe("site-pages", () => { // 2
     expect(accessibilityScanResults.violations).toEqual([]);
   });
 
-  test("projects page should not have accessibility issues", async ({ page }) => {
-    await page.goto("/projects");
+  test("side-projects page should not have accessibility issues", async ({ page }) => {
+    await page.goto("/side-projects");
   
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
   
