@@ -83,6 +83,4 @@ For more detail on the tech stack used to build this site, see the [colophon](/k
 
 :video_game: I mainly play sport games, not played much since becoming a Dad and spending spare time on tech projects.
 
-:beers: My favourite beer is 🪉 Guinness and I enjoy a good :tumbler_glass: Whisky.
-
 > :call_me_hand: Hang loose and take care
