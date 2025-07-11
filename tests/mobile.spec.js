@@ -13,7 +13,7 @@ test.describe("Mobile Browser Tests", () => {
     await menuButton.click();
         
     // Verify mobile menu opens
-    const mobileNav = page.locator("ul.nav-items").first();
+    const mobileNav = page.locator("ul.nav-links").first();
     await expect(mobileNav).toBeVisible();
         
     // Test navigation to blog through mobile menu
@@ -27,7 +27,7 @@ test.describe("Mobile Browser Tests", () => {
     if (await menuButton.isVisible()) {
       // Open menu
       await menuButton.click();
-      const mobileNav = page.locator("ul.nav-items").first();
+      const mobileNav = page.locator("ul.nav-links").first();
       await expect(mobileNav).toBeVisible();
             
       // Close menu by clicking burger again
