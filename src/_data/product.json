@@ -4,7 +4,7 @@
         "icon": "fa-solid fa-bullseye",
         "link": "/product/#business-outcomes",
         "order": 1,
-        "description": "Internal products must still provide business value. I focus on improving engineering workflows in ways that contribute to the organization’s goals — platform work is the foundation of the business."
+        "description": "Internal products must still provide business value. I focus on improving engineering workflows in ways that contribute to the organization’s goals - platform work is the foundation of the business."
     },
     {
         "title": "User needs",
@@ -25,7 +25,7 @@
         "icon": "fa-solid fa-user-check",
         "link": "/product/#validate",
         "order": 4,
-        "description": "Linked to discovery, before building anything, we validate our ideas: Does it solve the real problem? Would someone use it? Can someone use it? Can we build it? Does it work for the business?"
+        "description": "Linked to discovery, before building anything, we validate our ideas: Does it solve a real problem? Would someone use it? Can someone use it? Can we build it? Does it work for the business?"
     },
     {
         "title": "Build",
@@ -46,20 +46,20 @@
         "icon": "fa-solid fa-ruler",
         "link": "/product/#evaluate",
         "order": 7,
-        "description": "We need to measure the success of tool/product/feature. Has it solved the problem?"
+        "description": "We need to measure the success of the tool/product/feature. Has it solved the problem?"
     },
     {
         "title": "Iterate (bonus)",
         "icon": "fa-solid fa-user-gear",
         "link": "/product/#iterate",
         "order": 8,
-        "description": "If we haven't solved the problem we need to iterate. However, no product is ever 'done', we continuously iterate to solve new problems. I ensure we have the space to do this."
+        "description": "If we haven't solved the problem we need to iterate. That said, no product is ever 'done', we continuously iterate to solve new problems. We make the space to do this."
     },
     {
         "title": "Love",
         "icon": "fa-solid fa-heart",
         "link": "/product/#love",
         "order": 9,
-        "description": "The best products are loved, but this is very challenging for internal users who see something as a necessary tool to do their job. However, we strive to delight and show that we care about our engineers."
+        "description": "The best products are loved, but this is challenging for internal users who see something as a necessary tool to do their job. However, we strive to delight and show that we care about our engineers."
     }
 ]

@@ -23,24 +23,24 @@ Public sector products **improve the lives of citizens** - access to essential b
 
 ## :package: My product philosophy
 
-Internal product management is one of the most impactful but underappreciated parts of the organisation. Internal platform product managers don't just collaborate with engineers to build tools, they reduce friction and cognitive load, enhance engineering productivity, and enable the rest of the organisation to solve end user problems.
+Internal product management is one of the most impactful but underappreciated parts any organisation. Internal platform product managers don't just collaborate with engineers to build tools, they reduce friction and cognitive load, enhance engineering productivity, and enable the rest of the organisation to solve end user problems.
 
 My philosophy centres in treating product teams as users. That means understanding engineering workflows, pain points, needs and desires and prioritising to achieve strategic outcomes and *keeping the lights on* over shiny features.
 
-I empower our team and engineers to care not just about how a tool is built but *why* it's built, everyone on a product team is a *product person*. Engineers aren't just programmers, they are *problem solvers*.
+I empower our team and engineers to care not just about how a tool is built but *why* it's built. Everyone on a product team is a *product person*, engineers aren't just programmers, they are *problem solvers*.
 
-I think good internal product thinking is strategic and user centred - empowering the organisation fly.
+I think good internal product thinking is strategic and user centred - empowering the organisation to achieve outcomes.
 
 ## :construction_worker: Building for builders
 
 <figure>
-    <img src="/assets/images/undraw_engineering-team_13ax.svg" alt="Engineering team">
-    <figcaption>Engineering team</figcaption>
+    <img src="/assets/images/undraw/undraw_dev-productivity_5wps.png" alt="Engineer productivity" eleventy:widths="600">
+    <figcaption>Engineer productivity</figcaption>
 </figure>
 
 Being an *internal* product manager is tough, unlike customers who don't know what is possible, our users are primarily engineers and have ideas and opinions about what is possible. The goal remains the same though, how can we **improve the lives of our users**?
 
-Our products are technical, and often 3rd party tools, so having deep knowledge of the product is challenging without engineering experience. I spend more time growing my technical skills but this is an investment that will benefit me long term allowing better collaboration and conversations with users and stakeholders.
+Our products are technical, and often 3rd party tools, so having deep knowledge of the product is challenging without engineering experience. I spend more time growing my technical skills but this is an investment that will benefit me long term allowing better collaboration and conversations with users and stakeholders. I don't think you can be an internal product manager if you don't have the *ambition* and *agency* to develop yourself technically.
 
 To help me and our team build for builders, I always strive to follow my product philosophy and the pillars / principles set out below.
 
@@ -51,7 +51,7 @@ To help me and our team build for builders, I always strive to follow my product
     <figcaption>Product pillars</figcaption>
 </figure>
 
-This [**bikablo**](https://bikablo.com/en/home-page/) style drawing visualises my opinionated internal product pillars. These principles shape how I approach internal product management. You can discover each one below — I’ll be sharing more in future blog posts and/or case studies.
+This [**bikablo**](https://bikablo.com/en/home-page/) style drawing visualises my opinionated internal product pillars. These principles shape how I approach internal product management. You can discover each one below - I’ll be sharing more in future blog posts and / or case studies.
 
 {% include "product-cards.njk" %}
 
