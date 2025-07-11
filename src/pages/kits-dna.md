@@ -18,6 +18,11 @@ I'm using it to showcase my product philosophy and personal projects, and I'll w
 
 Originally I built `kits-dna` using **Jekyll** and hosted on **GitHub Pages**. This was primarily because it's what crisp-dna used (see [Inspiration](/kits-dna/#inspiration)) and it was easy to get started with. Jekyll was also considered the father of `Jamstack` / Static Site Generators. I used the default **Minima** theme, with custom `HTML` and `CSS` for the header and footer. I built the site entirely on my iPad Pro using **GitHub Codespaces**, demonstrating you don't even need a laptop to build a website.
 
+<figure>
+    <img src="/assets/images/undraw/undraw_static-website_x3tn.png" alt="Static website" eleventy:widths="600">
+    <figcaption>Static website</figcaption>
+</figure>
+
 #### v2
 
 In 2025 I decided to migrate `kits-dna` from Jekyll and GitHub Pages to **Eleventy** and **Netlify**. For more information on how and why I migrated, see my blog post [Migrating from Jekyll to Eleventy](/blog/migrating-from-jekyll-to-eleventy) TL;DR I had a dependency problem I couldn't fix and got frustrated with Jekyll! Eleventy doesn't really have a concept of themes or templates, however there is a feature rich starter blog which I played around with to learn the build system a wee bit before migrating. The lack of themes lent itself well to what I needed since I had introduced style changes to the Jekyll Minima theme I was using, so I wanted something I could put my own stamp on without breaking the theme dependencies.
@@ -75,4 +80,4 @@ This site aims to strike a balance; professional enough to showcase my product a
 
 ### Acknowledgements
 
-Thanks you to my wife for putting up with me spending my evenings building and tinkering on this site and my other projects :heart:
+Thank you to my wife for putting up with me spending my evenings building and tinkering on this site and my other projects :heart:
