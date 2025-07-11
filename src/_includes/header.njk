@@ -3,12 +3,12 @@
     <label for="burger-menu" data-role="burger">
       <input type="checkbox" id="burger-menu" aria-label="Toggle navigation menu"/>
     </label>
-    <ul class="nav-bar">
+    <ul class="nav-logo">
       <li>
         <a href="{{ '/' }}"><img src="/assets/images/hawaii-logo.webp" loading="eager" width="40" height="23" alt="CF" eleventy:ignore></a>
       </li>
     </ul>
-    <ul class="nav-items">
+    <ul class="nav-links">
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
           <a href="{{ entry.url }}"
@@ -20,7 +20,7 @@
         </li>
       {%- endfor %}
     </ul>
-    <ul class="nav-items">
+    <ul class="nav-utilities">
       <li>
         <a href="/search" title="Search"><i class="fa-solid fa-magnifying-glass header-icon"></i></a>
         <button class="dark-mode-toggle" id="darkModeToggle" title="Dark/Light Mode">

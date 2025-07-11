@@ -33,7 +33,7 @@
 .homepage img {
   display: block;
   margin: 2rem auto;
-  max-width: min(700px, 90%);
+  max-width: min(800px, 90%);
   width: 100%;
   height: auto;
 }
@@ -206,14 +206,16 @@ figure figcaption {
   *****************************************************************************/
 
 .responsive-nav,
-.responsive-nav > .nav-items {
+.responsive-nav > .nav-links,
+.responsive-nav > .nav-utilities {
   flex-direction: column;
   position: relative;
 }
 
 @media (min-width: 769px) {
   .responsive-nav,
-  .responsive-nav > .nav-items {
+  .responsive-nav > .nav-links
+  .responsive-nav > .nav-utilities {
     flex-direction: row;
   }
 }
@@ -293,14 +295,15 @@ figure figcaption {
 }
 
 /* nav-bar (logo) always visible */
-.responsive-nav > .nav-bar {
+.responsive-nav > .nav-logo {
   visibility: visible;
   opacity: 1;
   display: flex;
 }
 
 /* hide nav-items within menu */
-.responsive-nav > .nav-items {
+.responsive-nav > .nav-links,
+.responsive-nav > .nav-utilities {
   visibility: hidden;
   opacity: 0;
   transition: all 0.2s ease-in-out;
@@ -309,7 +312,8 @@ figure figcaption {
 }
 
 /* show hidden nav-items when burger is checked */
-.responsive-nav:has(> label > input[type="checkbox"]:checked) > .nav-items {
+.responsive-nav:has(> label > input[type="checkbox"]:checked) > .nav-links,
+.responsive-nav:has(> label > input[type="checkbox"]:checked) > .nav-utilities {
   visibility: visible;
   opacity: 1;
   z-index: 9999;
@@ -330,7 +334,8 @@ figure figcaption {
   }
 
   /* show all nav-items */
-  .responsive-nav > .nav-items {
+  .responsive-nav > .nav-links,
+  .responsive-nav > .nav-utilities {
     visibility: visible;
     opacity: 1;
     display: flex;
