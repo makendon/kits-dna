@@ -348,3 +348,8 @@ figure figcaption {
 .nav-utilities {
   transition: none !important;
 }
+
+// Hide contact form honeypot field
+.hidden {
+  display: none;
+}

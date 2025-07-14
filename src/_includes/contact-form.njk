@@ -1,5 +1,9 @@
-<form name="contact" netlify>
+<form name="contact" action="/success" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
   <fieldset>
+    <label class="hidden">
+      Don’t fill this out if you’re human: 
+      <input name="bot-field" />
+    </label>
     <label>
       First name
       <input
@@ -25,5 +29,6 @@
       ></textarea>
     </label>
   </fieldset>
+  <div data-netlify-recaptcha="true"></div>
   <button type="submit">Send a message</button>
 </form>
