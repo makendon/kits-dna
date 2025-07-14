@@ -1,4 +1,4 @@
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://scripts.simpleanalyticscdn.com 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://queue.simpleanalyticscdn.com; font-src 'self'; connect-src 'self' https://mastodon.social https://*.linkedin.com; frame-src 'self' https://scratch.mit.edu https://www.google.com/recaptcha/; frame-ancestors 'self' https://scratch.mit.edu; form-action 'self'; object-src 'none'; media-src 'none'; base-uri 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://scripts.simpleanalyticscdn.com 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://queue.simpleanalyticscdn.com; font-src 'self'; connect-src 'self' https://mastodon.social https://*.linkedin.com; frame-src 'self' https://scratch.mit.edu; frame-ancestors 'self' https://scratch.mit.edu; form-action 'self'; object-src 'none'; media-src 'none'; base-uri 'self'; upgrade-insecure-requests
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
