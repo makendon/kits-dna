@@ -25,6 +25,7 @@ layout: base.njk
     {% endif %}
   </header>
   <div>
+    <img src="{{ image }}" alt="{{ alt }}" eleventy:widths="600"></img>
     {{ content | safe }}
   </div>
   <footer>

@@ -38,26 +38,31 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
+      testIgnore: ["**/mobile.spec.js"],
     },
 
     {
       name: "firefox",
       use: { ...devices["Desktop Firefox"] },
+      testIgnore: ["**/mobile.spec.js"],
     },
 
     {
       name: "webkit",
       use: { ...devices["Desktop Safari"] },
+      testIgnore: ["**/mobile.spec.js"],
     },
 
     /* Test against mobile viewports. */
     {
       name: "Mobile Chrome",
       use: { ...devices["Pixel 5"] },
+      testMatch: ["**/mobile.spec.js", "**/accessibility.spec.js"],
     },
     {
       name: "Mobile Safari",
       use: { ...devices["iPhone 13"] },
+      testMatch: ["**/mobile.spec.js", "**/accessibility.spec.js"],
     },
 
     /* Test against branded browsers. */
@@ -78,4 +83,3 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
 });
-

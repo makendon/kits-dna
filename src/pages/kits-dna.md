@@ -1,5 +1,6 @@
 ---
 title: kits-dna
+permalink: /side-projects/{{ page.fileSlug }}/
 ---
 ## My personal website
 
@@ -16,6 +17,11 @@ I'm using it to showcase my product philosophy and personal projects, and I'll w
 #### v1
 
 Originally I built `kits-dna` using **Jekyll** and hosted on **GitHub Pages**. This was primarily because it's what crisp-dna used (see [Inspiration](/kits-dna/#inspiration)) and it was easy to get started with. Jekyll was also considered the father of `Jamstack` / Static Site Generators. I used the default **Minima** theme, with custom `HTML` and `CSS` for the header and footer. I built the site entirely on my iPad Pro using **GitHub Codespaces**, demonstrating you don't even need a laptop to build a website.
+
+<figure>
+    <img src="/assets/images/undraw/undraw_static-website_x3tn.png" alt="Static website" eleventy:widths="600">
+    <figcaption>Static website</figcaption>
+</figure>
 
 #### v2
 
@@ -74,4 +80,4 @@ This site aims to strike a balance; professional enough to showcase my product a
 
 ### Acknowledgements
 
-Thanks you to my wife for putting up with me spending my evenings building and tinkering on this site and my other projects :heart:
+Thank you to my wife for putting up with me spending my evenings building and tinkering on this site and my other projects :heart:

@@ -26,11 +26,16 @@
   text-align: center;
 }
 
+.homepage p {
+  text-align: center;
+}
+
 .homepage img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 1rem;
+  margin: 2rem auto;
+  max-width: min(800px, 90%);
+  width: 100%;
+  height: auto;
 }
 
 // Header
@@ -59,7 +64,7 @@ footer p {
 /* Search */
 #search {
     --pagefind-ui-text: #393939;
-    --pagefind-ui-font: $pico-font-family;
+    --pagefind-ui-font: var(--pico-font-family);
   }
 
 /* Style for the dark mode toggle icon */
@@ -151,8 +156,13 @@ footer p {
 .card {
 display: flex;
 flex-direction: column;
-align-items: center;
-justify-content: center;
+align-items: left;
+justify-content: left;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 // Hide heading anchor by default
@@ -185,4 +195,161 @@ img {
 
 figure figcaption {
   text-align: center;
+}
+
+// Responsive Nav Burger
+// https://github.com/picocss/pico/discussions/343 but using CSS classes rather than ARIA roles due to accessibility issues
+/*******************************************************************************
+  * Pico CSS  - responsive nav
+  * Grows vertically (mobile-first). Changes back to horizontal growth on higher
+  * resolutions.
+  *****************************************************************************/
+
+.responsive-nav,
+.responsive-nav > .nav-links,
+.responsive-nav > .nav-utilities {
+  flex-direction: column;
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .responsive-nav,
+  .responsive-nav > .nav-links,
+  .responsive-nav > .nav-utilities {
+    flex-direction: row;
+  }
+}
+
+/*******************************************************************************
+  * Pure CSS burger menu
+  * Styles a parent + checkbox to look like 3 stacked lines when unchecked and
+  * as a cross when checked. Includes animations.
+  *****************************************************************************/
+
+[data-role="burger"] {
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 10%;
+  box-sizing: border-box;
+  background-color: transparent;
+  height: 24px;
+  width: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+[data-role="burger"] > input[type="checkbox"] {
+  height: 3px;
+  width: 20px;
+  border: none;
+  background-color: $orange-400;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  margin-inline: 0;
+}
+
+[data-role="burger"] > input[type="checkbox"]:checked {
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+[data-role="burger"] > input[type="checkbox"]::before, [data-role="burger"] > input[type="checkbox"]::after {
+  height: 3px;
+  width: 20px;
+  border-radius: 2px;
+  background-color: $orange-400;
+  position: absolute;
+  content: "";
+  transition: all 0.2s ease-in-out;
+}
+
+[data-role="burger"] > input[type="checkbox"]::before {
+  top: -8px;
+}
+
+[data-role="burger"] > input[type="checkbox"]::after {
+  top: 8px;
+}
+
+[data-role="burger"] > input[type="checkbox"]:checked::before {
+  box-shadow: none;
+  transform: rotate(45deg) translate(5.75px, 5.75px);
+}
+
+[data-role="burger"] > input[type="checkbox"]:checked::after {
+  box-shadow: none;
+  transform: rotate(-45deg) translate(5.75px, -5.75px);
+}
+
+/*******************************************************************************
+  * Pure CSS toggle
+  * Uses a checkbox to trigger rules and show/hide related elements.
+  *****************************************************************************/
+
+/* adjust menu for toggling */
+.responsive-nav {
+  position: relative; /* anchor for children */
+  /* needed otherwise it grows to fit all its children */
+  max-height: calc(var(--pico-line-height) * 1em + var(--pico-nav-element-spacing-vertical)*2);
+}
+
+/* nav-bar (logo) always visible */
+.responsive-nav > .nav-logo {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+
+/* hide nav-items within menu */
+.responsive-nav > .nav-links,
+.responsive-nav > .nav-utilities {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  background-color: var(--pico-background-color);
+}
+
+/* show hidden nav-items when burger is checked */
+.responsive-nav:has(> label > input[type="checkbox"]:checked) > .nav-links,
+.responsive-nav:has(> label > input[type="checkbox"]:checked) > .nav-utilities {
+  visibility: visible;
+  opacity: 1;
+  z-index: 9999;
+}
+
+/* position the menu button */
+.responsive-nav > label {
+  position: absolute;
+  right: 0;
+  top: 11px;
+  padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+}
+
+@media (min-width: 769px) {
+  /* hide menu button */
+  .responsive-nav > label {
+    display: none;
+  }
+
+  /* show all nav-items */
+  .responsive-nav > .nav-links,
+  .responsive-nav > .nav-utilities {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    top: unset;
+  }
+}
+
+/* Disable transitions on nav links during theme change */
+.nav-links,
+.nav-utilities {
+  transition: none !important;
+}
+
+// Hide contact form honeypot field
+.hidden {
+  display: none;
 }

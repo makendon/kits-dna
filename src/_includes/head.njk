@@ -14,11 +14,23 @@
   <link rel="me" href="https://mastodon.social/@makendon"/>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/favicons-emoji/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/assets/favicons-logo/favicon.ico">
 
   <!-- Image preloading -->
   <link rel="preload" as="image" href="/assets/images/hawaii-logo.webp">
   
+  <!-- Prevent theme flash - must run before CSS -->
+  <script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+  </script>
+
   <!-- CSS -->
   {% css %}{% include "dist/css/styles.css" %}{% endcss %}
   <style>{% getBundle "css" %}</style>

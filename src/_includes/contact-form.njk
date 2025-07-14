@@ -1,0 +1,36 @@
+<form name="contact" action="/success" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
+  <fieldset>
+    <legend>Contact Form</legend>
+    <label class="hidden">
+      Don’t fill this out if you’re human: 
+      <input name="bot-field" />
+    </label>
+    <label>
+      First name
+      <input
+        name="first_name"
+        placeholder="First name"
+        autocomplete="given-name"
+      />
+    </label>
+    <label>
+      Email
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        autocomplete="email"
+      />
+    </label>
+    <label>
+      Message
+      <textarea
+        name="message"
+        placeholder="Your message"
+      ></textarea>
+    </label>
+  </fieldset>
+  <div data-netlify-recaptcha="true"></div>
+  <br />
+  <button type="submit">Send a message</button>
+</form>

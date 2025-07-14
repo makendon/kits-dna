@@ -1,0 +1,17 @@
+<div>
+  {%- for batch in product | batch(3) -%}
+    <div class="grid">
+      {%- for product in batch -%}
+        <div>
+          <article>
+            <i class="{{ product.icon }} card-icons"></i>
+            </a>
+            <br/>
+            <p class="product-title">{{ product.title }}</p>
+            <p>{{ product.description }}</p>
+          </article>
+        </div>
+      {%- endfor %}
+    </div>
+  {%- endfor %}
+</div>

@@ -2,55 +2,64 @@
     {
         "title": "Business outcomes",
         "icon": "fa-solid fa-bullseye",
-        "link": "/product-management/#business-outcomes",
-        "order": 1
+        "link": "/product/#business-outcomes",
+        "order": 1,
+        "description": "Internal products must still provide business value. I focus on improving engineering workflows in ways that contribute to the organization’s goals - platform work is the foundation of the business."
     },
     {
         "title": "User needs",
         "icon": "fa-solid fa-user",
-        "link": "/product-management/#user-needs",
-        "order": 2
+        "link": "/product/#user-needs",
+        "order": 2,
+        "description": "Our users are engineers - not end customers - but they're just as important. Understanding their workflows, pain points, needs and desires is key to building tools that solve hard problems."
     },
     {
         "title": "Discovery",
         "icon": "fa-solid fa-binoculars",
-        "link": "/product-management/#discovery",
-        "order": 3
+        "link": "/product/#discovery",
+        "order": 3,
+        "description": "Discovery isn’t user research - it’s collaborating with engineers, exploring tech constraints, and de-risking our ideas. Discovery is continuous, not a standalone phase."
     },
     {
         "title": "Validate ideas",
         "icon": "fa-solid fa-user-check",
-        "link": "/product-management/#validate",
-        "order": 4
+        "link": "/product/#validate",
+        "order": 4,
+        "description": "Linked to discovery, before building anything, we validate our ideas: Does it solve a real problem? Would someone use it? Can someone use it? Can we build it? Does it work for the business?"
     },
     {
         "title": "Build",
         "icon": "fa-solid fa-wrench",
-        "link": "/product-management/#build",
-        "order": 5
+        "link": "/product/#build",
+        "order": 5,
+        "description": "Working closely with engineers we spec up and 'productionise' our validated idea ensuring it's built and delivered to the required quality standard."
     },
     {
         "title": "Launch",
         "icon": "fa-solid fa-rocket",
-        "link": "/product-management/#launch",
-        "order": 6
+        "link": "/product/#launch",
+        "order": 6,
+        "description": "Internal launches need clear communication meeting engineers where they are. We strive for comphrensive documentation, demo's / walkthroughs, and act quickly on feedback to ensure successful launches."
     },
     {
-        "title": "Evaluate",
+        "title": "Evaluate (bonus)",
         "icon": "fa-solid fa-ruler",
-        "link": "/product-management/#evaluate",
-        "order": 7
+        "link": "/product/#evaluate",
+        "order": 7,
+        "description": "We need to measure the success of the tool/product/feature. Has it solved the problem?"
     },
     {
-        "title": "Iterate",
+        "title": "Iterate (bonus)",
         "icon": "fa-solid fa-user-gear",
-        "link": "/product-management/#iterate",
-        "order": 8
+        "link": "/product/#iterate",
+        "order": 8,
+        "description": "If we haven't solved the problem we need to iterate. That said, no product is ever 'done', we continuously iterate to solve new problems. We make the space to do this."
     },
     {
         "title": "Love",
         "icon": "fa-solid fa-heart",
-        "link": "/product-management/#love",
-        "order": 9
+        "link": "/product/#love",
+        "order": 9,
+        "description": "The best products are loved, but this is challenging for internal users who see something as a necessary tool to do their job. However, we strive to delight and show that we care about our engineers."
     }
 ]
