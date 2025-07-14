@@ -342,3 +342,9 @@ figure figcaption {
     top: unset;
   }
 }
+
+/* Disable transitions on nav links during theme change */
+.nav-links,
+.nav-utilities {
+  transition: none !important;
+}

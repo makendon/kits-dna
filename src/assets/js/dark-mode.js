@@ -5,36 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const darkModeToggle = document.querySelector(".dark-mode-toggle");
     
   function applyTheme(isDark) {
-    // Set data-theme attribute for Pico CSS and our custom styles
     document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
-    // Store user preference in session storage
-    sessionStorage.setItem("theme", isDark ? "dark" : "light");
-  }
-  
-  // Initial setup based on session storage or system preference
-  const sessionTheme = sessionStorage.getItem("theme");
-  if (sessionTheme) {
-    applyTheme(sessionTheme === "dark");
-  } else {
-    applyTheme(systemDarkMode.matches);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
   }
   
   // Listen for system theme changes if no manual preference
   systemDarkMode.addEventListener("change", (e) => {
-    if (!sessionStorage.getItem("theme")) {
+    if (!localStorage.getItem("theme")) {
       applyTheme(e.matches);
     }
   });
     
   // Add click handler for the toggle button
   if (darkModeToggle) {
-    darkModeToggle.addEventListener("click", () => {
-      // Toggle to opposite of current theme
-      const currentTheme = document.documentElement.getAttribute("data-theme") || 
-                           (systemDarkMode.matches ? "dark" : "light");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-        
-      applyTheme(newTheme === "dark");
+    darkModeToggle.addEventListener("click", function() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const isDark = currentTheme === "dark";
+      applyTheme(!isDark);
     });
   }
 });
