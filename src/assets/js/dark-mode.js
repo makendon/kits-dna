@@ -9,6 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }
   
+  // Initialize theme on page load
+  function initializeTheme() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      // Use saved preference
+      applyTheme(savedTheme === "dark");
+    } else {
+      // Use system preference
+      applyTheme(systemDarkMode.matches);
+    }
+  }
+  
+  // Initialize theme immediately
+  initializeTheme();
+  
   // Listen for system theme changes if no manual preference
   systemDarkMode.addEventListener("change", (e) => {
     if (!localStorage.getItem("theme")) {
