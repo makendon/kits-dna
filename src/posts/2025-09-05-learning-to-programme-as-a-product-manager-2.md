@@ -8,7 +8,7 @@ tags:
   - ai
 description: I've finished CS50's Introduction to Programming with Python course, here's my full time report.
 ---
-I'm learning [**Python**](https://www.python.org) - a programming language - to build my technical skills. I choose Python because it's often considered one of the easier languages to learn and is a little more readable then `JavaScript` along with being multi-purpose. We also have Python in our tech stack at work.
+I'm learning [**Python**](https://www.python.org) - a programming language - to build my technical skills. I chose Python because it's often considered one of the easier languages to learn and is a little more readable then `JavaScript` along with being multi-purpose. We also have Python in our tech stack at work.
 
 I've now completed [CS50's Introduction to Programming with Python](https://cs50.harvard.edu/python/2022/) course and wanted to share my final thoughts.
 
