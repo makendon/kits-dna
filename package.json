@@ -17,8 +17,7 @@
     "build:eleventy": "npx eleventy",
     "build:search": "npx pagefind --site dist",
     "start": "ELEVENTY_ENVIRONMENT=development npm-run-all build:sass --parallel watch:*",
-    "build": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*",
-    "deploy": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*"
+    "build": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*"
   },
   "repository": {
     "type": "git",
@@ -46,8 +45,8 @@
     "@axe-core/playwright": "^4.10.2",
     "@eslint/js": "^9.37.0",
     "@netlify/plugin-csp-nonce": "^1.5.2",
-    "@playwright/test": "^1.55.1",
-    "@types/node": "^24.6.2",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0",
     "eslint": "^9.37.0",
     "globals": "^16.4.0",
     "markdown-it": "^14.1.0",
