@@ -5,7 +5,7 @@ title: CS50P final project
 For my final project I made a terminal programme called the **Investment Portfolio**.
 
 <figure>
-    <img src="/assets/images/undraw/undraw_programming_65t2.png" alt="Static website" eleventy:widths="600">
+    <img src="/assets/images/undraw/undraw_programming_65t2.svg" alt="Static website" eleventy:widths="600">
     <figcaption>Programming</figcaption>
 </figure>
 

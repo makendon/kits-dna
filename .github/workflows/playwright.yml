@@ -30,8 +30,36 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    - name: Run Playwright tests
+    - name: Start dev server
+      run: |
+        npm start &
+        npx wait-on http://localhost:8080
+      timeout-minutes: 5
+
+    - name: Run Playwright tests against dev server
       run: npx playwright test
+      env:
+        BASE_URL: http://localhost:8080
+
+    - name: Stop dev server
+      run: pkill -f "npm start" || true
+
+    - name: Build Docker image
+      run: docker build -t test-site .
+
+    - name: Run container for testing
+      run: |
+        docker run -d -p 3000:8080 --name test-container test-site
+        sleep 10
+
+    - name: Run Playwright tests against container
+      run: npx playwright test
+      env:
+        BASE_URL: http://localhost:3000
+
+    - name: Stop container
+      if: always()
+      run: docker stop test-container && docker rm test-container
 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}

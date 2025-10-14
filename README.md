@@ -4,6 +4,13 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/698c405f-df5f-4dcb-aa60-191b0cdcaedf/deploy-status)](https://app.netlify.com/sites/kits-dna/deploys)
 
+## Development
+
+This project deploys to Netlify, but includes a Dockerfile for:
+- Local development consistency
+- Alternative deployment options
+- Containerized testing environments
+
 ## Getting started
 
 ### Local dependencies

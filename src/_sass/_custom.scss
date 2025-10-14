@@ -116,6 +116,7 @@ footer p {
 .footer-icon {
     height: 1.5em;
     width: 1.5em;
+    margin-right: 1em;
 
   &:hover {
     transform: scale(1.1);
@@ -352,4 +353,9 @@ figure figcaption {
 // Hide contact form honeypot field
 .hidden {
   display: none;
+}
+
+// Call to action
+.cta {
+  text-align: center;
 }
