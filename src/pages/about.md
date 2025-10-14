@@ -2,7 +2,7 @@
 title: About me
 eleventyNavigation:
   key: About
-  order: 2
+  order: 1
 ---
 ## :wave: Aloha, I'm Kit
 
@@ -17,7 +17,10 @@ I grew up in the countryside, which inspired my masters degree in Geoscience. My
 
 I moved into a product role in the public sector at the end of 2019 starting in Networking, before moving into Microsoft 365 and now within Platform Engineering and Developer Tooling. I help product teams deliver faster and safer by managing the internal platform - code hosting, continuous integration / continuous delivery (CI/CD), artefact storage and the engineering tools they rely on to build software. The platform is large scale and high leverage, allowing the higher level product teams to focus on solving citizen problems.
 
-<a href="/resume" role="button" class="outline">View my resume</a>
+<article class="cta">
+  <p>If you’d like to learn more about my experience and career background, you can explore my résumé below.</p>
+  <a href="/resume" role="button" class="outline">View my résumé</a>
+</article>
 
 ## :package: Product
 
@@ -61,14 +64,14 @@ What's in my toolkit:
 
 - Eleventy
 - Netlify
-- `HTML` / `CSS` / `SCSS` / `JavaScript` (only a little JavaScript)
+- `HTML` / `CSS` / `SCSS` / `JavaScript`
 - `Markdown`
 - Pagefind
 - Playwright
 
 #### :snake: Programming
 
-- `Python` (learning)
+- `Python`
 
 > [!Note]
 For more detail on the tech stack used to build this site, see the [colophon](/kits-dna/#colophon).

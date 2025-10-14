@@ -2,7 +2,7 @@
 title: Product
 eleventyNavigation:
   key: Product
-  order: 1
+  order: 2
 permalink: /product/
 ---
 > *"Product management is about creating a product customers love, yet also works for our business" - Marty Cagan*
@@ -34,7 +34,7 @@ I think good internal product thinking is strategic and user centred - empowerin
 ## :construction_worker: Building for builders
 
 <figure>
-    <img src="/assets/images/undraw/undraw_dev-productivity_5wps.png" alt="Engineer productivity" eleventy:widths="600">
+    <img src="/assets/images/undraw/undraw_dev-productivity_5wps-2.svg" alt="Engineer productivity" eleventy:widths="600">
     <figcaption>Engineer productivity</figcaption>
 </figure>
 
@@ -59,6 +59,9 @@ This [**bikablo**](https://bikablo.com/en/home-page/) style drawing visualises m
 
 :soon: Real examples of how I apply my product pillars to solve problems, build tools, and achieve outcomes.
 
-<hr />
+---
 
-<a href="/resume" role="button">View my resume</a>
+<article class="cta">
+  <p>Want to collaborate or chat about product thinking?</p>
+  <a href="/contact" role="button">Get in touch</a>
+</article>
