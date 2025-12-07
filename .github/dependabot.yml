@@ -10,8 +10,10 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
     groups:
-      dependencies:
+      npm-deps:
         patterns:
           - "*"
         update-types:
@@ -22,8 +24,10 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    cooldown:
+      default-days: 7
     groups:
-      github-actions:
+      github-actions-deps:
         patterns:
           - "*"
 
@@ -31,7 +35,9 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
     groups:
-      docker:
+      docker-deps:
         patterns:
           - "*"
