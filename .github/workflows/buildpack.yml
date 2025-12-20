@@ -1,4 +1,4 @@
-name: Build and Push Docker Image
+name: Build and Push Buildpack Image
 
 on:
   push:
@@ -31,20 +31,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@c299e40c65443455700f0fdfc63efafe5b349051 # v5.10.0
-        with:
-          images: ghcr.io/${{ github.repository }}
-          tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=raw,value=latest,enable={{is_default_branch}}
+      - name: Build with buildpacks
+        uses: buildpacks/github-actions/setup-pack@v5
 
-      - name: Build and push
-        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+      - name: Build and push image
+        run: |
+          pack build ghcr.io/${{ github.repository }}:latest \
+            --tag ghcr.io/${{ github.repository }}:${{ github.sha }} \
+            --builder heroku/builder:24 \
+            --publish
