@@ -6,10 +6,11 @@
 
 ## Development
 
-This project deploys to Netlify, but includes a Dockerfile for:
-- Local development consistency
-- Alternative deployment options
-- Containerized testing environments
+A Dockerfile is included for containerised and consistent testing environments. This approach ensures dependencies and the build environment match production, rather than using the Eleventy dev server which may have different behaviour.
+
+## Deployment
+
+This project deploys to Netlify on each push to `main`. A Heroku buildpack creates a production container image on each push to `main` and publishes it to GitHub Container Registry.
 
 ## Getting started
 
