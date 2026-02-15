@@ -150,6 +150,31 @@ Desktop browsers (chromium, firefox, webkit) skip mobile.spec.js tests. Mobile b
 - Search index is built separately via `npm run build:search` (uses Pagefind)
 - Source code is GPL v3 licensed; content is copyrighted
 
+## Claude Code Configuration
+
+This repository uses the `.claude/` directory to configure Claude Code behavior:
+
+### Directory Structure
+
+- **`CLAUDE.md`** (this file) - Main project instructions, always loaded by Claude Code
+- **`commands/`** - Skills that can be invoked via slash commands (e.g., `/hemingway`, `/polish`, `/review`)
+- **`rules/`** - Contextual guidelines that inform specific workflows (e.g., `editorial.md` for content review)
+
+### Skills
+
+**Skills** (in `commands/`):
+- Invoked with slash commands: `/hemingway`, `/polish`, `/review`
+- Load instructions into the current Claude Code session
+- Modify Claude's behavior for that task
+- Example: `/review` loads review instructions and Claude follows them in the main session
+
+### Rules
+
+**Rules** (in `rules/`):
+- Contextual guidelines referenced by skills or workflows
+- Not directly invoked - loaded when needed
+- Example: `editorial.md` provides guidelines for the `/review` skill
+
 ## Editorial Process
 
 See `.claude/rules/editorial.md` for writing guidelines and review process.
