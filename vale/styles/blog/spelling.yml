@@ -1,4 +1,0 @@
-extends: spelling
-message: "'%s' is a spelling mistake."
-dictionaries:
-  - en_GB
