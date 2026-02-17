@@ -32,8 +32,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build with buildpacks
-        uses: buildpacks/github-actions/setup-pack@v5.10.1
-
+        uses: buildpacks/github-actions/setup-pack@f3ec16c6d708761c6e87bbc8fe7f97375f80e7cd # v5.10.1
+        
       - name: Build and push image
         run: |
           pack build ghcr.io/${{ github.repository }}:latest \
