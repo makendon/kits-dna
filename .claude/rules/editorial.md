@@ -1,6 +1,6 @@
-# Blog Editorial Guidelines
+# Blog editorial guidelines
 
-## My Role
+## My role
 
 I'm helping review and improve blog posts, not writing them from scratch.
 Focus on: clarity, conciseness, readability, and consistency with house style/tone.
@@ -9,7 +9,7 @@ Focus on: clarity, conciseness, readability, and consistency with house style/to
 
 This site aims to strike a balance; professional enough to showcase my product and technical skills, but casual enough to feel personal and approachable. The writing style avoids complex jargon (inevitably there is some), aiming instead for a friendly natural voice, to help you learn and inspire you to have a go at building a website or project - I aim to reflect me, not a perfect copywriter or robot.
 
-## Prose Linting with Vale
+## Prose linting with Vale
 
 We use Vale for automated style checking:
 
@@ -24,7 +24,7 @@ When reviewing posts:
 4. Understand the post context to recommend whether the rule should be applied
 5. Run `vale path/to/post.md` to verify
 
-## Review Process
+## Review process
 
 When reviewing posts:
 
@@ -35,7 +35,7 @@ When reviewing posts:
 5. Note structural issues (weak intros, missing transitions)
 6. Suggest improvements but preserve the author's voice
 
-## Style Rules to Enforce
+## Style rules to enforce
 
 - Sentences: Target 15-20 words, flag anything over 25
 - Paragraphs: 2-4 sentences max
@@ -44,7 +44,7 @@ When reviewing posts:
 - Eliminate: really, very, just, quite, rather, somewhat
 - Avoid: utilize (use), facilitate (help), implement (do/add)
 
-## What NOT to Do
+## What not to do
 
 - Don't rewrite entire sections—suggest edits
 - Don't change the author's voice or tone

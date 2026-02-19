@@ -2,13 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Project overview
 
 kits-dna is the repository for **kitfrance.com**, a personal website built with Eleventy (11ty) static site generator. The site deploys to Netlify on each push to `main` and uses Docker for containerized testing environments.
 
-## Development Commands
+## Development commands
 
-### Local Development
+### Local development
 
 ```bash
 npm ci                    # Install dependencies (use ci, not install)
@@ -46,7 +46,7 @@ npm run clean             # Remove dist, .cache, playwright-report, and test-res
 npm run update            # Update npm dependencies
 ```
 
-### Docker Development
+### Docker development
 
 ```bash
 docker build -t kits-dna .
@@ -55,9 +55,9 @@ docker run -p 8080:8080 kits-dna
 
 ## Architecture
 
-### Directory Structure
+### Directory structure
 
-```
+```text
 src/
 ├── _data/              # Global data files (metadata.json, product.json, kitsDna.js)
 ├── _includes/          # Reusable components (header, footer, seo, etc.)
@@ -72,7 +72,7 @@ src/
 └── posts/              # Blog posts (markdown files)
 ```
 
-### Eleventy Configuration
+### Eleventy configuration
 
 - **Input directory**: `src/`
 - **Output directory**: `dist/`
@@ -80,7 +80,7 @@ src/
 - **Markdown engine**: Nunjucks (njk)
 - **HTML engine**: Nunjucks (njk)
 
-### Markdown Processing
+### Markdown processing
 
 The site uses markdown-it with these plugins:
 
@@ -88,7 +88,7 @@ The site uses markdown-it with these plugins:
 - `markdown-it-emoji` - Emoji support
 - `markdown-it-github-alerts` - GitHub-style alerts/callouts
 
-### Key Plugins
+### Key plugins
 
 - **@11ty/eleventy-img** - Automatic image optimization (webp, jpeg)
 - **@11ty/eleventy-navigation** - Navigation structure
@@ -107,7 +107,7 @@ The site uses markdown-it with these plugins:
 
 Posts with `draft: true` in frontmatter are excluded from production builds (`ELEVENTY_RUN_MODE === "build"`).
 
-### Custom Filters
+### Custom filters
 
 - `dateFormat` - Format dates for display
 - `filterTagList` - Filter out system tags from tag lists
@@ -115,9 +115,10 @@ Posts with `draft: true` in frontmatter are excluded from production builds (`EL
 - `sortAlphabetically` - Sort collections alphabetically
 - `getKeys` - Extract object keys
 
-## Testing
+## Test suite
 
 Playwright tests are in the `tests/` directory:
+
 - `basic.spec.js` - Basic functionality tests
 - `advanced.spec.js` - Advanced feature tests
 - `accessibility.spec.js` - Accessibility tests (includes axe-core)
@@ -127,7 +128,7 @@ Tests run against `http://localhost:8080` by default. Use `BASE_URL` environment
 
 Desktop browsers (chromium, firefox, webkit) skip mobile.spec.js tests. Mobile browsers (Mobile Chrome, Mobile Safari) only run mobile.spec.js and accessibility.spec.js.
 
-## ESLint Configuration
+## ESLint configuration
 
 - 2-space indentation
 - Double quotes
@@ -143,18 +144,18 @@ Desktop browsers (chromium, firefox, webkit) skip mobile.spec.js tests. Mobile b
 - **Build command**: `npm run build`
 - **Plugins**: netlify-plugin-cache (.cache directory), @netlify/plugin-csp-nonce
 
-## Important Notes
+## Important notes
 
 - Always use `npm ci` instead of `npm install` for consistent dependency installation
 - The Dockerfile approach ensures the build environment matches production
 - Search index is built separately via `npm run build:search` (uses Pagefind)
 - Source code is GPL v3 licensed; content is copyrighted
 
-## Claude Code Configuration
+## Claude Code configuration
 
 This repository uses the `.claude/` directory to configure Claude Code behavior:
 
-### Directory Structure
+### Claude directory structure
 
 - **`CLAUDE.md`** (this file) - Main project instructions, always loaded by Claude Code
 - **`commands/`** - Skills that can be invoked via slash commands (e.g., `/hemingway`, `/polish`, `/review`)
@@ -163,6 +164,7 @@ This repository uses the `.claude/` directory to configure Claude Code behavior:
 ### Skills
 
 **Skills** (in `commands/`):
+
 - Invoked with slash commands: `/hemingway`, `/polish`, `/review`
 - Load instructions into the current Claude Code session
 - Modify Claude's behavior for that task
@@ -171,10 +173,33 @@ This repository uses the `.claude/` directory to configure Claude Code behavior:
 ### Rules
 
 **Rules** (in `rules/`):
+
 - Contextual guidelines referenced by skills or workflows
 - Not directly invoked - loaded when needed
 - Example: `editorial.md` provides guidelines for the `/review` skill
 
-## Editorial Process
+### MCP servers
+
+This project uses MCP (Model Context Protocol) servers to extend Claude Code capabilities:
+
+**Configured servers** (in `.mcp.json`):
+
+- **GitHub MCP** - Provides GitHub integration for operations like:
+  - Creating/reading issues and pull requests
+  - Adding comments to issues/PRs
+  - Searching repositories
+  - Managing labels and milestones
+
+**Setup:**
+
+1. Set environment variable: `GITHUB_PERSONAL_ACCESS_TOKEN`
+   - Create token at: <https://github.com/settings/personal-access-tokens>
+   - Required scopes: `Read access to code and metadata` and `Read and Write access to issues and pull requests`
+2. Claude Code will automatically load the GitHub MCP server
+3. No additional configuration needed
+
+**Configuration file:** `.mcp.json` in project root
+
+## Editorial process
 
 See `.claude/rules/editorial.md` for writing guidelines and review process.
