@@ -69,4 +69,4 @@ This project implements the following security measures:
 
 ## Policy updates
 
-This security policy may be updated periodically. Last updated: 2026-02-15
+This security policy may be updated periodically. Last updated: 19/02/2026.
