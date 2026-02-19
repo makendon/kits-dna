@@ -8,10 +8,9 @@ on:
 
 permissions:
   contents: read
-  actions: write
 
 jobs:
-  test:
+  playwright-tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:

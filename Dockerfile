@@ -15,7 +15,7 @@ COPY . .
 RUN npm run build
 
 # Install a simple HTTP server
-RUN npm install -g serve
+RUN npm install -g serve@14.2.5
 
 # Expose port
 EXPOSE 8080
