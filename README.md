@@ -8,6 +8,9 @@
 
 A Dockerfile is included for containerised and consistent testing environments. This approach ensures dependencies and the build environment match production, rather than using the Eleventy dev server which may have different behaviour.
 
+> [!NOTE]
+> [Claude Code](https://claude.ai/code) and [GitHub Copilot](https://github.com/features/copilot) help with feature development, fixing bugs and refactoring. Configuration and instructions for Claude Code are in `.claude/CLAUDE.md`.
+
 ## Deployment
 
 This project deploys to Netlify on each push to `main`. A Heroku buildpack creates a production container image on each push to `main` and publishes it to GitHub Container Registry.
@@ -77,3 +80,8 @@ Source code licensed under [**GPL v3**](https://www.gnu.org/licenses/gpl-3.0.htm
 ### Content
 
 All **content** is copyright.
+
+All blog posts are human-written. AI is used for review and refinement.
+
+> [!NOTE]
+> AI-powered editorial review helps improve clarity, readability, and consistency. See `.claude/rules/editorial.md` for the review process and style guidelines.

@@ -1,0 +1,43 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "words": [
+    "axe",
+    "buildpack",
+    "Chromium",
+    "codebase",
+    "cSpell",
+    "Dockerfile",
+    "Eleventy",
+    "frontmatter",
+    "Hemingway",
+    "Heroku",
+    "kitfrance",
+    "makendon",
+    "Netlify",
+    "njk",
+    "Nunjucks",
+    "Pagefind",
+    "PicoCSS",
+    "Pico",
+    "Playwright",
+    "prismjs",
+    "Prism",
+    "syntaxhighlight",
+    "webp",
+    "webkit"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    ".cache/**",
+    "package-lock.json",
+    "playwright-report/**",
+    "test-results/**",
+    "**/*.min.js",
+    "**/*.min.css"
+  ],
+  "ignoreRegExpList": [
+    "/https?:\\/\\/[^\\s]*/g"
+  ]
+}
