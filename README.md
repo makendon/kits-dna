@@ -81,7 +81,7 @@ Source code licensed under [**GPL v3**](https://www.gnu.org/licenses/gpl-3.0.htm
 
 All **content** is copyright.
 
+All blog posts are human-written. AI is used for review and refinement.
+
 > [!NOTE]
 > AI-powered editorial review helps improve clarity, readability, and consistency. See `.claude/rules/editorial.md` for the review process and style guidelines.
-
-All blog posts and content are human-written. AI is used for review and refinement, not content creation.
