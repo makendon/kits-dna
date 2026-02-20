@@ -4,8 +4,8 @@
 
 I release security updates for the following versions:
 
-| Version | Supported          |
-| ------- | ------------------ |
+| Version | Supported |
+| ------- | --------- |
 | Latest (main branch) | :white_check_mark: |
 
 This is a personal website project. Only the latest version deployed to production receives security updates.
