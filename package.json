@@ -6,8 +6,9 @@
   "scripts": {
     "update": "npx npm-check-updates -u",
     "markdown": "markdownlint-cli2 '**/*.md' '!node_modules' '!LICENSE.md'",
+    "markdown:fix": "markdownlint-cli2 --fix '**/*.md' '!node_modules' '!LICENSE.md'",
     "spell": "npx cspell-cli '**/*.md' '!node_modules' '!LICENSE.md'",
-    "vale": "vale .",
+    "vale": "vale --glob=!LICENSE.md .",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
     "test": "npx playwright test",
