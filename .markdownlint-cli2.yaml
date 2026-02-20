@@ -7,13 +7,10 @@ config:
   line-length: false        # MD013 - Allow line length > 80
   no-inline-html: false     # MD033 - Allow inline HTML
   no-duplicate-heading: false      # MD024 - Allow duplicate headings
-
-  # Optional: Disable additional style rules (uncomment as needed)
-  # no-trailing-punctuation: false   # MD026 - Allow trailing punctuation in headings
-  # first-line-heading: false        # MD041 - Don't require first line to be h1
+  first-line-heading: false        # MD041 - Don't require first line to be h1
 
 # Auto-fix fixable errors
-fix: true
+fix: false
 
 # Respect .gitignore
 gitignore: true
