@@ -29,7 +29,7 @@ The programme covers the following course topics:
 Quick 3 minute demo of the **Investment Portfolio**.
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-  <iframe 
+  <iframe
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     src="https://www.youtube.com/embed/MZXWuFO9QUA?si=-LlyEU24wJoRU8eY"
     title="YouTube video player"
