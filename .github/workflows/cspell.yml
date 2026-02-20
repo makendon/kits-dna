@@ -1,0 +1,35 @@
+name: cSpell CI
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cspell:
+    name: Spell Check
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        with:
+          node-version: 25.6.0
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run cSpell
+        run: npx cspell-cli "**/*.md" --no-progress --gitignore
