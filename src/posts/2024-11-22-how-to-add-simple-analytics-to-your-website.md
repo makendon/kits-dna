@@ -11,7 +11,7 @@ Minima supports [Google Analytics (GA)](https://marketingplatform.google.com/abo
 
 ## Tracking Cookies
 
-GA is now on version 4 which Google suggests meets privacy standards, the issue is GA tracks IP addresses and uses tracking cookies, this is what gives it a full feature set. I haven’t come across many blogs (if any) that have a cookie banner, which they should if using GA due to the privacy laws. There are products that provide cookie banners, some for free, but I explored if there were any simpler analytics options out of the box where I didn’t need to configure a cookie banner.
+GA is now on version 4 which Google suggests meets privacy standards, the issue is GA tracks IP addresses and uses tracking cookies, this is what gives it a full feature set. I haven't come across many blogs (if any) that have a cookie banner, which they should if using GA due to the privacy laws. There are products that provide cookie banners, some at no cost, but I explored if there were any simpler analytics options out of the box where I didn't need to configure a cookie banner.
 
 ## Google Analytics Alternatives
 

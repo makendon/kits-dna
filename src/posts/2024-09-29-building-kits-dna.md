@@ -1,5 +1,5 @@
 ---
-title: Building My Personal Website... kits-dna
+title: Building My Personal Website… kits-dna
 date: 2024-09-29
 tags:
   - kits-dna
@@ -9,7 +9,7 @@ tags:
 description: Over a series of blog posts I’ll tell the story of how I built this website, aka kits-dna. My goal with this is to show people who aren’t engineers/developers that it's easy to create a personal website, either as a portfolio, blog or both, and get started with an internet presence outside of social media.
 ---
 > :memo: **Note:** For a brief overview of `kits-dna` read my project “**Personal Website**”, on my [Projects](/projects/) page.
-
+>
 > :recycle: **Update 02/03/2025**
 > I've migrated `kits-dna` from Jekyll and GitHub Pages to **Eleventy** and **Netlify**. See my post [Migrating from Jekyll to Eleventy](/migrating-from-jekyll-to-eleventy).
 > You can still view my [Jekyll code](https://github.com/makendon/kits-dna/tree/jekyll) to help you get started.
@@ -18,7 +18,7 @@ description: Over a series of blog posts I’ll tell the story of how I built th
 
 ### GitHub
 
-[**GitHub**](https://github.com/) is the home of open source so it made sense to start there as a beginner. If you’re a beginner like me, take the plunge and sign up, I recommend the following training from [GitHub Skills](https://github.com/skills):
+[**GitHub**](https://github.com/) is the home of open source so it made sense to start there as a beginner. If you’re a beginner like me, sign up. I recommend the following training from [GitHub Skills](https://github.com/skills):
 
 - Introduction to GitHub
 - Communicate using Markdown

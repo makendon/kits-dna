@@ -15,7 +15,7 @@ The following steps have been taken to make this website accessible:
 
 ### Playwright
 
-[Playwright](https://playwright.dev) is a framework for web testing and automation and can be used for accessibility testing. The accessibility tests use the [axe accessibility testing engine](https://www.deque.com/axe/), axe checks aginst a wide range of accessibility rules such as [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG21/)(WCAG) and some "best practices". Tests are also run against specific WCAG tags or success criteria.
+[Playwright](https://playwright.dev) is a framework for web testing and automation and can be used for accessibility testing. The accessibility tests use the [axe accessibility testing engine](https://www.deque.com/axe/), axe checks against a wide range of accessibility rules such as [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG21/)(WCAG) and some "best practices". Tests are also run against specific WCAG tags or success criteria.
 
 Playwright tests are ran against the development server, both locally and via a GitHub Actions workflow on each `pull request`.
 

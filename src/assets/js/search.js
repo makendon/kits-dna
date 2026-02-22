@@ -1,6 +1,7 @@
 // Pagefind search page functionality
+/* global PagefindUI */
 
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
   new PagefindUI({ element: "#search", 
     showSubResults: true,
     showEmptyFilters: false,

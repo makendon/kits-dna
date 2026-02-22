@@ -5,13 +5,13 @@ tags:
   - kits-dna
 description: This is the 10th and final post in the building kits-dna series. This post wraps up series, summarising what we've learnt and what's next.
 ---
-My goal with this series of posts was to show non *engineers/developers* that it's easy to build their own website. Hopefully reading this series has shown that and inspired you to try it! Even if it’s just cloning my repo or using a Jekyll theme, with a couple of new skills it’s *easy*, and fun to do… even on an iPad.
+My goal with this series of posts was to show non *engineers/developers* that it's easy to build their own website. I hope reading this series has shown that and inspired you to try it! Even if it's just cloning my repo or using a Jekyll theme, with a couple of new skills it's *easy*, and fun to do… even on an iPad.
 
 In this series we’ve covered:
 
 | Post | Technology |
 | --- | --- |
-| [Building My Personal Website... kits-dna](/blog/building-kits-dna) | GitHub, GitHub Pages, Git |
+| [Building My Personal Website… kits-dna](/blog/building-kits-dna) | GitHub, GitHub Pages, Git |
 | [How to Use an iPad or Tablet to Create a Website](/blog/how-to-use-an-iPad-or-tablet-to-create-a-website) | GitHub Codespaces |
 | [How to Get Started Building Your Website](/blog/how-to-get-started-building-your-website) | Jekyll |
 | [How to Customise the Appearance of Your Website](/blog/how-to-customise-the-appearance-of-your-website) | CSS |

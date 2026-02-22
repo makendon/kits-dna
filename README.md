@@ -50,7 +50,7 @@ Build and host on a local development server:
 npm start
 ```
 
-Open a web browser and go to http://localhost:8080/ you should see your local copy of the site running.
+Open a web browser and go to <http://localhost:8080/> you should see your local copy of the site running.
 
 #### Make changes
 

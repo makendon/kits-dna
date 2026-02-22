@@ -74,7 +74,7 @@ export default async function(eleventyConfig) {
   });
 
   // Drafts
-  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+  eleventyConfig.addPreprocessor("drafts", "*", (data) => {
     if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
       return false;
     }

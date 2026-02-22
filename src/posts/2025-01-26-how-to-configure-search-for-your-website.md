@@ -76,7 +76,7 @@ I didn't go down the rabbit hole of trying the customise how the search results 
 
 ## Adding Pagefind to your GitHub Actions Workflow for Jekyll
 
-So we've got Pagefind indexing the site locally, a styled search box and the functionality works... awesome! But now we need to index our site at build time for `production`. To do this add the following to your GitHub Actions workflow for building your Jekyll site before deploying to GitHub Pages.
+So we've got Pagefind indexing the site locally, a styled search box and the functionality works… awesome! But now we need to index our site at build time for `production`. To do this add the following to your GitHub Actions workflow for building your Jekyll site before deploying to GitHub Pages.
 
 Add the following workflow step under the **Build with Jekyll** step. If in doubt check out my [Jekyll workflow](https://github.com/makendon/kits-dna/blob/main/.github/workflows/jekyll.yml).
 
@@ -114,28 +114,28 @@ I've added tags to my blog posts and I wanted to iterate the search functionalit
 
 1. Add `data-pagefind-filter="tag"` to the tags list section of your layout. For example:
 
-```html
-<p>🏷️&nbsp;
-  {%- for tag in tags | filterTagList -%}
-  <a href="/tags/{{ tag | slugify }}/"data-pagefind-filter="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-  {%- endfor -%}
-</p>
-```
+    ```html
+    <p>🏷️&nbsp;
+      {%- for tag in tags | filterTagList -%}
+      <a href="/tags/{{ tag | slugify }}/"data-pagefind-filter="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {%- endfor -%}
+    </p>
+    ```
 
 2. Run Pagefind `npx pagefind --site dist`
 
 3. Go to your search page. You'll have a filter called `Tag`, by default the filter will display in the search UI sidebar.
 
-The filter will be closed and you'll need to click the arrow to open it. You can change the Pagefind script to open your Tag filter and remove empty filters by adding the following to your search script:
+    The filter will be closed and you'll need to click the arrow to open it. You can change the Pagefind script to open your Tag filter and remove empty filters by adding the following to your search script:
 
-```js
-showEmptyFilters: false,
-openFilters: ['tag']
-```
+    ```js
+    showEmptyFilters: false,
+    openFilters: ['tag']
+    ```
 
-The end result looks like:
+    The end result looks like:
 
-![Search UI](/assets/screenshots/search.png)
+    ![Search UI](/assets/screenshots/search.png)
 
 ## Wrap Up
 

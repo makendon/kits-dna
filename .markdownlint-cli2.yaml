@@ -1,0 +1,36 @@
+# markdownlint-cli2 configuration
+# Documentation: https://github.com/DavidAnson/markdownlint-cli2
+
+# Rule configuration
+config:
+  # Disable specific rules
+  line-length: false        # MD013 - Allow line length > 80
+  no-inline-html: false     # MD033 - Allow inline HTML
+  no-duplicate-heading: false      # MD024 - Allow duplicate headings
+  first-line-heading: false        # MD041 - Don't require first line to be h1
+
+# Auto-fix fixable errors
+fix: false
+
+# Respect .gitignore
+gitignore: true
+
+# Files to check (globs)
+globs:
+  - "**/*.md"
+
+# Files to ignore
+ignores:
+  - node_modules
+  - dist
+  - .cache
+  - LICENSE.md
+  - "**/node_modules"
+  - "**/.cache"
+  - vale/styles
+
+# Disable progress output
+noProgress: false
+
+# Disable banner
+noBanner: false

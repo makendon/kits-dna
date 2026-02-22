@@ -46,18 +46,19 @@ Then in your main `SCSS` file e.g. `styles.scss` import Pico CSS with `@use`:
 
 ```css
 @use "pico" with (
-	$theme-color: "jade"
+ $theme-color: "jade"
 );
 ```
 
 > [!Tip]
 > If you want to use a different colour theme to the default "azure" theme you can set this in your main `SCSS` file
-> 
+>
 >```css
 >@use "pico" with (
->	$theme-color: "jade"
+> $theme-color: "jade"
 >);
 >```
+>
 > This changes the colour theme to the "jade" theme.
 
 Viola! You don't need to do anything else unless you want to customise some of the 130 variables or use the colours. More on this in a bit because there's one more important step if you're using **Eleventy** with **Sass**.
@@ -91,9 +92,9 @@ To set up a container use the `.container` class. Here's an example layout from 
 
 ```html
 <main class="container" aria-label="Content">
-	<div>
-		[{ content | safe }] <!--replace square brackets with curly braces-->
-	</div>
+ <div>
+  [{ content | safe }] <!--replace square brackets with curly braces-->
+ </div>
 </main>
 ```
 
@@ -105,23 +106,23 @@ You can take advantage of these features by including other parts of your sites 
 
 ```html
 <header class="container">
-	<nav>
-		<ul>
-			<li>
-				[site logo goes here]
-			</li>
-		</ul>
-		<ul>
-			<li>
-				[nav links go here]
-			</li>
-		</ul>
-		<ul>
-			<li>
-				[Icon links go here]
-			</li>
-		</ul>
-	</nav>
+ <nav>
+  <ul>
+   <li>
+    [site logo goes here]
+   </li>
+  </ul>
+  <ul>
+   <li>
+    [nav links go here]
+   </li>
+  </ul>
+  <ul>
+   <li>
+    [Icon links go here]
+   </li>
+  </ul>
+ </nav>
 </header>
 ```
 
@@ -152,9 +153,9 @@ To create a grid use the `.grid` class. Then add `<div>` tags for the number of 
 
 ```html
 <div class="grid"> 
-	<div>Column 1</div> 
-	<div>Column 2</div> 
-	<div>Column 3</div>
+ <div>Column 1</div> 
+ <div>Column 2</div> 
+ <div>Column 3</div>
 </div>
 ```
 
@@ -168,11 +169,11 @@ I now use cards to display my list of blog posts with the date in the header and
 
 ```html
 <article>
-	<header>
-		[Date]
-	</header>
-	<h4>[Post title]</h4>
-	<p>[Post description]</p>
+ <header>
+  [Date]
+ </header>
+ <h4>[Post title]</h4>
+ <p>[Post description]</p>
 </article>
 ```
 
@@ -195,22 +196,22 @@ Pico comes with dark mode colours as default for each theme, and will automatica
 1. You probably will need some custom dark mode colours - if you have a Search bar for example
 2. If you want an option for a user to toggle dark mode, you'll need to add that feature yourself
 
-Pico has some documentation to support [CSS variables for color schemes](https://picocss.com/docs/css-variables#css-variables-for-color-schemes), but you'll need something like:
+Pico has some documentation to support [CSS variables for colour schemes](https://picocss.com/docs/css-variables#css-variables-for-color-schemes), but you'll need something like:
 
 ```css
 /* Device settings */
 @media only screen and (prefers-color-scheme: dark) {
-	:root:not([data-theme]) {
-		.search {
-			[class]
-		}
-	}
+ :root:not([data-theme]) {
+  .search {
+   [class]
+  }
+ }
 }
 /* Toggle option */
 [data-theme="dark"] {
-	.search {
-		[class]
-	}
+ .search {
+  [class]
+ }
 }
 ```
 
@@ -225,7 +226,7 @@ You can use non-theme colours, my product icons use the colour `orange-400`. You
 
 ```css
 .card-icons {
-	color: $orange-400;
+ color: $orange-400;
 }
 ```
 
@@ -253,6 +254,6 @@ Two negatives I can think of:
 
 Not starting with Pico CSS or a CSS framework taught be more about CSS and Sass than if I'd used one from the outset of building a website - all that Jekyll Minima theme CSS customisation! But I think that makes it easier to adopt a framework, and understand the value. I flipped `kits-dna` over to Pico CSS in just a few hours!
 
-Pico CSS has added a modern look, it's easy to install and use and isn't overkill. If I build another small project or website again I'll definitely use it, and hopefully after reading this post you might consider it too. Beautiful, simple to use and high performing, what more do you want. If I was building a SaaS application would I use it? Probably not, but that's not [Pico's target audience / usage scenario](https://picocss.com/docs/usage-scenarios), it comes down to using the right tool or framework for the job.
+Pico CSS has added a modern look, it's easy to install and use and isn't overkill. If I build another small project or website again I'll definitely use it, and after reading this post you might consider it too. Beautiful, simple to use and high performing, what more do you want. If I was building a SaaS application would I use it? Probably not, but that's not [Pico's target audience / usage scenario](https://picocss.com/docs/usage-scenarios), it comes down to using the right tool or framework for the job.
 
 Thanks for reading :call_me_hand:

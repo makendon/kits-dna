@@ -125,20 +125,20 @@ If you split your `includes` and `layouts` as I have then you'll need to update 
 
 ```js
 dir: {
-		input: "src",          // default: "."
-		includes: "_includes",  // default: "_includes" (`input` relative)
-		layouts: "_layouts",    // default: "_layouts" (`input` relative)
-		data: "_data",          // default: "_data" (`input` relative)
-		output: "dist",        // default: "_site"
-	},
+  input: "src",          // default: "."
+  includes: "_includes",  // default: "_includes" (`input` relative)
+  layouts: "_layouts",    // default: "_layouts" (`input` relative)
+  data: "_data",          // default: "_data" (`input` relative)
+  output: "dist",        // default: "_site"
+ },
 ```
 
 Layouts chain just like in Jekyll, but in Eleventy you can take advantage of directory data files to apply the layout across all files in the directory. For example, my site blog posts are in `src/posts`, add a file called `posts.json` and you could add the following code:
 
 ```json
 {
-	"layout": "post.njk",
-    "tags": "posts",
+ "layout": "post.njk",
+  "tags": "posts",
 }
 ```
 
@@ -160,27 +160,27 @@ To set a `production` environment variable so that select features will only wor
 
 1. Create a data file in your `_data` directory and add the following code
 
-```js
-export default function () {
-	return {
-		environment: process.env.ELEVENTY_ENVIRONMENT || "development",
-	};
-}
-```
+    ```js
+    export default function () {
+    return {
+      environment: process.env.ELEVENTY_ENVIRONMENT || "development",
+    };
+    }
+    ```
 
 2. In your `base.njk` layout (or layout to apply production variable) add:
 
-![Example of updating the environment variable in the base.njk file](/assets/screenshots/prod-env-example.png)
+    ![Example of updating the environment variable in the base.njk file](/assets/screenshots/prod-env-example.png)
 
-You'll notice that this code is similar to what you used in Jekyll, only rather than calling Jekyll we're calling the `kitsDna.js` data file added in step 1.
+    You'll notice that this code is similar to what you used in Jekyll, only rather than calling Jekyll we're calling the `kitsDna.js` data file added in step 1.
 
 3. Update your `package.json` build script:
 
-```json
-"build": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*",
-```
+    ```json
+    "build": "ELEVENTY_ENVIRONMENT=production npm-run-all build:*",
+    ```
 
-When building your site or deploying using the `npm run build` command, your analytics are included.
+    When building your site or deploying using the `npm run build` command, your analytics are included.
 
 > :memo: **Note:** If you just run `npm start` for local development your analytics are excluded.
 
@@ -193,7 +193,7 @@ It's frustrating but when you get the errors cleared you get your shiny new site
 
 ### CSS stylesheet
 
-Once I cleared my errors and my site built... I had no style. The stylesheet path for Jekyll was `/assets/css/styles.css`. Eleventy outputs style to `/css/styles.css`. Once I got the path right in my `head.njk` file I had my style back.
+Once I cleared my errors and my site built… I had no style. The stylesheet path for Jekyll was `/assets/css/styles.css`. Eleventy outputs style to `/css/styles.css`. Once I got the path right in my `head.njk` file I had my style back.
 
 ### Sass
 
@@ -221,7 +221,7 @@ The tags are nice to haves, but the image transformation has improved the site p
 
 I had an open issue to discover deploying `kits-dna` using a tool other than GitHub Pages. Migrating to Eleventy brought this into focus because while you can deploy an Eleventy site to GitHub Pages, it's not as graceful as Jekyll. GitHub Actions are available but it results in a `gh-pages` deployment branch that GitHub Pages uses to deploy the site, and I've avoided that to date. Time to discover an alternative :telescope:
 
-I looked at two providers [**Azure Static Web Apps**](https://azure.microsoft.com/en-us/products/app-service/static) and [**Netlify**](https://www.netlify.com) as simple, *free* alternatives. I decided to test out **Netlify** using my `test-elventy` project as it's a more commonly used platform and agnostic from Microsoft.
+I looked at two providers [**Azure Static Web Apps**](https://azure.microsoft.com/en-us/products/app-service/static) and [**Netlify**](https://www.netlify.com) as simple, *free* alternatives. I decided to test out **Netlify** using my `test-eleventy` project as it's a more commonly used platform and agnostic from Microsoft.
 
 ### Getting started with Netlify
 
@@ -240,6 +240,6 @@ Ta da ! Magic! No need for a GitHub Action workflow, Netlify builds and deploys 
 
 I've added relevant updates to my previous blog posts where relevant, the lighthouse and search posts in particular came in handy to help reconfigure lighthouse and install pagefind again :handshake:
 
-:face_exhaling: that was a long post. I've covered a lot and could have dived even deeper into each section, but hopefully this gives you the confidence to migrate your Jekyll site or create your first site with Eleventy. You learn so much by *doing*, crack on and get started, don't worry about making mistakes, you're learning :smile:
+:face_exhaling: that was a long post. I've covered a lot and could have dived even deeper into each section, but I hope this gives you the confidence to migrate your Jekyll site or create your first site with Eleventy. You learn so much by *doing*, crack on and get started, don't worry about making mistakes, you're learning :smile:
 
 Thanks for reading :call_me_hand:

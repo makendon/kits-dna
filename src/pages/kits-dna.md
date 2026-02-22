@@ -48,7 +48,7 @@ That's it for a quick overview, I don't want to write *War and Peace* on how I b
 
 ### Inspiration
 
-The repository name `kits-dna` was inspired by [crisp-dna](https://dna.crisp.se/docs/index.html), this site was the *a ha* moment that I could feasibly build my own static website, and easily add pages written in `Markdown`. It got me looking at GitHub Pages, then onto Jekyll and static site generators and I thought... I could do that. Of course my site is an insight into *my* inner workings.
+The repository name `kits-dna` was inspired by [crisp-dna](https://dna.crisp.se/docs/index.html), this site was the *a ha* moment that I could feasibly build my own static website, and easily add pages written in `Markdown`. It got me looking at GitHub Pages, then onto Jekyll and static site generators and I thought… I could do that. Of course my site is an insight into *my* inner workings.
 
 ### Tools
 

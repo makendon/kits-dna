@@ -13,7 +13,7 @@ To be fair the Jekyll documentation encourages the use of **Liquid** filters, on
 
 ### Problem
 
-From the **Projects** page I link to the **Blog**. This was done using `[Blog](/blog/)` where `/blog/` is the **Blog** page permalink defined in *frontmatter*. This worked fine when the site was running locally, however the link broke when the site was published to GitHub Pages. The only page I could navigate to without a bunch of 404's was... the homepage.
+From the **Projects** page I link to the **Blog**. This was done using `[Blog](/blog/)` where `/blog/` is the **Blog** page permalink defined in *frontmatter*. This worked fine when the site was running locally, however the link broke when the site was published to GitHub Pages. The only page I could navigate to without a bunch of 404's was… the homepage.
 
 When the site was published to GitHub Pages the site URL was `[username].github.io/kits-dna` (note this was before adding a custom domain). When I clicked on the header link to go to the blog I got a *404 Page Not Found* error :no_entry_sign: The URL that couldn't be found was `[username].github.io/blog` - oh oh - where has `/kits-dna` gone?
 
@@ -55,7 +55,7 @@ This isn’t a build gotcha, more a *design* gotcha. I noticed after my wife vis
 
 ## Wrap Up
 
-This is just a quick post that hopefully let’s you get the links right first time, or maybe you just read the Jekyll documentation properly :joy: It’s not too onerous to change but as it’s one of those issues you don’t see till you’ve deployed your site, it's easier to use the correct link structure from the start of your project. If nothing else it'll save toil on multiple deployments when you catch another link you’ve not changed!
+This is just a quick post that should help you get the links right first time, or maybe you just read the Jekyll documentation properly :joy: It’s not too onerous to change but as it’s one of those issues you don’t see till you’ve deployed your site, it's easier to use the correct link structure from the start of your project. If nothing else it'll save toil on multiple deployments when you catch another link you’ve not changed!
 
 I've only hinted at mobile, the next post will cover *responsive* design. This was a great lesson to learn.
 

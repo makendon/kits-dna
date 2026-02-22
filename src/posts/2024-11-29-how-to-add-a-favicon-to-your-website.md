@@ -35,7 +35,7 @@ You'll need to update the icons `href` to the relative path of your favicon. You
 
 ## Favicon Bug?
 
-Hopefully you guys are seeing the correct favicon... I'm not! :joy: I get...
+You guys should see the correct favicon… I'm not! :joy: I get…
 
 ![Screenshot of kits-dna favicon bug](/assets/screenshots/kitsdna-favicon-old.jpeg)
 
