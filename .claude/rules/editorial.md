@@ -41,7 +41,7 @@ When reviewing posts:
 - Paragraphs: 2-4 sentences max
 - Reading level: Grade 8-10 (Hemingway-style)
 - Active voice preferred (passive OK when appropriate)
-- Eliminate: really, very, just, quite, rather, somewhat
+- Eliminate weasel words: really, quite, rather, somewhat
 - Avoid: utilize (use), facilitate (help), implement (do/add)
 
 ## What not to do
