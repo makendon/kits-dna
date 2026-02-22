@@ -35,7 +35,7 @@ test('has title', async ({ page }) => {
 });
 ```
 
-In this example a test called 'has title' is making a navigation action to go to the page *https://playwright.dev/*, Playwright waits for the page to reach the load state before continuing. Playwright then asserts or expects the page to have the title *Playwright*. This test will pass if the page loads and the title is as per the assertion, the test will fail if the title was different.
+In this example a test called 'has title' is making a navigation action to go to the page *<https://playwright.dev/>*, Playwright waits for the page to reach the load state before continuing. Playwright then asserts or expects the page to have the title *Playwright*. This test will pass if the page loads and the title is as per the assertion, the test will fail if the title was different.
 
 Tests can run locally and in CI so that each time you make a change to your site, the tests can run to see if you've broken anything such as missing links or not building the search index.
 

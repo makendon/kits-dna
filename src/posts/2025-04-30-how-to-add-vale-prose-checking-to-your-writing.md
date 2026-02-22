@@ -139,7 +139,7 @@ To add an out of the box package, simply add the name of the package to your con
 Packages: prose lint, write-good, Google
 ```
 
-After adding your package to the configuration you then need to run the command ` vale sync` in the terminal. This syncs and installs the package into your `vale/styles` directory.
+After adding your package to the configuration you then need to run the command `vale sync` in the terminal. This syncs and installs the package into your `vale/styles` directory.
 
 Vale documentation has a list of [available packages](https://vale.sh/explorer).
 

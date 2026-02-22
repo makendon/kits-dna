@@ -68,7 +68,7 @@ bundle install && bundle update
 bundle exec jekyll serve
 ```
 
-- Open a web browser and go to http://localhost:4000/ you should see your local copy of the site running
+- Open a web browser and go to <http://localhost:4000/> you should see your local copy of the site running
 
 ### Make Changes
 
@@ -101,7 +101,7 @@ To unpublish your site:
 
 1. Go to **Settings** from the repository ribbon
 2. Under *Code and automation*, select **Pages**
-3. Where it says "Your site is live at..." click the **three dots (Additional site options)**
+3. Where it says "Your site is live at…" click the **three dots (Additional site options)**
 4. Select **Unpublish site**
 
 If you try to visit your site now you'll receive a *404 page not found* error. You can now work on improving your site till it's ready to viewed!
@@ -115,6 +115,6 @@ If you’ve followed this “Getting Started” *guide* you should now:
 1. Have your own copy of `kits-dna` - whether local or on GitHub - that you can make your own
 2. Be able publish *your* website to the internet
 
-I've not covered `git` commands here, hopefully you checked out that nice Udacity course I referenced in post 1! All this is great practice, so hopefully you're starting to feel a little more confident with the terminal and running commands.
+I've not covered `git` commands here, but you can check out that nice Udacity course I referenced in post 1! All this is great practice to feel more confident with the terminal and running commands.
 
 Hey maybe you’ve gotten the hobbyist dev bug! :nerd_face:

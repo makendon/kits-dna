@@ -33,9 +33,9 @@ The course wraps up with the final project. This is a much larger problem where 
 
 I've now added a link from my [Side Projects](/side-projects) area to a page with all the details of my [final project](/side-projects/cs50p-final-project) including a video demo.
 
-## The Elephant in the room
+## Let's be honest
 
-*Why learn to programme when AI can build it*
+Why learn to programme when AI can build it?
 
 Gen AI is only just getting started, it's already letting people like me build stuff, which is cool. But unless you're a developer using AI there's a lot of trust you've got to place in the code if you don't know what's it's doing. I'm an inquisitive person who likes to understand *how* things work, this doesn't mean I need to be a tech lead, but I want to know enough to make me question if something isn't right.
 
