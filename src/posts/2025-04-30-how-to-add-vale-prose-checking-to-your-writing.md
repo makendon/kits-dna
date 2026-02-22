@@ -13,7 +13,7 @@ Linters are common in software development or coding to check for style and code
 
 | Linter | Language |
 | ------ | ---------- |
-| Mardownlint | Markdown |
+| Markdownlint | Markdown |
 | ESlint | JavaScript |
 | Ruff | Python |
 | Checkstyle | Java |

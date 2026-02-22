@@ -221,7 +221,7 @@ The tags are nice to haves, but the image transformation has improved the site p
 
 I had an open issue to discover deploying `kits-dna` using a tool other than GitHub Pages. Migrating to Eleventy brought this into focus because while you can deploy an Eleventy site to GitHub Pages, it's not as graceful as Jekyll. GitHub Actions are available but it results in a `gh-pages` deployment branch that GitHub Pages uses to deploy the site, and I've avoided that to date. Time to discover an alternative :telescope:
 
-I looked at two providers [**Azure Static Web Apps**](https://azure.microsoft.com/en-us/products/app-service/static) and [**Netlify**](https://www.netlify.com) as simple, *free* alternatives. I decided to test out **Netlify** using my `test-elventy` project as it's a more commonly used platform and agnostic from Microsoft.
+I looked at two providers [**Azure Static Web Apps**](https://azure.microsoft.com/en-us/products/app-service/static) and [**Netlify**](https://www.netlify.com) as simple, *free* alternatives. I decided to test out **Netlify** using my `test-eleventy` project as it's a more commonly used platform and agnostic from Microsoft.
 
 ### Getting started with Netlify
 
