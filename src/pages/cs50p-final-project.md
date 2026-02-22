@@ -71,15 +71,15 @@ This is just a small part of the programme, check out the [README](https://githu
 In true product fashion here's the **Investment Portfolio** roadmap. My focus is still on learning! I've got some more tutorial projects to build and some packages to play with before I start tackling what's *next*. I'll update the roadmap as I iterate, and I'll write blog posts as I add exciting new capabilities :rocket:
 
 | :building_construction: Now | :telescope: Next | :seedling: Later |
-|--|--|--|
+| --------------------------- | ---------------- | ---------------- |
 | Learning | Database | Graphic User Interface |
-|  | Data analysis | Web application |
-|  | Data visualisation | Growth of £/$ |
-|  | Contribute/Withdraw  | Costs |
-|  | Allocation | News |
-|  | Cashflow  | PDF |
-|  |  | Rules |
-|  |  | AI |
+| | Data analysis | Web application |
+| | Data visualisation | Growth of £/$ |
+| | Contribute/Withdraw | Costs |
+| | Allocation | News |
+| | Cashflow | PDF |
+| | | Rules |
+| | | AI |
 
 ### Completed
 
