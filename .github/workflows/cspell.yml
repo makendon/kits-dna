@@ -32,4 +32,4 @@ jobs:
         run: npm ci
 
       - name: Run cSpell
-        run: npx cspell-cli "**/*.md" --no-progress --gitignore
+        run: npx cspell-cli "**/*.md" "!LICENSE.md" --no-progress --gitignore
