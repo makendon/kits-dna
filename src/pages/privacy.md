@@ -6,7 +6,7 @@ lastUpdated: 2025/07/07
 
 This Privacy Policy describes the policies on the collection, use and disclosure of your information that is collected when you use this website [https://kitfrance.com](https://kitfrance.com/).
 
-*Last updated on {{ lastUpdated | dateFormat }}*
+This privacy policy may be updated periodically. Last updated: {{ lastUpdated | dateFormat }}.
 
 ## Contact me
 
@@ -69,6 +69,6 @@ Netlify Forms incorporates several privacy and security considerations to help p
 
 - Data Storage Location: Form submission data is primarily stored in the United States. If you or your users are based in the UK or EU, you should note that personal data is transferred to the USA. Netlify relies on Standard Contractual Clauses (SCCs) to ensure compliance with UK GDPR and similar regulations for international data transfers [Forum Post: Privacy Policy: Where does Netlify Store Form Data?](https://answers.netlify.com/t/privacy-policy-where-does-netlify-store-form-data/128605).
 
-- Data Management: Form submission data is securely stored in Netlify’s user database. If your forms collect personally identifiable information (PII), it is recommended to regularly export and delete submissions to minimize data retention. For forms with file uploads containing PII, Netlify recommends using the Very Good Security integration for enhanced protection [Form submissions](https://docs.netlify.com/forms/submissions/?utm_content=ask-netlify).
+- Data Management: Form submission data is securely stored in Netlify’s user database. If your forms collect personally identifiable information (PII), it is recommended to regularly export and delete submissions to minimize data retention. For forms with file uploads containing PII, Netlify recommends using the VGS integration for enhanced protection [Form submissions](https://docs.netlify.com/forms/submissions/?utm_content=ask-netlify).
 
 - Compliance: Netlify maintains compliance with major privacy and security standards, including SOC 2 Type 2, ISO 27001, PCI DSS, GDPR, and CCPA. For healthcare organizations, Netlify offers a HIPAA-compliant service for handling protected health information (PHI) [Netlify launches a HIPAA-compliant service offering](https://www.netlify.com/blog/netlify-launches-a-hipaa-compliant-service-offering/?utm_content=ask-netlify).
