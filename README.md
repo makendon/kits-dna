@@ -4,6 +4,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/698c405f-df5f-4dcb-aa60-191b0cdcaedf/deploy-status)](https://app.netlify.com/sites/kits-dna/deploys)
 
+[![prek](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/j178/prek/master/docs/assets/badge-v0.json)](https://github.com/j178/prek)
+
 ## Development
 
 A Dockerfile is included for containerised and consistent testing environments. This approach ensures dependencies and the build environment match production, rather than using the Eleventy dev server which may have different behaviour.
@@ -63,6 +65,30 @@ Generate a production ready build to the `dist` folder:
 ```npm
 npm run build
 ```
+
+### Pre-commit hooks (optional)
+
+This project uses [prek](https://github.com/j178/prek) for pre-commit hooks to catch linting and formatting issues before committing.
+
+**Install hooks (recommended):**
+
+```bash
+brew install prek  # macOS (or see prek docs for other platforms)
+prek run --all-files  # (Optional) Pre-download hooks
+prek install  # Sets up git hooks
+```
+
+**Run checks manually (alternative):**
+
+```bash
+npm run eslint       # JavaScript linting
+npm run markdown     # Markdown linting
+npm run vale         # Prose linting
+npm run spell        # Spell checking
+```
+
+> [!NOTE]
+> Pre-commit hooks are optional. All checks run in CI regardless of local setup.
 
 ## Contributing
 
