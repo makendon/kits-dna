@@ -1,0 +1,38 @@
+[[repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+hooks = [
+  { id = "check-yaml" },
+  { id = "check-json" },
+  { id = "check-toml" },
+  { id = "end-of-file-fixer" },
+  { id = "trailing-whitespace" },
+]
+
+[[repos]]
+repo = "https://github.com/gitleaks/gitleaks"
+rev = "v8.24.2"
+hooks = [
+  { id = "gitleaks" },
+]
+
+[[repos]]
+repo = "https://github.com/DavidAnson/markdownlint-cli2"
+rev = "v0.21.0"
+hooks = [
+  { id = "markdownlint-cli2", args = ["**/*.md", "!node_modules", "!LICENSE.md"] },
+]
+
+[[repos]]
+repo = "https://github.com/errata-ai/vale"
+rev = "f544f49" #v3.13.1
+hooks = [
+  { id = "vale", args = ["--output=line", "--minAlertLevel=error", "--glob=!LICENSE.md", "."] },
+]
+
+[[repos]]
+repo = "https://github.com/streetsidesoftware/cspell-cli"
+rev = "v9.6.0"
+hooks = [
+  { id = "cspell", args = ["**/*.md", "!node_modules", "!LICENSE.md"] },
+]
