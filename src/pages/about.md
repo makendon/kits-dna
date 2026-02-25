@@ -31,7 +31,7 @@ Check out my [product](/product) page to learn about my product journey and disc
 Read my [blog](/blog) for thoughts on:
 
 - Building a personal website
-- My [projects](/projects)
+- My [projects](/side-projects)
 - Product management
   - Internal
   - Public sector
@@ -74,7 +74,7 @@ What's in my toolkit:
 - `Python`
 
 > [!Note]
-For more detail on the tech stack used to build this site, see the [colophon](/kits-dna/#colophon).
+For more detail on the tech stack used to build this site, see the [colophon](/side-projects/kits-dna/#colophon).
 
 ## :mirror_ball: Fun
 

@@ -78,7 +78,7 @@ I didn't go down the rabbit hole of trying the customise how the search results 
 
 So we've got Pagefind indexing the site locally, a styled search box and the functionality works… awesome! But now we need to index our site at build time for `production`. To do this add the following to your GitHub Actions workflow for building your Jekyll site before deploying to GitHub Pages.
 
-Add the following workflow step under the **Build with Jekyll** step. If in doubt check out my [Jekyll workflow](https://github.com/makendon/kits-dna/blob/main/.github/workflows/jekyll.yml).
+Add the following workflow step under the **Build with Jekyll** step. If in doubt check out my [Jekyll workflow](https://github.com/makendon/kits-dna/blob/jekyll/.github/workflows/jekyll.yml).
 
 ```yml
   - name: Run Pagefind

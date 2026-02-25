@@ -51,7 +51,7 @@ Simple Analytics works by using a `JavaScript` script that runs on each page. Th
 3. [Paste the script](https://docs.simpleanalytics.com/script) into the `simple-analytics.html` file
 4. Add the `simple-analytics.html` include to the body of your `default.html` layout before the closing `</body` tag.
 
-> :bulb: **Tip:** Liquid is stopping the code blocks so see my [kits-dna default.html file](https://github.com/makendon/kits-dna/blob/main/_layouts/default.html) for an example.
+> :bulb: **Tip:** Liquid is stopping the code blocks so see my [kits-dna default.html file](https://github.com/makendon/kits-dna/blob/jekyll/_layouts/default.html) for an example.
 
 As with GA, you can still use the `jekyll.environment == 'production'` tag with Simple Analytics. This means that the script will only be included if the Jekyll environment is equal to *production* such as your published site on GitHub Pages. Page views when developing locally (local host) will not be included in analytics as this would be *non-production.*
 

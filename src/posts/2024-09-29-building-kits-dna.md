@@ -8,10 +8,10 @@ tags:
   - jekyll
 description: Over a series of blog posts I’ll tell the story of how I built this website, aka kits-dna. My goal with this is to show people who aren’t engineers/developers that it's easy to create a personal website, either as a portfolio, blog or both, and get started with an internet presence outside of social media.
 ---
-> :memo: **Note:** For a brief overview of `kits-dna` read my project “**Personal Website**”, on my [Projects](/projects/) page.
+> :memo: **Note:** For a brief overview of `kits-dna` read my project “**Personal Website**”, on my [Projects](/side-projects/) page.
 >
 > :recycle: **Update 02/03/2025**
-> I've migrated `kits-dna` from Jekyll and GitHub Pages to **Eleventy** and **Netlify**. See my post [Migrating from Jekyll to Eleventy](/migrating-from-jekyll-to-eleventy).
+> I've migrated `kits-dna` from Jekyll and GitHub Pages to **Eleventy** and **Netlify**. See my post [Migrating from Jekyll to Eleventy](/blog/migrating-from-jekyll-to-eleventy).
 > You can still view my [Jekyll code](https://github.com/makendon/kits-dna/tree/jekyll) to help you get started.
 
 ## Technologies
@@ -28,7 +28,7 @@ description: Over a series of blog posts I’ll tell the story of how I built th
 
 #### GitHub Pages
 
-I use [**GitHub Pages**]([https://pages.github.com](https://pages.github.com/)) for hosting my site. I wanted something simple, turned out it wasn't quite so simple but this was my fault. I'll talk about my *gotcha's* in an upcoming post.
+I use [**GitHub Pages**](https://pages.github.com/) for hosting my site. I wanted something simple, turned out it wasn't quite so simple but this was my fault. I'll talk about my *gotcha's* in an upcoming post.
 
 GitHub Pages supports **Jekyll** and a number of Jekyll [themes](https://pages.github.com/themes/) out the box.
 

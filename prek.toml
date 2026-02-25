@@ -27,12 +27,12 @@ hooks = [
 repo = "https://github.com/errata-ai/vale"
 rev = "f544f49" #v3.13.1
 hooks = [
-  { id = "vale", args = ["--output=line", "--minAlertLevel=error", "--glob=!LICENSE.md", "."] },
+  { id = "vale", args = ["--output=line", "--minAlertLevel=error"], files = "\\.md$", exclude = "LICENSE\\.md" },
 ]
 
 [[repos]]
 repo = "https://github.com/streetsidesoftware/cspell-cli"
 rev = "v9.6.0"
 hooks = [
-  { id = "cspell", args = ["**/*.md", "!node_modules", "!LICENSE.md"] },
+  { id = "cspell", files = "\\.md$", exclude = "LICENSE\\.md" },
 ]

@@ -23,7 +23,7 @@ Once you've downloaded your favicon you need to add it to your site.
 2. Create a sub-directory called something like **favicons**
 3. Copy the contents of the favicon download into the **favicons** folder
 
-> :bulb: **Tip:** Checkout the [assets](https://github.com/makendon/kits-dna/tree/main/assets) directory in `kits-dna` for an example.
+> :bulb: **Tip:** Checkout the [assets](https://github.com/makendon/kits-dna/tree/main/src/assets) directory in `kits-dna` for an example.
 
 Now you've got favicons in your repo you need to add the code. The favicon code goes into the `head` or your site, for the non-techies this is different to your site `header`. The `_includes` directory in the repository root contains a `head.html` file. You need to add the following line of `HTML` code:
 
