@@ -7,8 +7,10 @@ exclude = [
     'http://localhost:8080/assets/images/hawaii-logo.webp',  # Local scan doesn't error on this but CI does
     'http://localhost:8080/assets/documents/resume.pdf',  # Local scan doesn't error on this but CI does
     'https://www.npmjs.com/',  # Works on manual check but assume rate limiting in effect
+    'https://npmjs.com/',  # Works on manual check but assume rate limiting in effect
     'https://www.netlify.com/',  # Works on manual check but times out in CI
-    'https://www.kitfrance.com/'  # Local scan doesn't error on this but CI does
+    'https://docs.netlify.com/',  # Works on manual check but times out in CI'
+    'https://kitfrance.com/'  # Local scan doesn't error on this but CI does
 ]
 
 # Exclude paths
