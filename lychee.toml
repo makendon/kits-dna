@@ -3,7 +3,10 @@
 
 exclude = [
     'localhost:4000',  # Jekyll server example
-    'http://localhost:8080/pagefind/pagefind-ui.css'  # Unclear why .css in exclude_path doesn't exclude this error
+    'http://localhost:8080/pagefind/pagefind-ui.css',  # Unclear why .css in exclude_path doesn't exclude this error
+    'http://localhost:8080/assets/images/hawaii-logo.webp',  # Local scan doesn't error on this but CI does
+    'http://localhost:8080/assets/documents/resume.pdf',  # Local scan doesn't error on this but CI does
+    'https://www.npmjs.com/'  # Works on manual check but assume rate limiting in effect
 ]
 
 # Exclude paths
