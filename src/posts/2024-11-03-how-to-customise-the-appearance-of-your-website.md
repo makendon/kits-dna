@@ -119,7 +119,7 @@ These aren't huge changes but have a big impact such as changing the background 
 
 Where you see `dark` in the example, this is attributed to the dark colour theme, more on this below.
 
-> :bulb: **Tip:** Check out [CSS Reference]([https://cssreference.io](https://cssreference.io/)) which explains common `CSS` *properties* with illustrated examples.
+> :bulb: **Tip:** Check out [CSS Reference](https://cssreference.io/) which explains common `CSS` *properties* with illustrated examples.
 
 ## How to Override Gem Theme Defaults
 

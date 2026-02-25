@@ -9,11 +9,11 @@ tags:
   - github-pages
 description: Wanting to move on from Jekyll? This post is all about migrating a Jekyll site to Eleventy.
 ---
-In my post [Bringing it all together](/bringing-it-all-together) I wrote a section called *Beyond Jekyll* in which I mention an opportunity to move on from Jekyll.
+In my post [Bringing it all together](/blog/bringing-it-all-together) I wrote a section called *Beyond Jekyll* in which I mention an opportunity to move on from Jekyll.
 
 I lost confidence in Jekyll recently. After fixing a low severity vulnerability in one of Jekyll's Ruby Gem dependencies, my build broke.
 
-I considered Hugo, but `kits-dna` is now powered by [**Eleventy**](https://www.11ty.dev) :rocket:  
+I considered Hugo, but `kits-dna` is now powered by [**Eleventy**](https://www.11ty.dev) :rocket:
 
 ## Eleventy
 
@@ -80,7 +80,7 @@ Below I'll dive into specific areas of difference.
 
 Eleventy depends on `node.js`. Install locally by picking an option from [nodejs.org](https://nodejs.org/en/download). Installing `node.js` will also install `npm` (node package manager).
 
-The [npm](npmjs.com) public registry contains millions of `JavaScript` code packages, including Eleventy. Install Eleventy:
+The [npm](https://npmjs.com) public registry contains millions of `JavaScript` code packages, including Eleventy. Install Eleventy:
 
 ```npm
 npm i @11ty/eleventy

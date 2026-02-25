@@ -80,16 +80,16 @@ Cool. So now you should have a your own copy of kits-dna either locally or on Gi
 
 There's a couple of ways that Github Pages can be enabled for a repository:
 
-1. Create a new public repository named *username.github.io*
+1. Create a new public repository named `username.github.io`
     1. Push / Create content
-    2. Open up a browser and go to https:username.github.io
+    2. Open up a browser and go to `https:username.github.io`
 2. Create a new public repository (any name)
     1. Push / Create content
     2. Go to **Settings** from the repository ribbon
     3. Under *Code and automation*, select **Pages**
     4. Under *Build and deployment*, select **Deploy from branch**. This is an auto GitHub Actions workflow, but you can also add a Jekyll GitHub Actions workflow for greater customisation
     5. Under *Branch*, select the **branch** this would usually be *main*, *master* or *gh-pages*
-    6. Open up a browser and go to https:repositoryname.github.io
+    6. Open up a browser and go to `https:repositoryname.github.io`
 
 > :hand: **Help:** Visit [GitHub Pages](https://pages.github.com/) for a quick overview. For further help see GitHub's extensive Pages [documentation](https://docs.github.com/en/pages).
 

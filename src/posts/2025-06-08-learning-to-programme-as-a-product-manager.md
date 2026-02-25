@@ -16,7 +16,7 @@ I'm now half way through [CS50's Introduction to Programming with Python](https:
 I was going to take [Replit's 100 Days of Code](https://replit.com/learn/100-days-of-python?utm_medium=referral&utm_campaign=100_days_of_code_python) but after completing [CS50's Introduction to Programming with Scratch](https://cs50.harvard.edu/scratch/2024/) course (I had already taken [CS50's Introduction to Computer Science for Business Professionals](https://cs50.harvard.edu/business/2017/) - highly recommended), I decided to jump into their Python course.
 
 > [!Note]
-> I didn't do the Scratch course problems / projects but I did create some of [my own](/scratch)
+> I didn't do the Scratch course problems / projects but I did create some of [my own](/side-projects/scratch)
 
 Comparing CS50 to other courses, the topics / modules seem to cover a greater scope of Python. Each module has a lecture lasting about an hour followed by *short* supporting videos. Crucially the course is designed for students with or **without** prior programming experience.
 

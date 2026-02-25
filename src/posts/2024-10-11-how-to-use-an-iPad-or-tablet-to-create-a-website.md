@@ -11,7 +11,7 @@ I have an old laptop and a slow Raspberry Pi 4, but I do have a newer iPad Pro, 
 
 ## GitHub Codespaces
 
-[**GitHub Codespaces**]([https://github.com/features/](https://github.com/features/codespaces)) solved this problem. It's a configured and secured IDE that runs **Visual Studio Code** in the browser and is integrated natively with GitHub.
+[**GitHub Codespaces**](https://github.com/features/codespaces) solved this problem. It's a configured and secured IDE that runs **Visual Studio Code** in the browser and is integrated natively with GitHub.
 
 With just a config file in your repo, you can spin up a Codespace at no cost (120 hours per month) with all the dependencies you need pre-installed. You can even install VS Code extensions as you would locally.
 
