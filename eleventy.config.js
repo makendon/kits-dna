@@ -99,6 +99,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./css/");
   eleventyConfig.addPassthroughCopy("./src/assets/");
   eleventyConfig.addPassthroughCopy("_headers");
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addFilter("dateFormat", dateFormat);
