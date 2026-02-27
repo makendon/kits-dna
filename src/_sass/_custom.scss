@@ -81,22 +81,22 @@ footer p {
     &:hover {
       transform: scale(1.1);
     }
-  
-  
+
+
     .light-icon {
       display: none;  // Hide sun by default (light mode)
       height: 1em;
       width: 1em;
       color: $amber-200;
     }
-    
+
     .dark-icon {
       display: inline;  // Show moon by default (light mode)
       height: 1em;
       width: 1em;
     }
 }
-  
+
 // Font Awesome icon styling
 .card-icons {
     display: grid;
@@ -139,7 +139,7 @@ footer p {
 .links-nextprev > * {
   list-style: none;
 	flex-grow: 1;
-  flex-basis: 45%; 
+  flex-basis: 45%;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -358,4 +358,9 @@ figure figcaption {
 // Call to action
 .cta {
   text-align: center;
+}
+
+// CSS transitions
+@view-transition {
+  navigation: auto;
 }
