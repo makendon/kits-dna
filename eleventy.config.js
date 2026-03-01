@@ -101,7 +101,11 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_headers");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    preAttributes: {
+      tabindex: "0"
+    }
+  });
   eleventyConfig.addFilter("dateFormat", dateFormat);
   eleventyConfig.addFilter("filterTagList", filterTagList);
   eleventyConfig.addFilter("wordCount", wordCount);
