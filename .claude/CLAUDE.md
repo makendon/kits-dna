@@ -151,9 +151,17 @@ Desktop browsers (chromium, firefox, webkit) skip mobile.spec.js tests. Mobile b
 - Search index is built separately via `npm run build:search` (uses Pagefind)
 - Source code is GPL v3 licensed; content is copyrighted
 
+## Markdown standards
+
+When writing or editing any `.md` file:
+
+- Follow the markdownlint rules defined in `.markdownlint-cli2.yaml` — run `npm run markdown` to check
+- Use **en-GB spelling** throughout (configured in `cspell.json`) — run `npm run spell` to check
+- Key disabled rules (allowed): long lines (MD013), inline HTML (MD033), duplicate headings (MD024), no required h1 (MD041)
+
 ## Claude Code configuration
 
-This repository uses the `.claude/` directory to configure Claude Code behavior:
+This repository uses the `.claude/` directory to configure Claude Code behaviour:
 
 ### Claude directory structure
 
@@ -167,7 +175,7 @@ This repository uses the `.claude/` directory to configure Claude Code behavior:
 
 - Invoked with slash commands: `/hemingway`, `/polish`, `/review`
 - Load instructions into the current Claude Code session
-- Modify Claude's behavior for that task
+- Modify Claude's behaviour for that task
 - Example: `/review` loads review instructions and Claude follows them in the main session
 
 ### Rules
@@ -177,6 +185,38 @@ This repository uses the `.claude/` directory to configure Claude Code behavior:
 - Contextual guidelines referenced by skills or workflows
 - Not directly invoked - loaded when needed
 - Example: `editorial.md` provides guidelines for the `/review` skill
+
+### Agents
+
+**Agents** (in `agents/`):
+
+Custom subagents that Claude Code can spawn to handle specialised tasks autonomously. Each agent has a defined set of tools and a specific role.
+
+| Agent | Description | When to use |
+| --- | --- | --- |
+| `playwright-test-planner` | Explores the site via browser and produces a comprehensive test plan | Generating or updating `specs/test-plan.md` |
+| `playwright-test-generator` | Executes each test plan step in a real browser and writes the resulting Playwright test code | Implementing new tests from the plan |
+| `playwright-test-healer` | Runs failing tests, debugs them, and edits the spec files to fix them | When tests break after site changes |
+
+**Usage examples:**
+
+```text
+# Create or refresh the test plan
+"Use the playwright-test-planner to create a test plan for kits-dna"
+
+# Implement tests from the plan
+"Use the playwright-test-generator to implement this test plan"
+
+# Fix broken tests after a change
+"Use the playwright-test-healer to fix the failing tests"
+```
+
+**Notes:**
+
+- Agents require the `playwright-test` MCP server to be running (configured in `.mcp.json`)
+- The test plan lives in `specs/test-plan.md`
+- Generator writes individual spec files; review and merge into the appropriate `tests/*.spec.js` file
+- Healer can run, debug, and edit test files directly — check its changes before committing
 
 ### MCP servers
 
