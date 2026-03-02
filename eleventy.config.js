@@ -98,6 +98,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/_sass/");
   eleventyConfig.addPassthroughCopy("./css/");
   eleventyConfig.addPassthroughCopy("./src/assets/");
+  eleventyConfig.addPassthroughCopy({ "./src/assets/favicons-logo/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy("_headers");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);

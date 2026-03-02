@@ -317,6 +317,7 @@ test.describe("SEO and Meta Tags", () => {
   // TC-090
   test("page loads without JavaScript console errors", async ({ page }) => {
     const consoleErrors = [];
+    const notFound = [];
 
     page.on("console", msg => {
       if (msg.type() === "error") {
@@ -324,9 +325,16 @@ test.describe("SEO and Meta Tags", () => {
       }
     });
 
+    page.on("response", response => {
+      if (response.status() === 404) {
+        notFound.push(response.url());
+      }
+    });
+
     await page.goto("/");
     await page.waitForLoadState("networkidle");
 
+    expect(notFound, `404 responses: ${notFound.join(", ")}`).toHaveLength(0);
     expect(consoleErrors, `Console errors: ${consoleErrors.join(", ")}`).toHaveLength(0);
   });
 });
