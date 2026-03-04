@@ -166,14 +166,15 @@ This repository uses the `.claude/` directory to configure Claude Code behaviour
 ### Claude directory structure
 
 - **`CLAUDE.md`** (this file) - Main project instructions, always loaded by Claude Code
-- **`commands/`** - Skills that can be invoked via slash commands (e.g., `/hemingway`, `/polish`, `/review`)
+- **`skills/`** - Skills that can be invoked via slash commands (e.g., `/review`, `/polish`, `/new-post`)
 - **`rules/`** - Contextual guidelines that inform specific workflows (e.g., `editorial.md` for content review)
 
 ### Skills
 
-**Skills** (in `commands/`):
+**Skills** (in `skills/`):
 
-- Invoked with slash commands: `/hemingway`, `/polish`, `/review`
+- Invoked with slash commands: `/review`, `/polish`, `/new-post`
+- Each skill lives in its own subdirectory with a `SKILL.md` entry point
 - Load instructions into the current Claude Code session
 - Modify Claude's behaviour for that task
 - Example: `/review` loads review instructions and Claude follows them in the main session
