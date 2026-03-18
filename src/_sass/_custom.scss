@@ -214,10 +214,20 @@ figure figcaption {
 }
 
 @media (min-width: 769px) {
-  .responsive-nav,
-  .responsive-nav > .nav-links,
+  .responsive-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .responsive-nav > .nav-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .responsive-nav > .nav-utilities {
     flex-direction: row;
+    justify-content: flex-end;
   }
 }
 
