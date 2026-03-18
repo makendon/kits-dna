@@ -350,6 +350,18 @@ figure figcaption {
   transition: none !important;
 }
 
+// Contact form
+form[name="contact"] {
+  max-width: 32rem;
+  margin-inline: auto;
+
+  fieldset {
+    border: 1px solid var(--pico-muted-border-color);
+    border-radius: var(--pico-border-radius);
+    padding: 1.5rem;
+  }
+}
+
 // Hide contact form honeypot field
 .hidden {
   display: none;

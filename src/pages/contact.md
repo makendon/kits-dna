@@ -10,7 +10,7 @@ You can send me a message via the contact form, email me, or through socials - c
 
 **By contacting me you are consenting to the collection, use and disclosure of your information in accordance with the [Privacy Policy](/privacy).**
 
-## :memo: Form
+## :memo: Contact form
 
 {% include "contact-form.njk" %}
 
