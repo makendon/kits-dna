@@ -14,6 +14,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/.playwright-mcp/
 
 # Personal images & documents
 src/assets/images/me.webp
