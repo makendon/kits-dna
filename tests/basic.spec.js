@@ -102,6 +102,38 @@ test.describe("Navigation", () => {
   });
 });
 
+// TC-091, TC-092: Homepage content sections
+test.describe("Homepage Content", () => {
+  // TC-091
+  test("latest posts section shows 3 posts with links", async ({ page }) => {
+    await page.goto("/");
+
+    await expect(page.getByRole("heading", { name: "Latest posts" })).toBeVisible();
+
+    const postCards = page.locator("section .grid article");
+    await expect(postCards).toHaveCount(3);
+
+    const postLinks = page.locator("section .grid .blog-post-list-heading a");
+    await expect(postLinks).toHaveCount(3);
+
+    for (const link of await postLinks.all()) {
+      await expect(link).toHaveAttribute("href", /^\/blog\//);
+    }
+
+    await expect(page.getByRole("button", { name: "View all posts" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "View all posts" })).toHaveAttribute("href", "/blog/");
+  });
+
+  // TC-092
+  test("homepage hero has About, Product, and Side Projects CTAs", async ({ page }) => {
+    await page.goto("/");
+
+    await expect(page.getByRole("button", { name: "About", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Product", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Side Projects", exact: true })).toBeVisible();
+  });
+});
+
 // TC-034 to TC-038, TC-087: Tags
 test.describe("Tags", () => {
   // TC-034

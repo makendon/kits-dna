@@ -123,8 +123,8 @@ test.describe("Mobile Browser Tests", () => {
     await page.setViewportSize({ width: 667, height: 375 });
 
     await expect(page.locator("body")).toBeVisible();
-    await expect(page.locator("header")).toBeVisible();
-    await expect(page.locator("footer")).toBeVisible();
+    await expect(page.getByRole("banner")).toBeVisible();
+    await expect(page.getByRole("contentinfo")).toBeVisible();
   });
 
   // TC-083: Homepage hero content is visible on mobile
@@ -136,6 +136,7 @@ test.describe("Mobile Browser Tests", () => {
     // Hero CTAs are <a role="button"> elements, exposed as buttons in the accessibility tree
     await expect(page.getByRole("button", { name: "About", exact: true }).first()).toBeVisible();
     await expect(page.getByRole("button", { name: "Product", exact: true }).first()).toBeVisible();
+    await expect(page.getByRole("button", { name: "Side Projects", exact: true }).first()).toBeVisible();
 
     const hasHorizontalOverflow = await page.evaluate(
       () => document.documentElement.scrollWidth > document.documentElement.clientWidth
