@@ -110,10 +110,11 @@ test.describe("Homepage Content", () => {
 
     await expect(page.getByRole("heading", { name: "Latest posts" })).toBeVisible();
 
-    const postCards = page.locator("section .grid article");
+    const latestSection = page.locator("section:has(h2:text('Latest posts'))");
+    const postCards = latestSection.locator(".grid article");
     await expect(postCards).toHaveCount(3);
 
-    const postLinks = page.locator("section .grid .blog-post-list-heading a");
+    const postLinks = latestSection.locator(".blog-post-list-heading a");
     await expect(postLinks).toHaveCount(3);
 
     for (const link of await postLinks.all()) {
