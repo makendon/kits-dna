@@ -7,6 +7,12 @@
   --pico-font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+// Constrain content width on prose-heavy pages
+.prose {
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
 /* Homepage */
 .homepage-button {
   justify-content: center;
