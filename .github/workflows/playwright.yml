@@ -4,21 +4,40 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'src/**'
-      - 'tests/**'
-      - 'playwright.config.js'
-      - 'eleventy.config.js'
-      - 'Dockerfile'
-      - 'package.json'
-      - 'package-lock.json'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      should-test: ${{ steps.filter.outputs.test }}
+    steps:
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+      with:
+        egress-policy: audit
+
+    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+    - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+      id: filter
+      with:
+        filters: |
+          test:
+            - 'src/**'
+            - 'tests/**'
+            - 'playwright.config.js'
+            - 'eleventy.config.js'
+            - 'Dockerfile'
+            - 'package.json'
+            - 'package-lock.json'
+
   playwright-tests:
+    needs: changes
+    if: needs.changes.outputs.should-test == 'true'
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -79,3 +98,19 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 1
+
+  playwright-check:
+    if: always()
+    needs: [changes, playwright-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+        with:
+          egress-policy: audit
+
+      - name: Check test results
+        run: |
+          if [[ "${{ needs.playwright-tests.result }}" == "failure" ]]; then
+            exit 1
+          fi
