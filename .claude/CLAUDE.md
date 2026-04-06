@@ -119,8 +119,7 @@ Posts with `draft: true` in frontmatter are excluded from production builds (`EL
 
 Playwright tests are in the `tests/` directory:
 
-- `basic.spec.js` - Basic functionality tests
-- `advanced.spec.js` - Advanced feature tests
+- `functional.spec.js` - Functional tests grouped by feature area (navigation, blog, search, dark mode, etc.)
 - `accessibility.spec.js` - Accessibility tests (includes axe-core)
 - `mobile.spec.js` - Mobile-specific tests
 
