@@ -11,8 +11,7 @@
 
 | File | Tests |
 | --- | --- |
-| `basic.spec.js` | Page title, nav links (About, Product, Blog, Search), dark mode button visible |
-| `advanced.spec.js` | Dark mode toggle, search with query, blog post navigation, external links, 404 page |
+| `functional.spec.js` | Page load/routing, navigation, homepage content, dark mode, search, blog, RSS, tags, about, product, resume, footer, SEO, external links, 404 |
 | `accessibility.spec.js` | axe-core scan: homepage, product, side-projects, blog; WCAG 2.1 A/AA on homepage |
 | `mobile.spec.js` | Burger menu open/close, mobile search, mobile dark mode, viewport responsiveness, mobile blog nav, mobile external links, mobile 404 |
 
@@ -24,7 +23,7 @@
 
 #### TC-001: Homepage loads with correct title
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -38,7 +37,7 @@
 
 #### TC-002: All primary pages return HTTP 200
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Assumption:** Site is running on <http://localhost:8080> with a complete build including the Pagefind search index.
@@ -54,7 +53,7 @@
 
 #### TC-003: 404 page for non-existent routes
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -69,7 +68,7 @@
 
 #### TC-004: Side-project sub-pages load correctly
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -89,7 +88,7 @@
 
 #### TC-005: Logo link navigates to homepage
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -104,7 +103,7 @@
 
 #### TC-006: All desktop nav links are present and navigable
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Partially covered — About, Product, Blog covered; Contact not independently verified
 
 **Steps:**
@@ -123,7 +122,7 @@
 
 #### TC-007: Active nav item has aria-current="page"
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -139,7 +138,7 @@
 
 #### TC-008: Search icon in nav bar opens search page
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -236,7 +235,7 @@
 
 #### TC-014: Dark mode toggle sets data-theme attribute
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -251,7 +250,7 @@
 
 #### TC-015: Dark mode toggle switches between dark and light on each click
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -269,7 +268,7 @@
 
 #### TC-016: Dark mode preference is persisted in localStorage across page navigations
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -304,7 +303,7 @@
 
 #### TC-018: Search page loads with heading and search input
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -319,7 +318,7 @@
 
 #### TC-019: Search returns results for a known term
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -337,7 +336,7 @@
 
 #### TC-020: Search with a term that yields no results shows an empty state
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -355,7 +354,7 @@
 
 #### TC-021: Search results can be filtered by content type
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Assumption:** Pagefind UI filters are visible once a search is performed (configured with `openFilters: ["tag", "content"]`).
@@ -374,7 +373,7 @@
 
 #### TC-022: Search accessed via header icon navigates to /search
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -410,7 +409,7 @@
 
 #### TC-024: Blog page lists posts in reverse chronological order
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -427,7 +426,7 @@
 
 #### TC-025: Blog post cards show title, description, and date
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -444,7 +443,7 @@
 
 #### TC-026: Clicking a blog post card navigates to the full post
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -460,7 +459,7 @@
 
 #### TC-027: Blog post page displays all expected metadata elements
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -478,7 +477,7 @@
 
 #### TC-028: Blog post previous and next navigation links work
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Assumption:** A middle post (not the first or last in the collection) is used.
@@ -498,7 +497,7 @@
 
 #### TC-029: "Back to top" link on blog posts returns to the top of the page
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -515,7 +514,7 @@
 
 #### TC-030: RSS icon on the blog page links to /feed.xml
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -534,7 +533,7 @@
 
 #### TC-031: RSS feed is accessible and returns valid XML
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -549,7 +548,7 @@
 
 #### TC-032: RSS feed contains blog post entries
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -564,7 +563,7 @@
 
 #### TC-033: Footer RSS icon links to /feed.xml with correct attributes
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -583,7 +582,7 @@
 
 #### TC-034: Tags index page lists all tags sorted alphabetically
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -600,7 +599,7 @@
 
 #### TC-035: Clicking a tag link navigates to the tag page
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -616,7 +615,7 @@
 
 #### TC-036: Tag page lists posts associated with that tag
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -632,7 +631,7 @@
 
 #### TC-037: Tag page has a working link back to /tags
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -649,7 +648,7 @@
 
 #### TC-038: Blog post tag links navigate to the correct tag page
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -668,7 +667,7 @@
 
 #### TC-039: About page loads with heading and profile image
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered (heading visible after nav click)
 
 **Steps:**
@@ -683,7 +682,7 @@
 
 #### TC-040: About page CTA button links to the résumé page
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -700,7 +699,7 @@
 
 #### TC-041: About page internal links navigate to correct destinations
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -721,7 +720,7 @@
 
 #### TC-042: Product page loads with philosophy content and pillar cards
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered (article with "Business outcomes" visible)
 
 **Steps:**
@@ -736,7 +735,7 @@
 
 #### TC-043: All 9 product pillar cards are displayed
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -752,7 +751,7 @@
 
 #### TC-044: Product page CTA "Get in touch" navigates to /contact
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -771,7 +770,7 @@
 
 #### TC-045: Side projects page lists all four project cards
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered (text check only)
 
 **Steps:**
@@ -787,7 +786,7 @@
 
 #### TC-046: Side projects "Learn more" button for kits-dna navigates correctly
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -803,7 +802,7 @@
 
 #### TC-047: Side projects "Check them out" button for Scratch navigates correctly
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -820,7 +819,7 @@
 
 #### TC-048: Disabled "Product" card button is not interactive
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -838,7 +837,7 @@
 
 #### TC-049: Resume page loads with correct heading and experience section
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -854,7 +853,7 @@
 
 #### TC-050: Resume accordion sections expand and collapse correctly
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Assumption:** The first `details` element (most recent DWP PM role) is open by default due to the `open` attribute in the template.
@@ -874,7 +873,7 @@
 
 #### TC-051: Resume PDF download link is present with correct attributes
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -889,7 +888,7 @@
 
 #### TC-052: Resume LinkedIn link is present and points to LinkedIn
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -904,7 +903,7 @@
 
 #### TC-053: Resume "Contact me" button navigates to /contact
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -923,7 +922,7 @@
 
 #### TC-054: Contact page loads with form and alternative contact methods
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -940,7 +939,7 @@
 
 #### TC-055: Contact form has all required fields
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -957,7 +956,7 @@
 
 #### TC-056: Contact form honeypot field is not visible to users
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -972,7 +971,7 @@
 
 #### TC-057: Contact form email field validates email format client-side
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -989,7 +988,7 @@
 
 #### TC-058: Contact "Send an Email" mailto link is correctly formed
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1004,7 +1003,7 @@
 
 #### TC-059: Contact page Privacy Policy link navigates to /privacy
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1023,7 +1022,7 @@
 
 #### TC-060: Footer social links are present and correctly configured
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1041,7 +1040,7 @@
 
 #### TC-061: Footer page links navigate correctly
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered for "Home" link only
 
 **Steps:**
@@ -1058,7 +1057,7 @@
 
 #### TC-062: Footer copyright text includes the author name
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1094,7 +1093,7 @@
 
 #### TC-064: Privacy page loads with all policy sections and a formatted date
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1112,7 +1111,7 @@
 
 #### TC-065: External links on the homepage have target and rel attributes
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Covered
 
 **Steps:**
@@ -1145,7 +1144,7 @@
 
 #### TC-067: Homepage has correct meta description, canonical link, and Open Graph tags
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1162,7 +1161,7 @@
 
 #### TC-068: Blog post pages have a title tag reflecting the post title
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1176,7 +1175,7 @@
 
 #### TC-069: Sitemap is accessible and contains site URLs
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1422,7 +1421,7 @@
 
 #### TC-087: Navigating directly to a tag URL loads the correct page
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1437,7 +1436,7 @@
 
 #### TC-088: Submitting an empty search does not cause errors
 
-**File:** `advanced.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1454,7 +1453,7 @@
 
 #### TC-089: Blog post URLs follow lowercase kebab-case slug format
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Steps:**
@@ -1469,7 +1468,7 @@
 
 #### TC-090: Page loads without JavaScript console errors
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Assumption:** Console error monitoring is set up via a `page.on('console')` listener before navigation.
@@ -1487,7 +1486,7 @@
 
 #### TC-091: System tags do not appear on blog post pages
 
-**File:** `basic.spec.js`
+**File:** `functional.spec.js`
 **Status:** Not covered
 
 **Assumption:** System tags such as "posts" and "pages" are filtered out by the `filterTagList` Eleventy filter.
@@ -1549,7 +1548,6 @@ Tests should be distributed across the existing spec files as follows:
 
 | File | Test Case IDs |
 | --- | --- |
-| `basic.spec.js` | TC-002, TC-004, TC-006 to TC-008, TC-034 to TC-053, TC-060 to TC-069, TC-087 to TC-091 |
-| `advanced.spec.js` | TC-015 to TC-016, TC-020 to TC-022, TC-024 to TC-025, TC-027 to TC-033 |
+| `functional.spec.js` | TC-002 to TC-004, TC-006 to TC-008, TC-014 to TC-016, TC-019 to TC-022, TC-024 to TC-033, TC-034 to TC-053, TC-060 to TC-069, TC-087 to TC-091 |
 | `accessibility.spec.js` | TC-075 to TC-082 |
 | `mobile.spec.js` | TC-012 to TC-013, TC-083 to TC-086 |
