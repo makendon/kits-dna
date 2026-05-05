@@ -52,7 +52,7 @@
     "@picocss/pico": "2.1.1",
     "@playwright/test": "1.59.1",
     "@types/node": "25.6.0",
-    "cspell-cli": "9.8.0",
+    "cspell-cli": "10.0.0",
     "eslint": "10.2.1",
     "globals": "17.5.0",
     "markdown-it": "14.1.1",
