@@ -5,6 +5,8 @@
 
 :root {
   --pico-font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --pf-font: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --pf-outline-focus: #00895A;
 }
 
 // Constrain content width on prose-heavy pages
@@ -66,12 +68,6 @@ footer p {
     text-decoration: underline;
   }
 }
-
-/* Search */
-#search {
-    --pagefind-ui-text: #393939;
-    --pagefind-ui-font: var(--pico-font-family);
-  }
 
 /* Style for the dark mode toggle icon */
 .dark-mode-toggle {

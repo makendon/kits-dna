@@ -67,13 +67,16 @@ test.describe("site-pages", () => {
   });
 
   // TC-078
-  test.fixme("search page should not have accessibility issues", async ({ page }) => {
-    await page.goto("/search");
+  test.fixme("search modal should not have accessibility issues", async ({ page }) => {
+    await page.goto("/");
+    await page.locator("pagefind-modal-trigger button").click();
+    await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
 
-    // The Pagefind search UI uses a title attribute only to label its search input,
-    // which violates the "label-title-only" accessibility rule (form elements must
-    // have a visible label). This is a known limitation of the Pagefind UI component.
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    // Pagefind's component UI ships keyboard-hint text and kbd badges that fail
+    // WCAG AA color contrast (#999/#8d8d8d on #fff/#f8f8f8). Tracked as a follow-up.
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .include("dialog.pf-modal")
+      .analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });

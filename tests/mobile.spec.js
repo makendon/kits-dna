@@ -40,11 +40,10 @@ test.describe("Mobile Browser Tests", () => {
       await menuButton.click();
     }
 
-    await page.getByTitle("Search").click();
-    await page.getByRole("textbox", { name: "Search" }).fill("git");
-    await page.keyboard.press("Enter");
-
-    await expect(page.getByLabel("Search this site").locator("div").filter({ hasText: "Filters Content content pages" })).toBeVisible();
+    await page.locator("pagefind-modal-trigger button").click();
+    await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
+    await page.locator("dialog[open] .pf-input").fill("git");
+    await expect(page.locator("ul.pf-results li").first()).toBeVisible();
   });
 
   // TC-017

@@ -44,7 +44,7 @@
 
 **Steps:**
 
-1. Navigate to each of the following URLs in turn: `/`, `/about`, `/product`, `/blog`, `/side-projects`, `/resume`, `/tags`, `/search`, `/contact`, `/accessibility`, `/privacy`, `/feed.xml`, `/sitemap.xml`
+1. Navigate to each of the following URLs in turn: `/`, `/about`, `/product`, `/blog`, `/side-projects`, `/resume`, `/tags`, `/contact`, `/accessibility`, `/privacy`, `/feed.xml`, `/sitemap.xml`
 2. For each URL, assert the HTTP response status is 200
 
 **Expected:** All pages return 200. Feed and sitemap return valid XML content.
@@ -136,7 +136,7 @@
 
 ---
 
-#### TC-008: Search icon in nav bar opens search page
+#### TC-008: Search trigger in nav bar opens the search modal
 
 **File:** `functional.spec.js`
 **Status:** Covered
@@ -144,10 +144,10 @@
 **Steps:**
 
 1. Navigate to `/`
-2. Click the element with `title="Search"` in the nav
-3. Assert the search text input is visible
+2. Click the `pagefind-modal-trigger` button in the nav
+3. Assert `dialog.pf-modal[open]` is visible
 
-**Expected:** Search page loads and search input is visible.
+**Expected:** The Pagefind search modal opens.
 
 ---
 
@@ -299,22 +299,9 @@
 
 ---
 
-### Section 5 — Search Functionality (Pagefind)
+### Section 5 — Search Functionality (Pagefind modal)
 
-#### TC-018: Search page loads with heading and search input
-
-**File:** `functional.spec.js`
-**Status:** Covered
-
-**Steps:**
-
-1. Navigate to `/search`
-2. Assert `h1` contains "Search the site"
-3. Assert the Pagefind search input (role "textbox" with name "Search") is visible
-
-**Expected:** Search page loads with a visible text input.
-
----
+The site uses the Pagefind Component UI modal. The trigger lives in the header (`pagefind-modal-trigger`); the dialog (`pagefind-modal`) is mounted once in `base.njk` and rendered as a native `<dialog class="pf-modal">`. There is no dedicated `/search` page and the default modal layout does not render filter controls.
 
 #### TC-019: Search returns results for a known term
 
@@ -323,12 +310,11 @@
 
 **Steps:**
 
-1. Navigate to `/search`
-2. Click the search text box
-3. Type "git" into the search box
-4. Press Enter
-5. Assert the filter panel containing "Filters Content content pages" is visible
-6. Assert at least one search result is visible
+1. Navigate to `/`
+2. Click the `pagefind-modal-trigger` button
+3. Assert `dialog.pf-modal[open]` is visible
+4. Fill `dialog[open] .pf-input` with "git"
+5. Assert at least one `ul.pf-results li` is visible
 
 **Expected:** Results are displayed for the term "git".
 
@@ -337,53 +323,16 @@
 #### TC-020: Search with a term that yields no results shows an empty state
 
 **File:** `functional.spec.js`
-**Status:** Not covered
-
-**Steps:**
-
-1. Navigate to `/search`
-2. Click the search text box
-3. Type "xyzzy12345nonexistent" into the search box
-4. Press Enter
-5. Assert no result articles are visible
-6. Assert a "no results" message or empty state is displayed
-
-**Expected:** Zero results displayed; UI communicates no results found cleanly.
-
----
-
-#### TC-021: Search results can be filtered by content type
-
-**File:** `functional.spec.js`
-**Status:** Not covered
-
-**Assumption:** Pagefind UI filters are visible once a search is performed (configured with `openFilters: ["tag", "content"]`).
-
-**Steps:**
-
-1. Navigate to `/search`
-2. Type "Eleventy" in the search box and press Enter
-3. Assert filter options for "content" type are visible (e.g. "posts" and "pages")
-4. Click the "posts" filter option
-5. Assert all visible results have URLs matching `/blog/`
-
-**Expected:** Filtering by "posts" narrows results to blog post URLs only.
-
----
-
-#### TC-022: Search accessed via header icon navigates to /search
-
-**File:** `functional.spec.js`
-**Status:** Not covered
+**Status:** Covered
 
 **Steps:**
 
 1. Navigate to `/`
-2. Click the magnifying glass icon (`title="Search"`) in the header
-3. Assert the URL is `/search/` or `/search`
-4. Assert the `h1` heading "Search the site" is visible
+2. Open the modal via the header trigger
+3. Fill the modal input with "xyzzy12345nonexistent"
+4. Assert `ul.pf-results li` has count 0
 
-**Expected:** Header search icon navigates to the dedicated search page.
+**Expected:** Zero results in the modal results list.
 
 ---
 
@@ -395,13 +344,58 @@
 **Steps:**
 
 1. Open site on mobile viewport
-2. Open the burger menu if needed
-3. Click the search icon
-4. Type "git" in the search box
-5. Press Enter
-6. Assert the filter panel is visible
+2. Open the burger menu so `.nav-utilities` becomes visible
+3. Click the `pagefind-modal-trigger` button
+4. Assert `dialog.pf-modal[open]` is visible
+5. Fill the modal input with "git"
+6. Assert at least one `ul.pf-results li` is visible
 
-**Expected:** Search works correctly on a mobile viewport.
+**Expected:** Modal-based search works correctly on a mobile viewport (the trigger lives in `.nav-utilities`, hidden behind the burger on mobile).
+
+---
+
+#### TC-087: Keyboard shortcut opens the search modal
+
+**File:** `functional.spec.js`
+**Status:** Covered
+
+**Steps:**
+
+1. Navigate to `/`
+2. Press `Meta+K` (or `Control+K` on non-mac runners)
+3. Assert `dialog.pf-modal[open]` is visible
+
+**Expected:** The Pagefind modal opens via its registered keyboard shortcut.
+
+---
+
+#### TC-088: Escape closes the search modal
+
+**File:** `functional.spec.js`
+**Status:** Covered
+
+**Steps:**
+
+1. Open the modal via the header trigger
+2. Press `Escape`
+3. Assert `dialog.pf-modal[open]` is no longer present
+
+**Expected:** Pressing Escape closes the dialog.
+
+---
+
+#### TC-089: Search modal works from a non-home page
+
+**File:** `functional.spec.js`
+**Status:** Covered
+
+**Steps:**
+
+1. Navigate to `/blog`
+2. Click the `pagefind-modal-trigger` button
+3. Assert `dialog.pf-modal[open]` is visible
+
+**Expected:** The single modal mounted in `base.njk` works on every page.
 
 ---
 
@@ -1049,7 +1043,6 @@
 2. In the footer, click "Résumé" and assert URL is `/resume`
 3. Go back, in the footer click "Accessibility" and assert URL is `/accessibility`
 4. Go back, in the footer click "Privacy" and assert URL is `/privacy`
-5. Go back, in the footer click "Search" and assert URL matches `/search`
 
 **Expected:** All footer page links navigate to the correct pages.
 
@@ -1271,18 +1264,20 @@
 
 ---
 
-#### TC-078: Search page passes axe-core automated scan
+#### TC-078: Search modal passes axe-core automated scan
 
 **File:** `accessibility.spec.js`
-**Status:** Not covered
+**Status:** `test.fixme` — Pagefind component UI ships keyboard-hint text (`#999` on `#fff`) and kbd badges (`#8d8d8d` on `#f8f8f8`) that fail WCAG AA colour contrast. Track as a follow-up.
 
 **Steps:**
 
-1. Navigate to `/search`
-2. Run an axe-core scan via AxeBuilder
-3. Assert the `violations` array is empty
+1. Navigate to `/`
+2. Open the search modal via the header trigger
+3. Assert `dialog.pf-modal[open]` is visible
+4. Run an axe-core scan via AxeBuilder, scoped with `.include("dialog.pf-modal")`
+5. Assert the `violations` array is empty
 
-**Expected:** No axe-core violations on the search page.
+**Expected:** No axe-core violations inside the open search modal.
 
 ---
 

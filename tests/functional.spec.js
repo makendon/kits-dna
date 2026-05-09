@@ -18,8 +18,9 @@ test("basic", async ({ page }) => {
   await expect(page.getByText("Jamstack kits-dna My personal")).toBeVisible();
   await page.getByRole("link", { name: "Blog", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Blog" })).toBeVisible();
-  await page.getByTitle("Search").click();
-  await expect(page.getByRole("textbox", { name: "Search" })).toBeVisible();
+  await page.locator("pagefind-modal-trigger button").click();
+  await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
+  await page.keyboard.press("Escape");
   await page.getByRole("link", { name: "Home" }).click();
   await expect(page.getByRole("button", { name: "Dark/Light Mode" })).toBeVisible();
 });
@@ -39,7 +40,6 @@ test.describe("Page Load and Routing", () => {
       "/side-projects",
       "/resume",
       "/tags",
-      "/search",
       "/contact",
       "/accessibility",
       "/privacy",
@@ -190,59 +190,54 @@ test.describe("Dark / Light Mode Toggle", () => {
 });
 
 // ---------------------------------------------------------------------------
-// TC-019, TC-020, TC-021, TC-022: Search Functionality
+// TC-008, TC-019, TC-020, TC-087, TC-088, TC-089: Search Functionality (modal)
 // ---------------------------------------------------------------------------
 
 test.describe("Search Functionality", () => {
-  // TC-019
-  test("search functionality", async ({ page }) => {
+  // TC-008 / TC-019: header trigger opens modal and returns results
+  test("search modal opens from header and returns results for known term", async ({ page }) => {
     await page.goto("/");
-    await page.getByTitle("Search").click();
-    await page.getByRole("textbox", { name: "Search" }).fill("git");
-    await page.keyboard.press("Enter");
-    await expect(page.getByLabel("Search this site").locator("div").filter({ hasText: "Filters Content content pages" })).toBeVisible();
+    await page.locator("pagefind-modal-trigger button").click();
+    await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
+    await page.locator("dialog[open] .pf-input").fill("git");
+    await expect(page.locator("ul.pf-results li").first()).toBeVisible();
   });
 
   // TC-020
-  test("search with no results shows empty state", async ({ page }) => {
-    await page.goto("/search");
-    await page.getByRole("textbox", { name: "Search" }).fill("xyzzy12345nonexistent");
-    await page.keyboard.press("Enter");
-
-    await expect(page.locator(".pagefind-ui__result")).toHaveCount(0);
-    await expect(page.locator(".pagefind-ui__message")).toBeVisible();
-  });
-
-  // TC-021
-  test("search results can be filtered by content type", async ({ page }) => {
-    await page.goto("/search");
-    await page.getByRole("textbox", { name: "Search" }).fill("Eleventy");
-    await page.keyboard.press("Enter");
-
-    await expect(page.locator(".pagefind-ui__filter-block").filter({ hasText: "Content" })).toBeVisible();
-
-    await page.getByRole("checkbox", { name: "posts" }).click();
-
-    const resultLinks = page.locator(".pagefind-ui__result-link");
-    const count = await resultLinks.count();
-    expect(count).toBeGreaterThan(0);
-    // Verify that at least some results are blog posts when filtering by posts type
-    const hrefs = [];
-    for (let i = 0; i < count; i++) {
-      const href = await resultLinks.nth(i).getAttribute("href");
-      hrefs.push(href);
-    }
-    const blogPostResults = hrefs.filter(href => href?.match(/\/blog\//));
-    expect(blogPostResults.length).toBeGreaterThan(0);
-  });
-
-  // TC-022
-  test("search accessed via header icon navigates to /search", async ({ page }) => {
+  test("search with no results shows empty list", async ({ page }) => {
     await page.goto("/");
-    await page.getByTitle("Search").click();
+    await page.locator("pagefind-modal-trigger button").click();
+    await page.locator("dialog[open] .pf-input").fill("xyzzy12345nonexistent");
+    await expect(page.locator("ul.pf-results li")).toHaveCount(0);
+  });
 
-    await expect(page).toHaveURL(/\/search\/?/);
-    await expect(page.getByRole("heading", { name: "Search the site", level: 1 })).toBeVisible();
+  // TC-087: keyboard shortcut opens the modal
+  test("keyboard shortcut opens the search modal", async ({ page }) => {
+    await page.goto("/");
+    const trigger = page.locator("pagefind-modal-trigger button");
+    await expect(trigger).toBeVisible();
+    // Pagefind binds Cmd+K on macOS / Ctrl+K elsewhere — derive from aria-keyshortcuts
+    const shortcut = await trigger.getAttribute("aria-keyshortcuts");
+    expect(shortcut).toMatch(/^(Control|Meta)\+k$/i);
+    await page.locator("body").click();
+    await page.keyboard.press(shortcut.replace(/\+k$/i, "+KeyK"));
+    await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
+  });
+
+  // TC-088: Escape closes the modal
+  test("Escape closes the search modal", async ({ page }) => {
+    await page.goto("/");
+    await page.locator("pagefind-modal-trigger button").click();
+    await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(page.locator("dialog.pf-modal[open]")).toHaveCount(0);
+  });
+
+  // TC-089: modal works from a non-home page
+  test("search modal opens from a non-home page", async ({ page }) => {
+    await page.goto("/blog");
+    await page.locator("pagefind-modal-trigger button").click();
+    await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
   });
 });
 
