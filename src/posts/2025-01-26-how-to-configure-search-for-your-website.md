@@ -145,15 +145,15 @@ Pagefind v1.5 brought a new search [component UI](https://pagefind.app/docs/sear
 
 ### Getting started with the component UI
 
-Here's the steps I took to implement the component UI:
+Here are the steps I took to implement the component UI:
 
 1. Replace the header search icon with the modal trigger. The modal trigger opens the modal and provides a search box. It uses the component `<pagefind-modal-trigger compact></pagefind-modal-trigger>` you can think of this component like an `HTML` tag.
 2. Add the modal itself `<pagefind-modal></pagefind-modal>` to your base layout `base.njk` file so that the modal appears on all pages.
 3. Load the Component UI assets globally. Add the asset loading to your `head.njk` include. You'll need to make sure any previous asset loading is removed from the search page and any `JavaScript` files – I deleted the old search page and search script.
 
-    ```js
+    ```html
     <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
-    <script src="/pagefind/pagefind-component-ui.js" type="module" defer></script>
+    <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
     ```
 
     > [!TIP]
