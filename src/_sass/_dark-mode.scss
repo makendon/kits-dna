@@ -24,6 +24,10 @@
     :root:not([data-theme]) {
         @include pagefind-dark-vars;
 
+        --pico-primary: #21E299; /* Jade 200 */
+        --pico-primary-underline: rgba(33, 226, 153, 0.5);
+        --pico-primary-hover: #00A66E; /* Jade 400 */
+
         .dark-mode-toggle {
             .light-icon {
                 display: inline-block;  // Show sun in dark mode
@@ -39,6 +43,10 @@
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
     @include pagefind-dark-vars;
+
+    --pico-primary: #21E299; /* Jade 200 */
+    --pico-primary-underline: rgba(33, 226, 153, 0.5);
+    --pico-primary-hover: #00A66E; /* Jade 400 */
 
     .dark-mode-toggle {
         .light-icon {

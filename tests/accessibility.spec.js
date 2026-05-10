@@ -67,13 +67,17 @@ test.describe("site-pages", () => {
   });
 
   // TC-078
+  // Upstream Pagefind issue: the component UI ships keyboard-hint text and kbd
+  // badges with colours that fail WCAG AA contrast. Defaults `--pf-text-muted: #767676`
+  // (4.48:1 on #fff) and `--pf-text-secondary: #666` are at or below threshold,
+  // and Pagefind's selectors use an `:is(*, #\#)`-stacked specificity hack that
+  // resists consumer overrides via the documented CSS variables. Tracking via
+  // upstream issue — re-enable once fixed there.
   test.fixme("search modal should not have accessibility issues", async ({ page }) => {
     await page.goto("/");
     await page.locator("pagefind-modal-trigger button").click();
     await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
 
-    // Pagefind's component UI ships keyboard-hint text and kbd badges that fail
-    // WCAG AA color contrast (#999/#8d8d8d on #fff/#f8f8f8). Tracked as a follow-up.
     const accessibilityScanResults = await new AxeBuilder({ page })
       .include("dialog.pf-modal")
       .analyze();
@@ -121,16 +125,20 @@ test("should not have any automatically detectable WCAG A or AA violations", asy
 });
 
 // TC-082
-test.fixme("dark mode should not introduce any automatically detectable accessibility issues", async ({ page }) => {
+test("dark mode should not introduce any automatically detectable accessibility issues", async ({ page }) => {
+  // Suppress CSS transitions so axe doesn't capture mid-transition colour values
+  // (Firefox in particular reads link colours mid-tween, producing false violations).
+  await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
+
+  // On mobile viewports the dark-mode toggle is inside .nav-utilities, hidden behind
+  // the burger menu, so open it first.
+  const burger = page.locator("label[for*='burger-menu']");
+  if (await burger.isVisible()) await burger.click();
 
   await page.getByRole("button", { name: "Dark/Light Mode" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 
-  // In dark mode, the Pico CSS Jade theme's primary link/button colour (#008f5e) has
-  // insufficient contrast ratio of 4.35:1 against the dark background (#13171f), falling
-  // short of the WCAG 2 AA requirement of 4.5:1. This affects nav links, footer links,
-  // and CTA buttons. This is a genuine colour contrast issue in the dark mode theme.
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
   expect(accessibilityScanResults.violations).toEqual([]);
