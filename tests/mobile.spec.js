@@ -106,15 +106,16 @@ test.describe("Mobile Browser Tests", () => {
   // TC-012: Mobile nav links navigate to correct pages
   test("mobile nav links navigate to correct pages", async ({ page }) => {
     const menuButton = page.locator("label[for*='burger-menu']");
+    const nav = page.getByRole("navigation");
 
     await menuButton.click();
-    await page.getByRole("link", { name: "About", exact: true }).click();
+    await nav.getByRole("link", { name: "About", exact: true }).click();
     await expect(page).toHaveURL(/\/about/);
 
     await page.goto("/");
     await menuButton.click();
-    await page.getByRole("link", { name: "Contact", exact: true }).click();
-    await expect(page).toHaveURL(/\/contact/);
+    await nav.getByRole("link", { name: "Résumé", exact: true }).click();
+    await expect(page).toHaveURL(/\/resume/);
   });
 
   // TC-013: Mobile landscape orientation does not break layout
