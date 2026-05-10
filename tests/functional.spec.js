@@ -2,30 +2,6 @@
 import { test, expect } from "@playwright/test";
 
 // ---------------------------------------------------------------------------
-// TC-001, TC-005, TC-006 (partial), TC-008, TC-014 (partial) — recorder smoke test
-// ---------------------------------------------------------------------------
-
-test("basic", async ({ page }) => {
-  await page.goto("/");
-  await expect(page).toHaveTitle(/Kit France/);
-  await page.goto("/");
-  await page.getByRole("button", { name: "About" }).click();
-  await expect(page.getByRole("heading", { name: "About" })).toBeVisible();
-  await page.getByRole("link", { name: "CF" }).click();
-  await page.getByRole("button", { name: "Product" }).click();
-  await expect(page.getByRole("article").filter({ hasText: "Business outcomes" })).toBeVisible();
-  await page.getByRole("link", { name: "Side Projects", exact: true }).click();
-  await expect(page.getByText("Jamstack kits-dna My personal")).toBeVisible();
-  await page.getByRole("link", { name: "Blog", exact: true }).click();
-  await expect(page.getByRole("heading", { name: "Blog" })).toBeVisible();
-  await page.locator("pagefind-modal-trigger button").click();
-  await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
-  await page.keyboard.press("Escape");
-  await page.getByRole("link", { name: "Home" }).click();
-  await expect(page.getByRole("button", { name: "Dark/Light Mode" })).toBeVisible();
-});
-
-// ---------------------------------------------------------------------------
 // TC-002, TC-004: Page Load and Routing
 // ---------------------------------------------------------------------------
 
@@ -43,6 +19,8 @@ test.describe("Page Load and Routing", () => {
       "/contact",
       "/accessibility",
       "/privacy",
+      "/feed.xml",
+      "/sitemap.xml",
     ];
 
     for (const url of urls) {
@@ -171,7 +149,8 @@ test.describe("Dark / Light Mode Toggle", () => {
 
     await page.getByRole("button", { name: "Dark/Light Mode" }).click();
 
-    await expect(page.locator("html")).toHaveAttribute("data-theme", initialTheme ?? /dark|light/);
+    if (initialTheme === null) throw new Error("expected initial data-theme attribute to be set");
+    await expect(page.locator("html")).toHaveAttribute("data-theme", initialTheme);
   });
 
   // TC-016
@@ -182,7 +161,8 @@ test.describe("Dark / Light Mode Toggle", () => {
 
     await page.goto("/about");
 
-    await expect(page.locator("html")).toHaveAttribute("data-theme", themeSwitchedTo ?? /dark|light/);
+    if (themeSwitchedTo === null) throw new Error("expected data-theme attribute to be set after toggle");
+    await expect(page.locator("html")).toHaveAttribute("data-theme", themeSwitchedTo);
 
     const storedTheme = await page.evaluate(() => localStorage.getItem("theme"));
     expect(storedTheme).toBe(themeSwitchedTo);
@@ -312,9 +292,10 @@ test.describe("Blog Page and Blog Posts", () => {
 
     const currentHeading = await page.getByRole("heading", { level: 1 }).innerText();
     const nextHref = await nextLink.getAttribute("href");
+    if (nextHref === null) throw new Error("expected next-post link to have an href");
     await nextLink.click();
 
-    await expect(page).toHaveURL(nextHref ?? /\/blog\//);
+    await expect(page).toHaveURL(nextHref);
 
     const newHeading = await page.getByRole("heading", { level: 1 }).innerText();
     expect(newHeading).not.toBe(currentHeading);
@@ -642,11 +623,19 @@ test.describe("SEO and Meta Tags", () => {
 // TC-065: External Links
 // ---------------------------------------------------------------------------
 
-test("external links", async ({ page }) => {
+test("all external homepage links have target=_blank and rel containing noopener+noreferrer", async ({ page }) => {
   await page.goto("/");
-  const externalLinks = page.locator("a[target=\"_blank\"], a[href^=\"http\"]");
-  if (await externalLinks.count() > 0) {
-    await expect(externalLinks.first()).toHaveAttribute("target", "_blank");
+  const externalLinks = page.locator("a[href^=\"http\"]:not([href*=\"kitfrance.com\"])");
+  const count = await externalLinks.count();
+  expect(count).toBeGreaterThan(0);
+  for (let i = 0; i < count; i++) {
+    const link = externalLinks.nth(i);
+    const href = await link.getAttribute("href");
+    await expect(link, `external link #${i} (${href}) missing target=_blank`).toHaveAttribute("target", "_blank");
+    const rel = await link.getAttribute("rel");
+    expect(rel, `external link #${i} (${href}) missing rel attribute`).not.toBeNull();
+    expect(rel, `external link #${i} (${href}) rel missing noopener`).toMatch(/noopener/);
+    expect(rel, `external link #${i} (${href}) rel missing noreferrer`).toMatch(/noreferrer/);
   }
 });
 

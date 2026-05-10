@@ -38,7 +38,7 @@
 #### TC-002: All primary pages return HTTP 200
 
 **File:** `functional.spec.js`
-**Status:** Not covered
+**Status:** Covered
 
 **Assumption:** Site is running on <http://localhost:8080> with a complete build including the Pagefind search index.
 
@@ -1110,8 +1110,9 @@ The site uses the Pagefind Component UI modal. The trigger lives in the header (
 **Steps:**
 
 1. Navigate to `/`
-2. Find all links matching `a[target="_blank"]`
-3. For each link, assert `rel` contains `noopener` or `noreferrer`
+2. Find all external links (matching `a[href^="http"]` and excluding `kitfrance.com`)
+3. Assert at least one external link is present
+4. For each link, assert `target="_blank"` is set and `rel` contains both `noopener` and `noreferrer`
 
 **Expected:** All external links have security attributes.
 
