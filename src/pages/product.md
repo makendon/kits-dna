@@ -2,7 +2,7 @@
 title: Product
 eleventyNavigation:
   key: Product
-  order: 2
+  order: 3
 permalink: /product/
 ---
 > *"Product management is about creating a product customers love, yet also works for our business" - Marty Cagan*
@@ -62,6 +62,6 @@ This [**bikablo**](https://bikablo.com/en/home-page/) style drawing visualises m
 ---
 
 <article class="cta">
-  <p>Want to collaborate or chat about product thinking?</p>
+  <p>Working on internal or platform products? Get in touch, always happy to chat.</p>
   <a href="/contact" role="button">Get in touch</a>
 </article>

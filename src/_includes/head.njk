@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Production -->
   {% if kitsDna.environment == 'production' %}
   {% endif %}
@@ -12,24 +12,28 @@
 
   <!-- Mastodon verification -->
   <link rel="me" href="https://mastodon.social/@makendon"/>
-  
+
   <!-- Favicon -->
   {% include "favicon.njk" %}
 
   <!-- Image preloading -->
   <link rel="preload" as="image" href="/assets/images/hawaii-logo.webp">
-  
+
   <!-- Prevent theme flash - must run before CSS -->
   <script>
   (function() {
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
       document.documentElement.setAttribute('data-theme', 'dark');
     }
   })();
   </script>
+
+  <!-- Pagefind component UI CSS -->
+  <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
 
   <!-- CSS -->
   {% css %}{% include "dist/css/styles.css" %}{% endcss %}

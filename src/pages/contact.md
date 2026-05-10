@@ -1,8 +1,5 @@
 ---
 title: Get in touch
-eleventyNavigation:
-  key: Contact
-  order: 5
 ---
 I'd love to hear from you! Get in touch about product, tools or any feedback about this site :speech_balloon:
 

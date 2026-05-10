@@ -5,6 +5,8 @@
 
 :root {
   --pico-font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --pf-font: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --pf-outline-focus: #00895A;
 }
 
 // Constrain content width on prose-heavy pages
@@ -67,12 +69,6 @@ footer p {
   }
 }
 
-/* Search */
-#search {
-    --pagefind-ui-text: #393939;
-    --pagefind-ui-font: var(--pico-font-family);
-  }
-
 /* Style for the dark mode toggle icon */
 .dark-mode-toggle {
     background: none;
@@ -80,26 +76,21 @@ footer p {
     padding: 0;
     cursor: pointer;
     color: grey;
-    margin-left: 20px;
     transition: transform 0.3s ease;
     font-size: 1rem;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
+    transform: translateY(-5px);
 
     .light-icon {
       display: none;  // Hide sun by default (light mode)
-      height: 1em;
-      width: 1em;
-      color: $amber-200;
+      height: 0.9em;
+      width: 0.9em;
     }
 
     .dark-icon {
       display: inline;  // Show moon by default (light mode)
-      height: 1em;
-      width: 1em;
+      height: 0.8em;
+      width: 0.8em;
+      transform: rotate(-20deg);
     }
 }
 
@@ -316,6 +307,10 @@ figure figcaption {
   visibility: visible;
   opacity: 1;
   display: flex;
+}
+
+.responsive-nav > .nav-logo img {
+  transform: translateY(3px);
 }
 
 /* hide nav-items within menu */

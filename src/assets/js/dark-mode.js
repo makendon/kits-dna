@@ -3,12 +3,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   const systemDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
   const darkModeToggle = document.querySelector(".dark-mode-toggle");
-    
+
   function applyTheme(isDark) {
     document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }
-  
+
   // Initialize theme on page load
   function initializeTheme() {
     const savedTheme = localStorage.getItem("theme");
@@ -20,17 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
       applyTheme(systemDarkMode.matches);
     }
   }
-  
+
   // Initialize theme immediately
   initializeTheme();
-  
+
   // Listen for system theme changes if no manual preference
   systemDarkMode.addEventListener("change", (e) => {
     if (!localStorage.getItem("theme")) {
       applyTheme(e.matches);
     }
   });
-    
+
   // Add click handler for the toggle button
   if (darkModeToggle) {
     darkModeToggle.addEventListener("click", function() {

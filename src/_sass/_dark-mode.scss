@@ -1,7 +1,29 @@
+/* Pagefind component UI inherits its colours from --pf-* CSS variables.
+ * Pagefind's own dark theme is gated on [data-pf-theme="dark"], but the site
+ * uses [data-theme="dark"], so we re-declare Pagefind's dark palette here.
+ */
+@mixin pagefind-dark-vars {
+    --pf-text: #e5e5e5;
+    --pf-text-secondary: #a0a0a0;
+    --pf-text-muted: #949494;
+    --pf-background: #1a1a1a;
+    --pf-border: #333;
+    --pf-border-focus: #555;
+    --pf-skeleton: #2a2a2a;
+    --pf-skeleton-shine: #333;
+    --pf-hover: #252525;
+    --pf-mark: #e5e5e5;
+    --pf-scroll-shadow: rgba(255, 255, 255, 0.1);
+    --pf-outline-focus: #00895A;
+    --pf-modal-backdrop: rgba(0, 0, 0, 0.7);
+}
+
 /* Dark color scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
+        @include pagefind-dark-vars;
+
         .dark-mode-toggle {
             .light-icon {
                 display: inline-block;  // Show sun in dark mode
@@ -10,18 +32,14 @@
                 display: none;  // Hide moon in dark mode
             }
         }
-        #search {
-            --pagefind-ui-primary: #fcfcfc;
-            --pagefind-ui-text: #fcfcfc;
-            --pagefind-ui-background: #343434;
-            --pagefind-ui-border: #1c1c1c;
-        }
     }
 }
-  
+
 /* Dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
+    @include pagefind-dark-vars;
+
     .dark-mode-toggle {
         .light-icon {
             display: inline-block;  // Show sun in dark mode
@@ -29,11 +47,5 @@
         .dark-icon {
             display: none;  // Hide moon in dark mode
         }
-    }
-    #search {
-        --pagefind-ui-primary: #fcfcfc;
-        --pagefind-ui-text: #fcfcfc;
-        --pagefind-ui-background: #343434;
-        --pagefind-ui-border: #1c1c1c;
     }
 }
