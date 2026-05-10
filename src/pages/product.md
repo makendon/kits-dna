@@ -2,7 +2,7 @@
 title: Product
 eleventyNavigation:
   key: Product
-  order: 2
+  order: 3
 permalink: /product/
 ---
 > *"Product management is about creating a product customers love, yet also works for our business" - Marty Cagan*
