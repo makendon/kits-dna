@@ -8,8 +8,8 @@ tags:
   - eleventy
 description: Being able to search across a website is a helpful capability and I want to give readers of my blog the ability to find information across my posts.
 ---
-> :recycle: **Update 02/03/2025**
-> I've updated this post with steps required to setup Pagefind with Eleventy.
+> :recycle: **Update 10/05/2026**
+> I've updated this post with steps to configure the Pagefind Component UI.
 
 There're a number of options available to add search capability to your website, examples include, [Algolia](https://www.algolia.com), [Lunr](https://lunrjs.com) and [Pagefind](https://pagefind.app).
 
@@ -137,9 +137,35 @@ I've added tags to my blog posts and I wanted to iterate the search functionalit
 
     ![Search UI](/assets/screenshots/search.png)
 
+## Component UI
+
+> :heavy_plus_sign: **Added 10/05/2026**
+
+Pagefind v1.5 brought a new search [component UI](https://pagefind.app/docs/search-ui/). This brings a search bar to Pagefind with the results either displayed in a `modal` (pop-out window) or a dropdown list. The component removes the need for a separate search page. I've now introduced this on `kits-dna` see it in action in the header.
+
+### Getting started with the component UI
+
+Here's the steps I took to implement the component UI:
+
+1. Replace the header search icon with the modal trigger. The modal trigger, triggers the modal and provides a search box. It uses the component `<pagefind-modal-trigger compact></pagefind-modal-trigger>` you can think of this component like an `HTML` tag.
+2. Add the modal itself `<pagefind-modal></pagefind-modal>` to your base layout `base.njk` file so that the modal appears on all pages.
+3. Load the Component UI assets globally. Add the asset loading to your `head.njk` include. You'll need to sure any previous asset loading is removed from the search page and any `JavaScript` files – I deleted the old search page and search script.
+
+    ```js
+    <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-component-ui.js" type="module" defer></script>
+    ```
+
+    > [!TIP]
+    > Place the Pagefind link and script assets **above** the `CSS` in your `head.njk` file. That way any `CSS` variables you want to override will be correctly picked up in the cascade.
+
+4. To override any `CSS` properties such as colour you can define these in your stylesheet under `:root`. E.g. you can change the font of the search and the outline focus which default to blue.
+5. Dark mode colours are available. I solved this problem by adding the `pagefind-dark-vars` as a mixin, and then using an include to bring them into my dark mode config. I use `SASS` and `Pico CSS` so this is likely to be different for you depending on the packages you use.
+6. Update your tests. If you have tests remembers to update these as any tests referencing the search page will fail once its removed.
+
 ## Wrap Up
 
-We've now got free search capability on our site that allows our visitors to check out if we've written about other useful things (or helps me find things I've written about). Click the :mag: on the header bar and try searching across this site, if it doesn't work, let me know!
+We've now got free search capability on our site that allows our visitors to check out if we've written about other useful things (or helps me find things I've written about). Click the search bar on the header bar and try searching across this site, if it doesn't work, let me know!
 
 ### Coming Up
 
