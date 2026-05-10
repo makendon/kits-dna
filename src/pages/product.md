@@ -62,6 +62,6 @@ This [**bikablo**](https://bikablo.com/en/home-page/) style drawing visualises m
 ---
 
 <article class="cta">
-  <p>Want to collaborate or chat about product thinking?</p>
+  <p>Working on internal or platform products? Get in touch, always happy to chat.</p>
   <a href="/contact" role="button">Get in touch</a>
 </article>
