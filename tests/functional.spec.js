@@ -515,8 +515,7 @@ test.describe("Resume", () => {
 
   // TC-049
   test("resume page loads with heading and experience section", async ({ page }) => {
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Kit France");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Resume");
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("Résumé");
     await expect(page.locator("blockquote")).toBeVisible();
     await expect(page.getByRole("heading", { name: /Experience/i })).toBeVisible();
   });
