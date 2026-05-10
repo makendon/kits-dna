@@ -147,9 +147,9 @@ Pagefind v1.5 brought a new search [component UI](https://pagefind.app/docs/sear
 
 Here's the steps I took to implement the component UI:
 
-1. Replace the header search icon with the modal trigger. The modal trigger, triggers the modal and provides a search box. It uses the component `<pagefind-modal-trigger compact></pagefind-modal-trigger>` you can think of this component like an `HTML` tag.
+1. Replace the header search icon with the modal trigger. The modal trigger opens the modal and provides a search box. It uses the component `<pagefind-modal-trigger compact></pagefind-modal-trigger>` you can think of this component like an `HTML` tag.
 2. Add the modal itself `<pagefind-modal></pagefind-modal>` to your base layout `base.njk` file so that the modal appears on all pages.
-3. Load the Component UI assets globally. Add the asset loading to your `head.njk` include. You'll need to sure any previous asset loading is removed from the search page and any `JavaScript` files – I deleted the old search page and search script.
+3. Load the Component UI assets globally. Add the asset loading to your `head.njk` include. You'll need to make sure any previous asset loading is removed from the search page and any `JavaScript` files – I deleted the old search page and search script.
 
     ```js
     <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
@@ -161,7 +161,7 @@ Here's the steps I took to implement the component UI:
 
 4. To override any `CSS` properties such as colour you can define these in your stylesheet under `:root`. E.g. you can change the font of the search and the outline focus which default to blue.
 5. Dark mode colours are available. I solved this problem by adding the `pagefind-dark-vars` as a mixin, and then using an include to bring them into my dark mode config. I use `SASS` and `Pico CSS` so this is likely to be different for you depending on the packages you use.
-6. Update your tests. If you have tests remembers to update these as any tests referencing the search page will fail once its removed.
+6. Update your tests. If you have tests, remember to update these as any tests referencing the search page will fail once its removed.
 
 ## Wrap Up
 
