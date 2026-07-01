@@ -50,7 +50,7 @@
     "@pagefind/component-ui": "1.5.2",
     "@picocss/pico": "2.1.1",
     "@playwright/test": "1.60.0",
-    "@types/node": "25.9.1",
+    "@types/node": "26.0.1",
     "cspell-cli": "10.0.0",
     "eslint": "10.4.0",
     "globals": "17.6.0",
