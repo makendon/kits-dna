@@ -1,5 +1,5 @@
 // @ts-check
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.js";
 
 // ---------------------------------------------------------------------------
 // TC-002, TC-004: Page Load and Routing

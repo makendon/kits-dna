@@ -384,6 +384,10 @@ form[name="contact"] {
 }
 
 // CSS transitions
-@view-transition {
-  navigation: auto;
+// Skipped for anyone who prefers reduced motion: view transitions animate the
+// whole page and can trigger vestibular discomfort.
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
 }
