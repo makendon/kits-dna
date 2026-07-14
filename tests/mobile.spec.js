@@ -1,5 +1,5 @@
 // @ts-check
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.js";
 
 test.describe("Mobile Browser Tests", () => {
   test.beforeEach(async ({ page }) => {
