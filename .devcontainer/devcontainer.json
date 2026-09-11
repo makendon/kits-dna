@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+	"name": "Node.js",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:5-26-trixie",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+
+	// npm start serves the Eleventy dev server on 8080 (see eleventy.config.js).
+	"forwardPorts": [8080],
+	"portsAttributes": {
+		"8080": {
+			"label": "kitfrance.com (npm start)",
+			"onAutoForward": "notify"
+		}
+	},
+
+	// Install project deps, then install and wire up prek so pre-commit hooks
+	// (see prek.toml) run automatically on commit, same as the README's local setup.
+	"postCreateCommand": "npm ci && npm install -g @j178/prek@0.5.2 && prek install"
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
