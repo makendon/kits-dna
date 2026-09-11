@@ -143,6 +143,12 @@ Desktop browsers (chromium, firefox, webkit) skip mobile.spec.js tests. Mobile b
 - **Build command**: `npm run build`
 - **Plugins**: netlify-plugin-cache (.cache directory), @netlify/plugin-csp-nonce
 
+## Git conventions
+
+- Use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages (`type(scope): summary`, e.g. `feat(devcontainer): add dev container config`, `chore(deps-dev): bump markdown-it`)
+- Common types used in this repo: `feat`, `fix`, `chore`, `docs`
+- Pre-commit hooks (via `prek`, see `prek.toml`) run on commit — see the README's "Pre-commit hooks" section for local setup
+
 ## Important notes
 
 - Always use `npm ci` instead of `npm install` for consistent dependency installation
