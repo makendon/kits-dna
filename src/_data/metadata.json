@@ -20,5 +20,8 @@
     },
     "mastodon": {
         "url": "https://mastodon.social/@makendon"
+    },
+    "status": {
+        "url": "https://status.kitfrance.com"
     }
 }
