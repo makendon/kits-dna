@@ -549,6 +549,12 @@ test.describe("Footer", () => {
     await expect(mastodonLink).toBeVisible();
     await expect(mastodonLink).toHaveAttribute("target", "_blank");
     await expect(mastodonLink).toHaveAttribute("rel", "noopener noreferrer");
+
+    const statusLink = page.locator("footer a", { hasText: "Status" });
+    await expect(statusLink).toBeVisible();
+    await expect(statusLink).toHaveAttribute("href", "https://status.kitfrance.com");
+    await expect(statusLink).toHaveAttribute("target", "_blank");
+    await expect(statusLink).toHaveAttribute("rel", "noopener noreferrer");
   });
 
   // TC-062
