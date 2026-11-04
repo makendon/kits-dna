@@ -142,6 +142,7 @@ Desktop browsers (chromium, firefox, webkit) skip mobile.spec.js tests. Mobile b
 - **Container**: Heroku buildpack publishes to GitHub Container Registry
 - **Build command**: `npm run build`
 - **Plugins**: netlify-plugin-cache (.cache directory), @netlify/plugin-csp-nonce
+- **Dependabot**: minor and patch PRs get auto-merge enabled by `.github/workflows/dependabot-auto-merge.yml`; they merge once required checks pass and the code owner approves. Major bumps are merged manually
 
 ## Important notes
 
