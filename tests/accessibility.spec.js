@@ -2,12 +2,17 @@
 import { test, expect } from "./fixtures.js";
 import AxeBuilder from "@axe-core/playwright";
 
+// Pagefind's search trigger shows an aria-hidden "⌘ K" hint. axe 4.14's
+// label-content-name-mismatch counts that text as visible, so the button is
+// excluded. It is third-party markup and the hint is worth keeping.
+const axe = (page) => new AxeBuilder({ page }).exclude(".pf-trigger-btn");
+
 test.describe("site-pages", () => {
   // TC-070
   test("homepage should not have any automatically detectable accessibility issues", async ({ page }) => {
     await page.goto("/");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -16,7 +21,7 @@ test.describe("site-pages", () => {
   test("product page should not have accessibility issues", async ({ page }) => {
     await page.goto("/product");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -25,7 +30,7 @@ test.describe("site-pages", () => {
   test("side-projects page should not have accessibility issues", async ({ page }) => {
     await page.goto("/side-projects");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -34,7 +39,7 @@ test.describe("site-pages", () => {
   test("blog page should not have accessibility issues", async ({ page }) => {
     await page.goto("/blog");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -43,7 +48,7 @@ test.describe("site-pages", () => {
   test("about page should not have accessibility issues", async ({ page }) => {
     await page.goto("/about");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -52,7 +57,7 @@ test.describe("site-pages", () => {
   test("blog post page should not have accessibility issues", async ({ page }) => {
     await page.goto("/blog/how-to-test-your-website");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -61,7 +66,7 @@ test.describe("site-pages", () => {
   test("contact page should not have accessibility issues", async ({ page }) => {
     await page.goto("/contact");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -78,7 +83,7 @@ test.describe("site-pages", () => {
     await page.locator("pagefind-modal-trigger button").click();
     await expect(page.locator("dialog.pf-modal[open]")).toBeVisible();
 
-    const accessibilityScanResults = await new AxeBuilder({ page })
+    const accessibilityScanResults = await axe(page)
       .include("dialog.pf-modal")
       .analyze();
 
@@ -89,7 +94,7 @@ test.describe("site-pages", () => {
   test("tags index page should not have accessibility issues", async ({ page }) => {
     await page.goto("/tags");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -98,7 +103,7 @@ test.describe("site-pages", () => {
   test("resume page should not have accessibility issues", async ({ page }) => {
     await page.goto("/resume");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -107,7 +112,7 @@ test.describe("site-pages", () => {
   test("404 page should not have accessibility issues", async ({ page }) => {
     await page.goto("/non-existent-page");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await axe(page).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
@@ -117,7 +122,7 @@ test.describe("site-pages", () => {
 test("should not have any automatically detectable WCAG A or AA violations", async ({ page }) => {
   await page.goto("/");
 
-  const accessibilityScanResults = await new AxeBuilder({ page })
+  const accessibilityScanResults = await axe(page)
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
     .analyze();
 
@@ -139,7 +144,7 @@ test("dark mode should not introduce any automatically detectable accessibility 
   await page.getByRole("button", { name: "Dark/Light Mode" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 
-  const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+  const accessibilityScanResults = await axe(page).analyze();
 
   expect(accessibilityScanResults.violations).toEqual([]);
 });
