@@ -66,14 +66,7 @@
     "sass": "1.106.1"
   },
   "overrides": {
-    "brace-expansion@1": "1.1.21",
-    "brace-expansion@2": "2.1.7",
-    "brace-expansion@>=3": "5.0.12",
-    "js-yaml@3": "3.15.2",
-    "js-yaml@4": "4.3.2",
-    "js-yaml@5": "5.4.2",
-    "sharp": "0.35.5",
-    "smol-toml": "1.9.0",
-    "katex": "0.18.2"
+    "katex": "0.18.2",
+    "re2js": "2.8.7"
   }
 }
