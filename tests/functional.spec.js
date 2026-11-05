@@ -552,7 +552,7 @@ test.describe("Footer", () => {
 
     const statusLink = page.locator("footer a", { hasText: "Status" });
     await expect(statusLink).toBeVisible();
-    await expect(statusLink).toHaveAttribute("href", "https://status.kitfrance.com");
+    await expect(statusLink).toHaveAttribute("href", "https://kits-dna.openstatus.dev");
     await expect(statusLink).toHaveAttribute("target", "_blank");
     await expect(statusLink).toHaveAttribute("rel", "noopener noreferrer");
   });
